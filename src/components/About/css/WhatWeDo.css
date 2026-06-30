@@ -1,0 +1,216 @@
+/* --- Master Container --- */
+.unq-wwd-container {
+  width: 100vw;
+  background-color: #ffffff; 
+  padding: 100px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* --- Header --- */
+.unq-wwd-main-title {
+  font-family: 'Georgia', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #2D2D2D;
+  margin: 0 0 80px 0;
+  text-align: center;
+}
+
+/* --- Layout Wrapper (Desktop Absolute Positioning) --- */
+.unq-wwd-layout {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  min-height: 800px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* --- Faded Center Image --- */
+.unq-wwd-image-wrapper {
+  position: absolute;
+  width: 70%;
+  height: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  /* விளிம்புகளை மங்கலாக்கும் மேஜிக் கமாண்ட் */
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 75%);
+}
+
+.unq-wwd-center-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.85; 
+}
+
+/* --- Floating Cards Base Style --- */
+.unq-wwd-card {
+  position: absolute;
+  z-index: 2;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* --- Card Number Circle --- */
+.unq-wwd-number {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  border: 1px solid #dcdcdc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.9rem;
+  color: #333;
+  background-color: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px);
+}
+
+/* --- Card Typography --- */
+.unq-wwd-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin: 0;
+}
+
+.unq-wwd-card-desc {
+  font-size: 0.85rem;
+  color: #666666;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* --- Specific Positions for Desktop --- */
+.unq-wwd-pos-1 { top: 10%; left: 5%; }
+.unq-wwd-pos-2 { top: 45%; right: 5%; }
+.unq-wwd-pos-3 { bottom: 10%; left: 5%; }
+
+/* ========================================================
+    🎯 RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
+======================================================== */
+@media (max-width: 1024px) {
+  .unq-wwd-layout {
+    min-height: 700px;
+  }
+  .unq-wwd-image-wrapper {
+    width: 85%;
+  }
+  .unq-wwd-pos-1 { left: 0; top: 5%; }
+  .unq-wwd-pos-2 { right: 0; top: 40%; }
+  .unq-wwd-pos-3 { left: 0; bottom: 5%; }
+}
+
+@media (max-width: 768px) {
+  .unq-wwd-container {
+    padding: 60px 20px;
+  }
+
+  .unq-wwd-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  /* மொபைல் வியூவில் படத்தை பின்புலமாக (Background) மாற்றி, கன்டென்ட்டை மேலே அடுக்காக காட்டுகிறோம் */
+  .unq-wwd-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px; /* கார்டுகளுக்கு இடையிலான இடைவெளி */
+    min-height: unset;
+    padding: 40px 0;
+  }
+
+  /* படம் மையத்தில் பின்புலமாகவே இருக்கும் */
+  .unq-wwd-image-wrapper {
+    position: absolute;
+    width: 120%; /* மொபைலில் படம் கொஞ்சம் பெரியதாகத் தெரிய */
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  }
+
+  /* கார்டுகள் படத்தின் மேல் அழகாக வரிசையாக அமையும் */
+  .unq-wwd-card {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 400px;
+    align-items: center;
+    text-align: center;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .unq-wwd-container {
+    padding: 60px 20px;
+  }
+
+  .unq-wwd-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  /* மொபைல் வியூவில் படத்தை பின்புலமாக (Background) மாற்றி, கன்டென்ட்டை மேலே அடுக்காக காட்டுகிறோம் */
+  .unq-wwd-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 60px;
+    min-height: unset;
+    padding: 40px 0;
+  }
+
+  /* படம் மையத்தில் பின்புலமாகவே இருக்கும் */
+  .unq-wwd-image-wrapper {
+    position: absolute;
+    width: 120%; 
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+    mask-image: radial-gradient(ellipse at center, black 40%, transparent 80%);
+  }
+
+  /* கார்டுகள் படத்தின் மேல் அழகாக வரிசையாக அமையும் */
+  .unq-wwd-card {
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    max-width: 400px;
+    align-items: center;
+    text-align: center;
+    top: auto !important;
+    left: auto !important;
+    right: auto !important;
+    bottom: auto !important;
+  }
+
+  /* 🎯 மொபைல் வியூவில் Description-க்கு மட்டும் கருப்பு நிறம் */
+  .unq-wwd-card-desc {
+    color: #000000; 
+    font-weight: 500; /* எழுத்துகள் இன்னும் தெளிவாகத் தெரிய லேசான தடிமன் சேர்க்கப்பட்டுள்ளது */
+  }
+}

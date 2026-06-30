@@ -1,0 +1,118 @@
+.unimaxx-hero-viewport {
+  width: 100vw;
+  height: 100vh; /* முழுத் திரையின் உயரத்தையும் எடுத்துக்கொள்ளும் */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* உள்ளடக்கங்களை செங்குத்தாக மையப்படுத்த */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.unimaxx-hero-darkener {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.45) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 1; /* இமேஜுக்கு மேலே, எழுத்துக்களுக்கு கீழே இருக்கும் */
+}
+
+.unimaxx-hero-bound-box {
+  width: 100%;
+  max-width: 2000px;
+  padding: 0 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2; /* டார்க் லேயருக்கு மேல் எழுத்துக்களைக் கொண்டு வர */
+  box-sizing: border-box;
+  margin-top: 80px; /* நேவ்பார் லோகோவிற்கான மேல் பக்க இடைவெளி */
+}
+
+.unimaxx-hero-text-cluster {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1100px; /* டெக்ஸ்ட் ரொம்ப நீளமாகப் போகாமல் தடுக்க */
+}
+
+.unimaxx-hero-headline {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 4.8rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 25px 0;
+  letter-spacing: -1px;
+}
+
+.unimaxx-hero-category {
+  font-family: 'Georgia', serif;
+  font-size: 28px;
+  font-weight: 400;
+  color: #e0e0e0;
+  margin: 0 0 25px 0;
+  opacity: 0.9;
+}
+
+.unimaxx-hero-paragraph {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: #cccccc;
+  line-height: 1.6;
+  max-width: 620px; /* பேரகிராஃப் வடிவம் கச்சிதமாக சுருங்க */
+  margin: 0;
+  font-weight: 300;
+  opacity: 0.85;
+}
+
+/* ========================================================
+   🎯 RESPONSIVE MEDIA QUERIES (மொபைல் மற்றும் டேப்லெட் பிக்ஸ்)
+======================================================== */
+@media (max-width: 1024px) {
+  .unimaxx-hero-headline {
+    font-size: 3.5rem;
+  }
+  .unimaxx-hero-category {
+    font-size: 24px;
+  }
+  .unimaxx-hero-bound-box {
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .unimaxx-hero-viewport {
+    height: 60vh; /* மொபைல் திரைகளில் சற்றே உயரம் குறைக்கப்படும் */
+  }
+  
+  .unimaxx-hero-bound-box {
+    padding: 0 24px;
+    margin-top: 100px;
+  }
+
+  .unimaxx-hero-headline {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .unimaxx-hero-category {
+    font-size: 20px;
+  }
+
+  .unimaxx-hero-paragraph {
+    font-size: 13px;
+    max-width: 100%;
+  }
+}

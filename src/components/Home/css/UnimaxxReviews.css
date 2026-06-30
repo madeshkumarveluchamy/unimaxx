@@ -1,0 +1,285 @@
+.um-reviews-master {
+  width: 100vw;
+  background-color: #E2DCD0;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+.um-reviews-section {
+  width: 100%;
+  max-width: 2000px;
+  padding: 100px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+.um-reviews-header h2 {
+  font-family: 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  max-width: 650px;
+  line-height: 1.25;
+  margin: 0;
+  text-align: left;
+}
+
+/* 4 Column Layout */
+.um-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+
+/* Individual Card Style */
+.um-review-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 480px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.01);
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  align-items: flex-start;
+}
+
+.um-review-card:hover {
+  transform: translateY(-5px);
+  background-color: #fcfcfc;
+}
+
+/* Static Content Group */
+.um-card-static-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  width: 100%;
+  align-items: flex-start;
+}
+
+.um-rev-stars {
+  color: #e0533c;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-align: left;
+}
+
+.um-rev-text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: #2d2d2d;
+  line-height: 1.6;
+  margin-top: 20px;
+  text-align: left;
+}
+
+/* User Profile Row */
+.um-rev-user-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 30px;
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  justify-content: flex-start;
+}
+
+.um-rev-user-info img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.um-rev-user-info div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.um-rev-user-info h4 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 4px 0;
+  text-align: left;
+}
+
+.um-rev-user-info span {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  color: #666666;
+  display: block;
+  text-align: left;
+}
+
+/* ===================================================
+   VIDEO AND INTERACTIVE CONTROLS
+   =================================================== */
+
+/* வீடியோ பேக்ரவுண்ட் லேயர் */
+.um-card-video-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  pointer-events: none; 
+}
+
+/* ஹோவர் பிளே ஐகான் */
+.um-hover-play-indicator {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 32px;
+  height: 32px;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #1a1a1a;
+  font-size: 11px;
+  padding-left: 2px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+.um-review-card:hover .um-hover-play-indicator {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* ===================================================
+   ACTIVE STATE (வீடியோ பிளே ஆகும் போதான ஸ்டைல்கள்)
+   =================================================== */
+.video-active {
+  background-color: #000000;
+}
+
+.video-active .um-card-video-bg {
+  opacity: 1; 
+}
+
+/* வீடியோவின் மேல் பெயர் மிதப்பதற்கான லேயர் */
+.um-video-user-overlay {
+  position: absolute;
+  bottom: 35px;
+  left: 30px;
+  margin: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  padding: 8px 16px;
+  border-radius: 30px;
+  width: auto;
+}
+
+.text-white {
+  color: #ffffff !important;
+}
+
+.text-white-dim {
+  color: #dddddd !important;
+}
+
+/* Responsive UI */
+@media (max-width: 1200px) {
+  .um-reviews-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ========================================================
+    🎯 PHONE VIEW PRECISE FIXES (768px-க்கு கீழே சென்டர் பிக்ஸ்)
+   ======================================================== */
+@media (max-width: 768px) {
+  .um-reviews-section {
+    padding: 60px 24px;
+    align-items: center;
+  }
+  
+  /* ஹெடர் சென்டர் அலைன்மென்ட் */
+  .um-reviews-header h2 {
+    font-size: 2.2rem;
+    text-align: center;
+    max-width: 100%;
+  }
+  
+  .um-reviews-grid {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  /* கார்டு மற்றும் அதன் உள்ளே இருக்கும் கன்டென்ட்கள் சென்டர் அலைன்மென்ட் */
+  .um-review-card {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    max-width: 450px; /* கார்டு மொபைலில் பார்க்க அழகாக இருக்க மேக்ஸ் வித் */
+  }
+
+  .um-card-static-content {
+    align-items: center;
+  }
+
+  .um-rev-stars {
+    text-align: center;
+  }
+
+  .um-rev-text {
+    text-align: center;
+  }
+
+  /* யூசர் புரொபைல் சென்டர் பிக்ஸ் */
+  .um-rev-user-info {
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .um-rev-user-info div {
+    align-items: center;
+  }
+
+  .um-rev-user-info h4 {
+    text-align: center;
+    margin: 0 0 2px 0;
+  }
+
+  .um-rev-user-info span {
+    text-align: center;
+  }
+
+  /* வீடியோ ஓடி கொண்டு இருக்கும் போது வரும் ஓவர்லே மொபைல் சென்டர் பிக்ஸ் */
+  .um-video-user-overlay {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 25px;
+    flex-direction: row; /* ஓவர்லேக்குள்ள இமேஜும் டெக்ஸ்ட்டும் பக்கத்துல இருக்க */
+    align-items: center;
+    justify-content: center;
+    width: max-content;
+    padding: 10px 20px;
+  }
+
+  .um-video-user-overlay div {
+    align-items: flex-start; /* ஓவர்லே டெக்ஸ்ட் மட்டும் லேசான அலைன்மென்ட் லாக் */
+  }
+}

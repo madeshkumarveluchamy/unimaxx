@@ -1,0 +1,252 @@
+.sync-portfolio-viewport {
+  width: 100vw;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  padding: 60px 0;
+}
+
+.sync-portfolio-container {
+  width: 100%;
+  max-width: 2000px;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Section Header Typography */
+.sync-portfolio-main-heading {
+  font-family: 'Georgia', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.sync-portfolio-main-heading span {
+  font-size: 2rem;
+}
+
+/* Main Background Banner Layout */
+.sync-portfolio-hero-banner {
+  width: 100%;
+  height: 65vh;
+  max-height: 550px;
+  min-height: 420px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 16px;
+  position: relative;
+  display: flex;
+  justify-content: flex-end; 
+  align-items: center; 
+  padding-right: 5%; 
+  box-sizing: border-box;
+  transition: background-image 0.5s ease-in-out; 
+}
+
+/* --- FLOATING ACCORDION CARD --- */
+.sync-portfolio-floating-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  padding: 24px;
+  width: 35%;
+  min-width: 380px;
+  max-width: 460px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  z-index: 5;
+  box-sizing: border-box;
+}
+
+/* Inner Card Image */
+.sync-portfolio-card-media {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sync-portfolio-card-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.sync-portfolio-card-info h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 22px;
+  font-weight: 500;
+  color: #1a1a1a;
+  margin: 0 0 15px 0;
+}
+
+/* Card Bottom Footer Grid */
+.sync-portfolio-card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 15px;
+}
+
+/* Black detailed button inside card */
+.sync-portfolio-detail-btn {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.sync-portfolio-plus-icon {
+  color: #d8b056; 
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* Meta Labels at Bottom Right of Card */
+.sync-portfolio-meta-tags {
+  display: flex;
+  gap: 10px;
+}
+
+.sync-portfolio-meta-tags span {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 10px;
+  color: #777777;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+/* --- BOTTOM NAVIGATION BUTTONS ROW --- */
+.sync-portfolio-controls-row {
+  display: flex;
+  justify-content: flex-end; 
+  width: 100%;
+}
+
+/* Black Oval Navigation Strip */
+.sync-portfolio-nav-strip {
+  background-color: #1a1a1a;
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.sync-portfolio-nav-text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  color: #ffffff;
+  padding: 0 15px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
+
+.sync-portfolio-arrow {
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+  padding: 12px 16px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.sync-portfolio-arrow:hover {
+  background-color: #d8b056; 
+  color: #ffffff;
+}
+
+/* ========================================================
+    🎯 RESPONSIVE RESPONSIVENESS (டேப்லெட் & மொபைல் பிக்ஸ்)
+======================================================== */
+@media (max-width: 900px) {
+  .sync-portfolio-hero-banner {
+    justify-content: center;
+    padding-right: 0;
+    height: auto;
+    min-height: auto;
+    padding: 30px 20px;
+  }
+  .sync-portfolio-floating-card {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .sync-portfolio-container {
+    padding: 0 24px;
+  }
+  .sync-portfolio-main-heading {
+    font-size: 2.2rem;
+  }
+  .sync-portfolio-card-footer {
+    flex-direction: column;
+    align-items: flex-center;
+    gap: 15px;
+  }
+  .sync-portfolio-controls-row {
+    justify-content: center;
+  }
+
+  /* 🎯 பிக்ஸ்: மொபைல் வியூவில் ஓவர்லே கார்டின் அளவை (Padding & Width) லேசாகக் குறைத்துள்ளேன் */
+  .sync-portfolio-floating-card {
+    width: 88%; /* இருபுறமும் பின்னணி இமேஜ் தெரியுமாறு வித் குறைக்கப்பட்டுள்ளது */
+    max-width: 340px;
+    height:200px;
+    padding: 16px; /* 24px-லிருந்து 16px ஆகக் குறைக்கப்பட்டுள்ளது */
+    gap: 12px;
+    text-align:Center;
+  }
+
+  .sync-portfolio-hero-banner {
+    justify-content: center;
+    padding-right: 0;
+    height: 400px;
+    min-height: auto;
+    align-items: flex-end !important;
+    padding: 30px 20px;
+  }
+  
+  .sync-portfolio-card-info h3 {
+    font-size: 18px;
+    margin: 0 0 8px 0;
+  }
+
+  .sync-portfolio-card-media {
+    width: 100%;
+    aspect-ratio: 16 / 11; 
+    border-radius: 12px;
+    overflow: hidden;
+  }
+
+  .sync-portfolio-card-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+}

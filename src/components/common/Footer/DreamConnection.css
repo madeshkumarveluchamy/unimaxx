@@ -1,0 +1,82 @@
+/* Wrapper */
+.dream-connect-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 12px; 
+  margin: -16px 0 -16px -16px; 
+}
+
+/* SVG Filter Background */
+.dream-connect-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Main Button Class */
+.dream-connect-btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  /* இரண்டாவது படத்திற்கு ஏற்ப துல்லியமான அளவுகள் */
+  /* மேல/கீழே 10px, வலது 14px, இடது 22px (சரியான Pill வடிவம்) */
+  padding: 10px 14px 10px 22px; 
+  border-radius: 50px; 
+  display: flex;
+  align-items: center;
+  /* எழுத்துக்கும் ஐகானுக்கும் உள்ள இடைவெளி */
+  gap: 14px; 
+  text-decoration: none;
+
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+
+.dream-connect-btn:hover {
+  /* #d8b056 என்பது உங்கள் ஐகானின் கோல்டன் நிறம். அதை வைத்தே Glow கொடுத்துள்ளேன் */
+  box-shadow: 0px 0px 15px 2px rgba(216, 176, 86, 0.7);
+}
+/* Text inside Button */
+.dream-connect-text {
+  font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  /* எழுத்தின் அளவு 13px ஆக மாற்றப்பட்டுள்ளது (தெளிவான பார்வைக்கு) */
+  font-size: 13px; 
+  font-weight: 500;
+  color: #ffffff; 
+  pointer-events: none; 
+  mix-blend-mode: difference; 
+}
+
+/* The Gold Icon Box */
+.dream-connect-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #d8b056; 
+  /* வட்டத்தின் அளவு படத்திற்கு ஏற்ப 28px ஆக வைக்கப்பட்டுள்ளது */
+  width: 38px; 
+  height: 38px; 
+  border-radius: 50%; 
+  pointer-events: none;
+  flex-shrink: 0;
+}
+
+/* Arrow inside the Gold Box */
+.dream-connect-icon svg {
+  /* அம்புக்குறியின் அளவு 14px */
+  width: 14px; 
+  height: 14px;
+  color: #ffffff;
+}
+
+/* Accessibility Focus */
+.dream-connect-btn:focus-visible {
+  outline: 2px solid #d8b056;
+  outline-offset: 3px;
+}

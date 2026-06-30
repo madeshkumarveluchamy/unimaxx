@@ -1,0 +1,36 @@
+/* Animation Overflow Wrapper */
+.sync-nav-text-fluid-wrapper {
+  position: relative;
+  display: inline-flex;
+  padding: 8px; 
+  margin: -8px; 
+}
+
+/* SVG Layer */
+.sync-nav-text-fluid-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+/* Main Text Button Component 👇 */
+.sync-nav-text-fluid-btn {
+  position: relative;
+  z-index: 2;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+  Border:1px solid #ffffff;
+  color: #ffffff; 
+  padding: 12px 15px; 
+  cursor: pointer;
+  user-select: none;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  mix-blend-mode: difference;
+}

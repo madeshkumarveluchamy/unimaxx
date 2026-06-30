@@ -1,0 +1,30 @@
+/* Container center pandrathuku (Theva illana itha eduthudalam) */
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffffff;
+}
+
+/* Button kக்கான Main Styles */
+.gooey-btn {
+  position: relative;
+  padding: 16px 40px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 0.05em;
+  font-size: 20px;
+  border-radius: 9999px; /* Pill shape */
+  background-color: #ff5500;
+  border: none;
+  cursor: none; /* Mouse pointer-ah hide panna */
+  
+  /* CSS Variables: Default position veliya set pandrom (-100px) */
+  --mouseX: -100px;
+  --mouseY: -100px;
+  
+  /* Masking trick: cursor iruka idathula transparent hole create pandrom */
+  -webkit-mask-image: radial-gradient(circle 35px at var(--mouseX) var(--mouseY), transparent 80%, black 100%);
+  mask-image: radial-gradient(circle 35px at var(--mouseX) var(--mouseY), transparent 80%, black 100%);
+}

@@ -1,0 +1,98 @@
+/* Layout Wrapper */
+.um-rm-fluid-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px; 
+  margin: -16px; 
+}
+
+/* SVG Filter Background */
+.um-rm-fluid-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Main Link Button Class */
+.um-rm-fluid-btn {
+  position: relative;
+  background: transparent;
+  border: 1px solid #cccccc;
+  
+  height: 42px; 
+  padding: 0 20px;
+  border-radius: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  cursor: pointer;
+  width: fit-content;
+  gap: 15px;
+  
+  /* Link-ல் வரும் Underline-ஐ தடுக்க 👇 */
+  text-decoration: none !important; 
+  
+  overflow: hidden; 
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Hover Effect */
+.um-rm-fluid-btn:hover {
+  border-color: #1a1a1a;
+}
+
+/* Text inside Link */
+.um-rm-fluid-text {
+  font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff; 
+  pointer-events: none;
+  mix-blend-mode: difference;
+  text-decoration: none !important; 
+  border-bottom: none !important; 
+  
+  /* Alignment Fixes */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1; 
+  margin: 0;
+  padding: 0;
+  padding-top: 2px; /* Optical Center Nudge */
+}
+
+/* The Gold Icon Box */
+.um-rm-fluid-icon {
+  background-color: #d8b056; 
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Arrow inside the Gold Box */
+.um-rm-fluid-icon svg {
+  width: 12px;
+  height: 12px;
+  color: #ffffff;
+}
+
+/* Accessibility Focus */
+.um-rm-fluid-btn:focus-visible {
+  outline: 2px solid #d8b056;
+  outline-offset: 3px;
+}

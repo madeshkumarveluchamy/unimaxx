@@ -1,0 +1,290 @@
+.um-footer-master {
+  width: 100vw;
+  background-color: #0f0e0d; /* படத்தில் உள்ளவாறு அடர்ந்த பிரீமியம் கருப்பு நிறம் */
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+.um-footer-container {
+  width: 100%;
+  max-width: 2000px;
+  padding: 80px 80px 40px 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+
+/* 3-Column Grid Configuration */
+.um-footer-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr 0.9fr; /* காலம்களின் விநியோகம் */
+  width: 100%;
+}
+
+.um-footer-col {
+  padding: 0 50px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* முதல் மற்றும் இரண்டாவது காலம்களுக்கு மட்டும் வலதுபுறம் செங்குத்து பார்டர் */
+.um-footer-brand-col,
+.um-footer-links-col {
+  border-right: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* முதல் காலம் மட்டும் இடதுபுற பேடிங் தேவையில்லை */
+.um-footer-brand-col {
+  padding-left: 0;
+}
+
+/* COLUMN 1: Brand Content Styling */
+.um-footer-logo-box {
+  width: 160px;
+  margin-bottom: 30px;
+}
+
+.um-footer-logo-box img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.um-footer-cta-title {
+  font-family: 'Georgia', serif;
+  font-size: 2.8rem;
+  font-weight: 400;
+  color: #ffffff;
+  line-height: 1.15;
+  margin: 0 0 20px 0;
+  letter-spacing: 0.5px;
+  text-align: left;
+}
+
+.um-footer-brand-desc {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  color: #8c8a87;
+  line-height: 1.6;
+  max-width: 320px;
+  margin: 0 0 35px 0;
+  text-align: left;
+}
+
+/* Let's Connect Oval White Button */
+.um-footer-connect-btn {
+  background-color: #ffffff;
+  color: #000000;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  width: fit-content;
+  transition: background-color 0.3s ease;
+}
+
+.um-footer-connect-btn:hover {
+  background-color: #e0e0e0;
+}
+
+.um-footer-arrow-circle {
+  background-color: #d8b056; 
+  color: #ffffff;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 11px;
+}
+
+/* HEADINGS FOR COL 2 & 3 (Quick Links & Get In Touch) */
+.um-footer-col h3 {
+  font-family: 'Georgia', serif;
+  font-weight: 400;
+  color: #d8b056; /* பிரீமியம் கோல்டன் நிறம் */
+  font-size: 24px;
+  margin: 0 0 25px 0;
+  text-align: left;
+}
+
+/* COLUMN 2: Quick Links List */
+.um-footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.um-footer-links-list a {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  color: #acaba9;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.um-footer-links-list a:hover {
+  color: #ffffff;
+}
+
+/* COLUMN 3: Contact & Address Info */
+.um-footer-address {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  color: #acaba9;
+  line-height: 1.6;
+  max-width: 300px;
+  margin-bottom: 25px;
+  text-align: left;
+}
+
+.um-footer-contact-details {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: #acaba9;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 30px;
+  align-items: flex-start;
+}
+
+.um-footer-contact-details a {
+  color: #acaba9;
+  text-decoration: underline; 
+  transition: color 0.3s ease;
+}
+
+.um-footer-contact-details a:hover {
+  color: #ffffff;
+}
+
+/* Social Icons Layout */
+.um-footer-socials {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.um-footer-socials a {
+  color: #ffffff;
+  font-size: 18px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.um-footer-socials a:hover {
+  color: #d8b056;
+  transform: translateY(-2px);
+}
+
+/* BOTTOM COPYRIGHT BAR */
+.um-footer-bottom-bar {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding-top: 30px;
+  text-align: center;
+  width: 100%;
+}
+
+.um-footer-bottom-bar p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  color: #6d6c6a;
+  margin: 0;
+}
+
+
+
+/* ========================================================
+    🎯 PHONE VIEW PRECISE FIXES (768px-க்கு கீழே சென்டர் பிக்ஸ்)
+   ======================================================== */
+@media (max-width: 768px) {
+  .um-footer-container {
+    padding: 60px 24px 30px 24px;
+    gap: 40px;
+    align-items: center;
+  }
+
+  .um-footer-grid {
+    grid-template-columns: 1fr; /* டேப்லெட் மற்றும் மொபைலில் சிங்கிள் காலமாக மாறும் */
+    gap: 50px;
+  }
+
+   .um-footer-col {
+    padding: 0;
+    border-right: none !important; /* செங்குத்து பார்டர்கள் நீக்கப்படும் */
+  }
+
+  .um-footer-col {
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  /* லோகோ மற்றும் பிராண்ட் சென்டர் பிக்ஸ் */
+  .um-footer-logo-box {
+    margin: 0 auto 30px auto;
+  }
+
+  .um-footer-cta-title {
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  .um-footer-brand-desc {
+    text-align: center;
+    margin: 0 auto 35px auto;
+  }
+
+  .um-footer-connect-btn {
+    margin: 0 auto; /* பட்டனை நடுவில் கொண்டுவர */
+  }
+
+  /* காலம்களின் ஹெடிங் சென்டர் பிக்ஸ் */
+  .um-footer-col h3 {
+    text-align: center;
+  }
+
+  /* குவிக் லிங்க்ஸ் சென்டர் பிக்ஸ் */
+  .um-footer-links-list {
+    align-items: center;
+  }
+
+  /* முகவரி மற்றும் காண்டாக்ட் விபரங்கள் சென்டர் பிக்ஸ் */
+  .um-footer-address {
+    text-align: center;
+    margin: 0 auto 25px auto;
+  }
+
+  .um-footer-contact-details {
+    align-items: center;
+  }
+
+  /* சோஷியல் ஐகான்கள் மொபைலில் சென்டர் ஆக இருக்க */
+  .um-footer-socials {
+    justify-content: center;
+    width: 100%;
+  }
+
+  .um-footer-bottom-bar p {
+    font-size: 11px;
+    line-height: 1.4;
+    text-align: center;
+  }
+}

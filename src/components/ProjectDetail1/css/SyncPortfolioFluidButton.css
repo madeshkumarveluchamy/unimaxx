@@ -1,0 +1,82 @@
+/* Layout Wrapper */
+.sync-port-fluid-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px; 
+  margin: -16px; 
+}
+
+/* SVG Filter Background */
+.sync-port-fluid-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Main Button Class */
+.sync-port-fluid-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  
+  height: 36px; 
+  padding: 0 16px;
+  border-radius: 4px; 
+  
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  cursor: pointer;
+  width: fit-content;
+  gap: 8px; 
+  
+  box-sizing: border-box;
+  text-decoration: none;
+  overflow: hidden; 
+}
+
+/* Text inside Button 👇 */
+.sync-port-fluid-text {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 500;
+  color: #ffffff; /* ஆரம்ப வெள்ளை நிறம் */
+  white-space: nowrap;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+  
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+  
+  /* THE MAGIC: வெள்ளை திரவம் தொடும் இடங்கள் மட்டும் நிறம் மாறும் */
+  mix-blend-mode: difference;
+}
+
+/* Plus Icon inside Button 👇 */
+.sync-port-fluid-icon {
+  color: #d8b056; /* ஆரம்ப தங்க நிறம் */
+  font-size: 13px;
+  font-weight: bold;
+  pointer-events: none;
+  position: relative;
+  z-index: 2;
+  
+  display: flex;
+  align-items: center;
+  line-height: 1;
+  margin: 0;
+  padding-bottom: 1px; 
+  
+  /* THE MAGIC: வெள்ளை திரவம் தொடும் இடங்கள் மட்டும் நிறம் மாறும் */
+  mix-blend-mode: difference;
+}
+
+/* குறிப்பு: கீழே இருந்த .sync-port-fluid-btn:hover கோடுகள் நீக்கப்பட்டுவிட்டன */

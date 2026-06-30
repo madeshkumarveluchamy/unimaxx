@@ -1,0 +1,147 @@
+/* ==================== 
+   MAIN LAYOUT (CUSTOM FLEX)
+==================== */
+.ux-philo-section {
+  background-color: #ffffff;
+  padding: 100px 0;
+  width: 100%;
+}
+
+.ux-philo-container {
+  max-width: 1250px; /* கச்சிதமான கண்டெய்னர் அளவு */
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.ux-philo-flex-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start; /* எல்லாவற்றையும் மேலிருந்து தொடங்க வைக்கும் */
+  gap: 50px; /* 3 காலம்களுக்கும் நடுவில் உள்ள இடைவெளி */
+}
+
+/* ==================== 
+   COLUMNS SIZING 
+==================== */
+.ux-philo-left-col {
+  width: 35%;
+  padding-top: 10px;
+}
+
+.ux-philo-center-col {
+  width: 35%;
+}
+
+.ux-philo-right-col {
+  width: 30%;
+  padding-top: 40px; /* வலது பக்க இமேஜ் சற்று கீழே இறங்கி இருக்க */
+}
+
+/* ==================== 
+   TYPOGRAPHY 
+==================== */
+.ux-philo-tag {
+  font-family: 'Rubik', sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #333333;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.ux-philo-main-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  line-height: 1.1;
+  color: #111111;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.ux-philo-sub-title {
+  font-family: 'Rubik', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #111111;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.ux-philo-desc {
+  font-family: 'Rubik', sans-serif;
+  font-size: 14px;
+  color: #666666;
+  line-height: 1.8;
+  margin: 0;
+}
+
+/* ==================== 
+   IMAGES 
+==================== */
+.ux-philo-main-img {
+  width: 100%;
+  aspect-ratio: 3 / 4; /* படத்தில் உள்ளவாறு நீளமான (Portrait) அளவு */
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.ux-philo-sub-img {
+  width: 85%; /* வலது பக்க இமேஜ் சற்று சிறியதாக இருக்க */
+  aspect-ratio: 1 / 1.1; /* சற்றே சதுர வடிவம் */
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* ==================== 
+   MOBILE RESPONSIVENESS 
+==================== */
+@media (max-width: 1024px) {
+  .ux-philo-main-title {
+    font-size: 2.6rem;
+  }
+  .ux-philo-flex-row {
+    gap: 30px;
+  }
+  .ux-philo-sub-img {
+    width: 100%;
+  }
+}
+
+/* Mobile & Tablets (768px-க்கு கீழ்) */
+@media (max-width: 768px) {
+  .ux-philo-section {
+    padding: 60px 0;
+  }
+  
+  .ux-philo-flex-row {
+    flex-direction: column; /* 3 காலம்களையும் ஒன்றன் கீழ் ஒன்றாக மாற்றுதல் */
+    gap: 50px;
+  }
+
+  .ux-philo-left-col,
+  .ux-philo-center-col,
+  .ux-philo-right-col {
+    width: 100%; /* மொபைலில் எல்லாமே முழு அகலம் (100%) எடுக்கும் */
+    padding-top: 0;
+  }
+
+  .ux-philo-main-title {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .ux-philo-sub-img {
+    aspect-ratio: 4 / 3; /* மொபைலில் இமேஜ் கிடைமட்டமாக தெரிய */
+    width: 100%;
+    margin-bottom: 30px;
+  }
+  
+  .ux-philo-main-img {
+    aspect-ratio: 4 / 3;
+  }
+}

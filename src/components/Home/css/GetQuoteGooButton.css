@@ -1,0 +1,104 @@
+/* Layout Wrapper */
+.unimaxxexpertise-btn-layout {
+  display: flex;
+  justify-content: flex-start;
+}
+
+/* Link-ல் இருந்து வரும் தானியங்கி கோட்டை நீக்க */
+.unimaxxexpertise-btn-layout a {
+  text-decoration: none !important;
+  border: none !important;
+}
+
+@media(max-width: 768px) {
+  .unimaxxexpertise-btn-layout {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Goo Animation Wrapper */
+.unimaxxexpertise-goo-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px; 
+  margin: -16px; 
+}
+
+/* SVG Filter Background */
+.unimaxxexpertise-goo-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Main Button Class (Padding Adjusted to accommodate deterministic nudge) */
+.unimaxxexpertise-goo-btn {
+  position: relative;
+  background: transparent;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: end;
+  justify-content: center;
+  cursor: pointer;
+  width: fit-content;
+  gap: 15px;
+  text-decoration: none;
+  overflow: hidden;
+  animation: fadeIn 0.4s ease;
+  box-sizing: border-box; 
+}
+
+/* Text inside Button (Deterministic Brute Force Centering 👇) */
+.unimaxxexpertise-goo-text {
+  font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #ffffff;
+  pointer-events: none;
+  mix-blend-mode: difference;
+  text-decoration: none !important; 
+  border-bottom: none !important; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  display: inline-block;
+}
+
+/* The Gold Icon Box */
+.unimaxxexpertise-goo-icon {
+  background-color: #d8b056; 
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  flex-shrink: 0;
+  position: relative;
+  top:3px;
+  z-index: 2;
+}
+
+.unimaxxexpertise-goo-icon svg {
+  width: 10px;
+  height: 10px;
+  color: #ffffff;
+}
+
+.unimaxxexpertise-goo-btn:focus-visible {
+  outline: 2px solid #d8b056;
+  outline-offset: 3px;
+}

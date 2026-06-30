@@ -1,0 +1,74 @@
+/* Wrapper */
+.um-vd-goo-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 16px; 
+  margin: -16px; 
+}
+
+/* SVG Filter Background */
+.um-vd-goo-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Main Button Class */
+.um-vd-goo-btn {
+  position: relative;
+  background: transparent;
+  border: 1px solid #1a1a1a;
+  padding: 10px 18px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  width: fit-content;
+  gap: 15px;
+  text-decoration: none;
+  overflow: hidden; 
+}
+
+/* Text inside Button */
+.um-vd-goo-text {
+  font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  color: #ffffff;
+  pointer-events: none;
+  mix-blend-mode: difference;
+}
+
+/* The Gold Icon Box */
+.um-vd-goo-icon {
+  background-color: #d8b056; 
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* Arrow inside the Gold Box */
+.um-vd-goo-icon svg {
+  width: 11px;
+  height: 11px;
+  color: #ffffff;
+}
+
+/* Accessibility Focus */
+.um-vd-goo-btn:focus-visible {
+  outline: 2px solid #d8b056;
+  outline-offset: 3px;
+}

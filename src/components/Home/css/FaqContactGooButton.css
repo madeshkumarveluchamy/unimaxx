@@ -1,0 +1,39 @@
+/* Main Button */
+.um-faq-fluid-btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  /* ஆரம்ப பேக்ரவுண்ட் வெள்ளை */
+  background-color: #ffffff; 
+  border: none; 
+  padding: 12px 24px; 
+  cursor: pointer;
+  border-radius: 50px; /* Pill shape */
+  font-family: 'Geist', 'Helvetica Neue', Arial, sans-serif;
+  overflow: hidden; 
+}
+
+/* SVG Fluid Layer */
+.um-faq-fluid-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1; 
+  pointer-events: none;
+}
+
+/* Text Layer */
+.um-faq-fluid-text {
+  position: relative;
+  z-index: 2; /* திரவத்திற்கு மேல் இருக்க வேண்டும் */
+  font-size: 13px; 
+  font-weight: 500;
+  /* THE MAGIC: Text is actually white! */
+  color: #ffffff; 
+  pointer-events: none;
+  /* White text on White background = Black text. 
+     White text on Black fluid = White text. */
+  mix-blend-mode: difference;
+}

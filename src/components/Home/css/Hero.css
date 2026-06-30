@@ -1,0 +1,191 @@
+.unimaxx-master-wrapper {
+  width: 100vw;
+  background-color: #0d0d0d;
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+}
+
+/* 1. GLOBAL RESET */
+html, body {
+  width: 100%;
+  height: 100%;
+  background-color: #0d0d0d;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* 2. HERO SECTION */
+.unimaxx-hero-section {
+  width: 100%;
+  max-width: 2000px;
+  min-height: 100vh;
+  min-height: 100dvh;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.unimaxx-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.45) 100%);
+  z-index: 1;
+}
+
+.unimaxx-hero-content {
+  position: absolute;
+  top: 45%; 
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+  max-width: 800px;
+  z-index: 10; 
+}
+
+.unimaxx-main-title {
+  color: #ffffff;
+  font-size: clamp(2.5rem, 5.2vw, 5rem);
+  font-weight: 300; 
+  line-height: 1.1;  
+  letter-spacing: -0.8px;
+  margin-top: 0;
+  margin-bottom: 2.2rem; 
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  text-shadow: none !important;
+}
+
+.unimaxx-cta-btn {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 6px 6px 6px 20px; 
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.3px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.unimaxx-cta-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: #d8b056;
+  color: #ffffff;
+}
+
+.unimaxx-btn-icon-wrapper {
+  background-color: #d8b056;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.unimaxx-btn-icon {
+  color: #ffffff;
+  font-size: 10px;
+}
+
+/* ========================================================
+   🎯 3. PURE CSS MARQUEE ENGINE (Right to Left - Updated)
+   ======================================================== */
+.unimaxx-marquee-container {
+  position: absolute;
+  bottom: 0%; 
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  z-index: 2;
+  pointer-events: none;
+  user-select: none;
+  padding: 20px 0;
+  
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0.6) 100%);
+  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+.unimaxx-marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 80px; 
+  
+  /* 🎯 அனிமேஷன் இப்போ வலது பக்கத்தில் இருந்து இடது பக்கமாக நகரும் */
+  animation: runLettersRightToLeft 22s linear infinite;
+}
+
+.unimaxx-marquee-track span {
+  color: #ffffff; 
+  font-family: 'Georgia', serif;
+  font-size: clamp(90px, 14vw, 220px); 
+  font-weight: 400;
+  white-space: nowrap;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+/* 🎯 0% லிருந்து -50% நோக்கி நகர்வதால் எழுத்துக்கள் வலமிருந்து இடமாக ஸ்மூத்தா ஓடும் */
+@keyframes runLettersRightToLeft {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* ========================================================
+   🎯 RESPONSIVE OVERRIDES
+   ======================================================== */
+@media (max-width: 768px) {
+  .unimaxx-hero-content {
+    top: 42%; 
+    width: 90%;
+  }
+
+  .unimaxx-main-title {
+    font-size: 2.3rem;
+    margin-bottom: 1.8rem;
+  }
+
+  .unimaxx-marquee-container {
+    bottom: 4%;
+  }
+  
+  .unimaxx-marquee-track {
+    gap: 40px;
+    animation-duration: 16s; 
+  }
+}
+
+@media (max-width: 426px) {
+  .unimaxx-hero-content {
+    top: 35%;
+  }
+
+  .unimaxx-main-title {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  .unimaxx-marquee-container {
+    bottom: 8%;
+  }
+}

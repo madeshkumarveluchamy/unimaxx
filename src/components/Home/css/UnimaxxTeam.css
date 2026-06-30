@@ -1,0 +1,266 @@
+/* முழுப் பக்கத்தின் பின்னணி நிறம் (ஆஃப்-ஒயிட்) */
+.um-team-master {
+  width: 100vw;
+  background-color: #f6f6f6; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0; 
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+
+/* உள் அட்டை - பெரிய வெள்ளை பாக்ஸ் */
+.um-team-section {
+  width: 90%;
+  max-width: 1440px; 
+  background-color: #ffffff; 
+  border-radius: 32px; 
+  padding: 80px 60px; 
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.02); 
+  box-sizing: border-box;
+}
+
+/* Header Text Layout */
+.um-team-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 60px;
+}
+
+.um-team-main-title {
+  font-family: 'Georgia', serif;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+  flex: 1.2;
+  text-align: left;
+}
+
+.um-team-subtitle-top {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: #4a4a4a;
+  line-height: 1.6;
+  max-width: 420px;
+  margin: 8px 0 0 0;
+  flex: 0.8;
+  text-align: left;
+}
+
+/* 5 Column Grid */
+.um-team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* Individual Team Card */
+.um-team-card {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 3 / 3.5; 
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.um-team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Top Right Star Icon */
+.um-team-card-icon {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 14px;
+}
+
+/* Bottom Name Overlay with Shadow Gradient */
+.um-team-name-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 40px 20px 20px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
+  box-sizing: border-box;
+  text-align: left;
+}
+
+.um-team-name-overlay span {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Bottom Footer CTA Area */
+.um-team-footer-cta {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end; 
+  width: 100%;
+  margin-top: 10px;
+}
+
+.um-team-cta-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.um-team-cta-text h3 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 12px 0;
+  text-align: left;
+}
+
+.um-team-cta-text p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: #555555;
+  margin: 0;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Black Join Button */
+.um-team-join-btn {
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+  padding: 14px 36px;
+  border-radius: 50px;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.um-team-join-btn:hover {
+  background-color: #333333;
+}
+
+/* Responsive Code */
+@media (max-width: 1200px) {
+  .um-team-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .um-team-header {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/* ========================================================
+    🎯 TABLET VIEW FIXES (768px-க்கு கீழே: மேலே 3, கீழே 2 + Center)
+   ======================================================== */
+@media (max-width: 768px) {
+  .um-team-master {
+    padding: 40px 16px;
+  }
+  
+  .um-team-section {
+    padding: 40px 24px;
+    border-radius: 24px;
+    align-items: center; 
+    gap: 40px;
+  }
+  
+  .um-team-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 15px;
+  }
+  
+  .um-team-main-title {
+    font-size: 2.4rem;
+    text-align: center;
+  }
+  
+  .um-team-subtitle-top {
+    text-align: center;
+    margin: 0;
+  }
+  
+  /* 🎯 கிரிட் லேஅவுட்டை Flexbox ஆக மாற்றி மேலே 3 கார்டுகளும் கீழே 2 கார்டுகளும் நடுவில் வருமாறு செய்யப்பட்டுள்ளது */
+  .um-team-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* கார்டுகள் நடுவில் அமர */
+    gap: 16px;
+    width: 100%;
+  }
+
+  /* 3 கார்டுகள் ஒரு வரிசையில் பிரிய துல்லியமான அகலம் */
+  .um-team-card {
+    flex: 0 1 calc(33.33% - 12px);
+    min-width: 160px; /* திரையின் அளவுக்கு ஏற்ப சுருங்க */
+  }
+  
+  .um-team-name-overlay {
+    text-align: center;
+  }
+  
+  .um-team-footer-cta {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+  
+  .um-team-cta-text {
+    align-items: center;
+    text-align: center;
+  }
+  
+  .um-team-cta-text h3 {
+    text-align: center;
+  }
+  
+  .um-team-cta-text p {
+    text-align: center;
+  }
+  
+  .um-team-join-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ========================================================
+    🎯 MOBILE VIEW FIXES (426px-க்கு கீழே: Line by Line)
+   ======================================================== */
+@media (max-width: 426px) {
+  .um-team-grid {
+    flex-direction: column; /* நேர்கோட்டில் அடுக்க */
+    align-items: center;
+    gap: 20px;
+  }
+
+  .um-team-card {
+    flex: 0 1 auto;
+    width: 100%; /* முழு அகலத்தையும் எடுக்க */
+    max-width: 280px; /* இமேஜ் அளவுக்கு அதிகமாக விரியாமல் தடுக்க */
+    aspect-ratio: 3 / 3.5;
+  }
+}

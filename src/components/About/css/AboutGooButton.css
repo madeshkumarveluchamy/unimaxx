@@ -1,0 +1,69 @@
+/* Wrapper */
+.about-goo-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: -20px; 
+}
+
+/* SVG Filter Background */
+.about-goo-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+}
+
+/* Main Button/Link Class */
+.about-goo-btn {
+  position: relative;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 4px 4px 4px 20px; 
+  border-radius: 4px; 
+  display: flex;
+  align-items: center;
+  gap: 20px; 
+  text-decoration: none;
+}
+
+/* Text inside Button */
+.about-goo-text {
+  font-family: 'Rubik', inherit, sans-serif; /* Added your Rubik font back */
+  font-size: 14px; 
+  font-weight: 500;
+  color: #ffffff; 
+  letter-spacing: 0.02em;
+  mix-blend-mode: difference; /* Touch invert magic */
+  pointer-events: none; 
+}
+
+/* The Gold Icon Box */
+.about-goo-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #c0964d; 
+  width: 32px; 
+  height: 32px; 
+  border-radius: 4px;
+  pointer-events: none;
+}
+
+/* Arrow inside the Gold Box */
+.about-goo-icon svg {
+  width: 16px; 
+  height: 16px;
+  color: #ffffff;
+}
+
+/* Accessibility Focus */
+.about-goo-btn:focus-visible {
+  outline: 2px solid #c0964d;
+  outline-offset: 3px;
+}

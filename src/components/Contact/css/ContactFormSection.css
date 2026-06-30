@@ -1,0 +1,270 @@
+/* --- SECTION CONTAINER --- */
+.unimaxx-form-section-container {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 100px 80px;
+  background-color: #ffffff; /* சுத்தமான வெள்ளை பின்னணி */
+  box-sizing: border-box;
+}
+
+/* --- GRID LAYOUT --- */
+.unimaxx-form-layout-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr; /* இடது பக்கம் படம்/விவரங்களுக்கு சற்றே கூடுதல் வித் */
+  gap: 80px;
+  align-items: start;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* --- LEFT COLUMN: INFO & IMAGE --- */
+.unimaxx-info-column {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.unimaxx-section-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.unimaxx-asterisk {
+  font-size: 26px;
+  color: #0f0e0d;
+  margin-top: 5px;
+}
+
+.unimaxx-section-header h2 {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 42px;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #0f0e0d;
+  margin: 0;
+}
+
+/* IMAGE BOUNDS */
+.unimaxx-form-image-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.unimaxx-form-src-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ADDRESS & CONTACT BLOCKS */
+.unimaxx-address-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px 20px;
+  margin-top: 10px;
+}
+
+.unimaxx-info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.unimaxx-icon-box {
+  background-color: #d8b056; /* பிரீமியம் கோல்டன் தீம் ஐகான் பேக்ரவுண்ட் */
+  color: #ffffff;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.unimaxx-info-item p {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #555555;
+  margin: 0;
+}
+
+.unimaxx-email-text {
+  word-break: break-all;
+}
+
+/* --- RIGHT COLUMN: PREMIUM CARD --- */
+.unimaxx-form-card-column {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.unimaxx-premium-form-card {
+  width: 100%;
+  margin-top: 150px;
+  background: #fdfdfd;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  border-radius: 20px;
+  padding: 35px 30px;
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.04);
+  box-sizing: border-box;
+}
+
+/* FORM ELEMENTS */
+.unimaxx-form-row-dual {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.unimaxx-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.unimaxx-input-group label {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  color: #888888;
+  letter-spacing: 0.5px;
+}
+
+.unimaxx-input-group input,
+.unimaxx-input-group textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  background-color: #fafafa;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+  color: #0f0e0d;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.unimaxx-input-group input::placeholder,
+.unimaxx-input-group textarea::placeholder {
+  color: #bbbbbb;
+}
+
+.unimaxx-input-group input:focus,
+.unimaxx-input-group textarea:focus {
+  outline: none;
+  border-color: #d8b056;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(216, 176, 86, 0.08);
+}
+
+.unimaxx-input-group textarea {
+  resize: vertical;
+}
+
+/* BUTTON */
+.unimaxx-form-submit-btn {
+  width: 100%;
+  background-color: #d8b056; /* ஃபிக்மாவில் உள்ள பிரீமியம் கோல்டன் நிறம் */
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  padding: 16px 0;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  box-shadow: 0 6px 20px rgba(216, 176, 86, 0.25);
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.unimaxx-form-submit-btn:hover {
+  background-color: #c49d45;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(216, 176, 86, 0.35);
+}
+
+/* ========================================================
+    🎯 RESPONSIVE MEDIA QUERIES (Mobile & Tablet View)
+======================================================== */
+@media (max-width: 1024px) {
+  .unimaxx-form-section-container {
+    padding: 80px 40px;
+  }
+  
+  .unimaxx-form-layout-grid {
+    grid-template-columns: 1fr; /* சிங்கள் காலம் லேஅவுட்டாக மாறும் */
+    gap: 50px;
+  }
+
+  .unimaxx-premium-form-card {
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 768px) {
+  .unimaxx-form-section-container {
+    padding: 60px 20px;
+  }
+
+  .unimaxx-premium-form-card {
+    margin-top: 0px;
+    padding: 30px 20px;
+  }
+
+  /* 🎯 பிக்ஸ்: மொபைல் வியூவில் தலைப்பு மற்றும் அஸ்டரிஸ்க் நடுப்பகுதிக்கு சீரமைப்பு */
+  .unimaxx-section-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+  }
+
+  .unimaxx-asterisk {
+    margin-top: 0;
+  }
+
+  .unimaxx-section-header h2 {
+    font-size: 32px;
+  }
+
+  /* 🎯 பிக்ஸ்: முகவரிகள் மற்றும் தொடர்புத் தகவல்களை முழுமையாக சென்டர் செய்கிறது */
+  .unimaxx-address-grid {
+    grid-template-columns: 1fr; 
+    gap: 24px;
+    justify-content: center;
+  }
+
+  .unimaxx-info-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  /* ஃபார்ம் உள்ளீட்டு தலைப்புகளை நடுப்பகுதிக்குக் கொண்டு வர */
+  .unimaxx-input-group label {
+    text-align: center;
+  }
+
+  .unimaxx-input-group input,
+  .unimaxx-input-group textarea {
+    text-align: center; /* பிளேஸ்ஹோல்டர்கள் நடுவில் தெரிய */
+  }
+
+  .unimaxx-form-row-dual {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+}

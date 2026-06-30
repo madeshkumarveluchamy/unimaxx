@@ -1,0 +1,205 @@
+/* --- Base Container Layout --- */
+.unq-team-container {
+  width: 100vw;
+  background-color: #ffffff;
+  padding: 100px 20px;
+  display: flex;
+  justify-content: center;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.unq-team-wrapper {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* --- Header Typography --- */
+.unq-team-header {
+  margin-bottom: 60px;
+}
+
+.unq-team-title {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.2;
+  margin: 0;
+}
+
+/* ========================================================
+    🎯 DESKTOP LAYOUT (Interactive Hover)
+======================================================== */
+.unq-team-desktop-layout {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+}
+
+/* Left Side: List */
+.unq-team-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+}
+
+.unq-team-list-item {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.unq-team-num {
+  width: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.unq-team-info-row {
+  display: flex;
+  align-items: baseline;
+  gap: 15px;
+}
+
+.unq-team-role {
+  font-size: 0.85rem;
+  color: #a0a0a0;
+  width: 180px; /* Aligns the names straight */
+  text-align: right;
+  transition: color 0.3s ease;
+}
+
+.unq-team-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #a0a0a0;
+  margin: 0;
+  transition: color 0.3s ease;
+}
+
+/* Active State Hover Effects */
+.unq-team-list-item.active .unq-team-name {
+  color: #1a1a1a; /* கருப்பு நிறமாக மாறும் */
+}
+.unq-team-list-item.active .unq-team-role {
+  color: #666666; /* சற்று அடர்ந்த சாம்பல் நிறம் */
+}
+
+/* Right Side: Image Display */
+.unq-team-image-display {
+  flex: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.unq-team-image-wrapper {
+  width: 350px;
+  height: 450px;
+  background-color: #f5f5f5;
+  overflow: hidden;
+}
+
+.unq-team-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.unq-team-caption {
+  width: 350px;
+  font-size: 0.85rem;
+  color: #333333;
+  margin-top: 15px;
+  text-align: left;
+}
+
+/* Default state: Hide mobile layout on desktop */
+.unq-team-mobile-layout {
+  display: none;
+}
+
+
+/* ========================================================
+    🎯 RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
+======================================================== */
+
+@media (max-width: 1024px) {
+  .unq-team-title {
+    font-size: 2.5rem;
+  }
+  .unq-team-name {
+    font-size: 1.5rem;
+  }
+  .unq-team-role {
+    width: 140px;
+  }
+  .unq-team-image-wrapper {
+    width: 300px;
+    height: 400px;
+  }
+  .unq-team-caption {
+    width: 300px;
+  }
+}
+
+/* --- MOBILE VIEW: Static Stacked Cards --- */
+@media (max-width: 768px) {
+  .unq-team-container {
+    padding: 60px 20px;
+  }
+
+  /* Hide Desktop Layout */
+  .unq-team-desktop-layout {
+    display: none;
+  }
+
+  /* Show Mobile Layout */
+  .unq-team-mobile-layout {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .unq-team-mobile-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .unq-team-mobile-img-wrapper {
+    width: 100%;
+    height: 350px;
+    background-color: #f5f5f5;
+    margin-bottom: 15px;
+  }
+
+  .unq-team-mobile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .unq-team-mobile-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+  }
+
+  .unq-team-mobile-role {
+    font-size: 0.9rem;
+    color: #666666;
+    margin: 0;
+  }
+}

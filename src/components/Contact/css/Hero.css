@@ -1,0 +1,95 @@
+/* --- HERO SECTION WRAPPER --- */
+.unimaxx-contact-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* முழு ஸ்கிரீனையும் அடைத்துக் கொள்ளும் */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #0f0e0d; /* படம் லோடு ஆகும் முன் தெரிய வேண்டிய டீஃபால்ட் டார்க் நிறம் */
+}
+
+/* --- BACKGROUND IMAGE LAYER --- */
+.unimaxx-contact-hero-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  z-index: 1;
+}
+
+/* --- PREMIUM DARK OVERLAY TINT --- */
+.unimaxx-contact-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* படத்தின் மேல் இருக்கும் பிரீமியம் டார்க் லேயர் டின்ட் (நெருக்கமான லுக் கிடைக்க) */
+  background: linear-gradient(
+    to bottom,
+    rgba(15, 14, 13, 0.4) 0%,
+    rgba(15, 14, 13, 0.6) 50%,
+    rgba(15, 14, 13, 0.5) 100%
+  );
+  z-index: 2;
+}
+
+/* --- CENTER CONTENT BLOCK --- */
+.unimaxx-contact-hero-content {
+  position: relative;
+  z-index: 3; /* ஓவர்லேக்கு மேலே கன்டென்ட் தெரிய */
+  text-align: center;
+  padding: 0 24px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* --- EXACT TEXT STYLE MATCH --- */
+.unimaxx-contact-hero-title {
+  color: #ffffff;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  font-size: 84px; /* பெரிய திரைகளுக்கான போல்டான பிரீமியம் சைஸ் */
+  font-weight: 500;
+  line-height: 1.15;
+  letter-spacing: -1px; /* எழுத்துக்கள் கச்சிதமாக நெருக்கமாக அமைய */
+  margin: 0;
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* டெக்ஸ்ட் தனியாக பளிச்சென்று தெரிய */
+  animation: smoothFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES (மொபைல் மற்றும் டேப்லெட் வியூ) --- */
+@media (max-width: 1024px) {
+  .unimaxx-contact-hero-title {
+    font-size: 64px; /* டேப்லெட் வியூ சைஸ் */
+  }
+}
+
+@media (max-width: 768px) {
+  .unimaxx-contact-hero-wrapper {
+    height: 60vh; /* மொபைலில் கச்சிதமான உயரம் */
+  }
+  
+  .unimaxx-contact-hero-title {
+    font-size: 42px; /* மொபைல் வியூ சைஸ் */
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+}
+
+/* --- LUXURY ENTRANCE ANIMATION --- */
+@keyframes smoothFadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

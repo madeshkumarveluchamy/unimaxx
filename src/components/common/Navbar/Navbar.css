@@ -1,0 +1,303 @@
+/* --- GLOBAL STICKY ROOT --- */
+.unimaxx-premium-nav-root {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
+  position: fixed; 
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding-top: 25px; 
+  padding-bottom: 15px;
+  box-sizing: border-box;
+  
+  /* ஆரம்பத்தில் டாப் வியூவில் முற்றிலும் இன்விசிபிள் */
+  background: transparent !important;
+  background-color: transparent !important; 
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+
+  /* ஸ்மூத் அண்ட் ஃபாஸ்ட் டிரான்சிஷன் டைமிங் */
+  transition: 
+    background-color 0.2s ease-in-out, 
+    backdrop-filter 0.2s ease-in-out,
+    -webkit-backdrop-filter 0.2s ease-in-out,
+    border-bottom 0.2s ease-in-out,
+    box-shadow 0.2s ease-in-out,
+    padding 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    width 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    top 0.3s cubic-bezier(0.25, 1, 0.5, 1),
+    border-radius 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  
+  will-change: background-color, backdrop-filter, padding; 
+}
+
+/* லோகோ மற்றும் மெனு அலைன்மென்ட் */
+.unimaxx-nav-flex-core {
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  align-items: center;
+  gap: 18px; 
+  width: 100%;
+  padding: 0 80px; 
+  box-sizing: border-box;
+}
+
+/* --- LOGO PLATE --- */
+.unimaxx-logo-white-plate {
+  background-color: #ffffff;
+  padding: 8px 24px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.15);
+}
+
+.unimaxx-src-logo {
+  height: 34px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* --- DESKTOP GLASS MENU --- */
+.unimaxx-exact-glass-pill {
+  background: rgba(255, 255, 255, 0.07) !important; 
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  
+  padding: 14px 0 !important; 
+  border-radius: 12px !important; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px; 
+  width: 65%; 
+  max-width: 1100px;
+  min-width: 750px;
+  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.unimaxx-exact-glass-pill a {
+  color: #ffffff !important; 
+  text-decoration: none !important;
+  font-family: 'Helvetica Neue', Arial, sans-serif !important; 
+  font-size: 18px !important; 
+  font-weight: 400 !important;
+  letter-spacing: 0.5px !important;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  opacity: 0.85;
+}
+
+.unimaxx-exact-glass-pill a:hover {
+  opacity: 1 !important;
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+
+
+@media (min-width: 769px) {
+  .unimaxx-premium-nav-root.scrolled {
+    padding-top: 10px !important;
+    padding-bottom: 10px !important;
+    top: 15px; 
+    width: 80% !important; 
+    max-width: 760px;
+    min-width: 760px;
+    border-radius: 50px !important; 
+    
+    background-color: rgba(15, 14, 13, 0.85) !important; 
+    backdrop-filter: blur(20px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+  }
+
+  .unimaxx-premium-nav-root.scrolled .unimaxx-nav-flex-core {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    gap: 0 !important;
+    padding: 0 10px 0 10px !important;
+  }
+
+  .unimaxx-premium-nav-root.scrolled .unimaxx-logo-white-plate {
+    padding: 6px 18px;
+    box-shadow: none;
+    background-color: #ffffff;
+    border-radius: 40px; 
+  }
+
+  .unimaxx-premium-nav-root.scrolled .unimaxx-src-logo {
+    height: 25px;
+  }
+
+  .unimaxx-premium-nav-root.scrolled .unimaxx-exact-glass-pill {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    width: auto !important;
+    min-width: auto !important;
+    padding: 0 20px 0 0 !important;
+    gap: 0 !important;
+  }
+
+  .unimaxx-premium-nav-root.scrolled .unimaxx-exact-glass-pill a {
+    margin-left: 45px; 
+    font-size: 16px !important;
+  }
+}
+
+
+.unimaxx-hamburger-trigger {
+  display: none;
+  background: transparent;
+  border: none;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  cursor: pointer;
+  z-index: 110;
+}
+
+.burger-line {
+  display: block;
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 9px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.burger-line:nth-child(1) { top: 0px; }
+.burger-line:nth-child(2) { top: 10px; }
+.burger-line:nth-child(3) { top: 20px; }
+
+.burger-active .burger-line:nth-child(1) {
+  top: 10px;
+  transform: rotate(135deg);
+}
+
+.burger-active .burger-line:nth-child(2) {
+  opacity: 0;
+  left: -20px;
+}
+
+.burger-active .burger-line:nth-child(3) {
+  top: 10px;
+  transform: rotate(-135deg);
+}
+
+
+
+@media (max-width: 768px) {
+  .unimaxx-premium-nav-root {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: calc(100% - 20px) !important; 
+    margin: 10px auto !important; 
+    border-radius: 12px !important; 
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    background-color: rgba(15, 14, 13, 0.85) !important;
+    backdrop-filter: blur(20px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .unimaxx-nav-flex-core {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 16px; 
+    gap: 0;
+  }
+
+  .unimaxx-hamburger-trigger {
+    display: block; 
+  }
+
+  .unimaxx-logo-white-plate {
+    padding: 6px 16px;
+    position: relative;
+    z-index: 110; 
+    border-radius: 6px !important;
+  }
+  
+  .unimaxx-src-logo {
+    height: 26px; 
+  }
+
+  .unimaxx-exact-glass-pill {
+    position: fixed; 
+    top: 75px; 
+    left: 5px !important;    
+    width: calc(100vw - 30px) !important; 
+    height: auto !important; 
+    max-width: 100vw !important;
+    min-width: auto !important;
+    box-sizing: border-box;
+    background: #0f0e0d !important; 
+    backdrop-filter: none !important; 
+    -webkit-backdrop-filter: none !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    border-radius: 24px !important; 
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0px; 
+    padding: 40px 20px !important; 
+    z-index: 105;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(0.96) translateY(-10px); 
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .unimaxx-exact-glass-pill.mobile-visible {
+    opacity: 1;
+    pointer-events: auto;
+    transform: scale(1) translateY(0);
+  }
+
+  .unimaxx-exact-glass-pill a {
+    font-family: 'Helvetica Neue', Arial, sans-serif !important;
+    font-size: 19px !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.8px !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+    text-decoration: none !important;
+    width: 100%;
+    max-width: 240px; 
+    text-align: center;
+    padding: 16px 0;
+    margin-left: 0 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05); 
+    transition: all 0.3s ease;
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  .unimaxx-exact-glass-pill a:last-child {
+    border-bottom: none;
+  }
+
+  .mobile-visible a {
+    opacity: 1;
+    transform: translateY(0);
+  }

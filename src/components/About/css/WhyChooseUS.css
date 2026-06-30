@@ -1,0 +1,150 @@
+/* --- Master Layout (Background matching the image) --- */
+.wcu-master {
+  width: 100vw;
+  background-color: #E3DDCD; /* Beige background from image */
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.wcu-section {
+  width: 100%;
+  max-width: 1400px;
+  padding: 100px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* --- Header Section --- */
+.wcu-heading {
+  font-family: 'Georgia', serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: #2D2D2D;
+  margin: 0 0 60px 0;
+  text-align: center;
+}
+
+/* --- 4-Column Grid Layout --- */
+.wcu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  width: 100%;
+}
+
+/* --- Card Styles --- */
+.wcu-card {
+  background-color: transparent;
+  border: 1.5px solid #CBC3B3; /* Subtle darker outline */
+  border-radius: 8px;
+  padding: 45px 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+/* --- OUTLINE NUMBER TYPOGRAPHY --- */
+.wcu-number-wrapper {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: baseline;
+  
+  /* Outline Effect */
+  color: transparent;
+  -webkit-text-stroke: 1.5px #333333; /* The transparent fill with black stroke */
+}
+
+.wcu-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #333333;
+  margin: 0 0 15px 0;
+}
+
+.wcu-card-desc {
+  font-size: 0.85rem;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* ========================================================
+    🎯 SLOT COUNTER ESSENTIAL CLASSES (நீங்கள் அனுப்பியவை)
+======================================================== */
+.arch-feat-slot-inline {
+  display: inline-flex !important;
+  align-items: baseline !important;
+  height: 1.1em !important;
+  overflow: hidden;
+  vertical-align: baseline !important;
+}
+
+.arch-feat-digit-column {
+  display: inline-flex !important;
+  flex-direction: column !important;
+  height: 1.1em !important;
+  width: auto !important;
+}
+
+.arch-feat-digit-strip {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+.arch-feat-digit-strip span {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  height: 1.1em !important;
+  line-height: 1.1em !important;
+}
+
+.wcu-suffix, 
+.arch-feat-slot-static-char {
+  display: inline-block !important;
+  vertical-align: baseline !important;
+  line-height: 1 !important;
+  margin-left: 4px;
+}
+
+/* ========================================================
+    🎯 RESPONSIVE MEDIA QUERIES (டேப்லெட் & மொபைல்)
+======================================================== */
+@media (max-width: 1024px) {
+  .wcu-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 600px) {
+  .wcu-section {
+    padding: 60px 20px;
+  }
+  
+  .wcu-heading {
+    font-size: 2.5rem;
+  }
+
+  .wcu-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wcu-card {
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+  }
+  
+  .wcu-number-wrapper {
+    justify-content: center;
+  }
+}
