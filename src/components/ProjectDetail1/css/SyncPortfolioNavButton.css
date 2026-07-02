@@ -1,9 +1,39 @@
+/* Outer Dark Container - Exact Match */
+.sync-portfolio-nav-strip {
+  display: inline-flex;
+  align-items: center;
+  background-color: #262626; /* Image-la iruka exact dark background */
+  padding: 6px; /* Arrows-ku suthilum iruka chinna gap */
+}
+
+/* Golden Arrow Buttons */
+.sync-portfolio-arrow {
+  background-color: #c29b57; /* Exact golden color */
+  color: #ffffff;
+  border: none;
+  width: 38px;  /* Perfect square size */
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  padding: 0;
+}
+
+.sync-portfolio-arrow:hover {
+  background-color: #a88548;
+}
+
 /* Animation Overflow Wrapper */
 .sync-nav-text-fluid-wrapper {
   position: relative;
-  display: inline-flex;
-  padding: 8px; 
-  margin: -8px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px; /* Arrow height-ku equal ah iruka */
+  border:none !important;
 }
 
 /* SVG Layer */
@@ -13,24 +43,26 @@
   width: 100%;
   height: 100%;
   pointer-events: none;
+  border:none !important;
 }
 
-/* Main Text Button Component 👇 */
+/* Main Text Component */
 .sync-nav-text-fluid-btn {
   position: relative;
   z-index: 2;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
+  font-size: 15px; /* Image-la iruka exact font size */
+  font-weight: 500;
   letter-spacing: 0.5px;
-  Border:1px solid #ffffff;
-  color: #ffffff; 
-  padding: 12px 15px; 
+  border: none; 
+  color: #e6e6e6; /* Pure white illama slight grey for text */
+  padding: 0 24px; /* Text matrum arrows-ku naduvula exact space */
   cursor: pointer;
   user-select: none;
-  border-radius: 4px;
+  border-radius: 0px; 
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%;
   mix-blend-mode: difference;
 }

@@ -143,8 +143,8 @@
 .um-proj-navigation-inline {
   display: inline-flex !important;
   flex-direction: row !important;
-  gap: 4px; 
-  background-color: #000000;
+  gap: 30px; 
+  background-color: #ffffff;
   padding: 4px;
 }
 

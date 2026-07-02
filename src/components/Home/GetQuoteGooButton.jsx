@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useCallback } from "react";
 // CSS கோப்பின் பெயரை இதற்கு ஏற்றாற்போல் கொடுத்துக்கொள்ளுங்கள்
 import "./css/GetQuoteGooButton.css";
+import {Link} from "react-router-dom";
 
 let idCounter = 0;
 function useStableIds() {
@@ -15,7 +16,7 @@ function useStableIds() {
   return ref.current;
 }
 
-export default function GetQuoteGooButton({ text = "Get a Quote", onClick }) {
+export default function GetQuoteGooButton({ text = "Get a Quote", to ,onClick }) {
   const wrapRef = useRef(null);
   const btnRef = useRef(null);
   const bgRef = useRef(null);
@@ -206,6 +207,9 @@ export default function GetQuoteGooButton({ text = "Get a Quote", onClick }) {
           {/* ஆரம்ப பேக்ரவுண்ட் (வெள்ளை) */}
           <rect ref={bgRef} fill="#ffffff" mask={`url(#${ids.mask})`} />
         </svg>
+        
+        
+        <Link className="text-decoration-none" to={`${to}`}>
 
         <button 
           className="unimaxxexpertise-goo-btn font-hanken d-flex position-relative" 
@@ -223,6 +227,7 @@ export default function GetQuoteGooButton({ text = "Get a Quote", onClick }) {
             </svg>
           </span>
         </button>
+        </Link>
       </div>
     </div>
   );

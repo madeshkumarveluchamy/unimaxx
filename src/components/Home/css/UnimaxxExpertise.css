@@ -39,6 +39,7 @@
   color: #a0a0a0;
   line-height: 1.6;
   text-align: left;
+  font-weight:400 !important;
 }
 
 /* Accordion Rows */
@@ -137,13 +138,14 @@
   font-size: 28px;
   color: #ffffff;
   margin: 0;
-  font-weight: 400;
+  font-weight: 300;
   text-align: left;
 }
 
 .um-exp-body-text {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
+  font-weight: 400!important;
   color: #a0a0a0;
   line-height: 1.6;
   margin: 0;

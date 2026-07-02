@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/UnimaxxPortfolio.css';
+import '../ProjectDetail1/css/UnimaxxPortfolio.css';
 
 // நாம் ஏற்கனவே பயன்படுத்திய அதே இமேஜ் ஃபைல்கள்
 import modern1 from '../../assets/modern1.webp'; 
@@ -9,6 +9,7 @@ import modern4 from '../../assets/modern4.webp';
 import modern5 from '../../assets/modern5.webp'; 
 import SyncPortfolioNavButton from '../ProjectDetail1/SyncPortfolioNavButton';
 import SyncPortfolioFluidButton from '../ProjectDetail1/SyncPortfolioFluidButton';
+import ProjectGooButtons from '../ProjectDetail1/ProjectGooButtons';
 
 const UnimaxxPortfolio = () => {
   // ஸ்லைடரின் தற்போதைய இண்டெக்ஸைக் கண்காணிக்க State
@@ -83,7 +84,7 @@ const UnimaxxPortfolio = () => {
               
               <div className="sync-portfolio-card-footer">
            
-                  <SyncPortfolioFluidButton />
+                  <ProjectGooButtons to="/" />
              
                 <div className="sync-portfolio-meta-tags">
                   <span className='font-manrope'>{currentProject.type}</span>
@@ -97,11 +98,12 @@ const UnimaxxPortfolio = () => {
 
         {/* கட்டுப்படுத்தும் நேவிகேஷன் பட்டன்கள் (View Next Projects) */}
         <div className="sync-portfolio-controls-row">
-          <div className="sync-portfolio-nav-strip">
-            <button className="sync-portfolio-arrow" onClick={handlePrev}>←</button>
-            <SyncPortfolioNavButton />
-            <button className="sync-portfolio-arrow" onClick={handleNext}>→</button>
-          </div>
+                  <SyncPortfolioNavButton
+          text="View Next Projects" 
+          onPrev={handlePrev} 
+          onNext={handleNext} 
+          onMainClick={() => console.log("Main text clicked!")} 
+        />
         </div>
 
       </div>

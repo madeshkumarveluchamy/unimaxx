@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useCallback } from "react";
-// CSS கோப்பின் பெயரை இதற்கு ஏற்றாற்போல் கொடுத்துக்கொள்ளுங்கள்
 import "./css/SyncPortfolioNavButton.css";
 
 let idCounter = 0;
@@ -15,7 +14,12 @@ function useStableIds() {
   return ref.current;
 }
 
-export default function SyncPortfolioNavButton({ text = "View Next Projects", onClick }) {
+export default function SyncPortfolioNavButton({ 
+  text = "View Next Projects", 
+  onPrev, 
+  onNext, 
+  onMainClick 
+}) {
   const wrapRef = useRef(null);
   const btnRef = useRef(null);
   const bgRef = useRef(null);
@@ -45,8 +49,7 @@ export default function SyncPortfolioNavButton({ text = "View Next Projects", on
     const x = r.left - w.left;
     const y = r.top - w.top;
     
-    // சிறிய வளைவுக்காக 4px Radius
-    const radius = 4; 
+    const radius = 0; // Exactly Sharp
     
     bgRef.current.setAttribute("x", x);
     bgRef.current.setAttribute("y", y);
@@ -172,45 +175,56 @@ export default function SyncPortfolioNavButton({ text = "View Next Projects", on
   };
 
   return (
-    <div 
-      className="sync-nav-text-fluid-wrapper" 
-      ref={wrapRef}
-      onMouseEnter={handleMouseEnter}
-      onMouseMove={handleMouseMove}
-      onMouseLeave={handleMouseLeave}
-    >
-      <svg className="sync-nav-text-fluid-svg" aria-hidden="true">
-        <defs>
-          <filter id={ids.filter} x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
-            <feColorMatrix
-              in="blur"
-              mode="matrix"
-              values="1 0 0 0 0
-                      0 1 0 0 0
-                      0 0 1 0 0
-                      0 0 0 25 -10"
-            />
-          </filter>
-          <mask id={ids.mask}>
-            <rect x="0" y="0" width="100%" height="100%" fill="white" />
-            <g filter={`url(#${ids.filter})`}>
-              <ellipse ref={blobRef1} fill="black" />
-              <ellipse ref={blobRef2} fill="black" />
-              <ellipse ref={blobRef3} fill="black" />
-            </g>
-          </mask>
-        </defs>
-        <rect ref={baseBgRef} fill="#ffffff" />
-        <rect ref={bgRef} fill="#1a1a1a" mask={`url(#${ids.mask})`} />
-      </svg>
-      <span 
-        className="sync-nav-text-fluid-btn font-hanken" 
-        ref={btnRef} 
-        onClick={onClick}
+    <div className="sync-portfolio-nav-strip">
+      <button className="sync-portfolio-arrow" onClick={onPrev}>
+        ←
+      </button>
+
+      <div 
+        className="sync-nav-text-fluid-wrapper" 
+        ref={wrapRef}
+        onMouseEnter={handleMouseEnter}
+        onMouseMove={handleMouseMove}
+        onMouseLeave={handleMouseLeave}
       >
-        {text}
-      </span>
+        <svg className="sync-nav-text-fluid-svg" aria-hidden="true">
+          <defs>
+            <filter id={ids.filter} x="-50%" y="-50%" width="200%" height="200%">
+              <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+              <feColorMatrix
+                in="blur"
+                mode="matrix"
+                values="1 0 0 0 0
+                        0 1 0 0 0
+                        0 0 1 0 0
+                        0 0 0 25 -10"
+              />
+            </filter>
+            <mask id={ids.mask}>
+              <rect x="0" y="0" width="100%" height="100%" fill="white" />
+              <g filter={`url(#${ids.filter})`}>
+                <ellipse ref={blobRef1} fill="black" />
+                <ellipse ref={blobRef2} fill="black" />
+                <ellipse ref={blobRef3} fill="black" />
+              </g>
+            </mask>
+          </defs>
+          <rect ref={baseBgRef} fill="#ffffff" />
+          {/* Background color matched exactly to the image's #262626 */}
+          <rect ref={bgRef} fill="#262626" mask={`url(#${ids.mask})`} />
+        </svg>
+        <span 
+          className="sync-nav-text-fluid-btn font-hanken" 
+          ref={btnRef} 
+          onClick={onMainClick}
+        >
+          {text}
+        </span>
+      </div>
+
+      <button className="sync-portfolio-arrow" onClick={onNext}>
+        →
+      </button>
     </div>
   );
 }

@@ -167,9 +167,13 @@ export default function StoryHeroGooButton({ text = "Let's Build Your Legacy", o
           <ellipse ref={blobRef3} fill="#ffffff" cx="0" cy="0" rx="0" ry="0" />
         </g>
       </svg>
+  <span class="storyherogoobtn-text">Let’s Build Your Legacy</span>
+  <span class="storyherogoobtn-icon">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
 
-      <span className="storyherogoobtn-text">{text}</span>
-      <span className="storyherogoobtn-icon">→</span>
     </button>
   );
 }

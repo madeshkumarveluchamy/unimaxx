@@ -9,6 +9,7 @@ import modern4 from '../../assets/modern4.webp';
 import modern5 from '../../assets/modern5.webp'; 
 import SyncPortfolioFluidButton from './SyncPortfolioFluidButton';
 import SyncPortfolioNavButton from './SyncPortfolioNavButton';
+import ProjectGooButtons from './ProjectGooButtons';
 
 const UnimaxxPortfolio = () => {
   // ஸ்லைடரின் தற்போதைய இண்டெக்ஸைக் கண்காணிக்க State
@@ -82,7 +83,7 @@ const UnimaxxPortfolio = () => {
               <h3 className='font-geist'>{currentProject.title}</h3>
               
               <div className="sync-portfolio-card-footer">
-                <SyncPortfolioFluidButton />
+                <ProjectGooButtons to="/" />
                 <div className="sync-portfolio-meta-tags">
                   <span className='font-manrope'>{currentProject.type}</span>
                   <span className='font-manrope'>{currentProject.location}</span>
@@ -95,11 +96,12 @@ const UnimaxxPortfolio = () => {
 
         {/* கட்டுப்படுத்தும் நேவிகேஷன் பட்டன்கள் (View Next Projects) */}
         <div className="sync-portfolio-controls-row">
-            <div className="sync-portfolio-nav-strip">
-              <button className="sync-portfolio-arrow" onClick={handlePrev}>←</button>
-              <SyncPortfolioNavButton />
-              <button className="sync-portfolio-arrow" onClick={handleNext}>→</button>
-            </div>
+          <SyncPortfolioNavButton 
+  text="View Next Projects" 
+  onPrev={handlePrev} 
+  onNext={handleNext} 
+  onMainClick={() => console.log("Main text clicked!")} 
+/>
         </div>
 
       </div>

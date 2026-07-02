@@ -56,7 +56,7 @@ html::-webkit-scrollbar {
 .story-hero-overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: rgba(0, 0, 0, 0.0);
   z-index: 1;
 }
 
@@ -183,33 +183,33 @@ html::-webkit-scrollbar {
    ========================================== */
 .portfolio-vertical-floating-card {
   position: absolute !important; /* 🎯 பெரிய ஸ்கிரீனில் கண்டிப்பாக அப்சல்யூட் ஆக தான் இருக்க வேண்டும் */
-  bottom: 40px !important;      /* 🎯 இமேஜின் பாட்டம் பார்டரில் கச்சிதமாக மிதக்க வைக்க */
+  bottom: 25px !important;      /* 🎯 இமேஜின் பாட்டம் பார்டரில் கச்சிதமாக மிதக்க வைக்க */
   background-color: #ffffff !important;
-  width: 360px !important; 
+  width: 450px !important; 
   border-radius: 12px !important; 
   padding: 14px !important;
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15) !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 12px !important;           
-  height: auto !important;        
+  gap: 20px !important;           
+  height: 400px !important;        
   z-index: 5 !important;
   margin-top: 0 !important;
 }
 
 /* இடது மற்றும் வலது அலைன்மென்ட் பூட்டு */
 .float-right { 
-  right: 50px !important; 
+  right: 25px !important; 
   left: auto !important;
 }
 .float-left { 
-  left: 50px !important; 
+  left: 25px !important; 
   right: auto !important;
 }
 
 .vertical-card-img-box {
   width: 100% !important;
-  height: 200px !important; 
+  height: 280px !important; 
   border-radius: 10px !important;
   overflow: hidden !important;
   display: block !important; /* டெஸ்க்டாப்பில் தம்ப்நெயில் தெரியும் */
@@ -289,16 +289,16 @@ html::-webkit-scrollbar {
    ========================================== */
 
 @media (min-width: 2000px) {
-  .portfolio-large-card { height: 580px; }
-  .portfolio-vertical-floating-card { width: 400px; bottom: 50px; }
-  .float-right { right: 60px !important; }
-  .float-left { left: 60px !important; }
+  .portfolio-large-card { height: 500px; }
+  .portfolio-vertical-floating-card { width: 400px; bottom: 35px !important; }
+  .float-right { right: 50px !important; }
+  .float-left { left: 50px !important; }
 }
 
 @media (max-width: 1200px) {
   .portfolio-large-card { height: 400px; }
-  .portfolio-vertical-floating-card { width: 310px; gap: 8px !important;  height :250px !important; }
-  .vertical-card-img-box { height: 160px !important; }
+  .portfolio-vertical-floating-card { width: 310px; gap: 15px !important;  height :300px !important; bottom: 35px !important; }
+  .vertical-card-img-box { height: 200px !important; }
   .vertical-card-title { font-size: 15px; }
 }
 

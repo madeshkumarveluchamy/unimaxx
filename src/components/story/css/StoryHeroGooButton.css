@@ -3,7 +3,8 @@
   position: relative;
   display: inline-flex;
   align-items: center;
-  background-color: #1a1a1a; /* Background moved here for 100% stability */
+  background: rgba(0, 0, 0, 0.1) !important; 
+  
   border: 1px solid rgba(255, 255, 255, 0.15); 
   padding: 6px 6px 6px 24px; 
   gap: 20px; 
@@ -35,7 +36,7 @@
   display: flex;
   align-items: center;
   font-size: 16px; 
-  font-weight: 500;
+  font-weight: 300;
   color: #ffffff; 
   mix-blend-mode: difference; /* Touch inversion */
   pointer-events: none;
@@ -45,7 +46,7 @@
 .storyherogoobtn-icon {
   position: relative;
   z-index: 2; 
-  background-color: #c59b6d; 
+  background-color: #D1A856; 
   color: #ffffff;
   width: 34px; 
   height: 34px; 

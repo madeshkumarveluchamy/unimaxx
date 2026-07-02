@@ -5,13 +5,13 @@
   justify-content: center;
   overflow-x: hidden;
   box-sizing: border-box;
-  padding-top: 160px; /* நேவ்பாருக்கான மேல் பக்க இடைவெளி */
+  padding-top: 80px; /* நேவ்பாருக்கான மேல் பக்க இடைவெளி */
 }
 
 .nest-top-container {
   width: 100%;
   max-width: 2000px;
-  padding: 0 80px 60px 80px;
+  padding: 0 80px 30px 80px;
   display: flex;
   flex-direction: column;
   gap: 30px; /* முதல் வரிசைக்கும் இரண்டாம் வரிசைக்கும் உள்ள கச்சிதமான கேப் */
@@ -69,8 +69,8 @@
 
 .nest-top-spec-box h4 {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 11px;
-  color: #888888;
+  font-size: 17px;
+  color: #1a1a1a;
   letter-spacing: 1.5px;
   text-transform: uppercase;
   margin: 0 0 6px 0;
@@ -80,15 +80,15 @@
 
 .nest-top-spec-box p {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 15px;
-  color: #1a1a1a;
+  font-size: 14px;
+  color: #888888;
   margin: 0;
   text-align: left;
 }
 
 .nest-top-paragraph {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 15px;
   color: #555555;
   line-height: 1.6;
   margin: 0;
@@ -99,13 +99,14 @@
 /* Kitchen Image Frame */
 .nest-top-image-panel {
   width: 100%;
+  height:100% !important;;
   border-radius: 16px;
   overflow: hidden;
 }
 
 .nest-top-image-panel img {
   width: 100%;
-  height: auto;
+  height: 100% !important;
   display: block;
   object-fit: cover;
 }
@@ -129,6 +130,12 @@
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+@media(min-width:1870px){
+.nest-top-row {
+  height:400px !important;
+}
 }
 
 /* ========================================================

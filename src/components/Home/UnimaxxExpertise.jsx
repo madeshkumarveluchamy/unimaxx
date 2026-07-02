@@ -115,11 +115,11 @@ const UnimaxxExpertise = () => {
                 <div className="um-row-action">
                   {isOpen ? (
                     <>
-                      <div className="um-quote-btn-wrapper">
-                        <Link  className='text-decoration-none' to="/projects">
-                        <GetQuoteGooButton />
-                        </Link>
-                      </div>
+                     
+                       
+                        <div><GetQuoteGooButton  to="/projects"/></div> 
+                    
+                      
                       <div className="um-toggle-icon um-icon-close">✕</div>
                     </>
                   ) : (

@@ -32,7 +32,7 @@ const UnimaxxOngoing = () => {
                 <p className='font-hanken fmin'>Refined interior blending functionality with elegance.</p>
                 <div className="um-btn-align-wrapper">
                   <Link  className="text-decoration-none" to="/projects">
-                  <ViewDetailedGooButton />
+                  <ViewDetailedGooButton textColor="black" />
                   </Link>
                 </div>
               </div>
@@ -52,7 +52,7 @@ const UnimaxxOngoing = () => {
                 <p className='font-hanken fmin'>Refined interior blending functionality with elegance.</p>
                 <div className="um-btn-align-wrapper">
                   <Link  className="text-decoration-none" to="/projects">
-                  <ViewDetailedGooButton />
+                  <ViewDetailedGooButton  textColor="black"/>
                   </Link>
                 </div>
               </div>

@@ -1,3 +1,4 @@
+/* Master Container */
 .um-ongoing-master {
   width: 100vw;
   background-color: #E2DCD0; 
@@ -61,10 +62,12 @@
   overflow: visible; 
 }
 
+/* 🎯 FIX 1: Background Image Shrink Prevent */
 .um-bg-main-img {
   width: 100%;
-  height: auto;
-  max-height: 550px;
+  height: 100%;
+  min-height: 400px; 
+  max-height: 500px; 
   object-fit: cover;
   border-radius: 20px;
   display: block;
@@ -81,6 +84,11 @@
   width: 32%; 
   min-width: 300px;
   max-width: 420px;
+  
+  /* 🎯 FIX 2: Overflow Control for Card */
+  max-height: 90%; 
+  overflow-y: auto; 
+  
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
@@ -88,12 +96,21 @@
   z-index: 10;
 }
 
+/* Custom Scrollbar for Card (Clean Look) */
+.um-overlay-card::-webkit-scrollbar {
+  width: 5px;
+}
+.um-overlay-card::-webkit-scrollbar-thumb {
+  background: #d8b056; 
+  border-radius: 10px;
+}
+
 .um-overlay-right {
-  right: 5%; 
+  right: 2.5%; 
 }
 
 .um-overlay-left {
-  left: 5%; 
+  left: 2.5%; 
 }
 
 /* Card Content Typography & UI */
@@ -133,70 +150,29 @@
   justify-content: flex-start;
 }
 
-/* View Detailed Project Button */
-.um-view-detail-btn {
-  background: transparent;
-  border: 1px solid #1a1a1a;
-  color: #1a1a1a;
-  padding: 10px 18px;
-  border-radius: 50px;
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 500;
-  display: inline-flex;
-  align-items: center;
-  justify-content: space-between;
-  cursor: pointer;
-  width: fit-content;
-  gap: 15px;
-  transition: all 0.3s ease;
-}
+/* ========================================================
+   🎯 RESPONSIVE UI: TABLET & PHONE FIXES
+======================================================== */
 
-.um-view-detail-btn:hover {
-  background-color: #1a1a1a;
-  color: #ffffff;
-}
-
-.um-btn-arrow-circle {
-  background-color: #d8b056; 
-  color: #ffffff;
-  width: 22px;
-  height: 22px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 11px;
-}
-
-/* Responsive UI */
+/* Small Desktop / Large Tablet */
 @media (max-width: 1024px) {
   .um-overlay-card {
     width: 40%;
   }
 }
 
-/* ========================================================
-   🎯 PHONE VIEW PRECISE FIXES (768px-க்கு கீழே சென்டர் பிக்ஸ்)
-======================================================== */
-@media (max-width: 768px) {
+/* 🎯 FIX 3: Tablet Stacked Layout (Prevents Crashing) */
+@media (max-width: 992px) {
   .um-ongoing-section {
-    padding: 50px 24px;
-    align-items: center;
+    padding: 60px 40px;
   }
 
-  /* ஹெடர் சென்டர் அலைன்மென்ட் */
   .um-ongoing-header {
     align-items: center;
     text-align: center;
   }
 
   .um-ongoing-subtitle {
-    text-align: center;
-  }
-
-  .um-ongoing-title {
-    font-size: 2.5rem;
     text-align: center;
   }
 
@@ -207,30 +183,41 @@
     align-items: center;
   }
 
-  /* ஓவர்லே கார்டு மொபைலில் சென்டர் அலைன்மென்ட் */
+  /* Reset Absolute Positioning -> Card falls naturally below the image */
   .um-overlay-card {
     position: relative;
     top: 0;
     transform: none;
-    width: 100%;
-    max-width: 100%;
-    left: 0 !important;
-    right: 0 !important;
+    width: 90%;
+    max-width: 500px;
+    left: auto !important;
+    right: auto !important;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
     align-items: center;
     text-align: center;
   }
 
-  .um-card-tag {
+  .um-card-tag, .um-overlay-card p {
     text-align: center;
   }
 
-  .um-overlay-card p {
-    text-align: center;
-  }
-
-  /* பட்டனை கார்டின் நடுவில் கொண்டுவர */
   .um-btn-align-wrapper {
     justify-content: center;
+  }
+}
+
+/* Extra small devices (Mobile) */
+@media (max-width: 768px) {
+  .um-ongoing-section {
+    padding: 50px 24px;
+  }
+
+  .um-ongoing-title {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .um-overlay-card {
+    width: 100%;
   }
 }

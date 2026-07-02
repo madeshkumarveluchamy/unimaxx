@@ -23,8 +23,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 16px; 
-  margin: -16px; 
+  padding: 8px; 
+  margin: 16px; 
 }
 
 /* SVG Filter Background */
@@ -45,14 +45,13 @@
   padding: 12px 24px;
   border-radius: 50px;
   display: inline-flex;
-  align-items: end;
+  align-items: center;
   justify-content: center;
   cursor: pointer;
   width: fit-content;
   gap: 15px;
   text-decoration: none;
   overflow: hidden;
-  animation: fadeIn 0.4s ease;
   box-sizing: border-box; 
 }
 
@@ -60,22 +59,23 @@
 .unimaxxexpertise-goo-text {
   font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 300;
   color: #ffffff;
+  text-deocration: none !important;
   pointer-events: none;
   mix-blend-mode: difference;
   text-decoration: none !important; 
   border-bottom: none !important; 
   display: flex;
-  align-items: center;
+  align-items: end!important;
   justify-content: center;
   line-height: 1;
   margin: 0;
   padding: 0;
-  padding-top: 15px;
+  
   display: inline-block;
 }
-
+  
 /* The Gold Icon Box */
 .unimaxxexpertise-goo-icon {
   background-color: #d8b056; 
@@ -87,8 +87,7 @@
   align-items: center;
   pointer-events: none;
   flex-shrink: 0;
-  position: relative;
-  top:3px;
+  position: relative; 
   z-index: 2;
 }
 

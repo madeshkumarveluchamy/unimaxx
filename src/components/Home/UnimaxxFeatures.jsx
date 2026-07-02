@@ -140,7 +140,7 @@ const UnimaxxFeatures = () => {
                 <SlotCounter value={stat.count} baseDirection="up"/>
                 <span className="arch-feat-stat-suffix font-geist">{stat.suffix}</span>
               </h4>
-              <p>{stat.label}</p>
+              <p className="font-serif text-black smin">{stat.label}</p>
             </div>
           ))}
         </div>

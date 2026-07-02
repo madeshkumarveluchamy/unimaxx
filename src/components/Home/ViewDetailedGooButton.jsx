@@ -15,7 +15,7 @@ function useStableIds() {
   return ref.current;
 }
 
-export default function ViewDetailedGooButton({ text = "View Detailed Project", onClick }) {
+export default function ViewDetailedGooButton({ text = "View Detailed Project" , textColor = "white",onClick }) {
   const wrapRef = useRef(null);
   const btnRef = useRef(null);
   const bgRef = useRef(null);
@@ -208,7 +208,7 @@ export default function ViewDetailedGooButton({ text = "View Detailed Project", 
         
         <span className="um-vd-goo-icon">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke={`${textColor}`} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
         </span>
       </button>

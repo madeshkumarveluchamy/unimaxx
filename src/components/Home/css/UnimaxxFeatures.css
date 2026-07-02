@@ -232,6 +232,7 @@
   justify-content: center !important;
   height: 1.1em !important;
   line-height: 1.1em !important;
+  font-weight: 400 !important;
 }
 
 .arch-feat-stat-suffix, 
@@ -245,9 +246,9 @@
 .arch-feat-stat-item p {
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 14px;
-  color: #4a4a4a;
+  
   text-transform: uppercase;
-  letter-spacing: 0.5px;
+  letter-spacing: 0.8px;
   margin: 0;
 }
 

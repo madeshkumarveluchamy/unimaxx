@@ -1,20 +1,21 @@
 import React, { useRef, useEffect, useCallback } from "react";
-// CSS கோப்பின் பெயரை இதற்கு ஏற்றாற்போல் கொடுத்துக்கொள்ளுங்கள்
-import "./css/ArchFeatGoodButton.css";
+import { Link } from "react-router-dom";
+import "./css/ProjectGooButtons.css";
 
+// Unique ID generator to ensure SVG filters don't clash
 let idCounter = 0;
 function useStableIds() {
   const ref = useRef(null);
   if (ref.current === null) {
     idCounter += 1;
     ref.current = {
-      filter: `archfeatgoobtn-filter-${idCounter}`
+      filter: `projectgoobtns-filter-${idCounter}`
     };
   }
   return ref.current;
 }
 
-export default function ArchFeatGooButton({ text = "The Architecture of Legacy", onClick }) {
+export default function ProjectGooButtons({ text = "View Detailed Project", to = {to} }) {
   const btnRef = useRef(null);
   
   const blobRef1 = useRef(null);
@@ -37,10 +38,8 @@ export default function ArchFeatGooButton({ text = "The Architecture of Legacy",
   const clampToButton = useCallback((x, y) => {
     if (!btnRef.current) return { x, y: 0 };
     const r = btnRef.current.getBoundingClientRect();
-    
-    const marginX = 16; 
-    const marginY = 10;
-    
+    const marginX = 8; 
+    const marginY = 4;
     return {
       x: Math.min(Math.max(x, marginX), r.width - marginX),
       y: Math.min(Math.max(y, marginY), r.height - marginY),
@@ -48,9 +47,9 @@ export default function ArchFeatGooButton({ text = "The Architecture of Legacy",
   }, []);
 
   const targetRadii = useCallback(() => {
-    if (!btnRef.current) return { rx: 15, ry: 15 };
+    if (!btnRef.current) return { rx: 12, ry: 12 };
     const r = btnRef.current.getBoundingClientRect();
-    return { rx: r.height * 0.40, ry: r.height * 0.40 }; 
+    return { rx: r.height * 0.55, ry: r.height * 0.55 }; 
   }, []);
 
   const animate = useCallback(() => {
@@ -138,18 +137,18 @@ export default function ArchFeatGooButton({ text = "The Architecture of Legacy",
   };
 
   return (
-    <button 
-      className="arch-feat-goo-btn font-hanken" 
+    <Link 
+      to={to}
+      className="projectgoobtns-btn text-decoration-none" 
       ref={btnRef} 
-      onClick={onClick}
       onMouseEnter={handleMouseEnter}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
     >
-      <svg className="arch-feat-goo-svg" aria-hidden="true">
+      <svg className="projectgoobtns-svg" aria-hidden="true">
         <defs>
           <filter id={ids.filter} x="-50%" y="-50%" width="200%" height="200%">
-            <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur" />
+            <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
             <feColorMatrix
               in="blur"
               mode="matrix"
@@ -168,12 +167,8 @@ export default function ArchFeatGooButton({ text = "The Architecture of Legacy",
         </g>
       </svg>
 
-      <span className="arch-feat-goo-text">{text}</span>
-      <span class="archfeatgoobtn-icon">
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-    </svg>
-  </span>
-    </button>
+      <span className="projectgoobtns-icon">+</span>
+      <span className="projectgoobtns-text">{text}</span>
+    </Link>
   );
 }

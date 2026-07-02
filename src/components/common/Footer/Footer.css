@@ -33,7 +33,7 @@
 /* முதல் மற்றும் இரண்டாவது காலம்களுக்கு மட்டும் வலதுபுறம் செங்குத்து பார்டர் */
 .um-footer-brand-col,
 .um-footer-links-col {
-  border-right: 1px solid rgba(255, 255, 255, 0.08);
+  border-right: 1px solid #ffffff;
 }
 
 /* முதல் காலம் மட்டும் இடதுபுற பேடிங் தேவையில்லை */
@@ -57,7 +57,7 @@
   font-family: 'Georgia', serif;
   font-size: 2.8rem;
   font-weight: 400;
-  color: #ffffff;
+  color: #ffffff !important;
   line-height: 1.15;
   margin: 0 0 20px 0;
   letter-spacing: 0.5px;
@@ -113,7 +113,7 @@
   font-family: 'Georgia', serif;
   font-weight: 400;
   color: #d8b056; /* பிரீமியம் கோல்டன் நிறம் */
-  font-size: 24px;
+  font-size: 28px;
   margin: 0 0 25px 0;
   text-align: left;
 }
@@ -131,7 +131,7 @@
 
 .um-footer-links-list a {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   color: #acaba9;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -144,7 +144,7 @@
 /* COLUMN 3: Contact & Address Info */
 .um-footer-address {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   font-style: normal;
   color: #acaba9;
   line-height: 1.6;
@@ -155,7 +155,7 @@
 
 .um-footer-contact-details {
   font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
   color: #acaba9;
   display: flex;
   flex-direction: column;
@@ -196,7 +196,7 @@
 
 /* BOTTOM COPYRIGHT BAR */
 .um-footer-bottom-bar {
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-top: 1px solid #ffffff;
   padding-top: 30px;
   text-align: center;
   width: 100%;

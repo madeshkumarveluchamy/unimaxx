@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/Hero.css';
+import '../ProjectDetail1/css/Hero.css';
 import backgroundimage from '../../assets/backgroundimage.webp';
 
 const Hero = () => {

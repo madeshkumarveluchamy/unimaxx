@@ -50,7 +50,7 @@
 /* --- LOGO PLATE --- */
 .unimaxx-logo-white-plate {
   background-color: #ffffff;
-  padding: 8px 24px;
+  padding: 3px 15px;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -59,16 +59,16 @@
 }
 
 .unimaxx-src-logo {
-  height: 34px;
+  height: 60px;
   width: auto;
   object-fit: contain;
 }
 
 /* --- DESKTOP GLASS MENU --- */
 .unimaxx-exact-glass-pill {
-  background: rgba(255, 255, 255, 0.07) !important; 
-  backdrop-filter: blur(16px) saturate(120%);
-  -webkit-backdrop-filter: blur(16px) saturate(120%);
+  background: rgba(0, 0, 0, 0.3) !important; 
+  backdrop-filter: blur(10px) saturate(80%);
+  -webkit-backdrop-filter: blur(10px) saturate(120%);
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   
@@ -78,7 +78,7 @@
   justify-content: center;
   align-items: center;
   gap: 80px; 
-  width: 65%; 
+  width: 57%; 
   max-width: 1100px;
   min-width: 750px;
   transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
@@ -105,8 +105,8 @@
 
 @media (min-width: 769px) {
   .unimaxx-premium-nav-root.scrolled {
-    padding-top: 10px !important;
-    padding-bottom: 10px !important;
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
     top: 15px; 
     width: 80% !important; 
     max-width: 760px;
@@ -128,14 +128,14 @@
   }
 
   .unimaxx-premium-nav-root.scrolled .unimaxx-logo-white-plate {
-    padding: 6px 18px;
+    padding: 1px 18px;
     box-shadow: none;
     background-color: #ffffff;
     border-radius: 40px; 
   }
 
   .unimaxx-premium-nav-root.scrolled .unimaxx-src-logo {
-    height: 25px;
+    height: 37px;
   }
 
   .unimaxx-premium-nav-root.scrolled .unimaxx-exact-glass-pill {

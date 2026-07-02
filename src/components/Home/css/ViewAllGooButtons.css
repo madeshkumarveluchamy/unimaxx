@@ -31,6 +31,7 @@
   cursor: pointer;
   width: fit-content;
   text-decoration: none;
+  font-weight:300 !important;
   overflow: hidden; 
 }
 
@@ -38,7 +39,7 @@
 .um-view-insights-text {
   font-family: 'Geist', 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
-  font-weight: 500;
+  font-weight: 300;
   color: #ffffff;
   pointer-events: none;
   mix-blend-mode: difference;

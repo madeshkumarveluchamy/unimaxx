@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/ModernDetail.css';
+import '../ProjectDetail1/css/ModernDetail.css';
 
 // தேவையான இமேஜ் ஃபைல்கள்
 import modern1 from '../../assets/modern1.webp';

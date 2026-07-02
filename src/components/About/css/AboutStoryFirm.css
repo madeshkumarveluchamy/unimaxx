@@ -13,7 +13,7 @@
 /* 🎯 Pure Custom Flexbox - Bootstrap-ஐ நம்பி இல்லை */
 .ux-firm-flex-row {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: space-between;
   gap: 40px; /* டெக்ஸ்ட்டுக்கும் இமேஜுக்கும் இடையே இடைவெளி */
 }
@@ -49,7 +49,7 @@
 
 .ux-firm-title {
   font-family: 'Playfair Display', serif;
-  font-size: 3.5rem;
+  font-size: 4rem;
   line-height: 1.1;
   color: #111111;
   margin: 0;
@@ -58,8 +58,8 @@
 
 .ux-firm-description {
   font-family: 'Rubik', sans-serif;
-  font-size: 14px;
-  color: #555555;
+  font-size: 18px;
+  color: #000000b9;
   line-height: 1.7;
   margin-bottom: 35px;
 }

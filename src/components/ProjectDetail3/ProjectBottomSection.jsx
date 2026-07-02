@@ -1,5 +1,5 @@
 import React from 'react';
-import './css/ProjectBottomSection.css';
+import '../ProjectDetail1/css/ProjectBottomSection.css';
 
 // தேவையான இமேஜ் ஃபைல்கள்
 import modern4 from '../../assets/modern4.webp';

@@ -206,21 +206,21 @@
 }
 
 /* ========================================================
-    🎯 PHONE VIEW PRECISE FIXES (768px-க்கு கீழே சென்டர் பிக்ஸ்)
-   ======================================================== */
+  🎯 PHONE VIEW PRECISE FIXES (768px-க்கு கீழே சென்டர் பிக்ஸ்)
+======================================================== */
 @media (max-width: 768px) {
   .um-reviews-section {
     padding: 60px 24px;
     align-items: center;
   }
-  
+
   /* ஹெடர் சென்டர் அலைன்மென்ட் */
   .um-reviews-header h2 {
     font-size: 2.2rem;
     text-align: center;
     max-width: 100%;
   }
-  
+
   .um-reviews-grid {
     grid-template-columns: 1fr;
     justify-items: center;

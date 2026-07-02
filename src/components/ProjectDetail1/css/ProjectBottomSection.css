@@ -10,7 +10,7 @@
 .nest-bottom-container {
   width: 100%;
   max-width: 2000px;
-  padding: 0 80px 100px 80px;
+  padding: 0 80px 20px 80px;
   display: flex;
   flex-direction: column;
   gap: 50px; /* அனைத்து பிரிவுகளுக்கும் இடையே உள்ள சீரான கேப் */
@@ -19,7 +19,7 @@
 /* --- TOP FULL WIDTH IMAGE --- */
 .nest-full-banner-frame {
   width: 100%;
-  aspect-ratio: 16 / 9.5;
+  aspect-ratio: 16 / 6;
   border-radius: 16px;
   overflow: hidden;
 }
@@ -42,13 +42,15 @@
 
 /* Left Side Image Column */
 .nest-timeline-image-holder {
-  width: 100%;
+  height: 100% ;
+  width: 100% ;
   border-radius: 16px;
   overflow: hidden;
 }
 
 .nest-timeline-image-holder img {
   width: 100%;
+  height: 100% !important;
   height: auto;
   display: block;
   object-fit: cover;
@@ -99,7 +101,7 @@
 /* --- 🎯 NEW ADDITION: FINAL CLOSet FULL BANNER FRAME --- */
 .nest-final-closet-frame {
   width: 100%;
-  aspect-ratio: 16 / 10.5; /* படத்தில் உள்ளவாறு கச்சிதமான லேண்ட்ஸ்கேப் ரேஷியோ */
+  aspect-ratio: 16 / 6; /* படத்தில் உள்ளவாறு கச்சிதமான லேண்ட்ஸ்கேப் ரேஷியோ */
   border-radius: 16px;
   overflow: hidden;
   margin-top: 20px; /* டைம்லைன் முடிந்த பிறகு வரும் கூடுதல் கேப் */
@@ -110,6 +112,14 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+@media(min-width:1370px){
+  .nest-timeline-split-grid {
+    height:350px ;
+  }
+  .nest-timeline-image-holder img{
+    height:400px ;
+  }
 }
 
 /* ========================================================

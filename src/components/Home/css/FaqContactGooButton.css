@@ -29,7 +29,7 @@
   position: relative;
   z-index: 2; /* திரவத்திற்கு மேல் இருக்க வேண்டும் */
   font-size: 13px; 
-  font-weight: 500;
+  font-weight: 300;
   /* THE MAGIC: Text is actually white! */
   color: #ffffff; 
   pointer-events: none;

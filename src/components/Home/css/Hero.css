@@ -104,9 +104,6 @@ html, body {
   font-size: 10px;
 }
 
-/* ========================================================
-   🎯 3. PURE CSS MARQUEE ENGINE (Right to Left - Updated)
-   ======================================================== */
 .unimaxx-marquee-container {
   position: absolute;
   bottom: 0%; 
@@ -117,9 +114,32 @@ html, body {
   pointer-events: none;
   user-select: none;
   padding: 20px 0;
-  
-  -webkit-mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0.6) 100%);
-  mask-image: linear-gradient(to bottom, black 50%, rgba(0, 0, 0, 0.6) 100%);
+}
+
+/* 🎯 Left Side Black Blur / Fade Effect */
+.unimaxx-marquee-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 25%; /* இடது பக்கம் கருப்பு நிறம் எவ்வளவு தூரம் வர வேண்டும் என்பதை இங்கே மாற்றலாம் */
+  height: 100%;
+  background: linear-gradient(to right, #000000 1%, transparent 100%);
+  z-index: 3;
+  pointer-events: none;
+}
+
+/* 🎯 Right Side Black Blur / Fade Effect */
+.unimaxx-marquee-container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 25%; /* வலது பக்கம் கருப்பு நிறம் எவ்வளவு தூரம் வர வேண்டும் என்பதை இங்கே மாற்றலாம் */
+  height: 100%;
+  background: linear-gradient(to left, #000000 1%, transparent 100%);
+  z-index: 3;
+  pointer-events: none;
 }
 
 .unimaxx-marquee-track {
@@ -127,7 +147,7 @@ html, body {
   width: max-content;
   gap: 80px; 
   
-  /* 🎯 அனிமேஷன் இப்போ வலது பக்கத்தில் இருந்து இடது பக்கமாக நகரும் */
+  /* 🎯 அனிமேஷன் வலது பக்கத்தில் இருந்து இடது பக்கமாக நகரும் */
   animation: runLettersRightToLeft 22s linear infinite;
 }
 
@@ -135,7 +155,7 @@ html, body {
   color: #ffffff; 
   font-family: 'Georgia', serif;
   font-size: clamp(90px, 14vw, 220px); 
-  font-weight: 400;
+  font-weight: 100;
   white-space: nowrap;
   line-height: 1;
   letter-spacing: 2px;
