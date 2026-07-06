@@ -4,7 +4,7 @@
   display: inline-flex;
   align-items: center;
   background-color: #1a1a1a; /* நீங்கள் கொடுத்த ஆரம்ப Background */
-  padding: 10px 10px 10px 24px; /* Icon-க்கு ஏற்ப நேர்த்தியான Padding */
+  padding: 8px 8px 8px 24px; /* Icon-க்கு ஏற்ப நேர்த்தியான Padding */
   gap: 15px; 
   border: none;
   cursor: pointer;
@@ -42,8 +42,8 @@
   z-index: 2; 
   background-color: #D1A856; 
   color: #ffffff;
-  width: 34px; 
-  height: 34px; 
+  width: 28px; 
+  height: 28px; 
   display: flex;
   align-items: center;
   justify-content: center;

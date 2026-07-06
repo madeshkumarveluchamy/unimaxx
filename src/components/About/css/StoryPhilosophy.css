@@ -1,14 +1,15 @@
 /* ==================== 
-   MAIN LAYOUT (CUSTOM FLEX)
+   MAIN LAYOUT
 ==================== */
 .ux-philo-section {
   background-color: #ffffff;
   padding: 100px 0;
   width: 100%;
+  overflow: hidden; 
 }
 
 .ux-philo-container {
-  max-width: 1250px; /* கச்சிதமான கண்டெய்னர் அளவு */
+  max-width: 1250px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -16,29 +17,102 @@
 .ux-philo-flex-row {
   display: flex;
   justify-content: space-between;
-  align-items: flex-start; /* எல்லாவற்றையும் மேலிருந்து தொடங்க வைக்கும் */
-  gap: 50px; /* 3 காலம்களுக்கும் நடுவில் உள்ள இடைவெளி */
+  align-items: flex-start;
+  gap: 50px;
+}
+
+/* ==================== 
+   SCROLL ANIMATIONS (Premium Float Effect)
+==================== */
+
+/* 1. Slide from Left */
+.slide-from-left {
+  opacity: 0;
+  transform: translateX(-60px); /* 150px லிருந்து 60px ஆக குறைக்கப்பட்டுள்ளது */
+  transition: opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1), transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* 2. Slide from Right */
+.slide-from-right {
+  opacity: 0;
+  transform: translateX(60px); /* 150px லிருந்து 60px ஆக குறைக்கப்பட்டுள்ளது */
+  transition: opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1), transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* 3. Center Fade In Up */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(60px); /* 100px லிருந்து 60px ஆக குறைக்கப்பட்டுள்ளது */
+  transition: opacity 1.5s cubic-bezier(0.22, 1, 0.36, 1), transform 1.5s cubic-bezier(0.22, 1, 0.36, 1);
+  will-change: opacity, transform;
+}
+
+/* Base Setup for Line Draw */
+.line-draw {
+  width: 0;
+  opacity: 0;
+  transition: width 1.5s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.8s ease-out;
+}
+
+.ux-philo-animated-line {
+  height: 1px;
+  background-color: #999999;
+  transform-origin: left;
+}
+
+.main-line { margin: -20px 0 40px 0; }
+.sub-line { margin: 10px 0 15px 0; }
+
+/* ==================== 
+   ACTIVE STATES (When Scrolled Into View) 
+==================== */
+.animate-active .slide-from-left,
+.animate-active .slide-from-right,
+.animate-active .fade-in-up {
+  opacity: 1;
+  transform: translate(0, 0); 
+}
+
+.animate-active .main-line { width: 100%; opacity: 1; }
+.animate-active .sub-line { width: 60px; opacity: 1; } 
+
+/* ==================== 
+   STAGGERED DELAYS (Smooth Chaining) 
+==================== */
+
+/* Left Column Sequence */
+.animate-active .ux-philo-tag.slide-from-left { transition-delay: 0.1s; }
+.animate-active .ux-philo-main-title.slide-from-left { transition-delay: 0.2s; }
+.animate-active .main-line.line-draw { transition-delay: 0.35s; }
+.animate-active .ux-philo-left-col .ux-philo-sub-title.slide-from-left { transition-delay: 0.45s; }
+.animate-active .ux-philo-left-col .sub-line.line-draw { transition-delay: 0.55s; }
+.animate-active .ux-philo-left-col .ux-philo-desc.slide-from-left { transition-delay: 0.65s; }
+
+/* Center Image */
+.animate-active .ux-philo-main-img.fade-in-up { transition-delay: 0.3s; }
+
+/* Right Column Sequence */
+.animate-active .ux-philo-sub-img.slide-from-right { transition-delay: 0.4s; }
+.animate-active .ux-philo-vision-block .ux-philo-sub-title.slide-from-right { transition-delay: 0.55s; }
+.animate-active .ux-philo-vision-block .sub-line.line-draw { transition-delay: 0.65s; }
+.animate-active .ux-philo-vision-block .ux-philo-desc.slide-from-right { transition-delay: 0.75s; }
+
+/* வெளியே போகும்போது எல்லா Elements-ம் தாமதம் இல்லாமல் ஆனால் மென்மையாக மறைய (Smooth Fade-out) */
+.slide-from-left, .slide-from-right, .fade-in-up, .line-draw {
+  transition-delay: 0s !important; 
 }
 
 /* ==================== 
    COLUMNS SIZING 
 ==================== */
-.ux-philo-left-col {
-  width: 35%;
-  padding-top: 10px;
-}
-
-.ux-philo-center-col {
-  width: 35%;
-}
-
-.ux-philo-right-col {
-  width: 30%;
-  padding-top: 40px; /* வலது பக்க இமேஜ் சற்று கீழே இறங்கி இருக்க */
-}
+.ux-philo-left-col { width: 35%; padding-top: 10px; }
+.ux-philo-center-col { width: 35%; }
+.ux-philo-right-col { width: 30%; padding-top: 40px; }
 
 /* ==================== 
-   TYPOGRAPHY 
+   TYPOGRAPHY & IMAGES
 ==================== */
 .ux-philo-tag {
   font-family: 'Rubik', sans-serif;
@@ -77,20 +151,17 @@
   margin: 0;
 }
 
-/* ==================== 
-   IMAGES 
-==================== */
 .ux-philo-main-img {
   width: 100%;
-  aspect-ratio: 3 / 4; /* படத்தில் உள்ளவாறு நீளமான (Portrait) அளவு */
+  aspect-ratio: 3 / 4;
   object-fit: cover;
   border-radius: 6px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .ux-philo-sub-img {
-  width: 85%; /* வலது பக்க இமேஜ் சற்று சிறியதாக இருக்க */
-  aspect-ratio: 1 / 1.1; /* சற்றே சதுர வடிவம் */
+  width: 85%;
+  aspect-ratio: 1 / 1.1;
   object-fit: cover;
   border-radius: 6px;
   margin-bottom: 40px;
@@ -101,47 +172,22 @@
    MOBILE RESPONSIVENESS 
 ==================== */
 @media (max-width: 1024px) {
-  .ux-philo-main-title {
-    font-size: 2.6rem;
-  }
-  .ux-philo-flex-row {
-    gap: 30px;
-  }
-  .ux-philo-sub-img {
-    width: 100%;
-  }
+  .ux-philo-main-title { font-size: 2.6rem; }
+  .ux-philo-flex-row { gap: 30px; }
+  .ux-philo-sub-img { width: 100%; }
 }
 
-/* Mobile & Tablets (768px-க்கு கீழ்) */
 @media (max-width: 768px) {
-  .ux-philo-section {
-    padding: 60px 0;
+  .ux-philo-section { padding: 60px 0; }
+  .ux-philo-flex-row { flex-direction: column; gap: 50px; }
+  .ux-philo-left-col, .ux-philo-center-col, .ux-philo-right-col {
+    width: 100%; padding-top: 0;
   }
+  .ux-philo-main-title { font-size: 2.5rem; margin-bottom: 30px; }
+  .ux-philo-sub-img { aspect-ratio: 4 / 3; width: 100%; margin-bottom: 30px; }
+  .ux-philo-main-img { aspect-ratio: 4 / 3; }
   
-  .ux-philo-flex-row {
-    flex-direction: column; /* 3 காலம்களையும் ஒன்றன் கீழ் ஒன்றாக மாற்றுதல் */
-    gap: 50px;
-  }
-
-  .ux-philo-left-col,
-  .ux-philo-center-col,
-  .ux-philo-right-col {
-    width: 100%; /* மொபைலில் எல்லாமே முழு அகலம் (100%) எடுக்கும் */
-    padding-top: 0;
-  }
-
-  .ux-philo-main-title {
-    font-size: 2.5rem;
-    margin-bottom: 30px;
-  }
-
-  .ux-philo-sub-img {
-    aspect-ratio: 4 / 3; /* மொபைலில் இமேஜ் கிடைமட்டமாக தெரிய */
-    width: 100%;
-    margin-bottom: 30px;
-  }
-  
-  .ux-philo-main-img {
-    aspect-ratio: 4 / 3;
+  .slide-from-left, .slide-from-right {
+    transform: translateY(40px); 
   }
 }

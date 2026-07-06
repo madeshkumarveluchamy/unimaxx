@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import './css/UnimaxxProjects.css';
 
@@ -14,7 +14,7 @@ const UnimaxxProjects = () => {
     { id: 4, img: hero3frame1, title: "Modern Residence 4", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
   ]);
 
-  const [direction, setDirection] = useState(1); 
+  const [direction, setDirection] = useState(1);
 
   const handleNext = () => {
     setDirection(1);
@@ -35,6 +35,16 @@ const UnimaxxProjects = () => {
       return updated;
     });
   };
+
+  // Autoplay Logic Added Here
+  useEffect(() => {
+    const autoPlayInterval = setInterval(() => {
+      handleNext();
+    }, 3000); // 3000ms = 3 seconds (Unangalku ethapla timing mathikonga)
+
+    // Cleanup function to clear interval on component unmount
+    return () => clearInterval(autoPlayInterval);
+  }, []); 
 
   const waterflowVariants = {
     initial: (dir) => ({

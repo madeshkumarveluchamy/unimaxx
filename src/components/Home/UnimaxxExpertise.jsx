@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './css/UnimaxxExpertise.css';
 
 import expertiseimg1 from '../../assets/expertiseimg1.webp';
@@ -7,10 +7,13 @@ import expertiseimg3 from '../../assets/expertiseimg3.webp';
 import expertiseimg4 from '../../assets/expertiseimg4.webp';
 import expertiseimg5 from '../../assets/expertiseimg5.webp';
 import GetQuoteGooButton from './GetQuoteGooButton';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom'; // தேவைப்பட்டால் மட்டும் பயன்படுத்தவும்
 
 const UnimaxxExpertise = () => {
   const [activeId, setActiveId] = useState(1);
+  
+  // Mobile-ஐ கண்டுபிடிக்க <= 968 பயன்படுத்துகிறோம்
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 968);
 
   const expertiseData = [
     {
@@ -60,8 +63,21 @@ const UnimaxxExpertise = () => {
     }
   ];
 
+  useEffect(() => {
+    const handleResize = () => {
+      // மொபைலைக் கண்டுபிடிக்க <= பயன்படுத்துவதே சரி
+      setIsMobile(window.innerWidth <= 968);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const toggleAccordion = (id) => {
-    setActiveId(activeId === id ? id : id);
+    // மொபைலில் click வேலை செய்ய வேண்டாம், Desktop-ல் மட்டும் வேலை செய்யட்டும்
+    if (!isMobile) {
+      setActiveId(activeId === id ? null : id); // ஒரே கார்டை மறுபடியும் கிளிக் செய்தால் மூடவும்
+    }
   };
 
   return (
@@ -79,11 +95,16 @@ const UnimaxxExpertise = () => {
         {/* Accordion List Container */}
         <div className="um-accordion-list">
           {expertiseData.map((item) => {
+            // Desktop-ல் click செய்தால் மட்டுமே isOpen true ஆகும்.
             const isOpen = activeId === item.id;
+            
+            // Mobile-ல் எல்லாமே திறந்திருக்க வேண்டும், Desktop-ல் click செய்தவை மட்டும் திறக்க வேண்டும்
+            const showDetails = isMobile || isOpen;
+
             return (
               <div
                 key={item.id} 
-                className={`um-accordion-row ${isOpen ? 'um-row-open' : ''}`}
+                className={`um-accordion-row ${showDetails ? 'um-row-open' : ''}`}
                 onClick={() => toggleAccordion(item.id)}
               >
                 
@@ -102,8 +123,8 @@ const UnimaxxExpertise = () => {
                     <span className="um-content-subtitle font-geist fmin">{item.subtitle}</span>
                   </div>
 
-                  {/* ஓப்பனாக இருக்கும்போது மட்டும் வெளியே தெரியும் கூடுதல் தகவல்கள் */}
-                  {isOpen && (
+                  {/* ஓப்பனாக இருக்கும்போது அல்லது மொபைலாக இருக்கும்போது வெளியே தெரியும் கூடுதல் தகவல்கள் */}
+                  {showDetails && (
                     <div className="um-expanded-details">
                       <h4 className="um-exp-count font-geist fsub">{item.count}</h4>
                       <p className="um-exp-body-text font-geist fmin">{item.desc}</p>
@@ -111,26 +132,33 @@ const UnimaxxExpertise = () => {
                   )}
                 </div>
 
-                {/* Right Side Action (Icon & Button Area) */}
-                <div className="um-row-action">
-                  {isOpen ? (
-                    <>
-                     
-                       
-                        <div><GetQuoteGooButton  to="/projects"/></div> 
-                    
-                      
-                      <div className="um-toggle-icon um-icon-close">✕</div>
-                    </>
-                  ) : (
-                    <div className="um-toggle-icon um-icon-plus">＋</div>
-                  )}
-                </div>
+                {/* Right Side Action (Icon & Button Area) - Desktop-ல் மட்டும் காட்ட வேண்டும் */}
+                {!isMobile && (
+                  <div className="um-row-action">
+                    {isOpen ? (
+                      <>
+                        <div className="um-card-quote-btn">
+                          <GetQuoteGooButton to="/projects"/>
+                        </div> 
+                        <div className="um-toggle-icon um-icon-close">✕</div>
+                      </>
+                    ) : (
+                      <div className="um-toggle-icon um-icon-plus">＋</div>
+                    )}
+                  </div>
+                )}
 
               </div>
             );
           })}
         </div>
+
+        {/* Mobile-க்கான Common Button - இது Mobile-ல் மட்டுமே Section-க்கு கீழே தெரியும் */}
+        {isMobile && (
+          <div className="um-mobile-common-btn" style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '30px' }}>
+            <GetQuoteGooButton to="/projects"/>
+          </div>
+        )}
 
       </section>
     </div>

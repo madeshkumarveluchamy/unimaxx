@@ -9,7 +9,7 @@
 .um-reviews-section {
   width: 100%;
   max-width: 2000px;
-  padding: 100px 80px;
+  padding: 100px 80px 100px 80px; /* Optional: Adjusted padding */
   display: flex;
   flex-direction: column;
   gap: 60px;
@@ -26,16 +26,35 @@
   text-align: left;
 }
 
-/* 4 Column Layout */
-.um-reviews-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+/* ===================================================
+   HORIZONTAL SLIDER STYLES
+   =================================================== */
+.um-reviews-slider {
+  display: flex;          /* இது மிகவும் முக்கியம் */
   gap: 24px;
   width: 100%;
+  overflow-x: auto;       /* இது இருந்தால்தான் scroll ஆகும் */
+  scroll-behavior: auto;  
+  cursor: grab;
+  /* Scrollbar-ஐ மறைக்க */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.um-reviews-slider::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Drag செய்யும் போது Cursor மாறுவதற்காக */
+.um-reviews-slider.dragging {
+  cursor: grabbing;
+  scroll-behavior: auto; /* Drag-ஐ smooth-ஆக மாற்ற */
 }
 
 /* Individual Card Style */
 .um-review-card {
+  flex: 0 0 auto; /* Grid-ல் இருந்து Flex-க்கு மாறுவதால் சுருங்காமல் இருக்க */
+  width: 350px; /* கார்டின் அகலத்தை செட் செய்துள்ளேன் (தேவைக்கேற்ப மாற்றிக்கொள்ளலாம்) */
   background-color: #ffffff;
   border-radius: 20px;
   padding: 40px 30px;
@@ -47,11 +66,16 @@
   box-sizing: border-box;
   position: relative;
   overflow: hidden;
-  cursor: pointer;
   transition: all 0.3s ease;
   align-items: flex-start;
+  user-select: none; /* Drag செய்யும்போது Text Select ஆவதைத் தடுக்க */
 }
 
+
+.um-review-card {
+  flex: 0 0 auto;         /* கார்டுகள் சுருங்காமல் இருக்க இது அவசியம் */
+  width: 350px;           /* அகலம் கட்டாயம் இருக்க வேண்டும் */
+}
 .um-review-card:hover {
   transform: translateY(-5px);
   background-color: #fcfcfc;
@@ -64,6 +88,7 @@
   flex-grow: 1;
   width: 100%;
   align-items: flex-start;
+  pointer-events: none; /* உள்ளே இருக்கும் Content Drag-ஐ டிஸ்டர்ப் செய்யாமல் இருக்க */
 }
 
 .um-rev-stars {
@@ -92,6 +117,7 @@
   z-index: 3;
   width: 100%;
   justify-content: flex-start;
+  pointer-events: none;
 }
 
 .um-rev-user-info img {
@@ -128,7 +154,6 @@
    VIDEO AND INTERACTIVE CONTROLS
    =================================================== */
 
-/* வீடியோ பேக்ரவுண்ட் லேயர் */
 .um-card-video-bg {
   position: absolute;
   top: 0;
@@ -142,7 +167,6 @@
   pointer-events: none; 
 }
 
-/* ஹோவர் பிளே ஐகான் */
 .um-hover-play-indicator {
   position: absolute;
   top: 30px;
@@ -159,6 +183,7 @@
   padding-left: 2px;
   opacity: 0;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 
 .um-review-card:hover .um-hover-play-indicator {
@@ -177,7 +202,6 @@
   opacity: 1; 
 }
 
-/* வீடியோவின் மேல் பெயர் மிதப்பதற்கான லேயர் */
 .um-video-user-overlay {
   position: absolute;
   bottom: 35px;
@@ -198,15 +222,8 @@
   color: #dddddd !important;
 }
 
-/* Responsive UI */
-@media (max-width: 1200px) {
-  .um-reviews-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* ========================================================
-  🎯 PHONE VIEW PRECISE FIXES (768px-க்கு கீழே சென்டர் பிக்ஸ்)
+  🎯 PHONE VIEW PRECISE FIXES
 ======================================================== */
 @media (max-width: 768px) {
   .um-reviews-section {
@@ -214,24 +231,16 @@
     align-items: center;
   }
 
-  /* ஹெடர் சென்டர் அலைன்மென்ட் */
   .um-reviews-header h2 {
     font-size: 2.2rem;
     text-align: center;
     max-width: 100%;
   }
 
-  .um-reviews-grid {
-    grid-template-columns: 1fr;
-    justify-items: center;
-  }
-
-  /* கார்டு மற்றும் அதன் உள்ளே இருக்கும் கன்டென்ட்கள் சென்டர் அலைன்மென்ட் */
   .um-review-card {
     align-items: center;
     text-align: center;
-    width: 100%;
-    max-width: 450px; /* கார்டு மொபைலில் பார்க்க அழகாக இருக்க மேக்ஸ் வித் */
+    width: 300px; /* Mobile-ல் கார்டின் அளவை சற்றே குறைத்துள்ளேன் */
   }
 
   .um-card-static-content {
@@ -246,7 +255,6 @@
     text-align: center;
   }
 
-  /* யூசர் புரொபைல் சென்டர் பிக்ஸ் */
   .um-rev-user-info {
     flex-direction: column;
     justify-content: center;
@@ -267,12 +275,11 @@
     text-align: center;
   }
 
-  /* வீடியோ ஓடி கொண்டு இருக்கும் போது வரும் ஓவர்லே மொபைல் சென்டர் பிக்ஸ் */
   .um-video-user-overlay {
     left: 50%;
     transform: translateX(-50%);
     bottom: 25px;
-    flex-direction: row; /* ஓவர்லேக்குள்ள இமேஜும் டெக்ஸ்ட்டும் பக்கத்துல இருக்க */
+    flex-direction: row;
     align-items: center;
     justify-content: center;
     width: max-content;
@@ -280,6 +287,6 @@
   }
 
   .um-video-user-overlay div {
-    align-items: flex-start; /* ஓவர்லே டெக்ஸ்ட் மட்டும் லேசான அலைன்மென்ட் லாக் */
+    align-items: flex-start;
   }
 }

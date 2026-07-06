@@ -1,12 +1,44 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './css/UnimaxxOngoing.css';
 
-import bgImg from '../../assets/ongoing1.webp';
-import overlayImg from '../../assets/ongoingprojectoverlay.webp';
+import bgImg from '../../assets/ongoing1.webp'; // Background image (Now static)
+
+// Card-kulla slide aaga vendiya images (Add your actual images here)
+import overlayImg1 from '../../assets/aboutstory.png';
+import overlayImg2 from '../../assets/aboutstory2.png'; 
+import overlayImg3 from '../../assets/aboutstory3.png'; 
+
 import ViewDetailedGooButton from './ViewDetailedGooButton';
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
+
+// Reusable AutoSlider Component
+const AutoSlider = ({ images, interval = 3000 }) => {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, interval);
+
+    return () => clearInterval(timer);
+  }, [images.length, interval]);
+
+  return (
+    <img 
+      key={currentIndex} 
+      src={images[currentIndex]} 
+      alt="Project Overlay Slider" 
+      className="slider-fade-anim" // Custom animation class
+      style={{ width: '100%', height: '100%', objectFit: 'cover' }} // Ensures it fits perfectly inside the box
+    />
+  );
+};
 
 const UnimaxxOngoing = () => {
+  // Array of images for the cards
+  const project1CardImages = [overlayImg1, overlayImg2, overlayImg3];
+  const project2CardImages = [overlayImg1, overlayImg2, overlayImg3];
+
   return (
     <div className="um-ongoing-master">
       <section className="um-ongoing-section">
@@ -19,48 +51,65 @@ const UnimaxxOngoing = () => {
 
         <div className="um-ongoing-list">
           
-          {/* Row 1: Overlay Card on the RIGHT */}
+          {/* Row 1 */}
           <div className="um-ongoing-row">
             <div className="um-bg-image-wrapper">
+              
+              {/* Static Background Image */}
               <img src={bgImg} alt="Project Background 1" className="um-bg-main-img" />
               
               <div className="um-overlay-card um-overlay-right">
-                <span className="um-card-tag font-serief fw-semibold ftit">Begin Your Design Journey</span>
+                {/* 1. Banner Image on Top (Now Sliding!) */}
                 <div className="um-overlay-img-box">
-                  <img src={overlayImg} alt="Project Overlay" />
+                  <AutoSlider images={project1CardImages} interval={3000} />
                 </div>
-                <p className='font-hanken fmin'>Refined interior blending functionality with elegance.</p>
-                <div className="um-btn-align-wrapper">
-                  <Link  className="text-decoration-none" to="/projects">
-                  <ViewDetailedGooButton textColor="black" />
-                  </Link>
+                
+                {/* 2. Centered Text Content Below */}
+                <div className="um-overlay-text-content">
+                  <h3 className="um-card-title font-serief">Modern Residence</h3>
+                  
+                  <div className="um-btn-align-wrapper">
+                    <Link className="text-decoration-none" to="/projects">
+                      <ViewDetailedGooButton textColor="black" />
+                    </Link>
+                  </div>
+                  
+                  <span className="um-card-footer font-hanken">RESIDENTIAL &nbsp; COIMBATORE, TN</span>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Row 2: Overlay Card on the LEFT */}
+          {/* Row 2 */}
           <div className="um-ongoing-row">
             <div className="um-bg-image-wrapper">
+              
+              {/* Static Background Image */}
               <img src={bgImg} alt="Project Background 2" className="um-bg-main-img" />
               
               <div className="um-overlay-card um-overlay-left">
-                <span className="um-card-tag ssub fw-semibold font-serief ftit">Begin Your Design Journey</span>
+                {/* 1. Banner Image on Top (Now Sliding!) */}
                 <div className="um-overlay-img-box">
-                  <img src={overlayImg} alt="Project Overlay" />
+                  <AutoSlider images={project2CardImages} interval={3500} /> 
                 </div>
-                <p className='font-hanken fmin'>Refined interior blending functionality with elegance.</p>
-                <div className="um-btn-align-wrapper">
-                  <Link  className="text-decoration-none" to="/projects">
-                  <ViewDetailedGooButton  textColor="black"/>
-                  </Link>
+                
+                {/* 2. Centered Text Content Below */}
+                <div className="um-overlay-text-content">
+                  <h3 className="um-card-title font-serief">Modern Residence</h3>
+                  
+                  <div className="um-btn-align-wrapper">
+                    <Link className="text-decoration-none" to="/projects">
+                      <ViewDetailedGooButton textColor="black" />
+                    </Link>
+                  </div>
+                  
+                  <span className="um-card-footer font-hanken">RESIDENTIAL &nbsp; COIMBATORE, TN</span>
                 </div>
               </div>
             </div>
           </div>
 
         </div>
-
       </section>
     </div>
   );

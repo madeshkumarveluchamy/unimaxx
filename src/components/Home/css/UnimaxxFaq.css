@@ -269,7 +269,7 @@
   }
 
   .um-faq-question-row {
-    flex-direction: column;
+    flex-direction: row;
     gap: 10px;
     text-align: left !important;
   }

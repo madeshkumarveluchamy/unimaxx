@@ -5,8 +5,8 @@
   align-items: center;
   justify-content: flex-start;
   padding: 20px;
-  margin: -20px 0 -20px -20px; 
-  margin-top: 2rem; 
+  margin: -20px 0 -20px -20px;
+  background-color: #ffffff;
 }
 
 /* SVG Filter Background */
@@ -34,12 +34,13 @@
 
 /* Text inside Button */
 .portfoliogoo-text {
-  font-family: 'Hanken Grotesk', sans-serif; 
-  font-size: 11px; 
+  font-family: 'Hanken Grotesk', sans-serif;
+  font-size: 11px;
   font-weight: 500;
-  color: #ffffff; 
+  color: #ffffff;
   letter-spacing: 0.04em;
-  pointer-events: none; 
+  pointer-events: none;
+  mix-blend-mode: difference;
 }
 
 /* The Gold Icon Box */
@@ -50,7 +51,7 @@
   background-color: #bb9062; 
   width: 32px; 
   height: 32px; 
-  border-radius: 20%; 
+  border-radius: 0%; 
   pointer-events: none;
 }
 
@@ -64,6 +65,7 @@
   pointer-events: none; 
   mix-blend-mode: difference; /* இந்த வரிதான் எழுத்துக்களை கருப்பாக மாற்றும் மேஜிக் */
 }
+
 
 /* Arrow inside the Gold Box */
 .portfoliogoo-icon svg {

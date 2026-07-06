@@ -61,7 +61,7 @@ const ContactFormSection = () => {
         {/* ================= இடது பக்க கன்டென்ட் & விவரங்கள் ================= */}
         <div className="unimaxx-info-column">
           <div className="unimaxx-section-header">
-            <span className="unimaxx-asterisk">✳</span>
+            <span className="unimaxx-asterisk font-serief">✳</span>
             <h2>Connect with <br /> Our Design Team</h2>
           </div>
           

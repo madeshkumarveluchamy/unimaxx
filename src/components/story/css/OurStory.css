@@ -311,12 +311,12 @@ html::-webkit-scrollbar {
     margin-top: 80px !important; 
   }
 
-  .story-hero-section{
-    height:60vh;
+  .story-hero-section {
+    height: 60vh;
   }
   
   .portfolio-container { 
-    padding: 60px 20px; 
+    padding: 30px 10px; 
   }
   
   .portfolio-header { 
@@ -335,86 +335,102 @@ html::-webkit-scrollbar {
     gap: 45px; 
   } 
 
-  /* மொபைலில் ஹைட்டை ரிலீஸ் செய்கிறோம் */
+  /* 🎯 Main Wrapper Alignment */
   .portfolio-large-card { 
     height: auto !important; 
     display: flex !important;
     flex-direction: column !important;
+    align-items: center !important; /* Centering the floating card */
   }
 
   .portfolio-main-img { 
-    height: 240px !important; 
+    height: 550px !important; /* Optimized height */
     width: 100%;
     border-radius: 12px;
+    object-fit: cover;
   }
 
-  /* 🎯 மொபைலுக்கான ரிலேடிவ் மேட்சிங் லாக் */
-  .portfolio-vertical-floating-card {
-
+  /* 🎯 Floating Card - Overlapping Logic */
+ .portfolio-vertical-floating-card {
     position: relative !important; 
-    width: 91.8% !important;
-    max-width: 100% !important;
-    top: auto !important;             
-    bottom: auto !important;           
+    width: 80% !important;
+    max-width: 500px !important;
+    top: auto !important;            
+    bottom: auto !important;          
     left: auto !important;
     right: auto !important;
-    margin: -30px auto 0 auto !important; 
-    height: auto !important;           
-    padding: 20px 16px !important;
-    border-radius: 5px !important;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08) !important;
+    margin: -350px auto 20px auto !important; 
+    height: 270px !important;         
+    
+    /* 👇 Ithu thaan mukkiyam: 4 sides-layum uniform space tharum */
+    padding: 20px !important; 
+    
+    border-radius: 20px !important;
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15) !important;
     background-color: #ffffff !important;
     display: flex !important;
     flex-direction: column !important;
     align-items: center !important; 
     text-align: center !important;
+    z-index: 10 !important;
   }
 
-  .vertical-card-img-box { 
-    display: none !important; /* மொபைலில் தம்ப்நெயில் தேவையில்லை */
-  }
-
-  .vertical-card-title { 
-    font-size: 17px !important; 
-    margin: 0 0 12px 0 !important; 
-    text-align: center !important; 
+  /* 1. Slider Image Box - Top */
+.vertical-card-img-box { 
+    display: block !important; 
     width: 100% !important;
+    height: 200px !important; 
+    
+    /* 👇 Image-ku rounded corners add panniduchu */
+    border-radius: 12px !important; 
+    overflow: hidden !important; 
+    
+    margin-bottom: 20px !important;
   }
 
+  /* 2. Title */
+  .vertical-card-title { 
+    font-family: 'Playfair Display', serif !important;
+    font-size: 28px !important; 
+    margin: 10px 0 15px 0 !important; 
+    text-align: center !important; 
+    color: #111 !important;
+    font-weight: 500 !important;
+  }
+
+  /* 3. Bottom Row - Flex Layout */
   .vertical-card-bottom-row { 
     display: flex !important;
     flex-direction: column !important; 
     align-items: center !important; 
     justify-content: center !important;
-    gap: 16px !important;
+    gap: 15px !important;
     width: 100% !important;
-    margin-top: 4px !important; 
-    border-top: 1px solid #f2f2f2 !important;
-    padding-top: 14px !important;
+    margin-top: 0 !important; 
+    border-top: none !important; /* Remove old border */
+    padding-top: 0 !important;
   }
 
-  .vertical-view-btn {
-    font-size: 11px !important;
-    padding: 4px 14px 4px 4px !important;
-    width: fit-content !important; 
-    align-self: center !important;
-  }
-
+  /* 4. Tags Styling - Match Reference Design */
   .vertical-card-tags {
     display: flex !important;
     gap: 8px !important;
     justify-content: center !important;
     width: 100% !important;
+    margin-top: 10px !important;
   }
 
   .v-tag { 
-    font-size: 9px !important; 
-    padding: 4px 12px !important; 
-    background-color: #f7f7f7 !important; 
+    font-family: 'Geist', sans-serif !important;
+    font-size: 11px !important; 
+    padding: 0 !important; /* Remove background box styling */
+    background-color: transparent !important; 
+    color: #888 !important; /* Light text color */
+    text-transform: uppercase !important;
+    letter-spacing: 0.1em !important;
   }
 }
 
 @media (max-width: 480px) {
-  .portfolio-main-img { height: 200px !important; }
-  .vertical-card-title { font-size: 14px !important; }
+  
 }

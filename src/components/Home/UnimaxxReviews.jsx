@@ -1,19 +1,23 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './css/UnimaxxReviews.css';
 
-// உங்களுக்குத் தேவையான வீடியோ மற்றும் இமேஜ் ஃபைல்கள்
-import reviewVideo1 from '../../assets/bg-videos.mp4'; // (உதாரணத்திற்கு ஒரே வீடியோவை பகிர்ந்துள்ளேன், நீங்கள் வெவ்வேறு வீடியோக்களை மாற்றிக்கொள்ளலாம்)
+import reviewVideo1 from '../../assets/bg-videos.mp4'; 
 import user1 from '../../assets/user1.webp';
 import user2 from '../../assets/user2.webp';
 import user3 from '../../assets/user3.webp';
 import user4 from '../../assets/user4.webp';
 
 const UnimaxxReviews = () => {
-  // எந்த கார்டில் வீடியோ ஓடிக்கொண்டிருக்கிறது என்பதை லாக் செய்ய State (null என்றால் எதுவும் ஓடவில்லை)
   const [activeVideoId, setActiveVideoId] = useState(null);
-  
-  // அனைத்து வீடியோக்களையும் தனித்தனியாகக் கட்டுப்படுத்த Array-of-Refs செட்டப்
   const videoRefs = useRef({});
+
+  const sliderRef = useRef(null);
+  const isDown = useRef(false);
+  const isHovering = useRef(false); 
+  const startX = useRef(0);
+  const scrollLeft = useRef(0);
+  const dragged = useRef(false);
+  const animationRef = useRef(null); 
 
   const reviewsData = [
     {
@@ -54,24 +58,98 @@ const UnimaxxReviews = () => {
     }
   ];
 
+  // Auto-Scroll வேலை செய்ய 8 கார்டுகளாக மாற்றுகிறோம்
+  const displayReviews = [
+    ...reviewsData,
+    ...reviewsData.map(review => ({ ...review, id: review.id + 4 })) 
+  ];
+
+  // Auto-Scroll Animation 
+  useEffect(() => {
+    const slider = sliderRef.current;
+    
+    const autoScroll = () => {
+      if (!slider) return;
+
+      if (isDown.current || isHovering.current || activeVideoId !== null) {
+        animationRef.current = requestAnimationFrame(autoScroll);
+        return;
+      }
+
+      slider.scrollLeft += 1;
+
+      if (Math.ceil(slider.scrollLeft) >= slider.scrollWidth - slider.clientWidth) {
+        slider.scrollLeft = 0;
+      }
+
+      animationRef.current = requestAnimationFrame(autoScroll);
+    };
+
+    if (animationRef.current) cancelAnimationFrame(animationRef.current);
+    animationRef.current = requestAnimationFrame(autoScroll);
+
+    return () => cancelAnimationFrame(animationRef.current);
+  }, [activeVideoId]); 
+
+  // ==========================================
+  // Mouse Drag Events (Desktop Only)
+  // மொபைலுக்கு Native Swipe வேலை செய்யும்
+  // ==========================================
+  const handleMouseDown = (e) => {
+    isDown.current = true;
+    dragged.current = false;
+    if (sliderRef.current) {
+      sliderRef.current.classList.add('dragging');
+      startX.current = e.pageX - sliderRef.current.offsetLeft;
+      scrollLeft.current = sliderRef.current.scrollLeft;
+    }
+  };
+
+  const handleMouseLeave = () => {
+    isDown.current = false;
+    isHovering.current = false; 
+    if (sliderRef.current) sliderRef.current.classList.remove('dragging');
+  };
+
+  const handleMouseEnter = () => {
+    isHovering.current = true; 
+  };
+
+  const handleMouseUp = () => {
+    isDown.current = false;
+    if (sliderRef.current) sliderRef.current.classList.remove('dragging');
+  };
+
+  const handleMouseMove = (e) => {
+    if (!isDown.current || !sliderRef.current) return;
+    e.preventDefault();
+    const x = e.pageX - sliderRef.current.offsetLeft;
+    // 1.5 என Speed-ஐ குறைத்துள்ளேன், Drag மிகவும் Smooth ஆக இருக்கும்
+    const walk = (x - startX.current) * 1.5; 
+    
+    if (Math.abs(walk) > 5) {
+      dragged.current = true;
+    }
+    sliderRef.current.scrollLeft = scrollLeft.current - walk;
+  };
+
+  // Card Click (Video Player Logic)
   const handleCardClick = (id) => {
-    // 1. ஏற்கனவே ஓடிக்கொண்டிருக்கும் வீடியோவை பாஸ் செய்து கார்டாக மாற்ற
+    if (dragged.current) return; 
+
     if (activeVideoId && activeVideoId !== id) {
       const currentPlayingVideo = videoRefs.current[activeVideoId];
       if (currentPlayingVideo) {
         currentPlayingVideo.pause();
-        currentPlayingVideo.currentTime = 0; // வீடியோவை ஆரம்பத்திற்கு கொண்டு செல்ல
+        currentPlayingVideo.currentTime = 0;
       }
     }
 
-    // 2. கிளிக் செய்யப்பட்ட புதிய கார்டை வீடியோவாக மாற்றி பிளே செய்ய
     const targetVideo = videoRefs.current[id];
     if (activeVideoId === id) {
-      // அதே கார்டை மீண்டும் கிளிக் செய்தால் வீடியோ பாஸ் ஆகி கார்டாக மாறும்
       if (targetVideo) targetVideo.pause();
       setActiveVideoId(null);
     } else {
-      // புதிய கார்டில் வீடியோ பிளே ஆகும்
       if (targetVideo) targetVideo.play();
       setActiveVideoId(id);
     }
@@ -81,14 +159,21 @@ const UnimaxxReviews = () => {
     <div className="um-reviews-master">
       <section className="um-reviews-section">
         
-        {/* Header Title */}
         <div className="um-reviews-header">
           <h2 className='font-serief'>Don't just listen to us—see what our partners have to say.</h2>
         </div>
 
-        {/* 4 Column Grid */}
-        <div className="um-reviews-grid">
-          {reviewsData.map((review) => {
+        <div 
+          className="um-reviews-slider"
+          ref={sliderRef}
+          onMouseDown={handleMouseDown}
+          onMouseEnter={handleMouseEnter} 
+          onMouseLeave={handleMouseLeave}
+          onMouseUp={handleMouseUp}
+          onMouseMove={handleMouseMove}
+          // Touch Events நீக்கப்பட்டுவிட்டன! Mobile-ல் Browser-ன் இயல்பான Swipe வேலை செய்யும்.
+        >
+          {displayReviews.map((review) => {
             const isPlaying = activeVideoId === review.id;
             
             return (
@@ -97,7 +182,6 @@ const UnimaxxReviews = () => {
                 className={`um-review-card ${isPlaying ? 'video-active' : ''}`}
                 onClick={() => handleCardClick(review.id)}
               >
-                {/* பேக்ரவுண்ட் வீடியோ லேயர் - அனைத்து கார்டுகளுக்கும் பொதுவானது */}
                 <video 
                   ref={(el) => (videoRefs.current[review.id] = el)}
                   src={review.videoUrl}
@@ -108,7 +192,6 @@ const UnimaxxReviews = () => {
                   onEnded={() => setActiveVideoId(null)}
                 />
 
-                {/* வீடியோ பிளே ஆகாத போது மட்டும் தெரிய வேண்டிய இயல்பான கார்டு விபரங்கள் */}
                 {!isPlaying ? (
                   <>
                     <div className="um-card-static-content">
@@ -117,20 +200,18 @@ const UnimaxxReviews = () => {
                     </div>
 
                     <div className="um-rev-user-info">
-                      <img src={review.userImg} alt={review.userName} />
+                      <img src={review.userImg} alt={review.userName} draggable="false" />
                       <div>
                         <h4 className='font-inter fsub'>{review.userName}</h4>
                         <span className='font-geist fmin'>{review.company}</span>
                       </div>
                     </div>
                     
-                    {/* ஹோவர் செய்யும்போது மட்டும் தெரியும் சிறிய பிளே ஐகான் ஓவர்லே */}
                     <div className="um-hover-play-indicator">▶</div>
                   </>
                 ) : (
-                  /* வீடியோ பிளே ஆகும்போது படத்தில் உள்ளது போல பெயர் மட்டும் கீழே மிதக்கும் */
                   <div className="um-rev-user-info um-video-user-overlay">
-                    <img src={review.userImg} alt={review.userName} />
+                    <img src={review.userImg} alt={review.userName} draggable="false" />
                     <div>
                       <h4 className="text-white font-inter fsub">{review.userName}</h4>
                       <span className="text-white-dim font-geist fmin">{review.company}</span>
