@@ -195,7 +195,7 @@ export default function AboutGooButton({ text = "Contact Our Team", to = "/conta
       </svg>
 
       <Link to={to} className="about-goo-btn" ref={btnRef}>
-        <span className="about-goo-text">{text}</span>
+        <span className="about-goo-text font-hanken">{text}</span>
         
         <div className="about-goo-icon">
           <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

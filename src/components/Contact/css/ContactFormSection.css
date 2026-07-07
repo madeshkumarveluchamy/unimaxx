@@ -63,27 +63,30 @@
 /* ADDRESS & CONTACT BLOCKS */
 .unimaxx-address-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 30px 20px;
-  margin-top: 10px;
+  grid-template-columns: auto auto; /* கட்டங்களை உள்ளடக்கத்திற்கு ஏற்றவாறு மாற்றி நடுவில் வைக்க */
+  justify-content: center; /* மொத்த கிரிட்டையும் நடுவில் கொண்டு வர */
+  gap: 30px 50px; /* ஐகான்களுக்கு இடையிலான இடைவெளி */
+  margin: 30px auto 0; /* மேலிருந்து இடைவெளி விட்டு நடுவில் வைக்க */
+  width: 100%;
 }
 
 .unimaxx-info-item {
   display: flex;
-  align-items: flex-start;
+  align-items: center; /* ஐகான் மற்றும் டெக்ஸ்டை நேராக (vertically center) வைக்க */
+  justify-content: flex-start;
   gap: 15px;
 }
 
+/* ADDRESS & CONTACT BLOCKS */
 .unimaxx-icon-box {
-  background-color: #d8b056; /* பிரீமியம் கோல்டன் தீம் ஐகான் பேக்ரவுண்ட் */
+  background-color: #dcb15e; 
   color: #ffffff;
-  width: 36px;
-  height: 36px;
-  border-radius: 8px;
+  width: 48px; 
+  height: 48px; 
+  border-radius: 12px; 
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 16px;
   flex-shrink: 0;
 }
 
@@ -93,10 +96,24 @@
   line-height: 1.5;
   color: #555555;
   margin: 0;
-}
-
+} 
 .unimaxx-email-text {
   word-break: break-all;
+}
+
+.unimaxx-section-header {
+  display: flex;
+  align-items: flex-start; /* அல்லது center, உங்கள் தேவைக்கேற்ப */
+  gap: 15px; /* இமேஜ்க்கும் Text-க்கும் இடையே உள்ள இடைவெளி */
+}
+.hello{
+  padding-left: 25px;
+}
+
+.unimaxx-asterisk-icon {
+  width: 25px; /* இமேஜின் அளவை உங்கள் டிசைனுக்கு ஏற்ப மாற்றவும் */
+  height: auto;
+  margin-top: 5px; /* Text உடன் சரியாக align செய்ய */
 }
 
 /* --- RIGHT COLUMN: PREMIUM CARD --- */

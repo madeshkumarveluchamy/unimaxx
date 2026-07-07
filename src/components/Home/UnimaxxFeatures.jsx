@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import './css/UnimaxxFeatures.css';
+import staricon from '../../assets/logo1.png'; 
 
 import frame1 from '../../assets/hero2frame1.webp';
 import frame2 from '../../assets/hero2frame2.webp';
@@ -73,7 +74,11 @@ const UnimaxxFeatures = () => {
         <div className="arch-feat-header">
           <div className="arch-feat-left-title">
             <h2 className='font-serif stit'>
-              Quiet corners, bold <br /> statements <span className="arch-feat-star-icon">✻</span> we design<br/> spaces that connect with you.
+              Quiet corners, bold <br /> statements <img 
+                                        src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
+                                        alt="Star Icon" 
+                                        className="unimaxx-asterisk-icon" 
+                                      /> we design<br/> spaces that connect with you.
             </h2>
           </div>
           

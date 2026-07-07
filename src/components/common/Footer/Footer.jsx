@@ -7,6 +7,23 @@ import { FaInstagram, FaFacebookF, FaXTwitter, FaPinterestP } from 'react-icons/
 import DreamConnection from './DreamConnection';
 
 const Footer = () => {
+
+    const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setIsScrolled(false);
+    setIsTransitioning(true);
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 50);
+  };
+
   return (
     <footer className="um-footer-master">
       <div className="um-footer-container">
@@ -25,8 +42,8 @@ const Footer = () => {
             </p>
             <div className="text-center text-md-start">
               {/* 🎯 Let's Connect கிளிக் பண்ணா Start a project பேஜுக்கு போக செட் பண்ணியாச்சு */}
-              <Link to="/start-a-project" style={{ textDecoration: 'none' }} className="text-decoration-none">
-            <DreamConnection />
+              <Link to="/start-a-project" style={{ textDecoration: 'none' }}  className="text-decoration-none">
+            <DreamConnection onClick={handleLinkClick} />
   </Link>
             </div>
           </div>
@@ -36,12 +53,12 @@ const Footer = () => {
             <h3 className='font-serief text-center text-md-start'>Quick Links</h3>
             <ul className="um-footer-links-list">
               {/* 🎯 பழைய href தூக்கிட்டு App.js-ல இருக்குற exact paths-ஐ Link-ஆ மாத்தியாச்சு */}
-              <li><Link to="/" className='font-geist fmin text-decoration-none'>Home</Link></li>
-              <li><Link to="/projects" className='font-geist fmin text-decoration-none'>Projects</Link></li>
-              <li><Link to="/what-we-deliver" className='font-geist fmin text-decoration-none'>What We Deliver</Link></li>
-              <li><Link to="/projects" className='font-geist fmin text-decoration-none'>Our Story</Link></li>
-              <li><Link to="/start-a-project" className='font-geist fmin text-decoration-none'>Contact</Link></li>
-              <li><Link to="/" className='font-geist fmin text-decoration-none'>Blog</Link></li>
+              <li><Link to="/" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Home</Link></li>
+              <li><Link to="/projects" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Projects</Link></li>
+              <li><Link to="/what-we-deliver" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>What We Deliver</Link></li>
+              <li><Link to="/projects" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Our Story</Link></li>
+              <li><Link to="/start-a-project" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Contact</Link></li>
+              <li><Link to="/" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Blog</Link></li>
             </ul>
           </div>
 

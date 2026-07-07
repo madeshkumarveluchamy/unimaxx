@@ -159,7 +159,7 @@ export default function CtaGooButton({ text = "Contact Our Team", onClick }) {
       </svg>
 
       {/* 3. Text with Difference Blend Mode */}
-      <span className="ctagoobutton-text">{text}</span>
+      <span className="ctagoobutton-text font-hanken">{text}</span>
       
       {/* 4. Gold Icon Box */}
       <span className="ctagoobutton-icon">→</span>

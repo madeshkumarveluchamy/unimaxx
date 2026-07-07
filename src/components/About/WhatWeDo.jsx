@@ -64,9 +64,9 @@
               /* once: false கொடுத்தால் மேலேயும் கீழேயும் ஸ்க்ரோல் செய்யும்போது மீண்டும் அனிமேட் ஆகும். 
                 ஒருமுறை மட்டும் போதும் எனில் once: true என மாற்றிக்கொள்ளவும் */
             >
-              <div className="unq-wwd-number">{item.id}</div>
-              <h3 className="unq-wwd-card-title">{item.title}</h3>
-              <p className="unq-wwd-card-desc">{item.desc}</p>
+              <div className="unq-wwd-number font-geist maindes">{item.id}</div>
+              <h3 className="unq-wwd-card-title font-geist maintit">{item.title}</h3>
+              <p className="unq-wwd-card-desc font-geist mainsub">{item.desc}</p>
             </motion.div>
           ))}
 

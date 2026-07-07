@@ -1,6 +1,6 @@
 import React from 'react';
 import '../ProjectDetail1/css/ModernDetail.css';
-
+import staricon from '../../assets/logo1.png'; // உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும்
 // தேவையான இமேஜ் ஃபைல்கள்
 import modern1 from '../../assets/modern1.webp';
 import modern2 from '../../assets/modern2.webp';
@@ -16,7 +16,11 @@ const ModernDetail = () => {
           
           
           <div className="nest-top-text-panel">
-            <h2 className="nest-top-heading font-serief ftit"><span>✻</span> Modern Nest</h2>
+            <h2 className="nest-top-heading font-serief"><img 
+                                                                  src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
+                                                                  alt="Star Icon" 
+                                                                  className="unimaxx-asterisk-icon" 
+                                                                />  Modern Nest</h2>
             
             <div className="nest-top-specs-grid">
               <div className="nest-top-spec-box">

@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import './css/OurStory.css';
-
+import staricon from '../../assets/logo1.png';
 import heroBg1Png from '../../assets/hero-bg1.webp';
 
 // ==========================================
@@ -155,7 +155,11 @@ const OurStory = () => {
         <div className="portfolio-header">
           <span className="portfolio-sub maindes font-geist">RECENT PROJECTS</span>
           <h2 className="portfolio-title">
-            <span className="story-asterisk maintit font-serief">✳</span> Our Portfolio
+            <img 
+                                                    src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
+                                                    alt="Star Icon" 
+                                                    className="unimaxx-asterisk-icon" 
+                                                  />  Our Portfolio
           </h2>
         </div>
 

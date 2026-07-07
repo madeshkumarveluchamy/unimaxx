@@ -294,7 +294,7 @@
   }
 
   .um-overlay-text-left {
-    flex-direction: column;
+    . 
     gap: 5px;
     justify-content: center;
   }

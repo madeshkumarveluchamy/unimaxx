@@ -16,7 +16,12 @@
     return ref.current;
   }
 
-  export default function DreamConnection({ text = "Let's Connect", to = "/contact" }) {
+
+
+  export default function DreamConnection({ text = "Let's Connect", to = "/start-a-project" , onClick }) {
+
+
+    
     const wrapRef = useRef(null);
     const btnRef = useRef(null);
     const bgRef = useRef(null);
@@ -204,8 +209,8 @@
           <rect ref={bgRef} fill="#ffffff" mask={`url(#${ids.mask})`} />
         </svg>
 
-        <Link to={to} className="dream-connect-btn" ref={btnRef}>
-          <span className="dream-connect-text">{text}</span>
+        <Link to={to} className="dream-connect-btn" onClick={onClick} ref={btnRef} >
+          <span className="dream-connect-text " >{text}</span>
           
           <div className="dream-connect-icon">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">

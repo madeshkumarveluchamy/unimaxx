@@ -77,8 +77,8 @@ const WhyChooseUs = () => {
               </div>
               
               {/* Card Content */}
-              <h3 className="wcu-card-title">{stat.title}</h3>
-              <p className="wcu-card-desc">{stat.desc}</p>
+              <h3 className="wcu-card-title maintit font-geist">{stat.title}</h3>
+              <p className="wcu-card-desc mainsub font-geist">{stat.desc}</p>
               
             </div>
           ))}

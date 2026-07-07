@@ -154,7 +154,7 @@ html, body {
 .unimaxx-marquee-track span {
   color: #ffffff; 
   font-family: 'Georgia', serif;
-  font-size: clamp(90px, 14vw, 220px); 
+  font-size: clamp(120px, 14vw, 220px); 
   font-weight: 100;
   white-space: nowrap;
   line-height: 1;
@@ -186,7 +186,7 @@ html, body {
   }
 
   .unimaxx-marquee-container {
-    bottom: 4%;
+    bottom: 0%;
   }
   
   .unimaxx-marquee-track {
@@ -206,6 +206,6 @@ html, body {
   }
 
   .unimaxx-marquee-container {
-    bottom: 8%;
+    bottom: 0%;
   }
 }

@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './css/ServicePage.css';
-
+import staricon from '../../assets/logo1.png'; 
 // Assets
 import heroBgPng from '../../assets/hero-bg.webp';
 import service1Png from '../../assets/service1.webp';
@@ -230,7 +230,11 @@ export default function ServicePage() {
         <div className="services-header">
           <span className="services-sub maindes font-geist">WHAT WE DO</span>
           <h2 className="services-title">
-            <span className="asterisk font-serief">✳</span> Our Services
+            <img 
+                                                    src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
+                                                    alt="Star Icon" 
+                                                    className="unimaxx-asterisk-icon" 
+                                                  />  Our Services
           </h2>
         </div>
 

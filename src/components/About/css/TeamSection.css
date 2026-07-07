@@ -27,6 +27,7 @@
   font-size: 3rem;
   font-weight: 400;
   color: #1a1a1a;
+  text-align: start !important;
   line-height: 1.2;
   margin: 0;
 }
@@ -53,7 +54,7 @@
 .unq-team-list-item {
   display: flex;
   align-items: center;
-  cursor: pointer;
+  /* cursor: pointer; (இங்கிருந்து நீக்கப்பட்டது) */
   transition: all 0.3s ease;
 }
 
@@ -64,16 +65,20 @@
   color: #1a1a1a;
 }
 
+/* ... உங்களின் முந்தைய CSS குறியீடுகள் ... */
+
 .unq-team-info-row {
   display: flex;
   align-items: baseline;
   gap: 15px;
+  cursor: pointer; /* Role, Name என இரண்டின் மீதும் கை குறி காட்டும் */
+  width: fit-content; /* எழுத்துகள் உள்ள இடத்திற்கு மட்டும் Hover வேலை செய்ய */
 }
 
 .unq-team-role {
   font-size: 0.85rem;
   color: #a0a0a0;
-  width: 180px; /* Aligns the names straight */
+  width: 180px; 
   text-align: right;
   transition: color 0.3s ease;
 }
@@ -84,14 +89,17 @@
   color: #a0a0a0;
   margin: 0;
   transition: color 0.3s ease;
+  /* இங்கு இருந்த cursor: pointer; நீக்கப்பட்டுவிட்டது */
 }
+
+/* ... உங்களின் முந்தைய CSS குறியீடுகள் ... */
 
 /* Active State Hover Effects */
 .unq-team-list-item.active .unq-team-name {
-  color: #1a1a1a; /* கருப்பு நிறமாக மாறும் */
+  color: #1a1a1a;
 }
 .unq-team-list-item.active .unq-team-role {
-  color: #666666; /* சற்று அடர்ந்த சாம்பல் நிறம் */
+  color: #666666;
 }
 
 /* Right Side: Image Display */
@@ -129,14 +137,15 @@
   display: none;
 }
 
-
 /* ========================================================
     🎯 RESPONSIVE MEDIA QUERIES (Mobile & Tablet)
 ======================================================== */
 
 @media (max-width: 1024px) {
   .unq-team-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
+    width: 100%;
+    text-align: center !important;
   }
   .unq-team-name {
     font-size: 1.5rem;
@@ -156,7 +165,7 @@
 /* --- MOBILE VIEW: Static Stacked Cards --- */
 @media (max-width: 768px) {
   .unq-team-container {
-    padding: 60px 20px;
+    padding: 20px 20px;
   }
 
   /* Hide Desktop Layout */
@@ -174,7 +183,7 @@
   .unq-team-mobile-card {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .unq-team-mobile-img-wrapper {

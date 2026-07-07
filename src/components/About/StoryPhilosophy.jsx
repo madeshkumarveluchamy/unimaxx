@@ -51,8 +51,8 @@ useEffect(() => {
         <div className="ux-philo-flex-row">
           
           {/* ================= COLUMN 1 ================= */}
-          <div className="ux-philo-col ux-philo-left-col">
-            <div className="ux-philo-tag slide-from-left">● OUR PHILOSOPHY</div>
+          <div className="ux-philo-col ux-philo-left-col ">
+            <div className="ux-philo-tag slide-from-left mainsub font-geist">● OUR PHILOSOPHY</div>
             
             <h2 className="ux-philo-main-title slide-from-left">
               Design with <br />
@@ -63,11 +63,11 @@ useEffect(() => {
             <div className="ux-philo-animated-line main-line line-draw"></div>
 
             <div className="ux-philo-text-block">
-              <h3 className="ux-philo-sub-title slide-from-left">OUR MISSION</h3>
+              <h3 className="ux-philo-sub-title slide-from-left maintit font-geist">OUR MISSION</h3>
               
               <div className="ux-philo-animated-line sub-line line-draw"></div>
               
-              <p className="ux-philo-desc slide-from-left">
+              <p className="ux-philo-desc slide-from-left mainsub font-geist">
                 At Unimaxx, we believe architecture should improve lives, respect the environment, and tell a story. 
                 Every line we draw reflects purpose, creativity, and care. Our mission is to deliver spaces that endure 
                 aesthetically, functionally, and emotionally.
@@ -93,11 +93,11 @@ useEffect(() => {
             />
             
             <div className="ux-philo-text-block ux-philo-vision-block">
-              <h3 className="ux-philo-sub-title slide-from-right">OUR VISION</h3>
+              <h3 className="ux-philo-sub-title slide-from-right maintit font-geist">OUR VISION</h3>
 
               <div className="ux-philo-animated-line sub-line line-draw"></div>
 
-              <p className="ux-philo-desc slide-from-right">
+              <p className="ux-philo-desc slide-from-right mainsub font-geist">
                 Our vision is to create purposeful, innovative, and enduring spaces through a process that values 
                 collaboration, creativity, and sustainability. Every line we draw and every space we craft reflects our 
                 commitment to human-centered design, technical precision, and timeless aesthetic values.

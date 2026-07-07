@@ -115,12 +115,13 @@
 
   .unq-cta-content {
     flex-direction: column; /* மொபைலில் டைட்டிலுக்கு கீழே பட்டன் வரும் */
-    align-items: flex-start;
+    align-items: center;
     gap: 30px;
     padding: 40px 20px;
   }
 
   .unq-cta-title {
+    text-align:center;
     font-size: 2.8rem;
   }
 
