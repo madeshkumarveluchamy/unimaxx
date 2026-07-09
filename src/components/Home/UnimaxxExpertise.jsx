@@ -86,7 +86,7 @@ const UnimaxxExpertise = () => {
         
         {/* Header Title Area */}
         <div className="um-expertise-header">
-          <h2 className="um-exp-title font-serief ftit">Our expertise</h2>
+          <h2 className="um-exp-title font-serief text-white">Our expertise</h2>
           <p className="um-exp-desc-top fmin font-geist">
             We offer a full spectrum of interior design — each tailored to elevate spaces with clarity and timeless aesthetic value.
           </p>
@@ -126,7 +126,7 @@ const UnimaxxExpertise = () => {
                   {/* ஓப்பனாக இருக்கும்போது அல்லது மொபைலாக இருக்கும்போது வெளியே தெரியும் கூடுதல் தகவல்கள் */}
                   {showDetails && (
                     <div className="um-expanded-details">
-                      <h4 className="um-exp-count font-geist fsub">{item.count}</h4>
+                      <h4 className="um-exp-count font-geist ">{item.count}</h4>
                       <p className="um-exp-body-text font-geist fmin">{item.desc}</p>
                     </div>
                   )}
@@ -155,7 +155,7 @@ const UnimaxxExpertise = () => {
 
         {/* Mobile-க்கான Common Button - இது Mobile-ல் மட்டுமே Section-க்கு கீழே தெரியும் */}
         {isMobile && (
-          <div className="um-mobile-common-btn" style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '30px' }}>
+          <div className="um-mobile-common-btn" style={{ display: 'flex', justifyContent: 'center', width: '100%', marginTop: '0px' }}>
             <GetQuoteGooButton to="/projects"/>
           </div>
         )}

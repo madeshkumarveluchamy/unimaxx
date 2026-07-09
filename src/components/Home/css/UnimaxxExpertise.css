@@ -12,7 +12,7 @@
   padding: 100px 80px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 20px;
 }
 
 /* Header Text Area */
@@ -156,8 +156,9 @@
 .um-row-action {
   display: flex;
   flex-direction: column-reverse !important;
-
-  align-items: center;
+  height:100%;
+  justify-content:space-around;
+  align-items: flex-end;
   gap: 40px;
 }
 

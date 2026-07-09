@@ -10,10 +10,10 @@
 .um-footer-container {
   width: 100%;
   max-width: 2000px;
-  padding: 80px 80px 40px 80px;
+  padding: 80px 80px 0px 80px;
   display: flex;
   flex-direction: column;
-  gap: 60px;
+  gap: 0px;
 }
 
 /* 3-Column Grid Configuration */
@@ -24,7 +24,7 @@
 }
 
 .um-footer-col {
-  padding: 0 50px;
+  padding: 0 50px 50px;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -32,13 +32,20 @@
 
 /* முதல் மற்றும் இரண்டாவது காலம்களுக்கு மட்டும் வலதுபுறம் செங்குத்து பார்டர் */
 .um-footer-brand-col,
-.um-footer-links-col {
-  border-right: 1px solid #ffffff;
+.um-footer-links-col,
+.um-footer-contact-col {
+  border-right: 1px solid rgba(255,255,255,0.3);
+  
+}
+
+.um-footer-brand-col{
+  border-left: 1px solid rgba(255,255,255,0.3);
 }
 
 /* முதல் காலம் மட்டும் இடதுபுற பேடிங் தேவையில்லை */
 .um-footer-brand-col {
-  padding-left: 0;
+  ;
+  text
 }
 
 /* COLUMN 1: Brand Content Styling */
@@ -196,10 +203,12 @@
 
 /* BOTTOM COPYRIGHT BAR */
 .um-footer-bottom-bar {
-  border-top: 1px solid #ffffff;
+  border-top: 1px solid rgba(255,255,255,0.3);
+  border-left: 1px solid rgba(255,255,255,0.3);
+  border-right: 1px solid rgba(255,255,255,0.3);
   padding-top: 30px;
   text-align: center;
-  width: 100%;
+  width: 99.9 %;
 }
 
 .um-footer-bottom-bar p {
@@ -219,6 +228,10 @@
     padding: 60px 24px 30px 24px;
     gap: 40px;
     align-items: center;
+  }
+
+  .um-footer-brand-col{
+    border:none;
   }
 
   .um-footer-grid {
@@ -286,5 +299,9 @@
     font-size: 11px;
     line-height: 1.4;
     text-align: center;
+    
+  }
+  .um-footer-bottom-bar{
+   border:none;
   }
 }

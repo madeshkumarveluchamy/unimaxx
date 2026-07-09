@@ -23,8 +23,8 @@
   display: inline-flex;
   align-items: center;
   justify-content: flex-start;
-  padding: 8px; 
-  margin: 16px; 
+  padding: 0px; 
+   
 }
 
 /* SVG Filter Background */
@@ -38,11 +38,11 @@
 }
 
 /* Main Button Class (Padding Adjusted to accommodate deterministic nudge) */
-.unimaxxexpertise-goo-btn {
+.unimaxxexpertise-goo-btns {
   position: relative;
   background: transparent;
   border: none;
-  padding: 12px 24px;
+  padding: 6px 12px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
@@ -77,10 +77,10 @@
 }
   
 /* The Gold Icon Box */
-.unimaxxexpertise-goo-icon {
+.unimaxxexpertise-goo-icons {
   background-color: #d8b056; 
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -91,13 +91,13 @@
   z-index: 2;
 }
 
-.unimaxxexpertise-goo-icon svg {
-  width: 10px;
-  height: 10px;
-  color: #ffffff;
+.unimaxxexpertise-goo-icons svg {
+  width: 14px;
+  height: 14px;
+  color: #00000;
 }
 
-.unimaxxexpertise-goo-btn:focus-visible {
+.unimaxxexpertise-goo-btns:focus-visible {
   outline: 2px solid #d8b056;
   outline-offset: 3px;
 }

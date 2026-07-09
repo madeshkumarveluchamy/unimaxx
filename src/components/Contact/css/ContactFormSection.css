@@ -38,7 +38,7 @@
 }
 
 .unimaxx-section-header h2 {
-  font-size: 42px;
+  font-size: 62px;
   font-weight: 500;
   line-height: 1.2;
   color: #0f0e0d;
@@ -103,8 +103,9 @@
 
 .unimaxx-section-header {
   display: flex;
+  padding-bottom:25px;
   align-items: flex-start; /* அல்லது center, உங்கள் தேவைக்கேற்ப */
-  gap: 15px; /* இமேஜ்க்கும் Text-க்கும் இடையே உள்ள இடைவெளி */
+   /* இமேஜ்க்கும் Text-க்கும் இடையே உள்ள இடைவெளி */
 }
 .hello{
   padding-left: 25px;
@@ -114,6 +115,7 @@
   width: 25px; /* இமேஜின் அளவை உங்கள் டிசைனுக்கு ஏற்ப மாற்றவும் */
   height: auto;
   margin-top: 5px; /* Text உடன் சரியாக align செய்ய */
+  margin-right: 5px;
 }
 
 /* --- RIGHT COLUMN: PREMIUM CARD --- */
@@ -125,7 +127,7 @@
 
 .unimaxx-premium-form-card {
   width: 100%;
-  margin-top: 130px;
+  
   background: #fdfdfd;
   border: 1px solid rgba(0, 0, 0, 0.03);
   border-radius: 20px;
@@ -152,7 +154,7 @@
   font-family: 'Helvetica Neue', Arial, sans-serif;
   font-size: 13px;
   font-weight: 600;
-  color: #888888;
+  color: #222222;
   letter-spacing: 0.5px;
 }
 
@@ -257,9 +259,12 @@
 
   /* 🎯 பிக்ஸ்: முகவரிகள் மற்றும் தொடர்புத் தகவல்களை முழுமையாக சென்டர் செய்கிறது */
   .unimaxx-address-grid {
-    grid-template-columns: 1fr; 
-    gap: 24px;
-    justify-content: center;
+    display: grid;
+  grid-template-columns: 1fr 1fr; /* கட்டங்களை உள்ளடக்கத்திற்கு ஏற்றவாறு மாற்றி நடுவில் வைக்க */
+  justify-content: start; /* மொத்த கிரிட்டையும் நடுவில் கொண்டு வர */
+  gap: 30px 50px; /* ஐகான்களுக்கு இடையிலான இடைவெளி */
+  margin: 30px auto 0; /* மேலிருந்து இடைவெளி விட்டு நடுவில் வைக்க */
+  width: 100%;
   }
 
   .unimaxx-info-item {
@@ -271,12 +276,12 @@
 
   /* ஃபார்ம் உள்ளீட்டு தலைப்புகளை நடுப்பகுதிக்குக் கொண்டு வர */
   .unimaxx-input-group label {
-    text-align: center;
+    text-align: start;
   }
 
   .unimaxx-input-group input,
   .unimaxx-input-group textarea {
-    text-align: center; /* பிளேஸ்ஹோல்டர்கள் நடுவில் தெரிய */
+    text-align: start; /* பிளேஸ்ஹோல்டர்கள் நடுவில் தெரிய */
   }
 
   .unimaxx-form-row-dual {

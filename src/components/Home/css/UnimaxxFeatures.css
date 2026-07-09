@@ -7,8 +7,6 @@
   box-sizing: border-box;
 }
 
-
-
 .arch-feat-section {
   width: 100%;
   max-width: 2000px;
@@ -265,6 +263,15 @@
   }
 }
 
+/* 👇 NEW BLOCK: Centers the odd card in the 2-column layout 👇 */
+@media (max-width: 1200px) and (min-width: 769px) {
+  .arch-feat-grid-mesh > :last-child:nth-child(odd) {
+    grid-column: 1 / -1;     
+    justify-self: center;    
+    width: calc(50% - 12px); 
+  }
+}
+
 @media (max-width: 768px) {
   .arch-feat-section {
     padding: 60px 24px;
@@ -314,8 +321,10 @@
 
   /* ஸ்டாட்ஸ் பார் மொபைல் சென்டர் அலைன்மென்ட் */
   .arch-feat-stats-bar {
-    flex-direction: column;
-    gap: 40px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+    column-gap: 15px;
     padding-top: 40px;
   }
 
@@ -324,10 +333,12 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
   }
 
+  /* Slightly reduced font size so 2 columns fit comfortably on smaller screens */
   .arch-feat-stat-item h4 {
-    font-size: 3.5rem;
+    font-size: 2.8rem; 
     justify-content: center;
   }
 }

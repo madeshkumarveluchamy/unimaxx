@@ -18,6 +18,15 @@
   color: #121212;    /* பிக்மாவில் உள்ள அதே எக்ஸாக்ட் டார்க் ஷேடு */
 }
 
+.font-serieef {
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 3.5rem;
+  font-weight: 500; 
+  color: #1a1a1a;
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+}
+
 
 .font-serif {
   font-family: 'Playfair Display', Georgia, serif !important;
@@ -89,12 +98,15 @@
        font-size:13px !important;
     }
    .maindes{
-       font-size:15px !important;
+       font-size:16px !important;
     }
    .mainsub{
-        font-size:17px !important;
+        font-size:15px !important;
     }
    .maintit{
-        font-size:20px !important;
+        font-size:21px !important;
+    }
+    .mainhead{
+        font-size:33px !important;
     }
 }

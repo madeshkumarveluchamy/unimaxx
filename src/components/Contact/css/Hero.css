@@ -7,7 +7,7 @@
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  background-color: #0f0e0d; /* படம் லோடு ஆகும் முன் தெரிய வேண்டிய டீஃபால்ட் டார்க் நிறம் */
+  /* படம் லோடு ஆகும் முன் தெரிய வேண்டிய டீஃபால்ட் டார்க் நிறம் */
 }
 
 /* --- BACKGROUND IMAGE LAYER --- */
@@ -30,14 +30,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  /* படத்தின் மேல் இருக்கும் பிரீமியம் டார்க் லேயர் டின்ட் (நெருக்கமான லுக் கிடைக்க) */
-  background: linear-gradient(
-    to bottom,
-    rgba(15, 14, 13, 0.4) 0%,
-    rgba(15, 14, 13, 0.6) 50%,
-    rgba(15, 14, 13, 0.5) 100%
-  );
   z-index: 2;
+  background-color:rgba(0, 0, 0, .05);
 }
 
 /* --- CENTER CONTENT BLOCK --- */
@@ -59,7 +53,7 @@
   line-height: 1.15;
   letter-spacing: -1px; /* எழுத்துக்கள் கச்சிதமாக நெருக்கமாக அமைய */
   margin: 0;
-  text-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* டெக்ஸ்ட் தனியாக பளிச்சென்று தெரிய */
+  text-shadow: 0 4px 20px rgba(0, 0, 0, 10); /* டெக்ஸ்ட் தனியாக பளிச்சென்று தெரிய */
   animation: smoothFadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 

@@ -66,15 +66,17 @@ const UnimaxxOngoing = () => {
                 
                 {/* 2. Centered Text Content Below */}
                 <div className="um-overlay-text-content">
-                  <h3 className="um-card-title font-serief">Modern Residence</h3>
+                  <h3 className="um-card-title font-serief ">Modern Residence</h3>
                   
-                  <div className="um-btn-align-wrapper">
-                    <Link className="text-decoration-none" to="/projects">
+                  <div className="um-btn-align-wrapper row">
+                    <Link className="text-decoration-none col-12 col-md-6 hellos gap-3" to="/projects">
                       <ViewDetailedGooButton textColor="black" />
                     </Link>
+
+                    <span className="um-card-footer font-hanken col-12 col-md-6">RESIDENTIAL &nbsp; COIMBATORE, TN</span>
                   </div>
                   
-                  <span className="um-card-footer font-hanken">RESIDENTIAL &nbsp; COIMBATORE, TN</span>
+                  
                 </div>
               </div>
             </div>
@@ -97,13 +99,15 @@ const UnimaxxOngoing = () => {
                 <div className="um-overlay-text-content">
                   <h3 className="um-card-title font-serief">Modern Residence</h3>
                   
-                  <div className="um-btn-align-wrapper">
-                    <Link className="text-decoration-none" to="/projects">
+                  <div className="um-btn-align-wrapper row">
+                    <Link className="text-decoration-none col-12 col-md-6 hellos" to="/projects">
                       <ViewDetailedGooButton textColor="black" />
                     </Link>
+
+                    <span className="um-card-footer font-hanken col-12 col-md-6">RESIDENTIAL &nbsp; COIMBATORE, TN</span>
                   </div>
                   
-                  <span className="um-card-footer font-hanken">RESIDENTIAL &nbsp; COIMBATORE, TN</span>
+                  
                 </div>
               </div>
             </div>

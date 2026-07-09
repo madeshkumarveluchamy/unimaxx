@@ -94,7 +94,7 @@
 
 @media (max-width: 768px) {
   .unimaxx-hero-viewport {
-    height: 60vh; /* மொபைல் திரைகளில் சற்றே உயரம் குறைக்கப்படும் */
+    height: 70vh; /* மொபைல் திரைகளில் சற்றே உயரம் குறைக்கப்படும் */
   }
   
   .unimaxx-hero-bound-box {

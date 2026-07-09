@@ -1,6 +1,5 @@
 import React from 'react';
 import './css/UnimaxxTeam.css';
-import ViewAllGooButtons from "./ViewAllGooButtons"
 import peopleimg1 from '../../assets/peopleimg1.webp';
 import peopleimg2 from '../../assets/peopleimg2.webp';
 import peopleimg3 from '../../assets/peopleimg3.webp';
@@ -17,12 +16,14 @@ const UnimaxxTeam = () => {
   ];
 
   return (
-    <div className="um-team-master">
+    <div className="um-team-masters">
       <section className="um-team-section">
         
         {/* Header Area */}
         <div className="um-team-header">
-          <h2 className="um-team-main-title font-serief ftit">Meet the people behind the process</h2>
+          <h2 className="um-team-main-title font-serief">
+            Meet the people behind<br />the process
+          </h2>
           <p className="um-team-subtitle-top font-geist fsub">
             Exceptional design is a team effort. We collaborate closely to bring aligned, thoughtful results that not only meet but exceed your expectations.
           </p>
@@ -33,9 +34,16 @@ const UnimaxxTeam = () => {
           {teamMembers.map((member) => (
             <div key={member.id} className="um-team-card">
               <img src={member.img} alt={member.name} className="um-team-img" />
-              <div className="um-team-card-icon font-geist">✻</div>
+              <div className="um-team-card-icon">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="8" cy="2" r="1.8"/>
+                  <circle cx="8" cy="14" r="1.8"/>
+                  <circle cx="2" cy="8" r="1.8"/>
+                  <circle cx="14" cy="8" r="1.8"/>
+                </svg>
+              </div>
               <div className="um-team-name-overlay font-geist">
-                <span className='font-geist'>{member.name}</span>
+                <span>{member.name}</span>
               </div>
             </div>
           ))}
@@ -44,10 +52,12 @@ const UnimaxxTeam = () => {
         {/* Footer CTA Area */}
         <div className="um-team-footer-cta">
           <div className="um-team-cta-text">
-            <h3 className='font-inter fsub'>Join us in shaping better spaces</h3>
-            <p className='font-geist fdes'>Ready to build something meaningful together? Let's connect and turn ideas into impactful design.</p>
+            <h3 className="font-inter fsub">Join us in shaping better spaces</h3>
+            <p className="font-geist fdes">
+              Ready to build something meaningful together? Let's connect <br/>and turn ideas into impactful design.
+            </p>
           </div>
-          <ViewAllGooButtons text="Join Us Now "/>
+          <button className="um-team-join-btn">Join us now</button>
         </div>
 
       </section>

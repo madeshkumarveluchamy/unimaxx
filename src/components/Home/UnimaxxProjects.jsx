@@ -172,11 +172,24 @@ const UnimaxxProjects = () => {
 
         {/* Buttons Layout Control */}
         <div className="um-proj-navigation-wrapper">
-          <div className="um-proj-navigation-inline">
-            <button className="um-proj-arrow-btn" onClick={handlePrev}>←</button>
-            <button className="um-proj-arrow-btn um-arrow-active" onClick={handleNext}>→</button>
+            <div className="um-proj-navigation-inline">
+              {/* Left Modern Arrow */}
+              <button className="um-proj-arrow-btn" onClick={handlePrev} aria-label="Previous">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="19" y1="12" x2="5" y2="12"></line>
+                  <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+              </button>
+              
+              {/* Right Modern Arrow */}
+              <button className="um-proj-arrow-btn um-arrow-active" onClick={handleNext} aria-label="Next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </button>
+            </div>
           </div>
-        </div>
 
       </section>
     </div>

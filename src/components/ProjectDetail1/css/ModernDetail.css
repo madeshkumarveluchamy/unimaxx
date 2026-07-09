@@ -154,7 +154,7 @@
   }
   
   .nest-top-container {
-    padding: 0 24px 40px 24px;
+    padding: 0 24px 24px 24px;
     align-items: center;
   }
 
@@ -176,7 +176,6 @@
 
   /* 🎯 ஸ்பெக்ஸ் பாக்ஸ்கள் மற்றும் உரைகள் சென்டர் அலைன்மென்ட் */
   .nest-top-specs-grid {
-    grid-template-columns: 1fr;
     gap: 20px;
   }
 

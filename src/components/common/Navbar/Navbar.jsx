@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-
+import { NavLink } from "react-router-dom";
 import logoImg from '../../../assets/unimaxxlogo.webp'; 
 
 const Navbar = () => {
@@ -53,18 +53,18 @@ const Navbar = () => {
 
   return (
     <header className={`unimaxx-premium-nav-root ${isScrolled ? 'scrolled' : ''} ${isTransitioning ? 'no-transition' : ''}`}>
-      <div className="unimaxx-nav-flex-core">
+      <div className="unimaxx-nav-flex-core ">
         
         {/* Logo Block */}
-        <div className="unimaxx-logo-white-plate">
-          <Link to="/" onClick={handleLinkClick}>
+        <div className="unimaxx-logo-white-plate ">
+          <NavLink to="/" onClick={handleLinkClick}>
             <img src={logoImg} alt="Unimaxx Logo" className="unimaxx-src-logo" />
-          </Link>
+          </NavLink>
         </div>
 
         {/* Mobile Toggle Button */}
         <button 
-          className={`unimaxx-hamburger-trigger ${isMenuOpen ? 'burger-active' : ''}`} 
+          className={` unimaxx-hamburger-trigger ${isMenuOpen ? 'burger-active' : ''}`} 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle Navigation"
         >
@@ -74,12 +74,13 @@ const Navbar = () => {
         </button>
 
         {/* Glass Menu with Social Icons */}
-        <nav className={`unimaxx-exact-glass-pill ${isMenuOpen ? 'mobile-visible' : ''}`}>
+        <nav className={` unimaxx-exact-glass-pill ${isMenuOpen ? 'mobile-visible ' : ''}`}>
           <div className="unimaxx-mobile-links">
-            <Link to="/projects" onClick={handleLinkClick}>Projects</Link>
-            <Link to="/what-we-deliver" onClick={handleLinkClick}>What we Deliver</Link>
-            <Link to="/our-story" onClick={handleLinkClick}>Our Story</Link>
-            <Link to="/start-a-project" onClick={handleLinkClick}>Start a Project</Link>
+            <NavLink to="/" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-item active-menu" : "nav-item"}>Home</NavLink>
+            <NavLink to="/projects" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-item active-menu" : "nav-item"}>Projects</NavLink>
+            <NavLink to="/what-we-deliver" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-item active-menu" : "nav-item"}>What we Deliver</NavLink>
+            <NavLink to="/our-story" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-item active-menu" : "nav-item"}>Our Story</NavLink>
+            <NavLink to="/start-a-project" onClick={handleLinkClick} className={({ isActive }) => isActive ? "nav-item active-menu" : "nav-item"}>Start a Project</NavLink>
           </div>
 
           {/* 🎯 Social Media Icons Added Here */}

@@ -146,7 +146,7 @@
 /* படத்தில் உள்ளவாறு இமேஜின் கீழ் இருக்கும் பிளாக் ஓவர்லே பட்டி */
 .um-faq-image-overlay-bar {
   position: absolute;
-  bottom: 25px;
+  bottom: 13px;
   left: 50%;
   transform: translateX(-50%);
   width: 90%;
@@ -169,6 +169,7 @@
 
 .um-overlay-star {
   color: #ffffff;
+  align-items: start;
   font-size: 14px;
 }
 
@@ -294,9 +295,9 @@
   }
 
   .um-overlay-text-left {
-    . 
     gap: 5px;
     justify-content: center;
+    align-items: start;
   }
 
   .um-faq-contact-btn {

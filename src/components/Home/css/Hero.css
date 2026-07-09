@@ -34,7 +34,7 @@ html, body {
 .unimaxx-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.45) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
   z-index: 1;
 }
 
@@ -124,7 +124,7 @@ html, body {
   left: 0;
   width: 25%; /* இடது பக்கம் கருப்பு நிறம் எவ்வளவு தூரம் வர வேண்டும் என்பதை இங்கே மாற்றலாம் */
   height: 100%;
-  background: linear-gradient(to right, #000000 1%, transparent 100%);
+  background: linear-gradient(to right, #000000 1%, transparent 35%);
   z-index: 3;
   pointer-events: none;
 }
@@ -137,7 +137,7 @@ html, body {
   right: 0;
   width: 25%; /* வலது பக்கம் கருப்பு நிறம் எவ்வளவு தூரம் வர வேண்டும் என்பதை இங்கே மாற்றலாம் */
   height: 100%;
-  background: linear-gradient(to left, #000000 1%, transparent 100%);
+  background: linear-gradient(to left, #000000 1%, transparent 35%);
   z-index: 3;
   pointer-events: none;
 }
@@ -191,13 +191,13 @@ html, body {
   
   .unimaxx-marquee-track {
     gap: 40px;
-    animation-duration: 16s; 
+    animation-duration: 24s; 
   }
 }
 
 @media (max-width: 426px) {
   .unimaxx-hero-content {
-    top: 35%;
+    top: 45%;
   }
 
   .unimaxx-main-title {

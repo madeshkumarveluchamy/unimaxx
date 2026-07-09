@@ -252,3 +252,39 @@
     padding-right: 0;
   }
 }
+
+/* Navigation Buttons Container */
+.um-proj-navigation-inline {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  gap: 20px; /* 🎯 FIX: Render arrows closer matching the 2nd image */
+  background-color: #ffffff;
+  padding: 4px;
+}
+
+/* Modern Rounded Arrow Buttons */
+.um-proj-arrow-btn {
+  background-color: #121212; /* Deep black */
+  color: #ffffff;
+  border: none;
+  width: 55px; /* Perfect square size */
+  height: 55px; 
+  border-radius: 12px; /* 🎯 FIX: Rounded corners as per image */
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+}
+
+/* Hover & Active Effects */
+.um-proj-arrow-btn:hover {
+  background-color: #333333;
+  transform: translateY(-2px); /* Slight lift effect */
+}
+
+.um-proj-arrow-btn:active {
+  transform: translateY(0);
+}

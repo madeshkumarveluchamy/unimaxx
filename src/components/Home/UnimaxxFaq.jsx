@@ -30,12 +30,12 @@ const UnimaxxFaq = () => {
     },
     {
       id: 5,
-      question: "What are your pricing options?",
+      question: "5.What are your pricing options?",
       answer: "Our pricing options are transparent and tailored based on the project scale, material selections, and specific customization requirements."
     },
     {
       id: 6,
-      question: "5. Why should we choose your firm?",
+      question: "6. Why should we choose your firm?",
       answer: "We focus on a perfect blend of timeless aesthetics, technical precision, and an uncompromised commitment to bringing your unique spatial vision to life."
     }
   ];
@@ -50,7 +50,9 @@ const UnimaxxFaq = () => {
         
         {/* FAQ Header Content */}
         <div className="um-faq-header">
-          <h2 className="um-faq-main-title font-serief ftit">Answers that bring clarity</h2>
+          <h2 className="um-faq-main-title font-serief 
+          
+          ">Answers that bring clarity</h2>
           <p className="um-faq-subtitle-top font-geist fsub">
             We've answered the most common questions to help you move forward.
           </p>

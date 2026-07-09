@@ -212,7 +212,7 @@ export default function GetQuoteGooButton({ text = "Get a Quote", to ,onClick })
         <Link className="text-decoration-none" to={`${to}`}>
 
         <button 
-          className="unimaxxexpertise-goo-btn font-hanken d-flex position-relative" 
+          className="unimaxxexpertise-goo-btns font-hanken d-flex position-relative" 
           ref={btnRef} 
           onClick={(e) => {
             if (onClick) onClick(e);
@@ -221,7 +221,7 @@ export default function GetQuoteGooButton({ text = "Get a Quote", to ,onClick })
         >
           <span className="unimaxxexpertise-goo-text">{text}</span>
           
-          <span className="unimaxxexpertise-goo-icon ">
+          <span className="unimaxxexpertise-goo-icons ">
             <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M5 12H19M19 12L13 6M19 12L13 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>

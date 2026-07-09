@@ -85,7 +85,7 @@ useEffect(() => {
           </div>
 
           {/* ================= COLUMN 3 ================= */}
-          <div className="ux-philo-col ux-philo-right-col">
+          <div className="ux-philo-col ux-philo-right-col vision-col">
             <img 
               src={staircaseImg} 
               alt="Modern Staircase" 
@@ -97,7 +97,7 @@ useEffect(() => {
 
               <div className="ux-philo-animated-line sub-line line-draw"></div>
 
-              <p className="ux-philo-desc slide-from-right mainsub font-geist">
+              <p className="ux-philo-desc slide-from-right mainsub font-geist desc-story">
                 Our vision is to create purposeful, innovative, and enduring spaces through a process that values 
                 collaboration, creativity, and sustainability. Every line we draw and every space we craft reflects our 
                 commitment to human-centered design, technical precision, and timeless aesthetic values.

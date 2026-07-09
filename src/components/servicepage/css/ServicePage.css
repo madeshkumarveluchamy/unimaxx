@@ -382,3 +382,33 @@ body::-webkit-scrollbar,
     gap: 30px;
   }
 }
+
+@media (max-width: 576px) {
+
+  .hero-title {
+  margin-top: 80px !important;
+ 
+}
+
+
+.services-list {
+  gap: 0px; 
+}
+
+.hero-section {
+  position: relative;
+  height: 80vh; 
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0b0a0a;
+  overflow: hidden;
+}
+
+.services-container {
+  padding: 60px 7% 120px 7%; 
+}
+
+
+}

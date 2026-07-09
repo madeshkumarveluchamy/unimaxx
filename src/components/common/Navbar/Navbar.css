@@ -35,6 +35,17 @@
   will-change: background-color, backdrop-filter, padding; 
 }
 
+
+.nav-item {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.nav-item.active-menu {
+  color: #d8b056 !important; 
+  font-weight: bold; 
+}
+
 /* லோகோ மற்றும் மெனு அலைன்மென்ட் */
 .unimaxx-nav-flex-core {
   display: flex;
@@ -50,7 +61,6 @@
 /* --- LOGO PLATE --- */
 .unimaxx-logo-white-plate {
   background-color: #ffffff;
-  padding: 3px 15px;
   border-radius: 6px;
   display: flex;
   justify-content: center;
@@ -66,22 +76,21 @@
 
 /* --- DESKTOP GLASS MENU --- */
 .unimaxx-exact-glass-pill {
-  background: rgba(0, 0, 0, 0.3) !important; 
-  backdrop-filter: blur(10px) saturate(80%);
-  -webkit-backdrop-filter: blur(10px) saturate(120%);
+ background-color: rgba(15, 14, 13, 0.64) !important;
+  backdrop-filter: blur(20px) saturate(140%) !important;
+  -webkit-backdrop-filter: blur(40px) saturate(140%) !important;
   border: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-  
-  padding: 14px 0 !important; 
-  border-radius: 12px !important; 
+  padding: 20px 10px !important;
+  border-radius: 12px !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 80px; 
-  width: 57%; 
+  gap: 80px;
+  width: 57%;
   max-width: 1100px;
   min-width: 750px;
-  transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+  
 }
 
 .unimaxx-exact-glass-pill a {
@@ -94,11 +103,11 @@
   transition: all 0.2s ease;
   white-space: nowrap;
   opacity: 0.85;
+   transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1) !important;
 }
 
 .unimaxx-exact-glass-pill a:hover {
   opacity: 1 !important;
-  text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
 /* 🎯 HIDE SOCIAL ICONS ON DESKTOP (BIG SCREENS) */
@@ -113,28 +122,28 @@
   text-decoration: none !important;
   font-family: 'Helvetica Neue', Arial, sans-serif !important; 
   font-size: 18px !important; 
-  margin-left: 45px; 
+
   font-weight: 400 !important;
   letter-spacing: 0.5px !important;
   transition: all 0.2s ease;
   white-space: nowrap;
   opacity: 0.85;
 }
-  
+
   .unimaxx-premium-nav-root.scrolled {
     padding-top: 8px !important;
     padding-bottom: 8px !important;
-    top: 15px; 
-    width: 80% !important; 
-    max-width: 800px !important;
-    min-width: 800px !important;
-    border-radius: 50px !important; 
-    
-    background-color: rgba(15, 14, 13, 0.85) !important; 
+    top: 15px;
+    width: 80% !important;
+    max-width: 850px !important;
+    min-width: 780px !important;
+    border-radius: 50px !important;
+    background-color: rgba(15, 14, 13, 0.64) !important;
     backdrop-filter: blur(20px) saturate(140%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+
   }
 
   .unimaxx-premium-nav-root.scrolled .unimaxx-nav-flex-core {
@@ -142,10 +151,12 @@
     justify-content: space-between !important;
     gap: 0 !important;
     padding: 0 10px 0 10px !important;
+    width:100%;
   }
 
   .unimaxx-premium-nav-root.scrolled .unimaxx-logo-white-plate {
     padding: 1px 18px;
+    padding-top:5px;
     box-shadow: none;
     background-color: #ffffff;
     border-radius: 40px; 
@@ -159,16 +170,19 @@
     background: transparent !important;
     border: none !important;
     box-shadow: none !important;
-    backdrop-filter: none !important;
-    -webkit-backdrop-filter: none !important;
+    backdrop-filter: NONE !important;
+    -webkit-backdrop-filter: blur(80px) saturate(140%) !important;
     width: auto !important;
     min-width: auto !important;
     padding: 0 20px 0 0 !important;
     gap: 0 !important;
+    
   }
 
   .unimaxx-premium-nav-root.scrolled .unimaxx-exact-glass-pill a {
     font-size: 16px !important;
+    padding-left:30px !important;
+    
   }
 }
 
@@ -219,7 +233,7 @@
 .unimaxx-mobile-links {
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
    /* Navlinks-ku naduvula thevayana gap. Itha ungaluku etha madhiri maathikalam (e.g., 40px, 60px) */
   width: 100%;
@@ -229,13 +243,13 @@
   .unimaxx-premium-nav-root {
     padding-top: 12px;
     padding-bottom: 12px;
-    width: calc(100% - 20px) !important; 
+    width: calc(100% - 40px) !important; 
     margin: 10px auto !important; 
     border-radius: 12px !important; 
     left: 50%;
     transform: translateX(-50%);
-    top: 0;
-    background-color: rgba(15, 14, 13, 0.94) !important;
+    top: 10px !important;
+    background-color: rgba(15, 14, 13, 0.64) !important;
     backdrop-filter: blur(20px) saturate(140%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -246,6 +260,7 @@
     flex-direction: row;
     justify-content: space-between;
     padding: 0 16px; 
+    min-height:50px;
     gap: 0;
   }
 
@@ -254,28 +269,31 @@
   }
 
   .unimaxx-logo-white-plate {
-    padding: 6px 16px;
     position: relative;
+    
     z-index: 110; 
     border-radius: 6px !important;
+    height:50px !important;
+    width:100px !important;
   }
   
   .unimaxx-src-logo {
-    height: 26px; 
+    height: 30px; 
+    padding-top:5px;
   }
 
   .unimaxx-exact-glass-pill {
     position: fixed; 
-    top: 75px; 
-    left: 5px !important;    
-    width: calc(100vw - 30px) !important; 
+    top: 90px; 
+    right: -10px !important;    
+    width: calc(100vw - 20px) !important; 
     height: 70vh !important; 
     max-width: 100vw !important;
     min-width: auto !important;
     box-sizing: border-box;
-    background:  rgba(0, 0, 0, 0.98) !important; 
-    backdrop-filter: none !important; 
-    -webkit-backdrop-filter: none !important;
+    background-color: rgba(15, 14, 13, 0.64) !important;
+    backdrop-filter: blur(20px) saturate(140%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
     border-radius: 24px !important; 
     box-shadow: 0 25px 60px rgba(0, 0, 0, 0.65); 
@@ -293,11 +311,16 @@
     transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
-  .unimaxx-exact-glass-pill.mobile-visible {
+.unimaxx-exact-glass-pill.mobile-visible {
     opacity: 1;
     pointer-events: auto;
-    transform: scale(1) translateY(0);
-  }
+    position: absolute;
+    z-index: 999;
+    background-color: rgba(43, 39, 34, 1) !important; !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+}
 
   /* 🎯 Main Mobile Links Wrapper */
   .unimaxx-mobile-links {
@@ -374,4 +397,16 @@
     opacity: 1;
     transform: translateY(0);
   }
+}
+
+.your-main-menu-overlay-class {
+    background-color: rgba(43, 39, 34, 0.95) !important; /* 95% opacity கொடுத்தால் பின்னால் உள்ள எழுத்துகள் குழப்பாது */
+    backdrop-filter: blur(30px) !important;
+    -webkit-backdrop-filter: blur(30px) !important;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
 }

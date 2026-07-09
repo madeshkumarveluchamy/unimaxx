@@ -125,8 +125,8 @@ const AnimatedProjectCard = ({ project }) => {
         <div className="vertical-card-bottom-row">
           <ProjectGooButton to={project.path}  />
           <div className="vertical-card-tags" >
-            <span className="v-tag mainsdes">{project.category}</span>
-            <span className="v-tag mainsdes">{project.location}</span>
+            <span className="v-tag ">{project.category}</span>
+            <span className="v-tag ">{project.location}</span>
           </div>
         </div>
       </div>

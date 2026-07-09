@@ -138,14 +138,14 @@ const UnimaxxFeatures = () => {
         </div>
 
         {/* 4-Column Stats Bar with Animated Slot Counter */}
-        <div className="arch-feat-stats-bar">
+        <div className="arch-feat-stats-bar ">
           {statsData.map((stat, idx) => (
-            <div key={idx} className="arch-feat-stat-item font-geist">
+            <div key={idx} className="arch-feat-stat-item font-geist ">
               <h4>
                 <SlotCounter value={stat.count} baseDirection="up"/>
                 <span className="arch-feat-stat-suffix font-geist">{stat.suffix}</span>
               </h4>
-              <p className="font-serif text-black smin">{stat.label}</p>
+              <p className="font-serieef text-black fw-light smin">{stat.label}</p>
             </div>
           ))}
         </div>

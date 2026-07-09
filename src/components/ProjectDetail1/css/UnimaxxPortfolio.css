@@ -197,6 +197,16 @@
 }
 
 @media (max-width: 768px) {
+
+  .sync-portfolio-meta-tags span {
+  font-size: 12px;
+}
+
+  .sync-portfolio-meta-tags {
+  display: flex;
+  gap: 10px;
+}
+
   .sync-portfolio-container {
     padding: 0 24px;
   }
@@ -204,7 +214,8 @@
     font-size: 2.2rem;
   }
   .sync-portfolio-card-footer {
-    flex-direction: column;
+    display:flex;
+    flex-direction:column;
     align-items: flex-center;
     gap: 15px;
   }
@@ -215,10 +226,10 @@
   /* 🎯 பிக்ஸ்: மொபைல் வியூவில் ஓவர்லே கார்டின் அளவை (Padding & Width) லேசாகக் குறைத்துள்ளேன் */
   .sync-portfolio-floating-card {
     width: 88%; /* இருபுறமும் பின்னணி இமேஜ் தெரியுமாறு வித் குறைக்கப்பட்டுள்ளது */
-    max-width: 340px;
-    height:200px;
+    max-width: 340px ;
+    height:250px;
     padding: 16px; /* 24px-லிருந்து 16px ஆகக் குறைக்கப்பட்டுள்ளது */
-    gap: 12px;
+    gap: 6px;
     text-align:Center;
   }
 

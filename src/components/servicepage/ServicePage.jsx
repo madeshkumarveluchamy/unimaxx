@@ -196,8 +196,8 @@ function ServiceRow({ service }) {
             <ul className="points-list d-flex justify-content-center align-items-center">
               {service.points.map((point, index) => (
                 <li key={index} className="point-item">
-                  <span className="check-icon maindes ">✔</span>
-                  <span className="point-text maindes">{point}</span>
+                  <span className="check-icon  ">✔</span>
+                  <span className="point-text maindes ">{point}</span>
                 </li>
               ))}
             </ul>
@@ -228,8 +228,8 @@ export default function ServicePage() {
       {/* SERVICES LIST SECTION */}
       <main className="services-container">
         <div className="services-header">
-          <span className="services-sub maindes font-geist">WHAT WE DO</span>
-          <h2 className="services-title">
+          <span className="services-sub maindes font-geist mainsub">WHAT WE DO</span>
+          <h2 className="services-title mainhead">
             <img 
                                                     src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
                                                     alt="Star Icon" 

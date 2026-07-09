@@ -38,11 +38,11 @@
 .um-ins-desc-right {
   flex: 0.7;
   display: flex;
-  padding-top: 4vw;
+
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  text-align: right;
+  text-align: left;
   gap: 20px;
 }
 
@@ -216,18 +216,19 @@
 
   /* கார்டுகள் மற்றும் உள்ளே இருக்கும் கூறுகள் சென்டர் அநிலைமைண்ட் */
   .um-insight-card {
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
     gap: 25px;
     padding: 30px;
     width: 100%;
-    max-width: 480px; /* போனில் பார்க்க நேர்த்தியாக இருக்க */
+    max-width: 100%; /* போனில் பார்க்க நேர்த்தியாக இருக்க */
+    height:300px;
   }
 
   .um-ins-card-content {
     min-height: auto;
-    gap: 20px;
+    gap:20px;
     align-items: center;
     width: 100%;
   }
@@ -242,6 +243,6 @@
 
   .um-ins-card-image {
     width: 100%; /* மொபைலில் படம் முழு அகலத்திற்கு மாறும் */
-    aspect-ratio: 1.6 / 1;
+    aspect-ratio: 1 / 1.5;
   }
 }

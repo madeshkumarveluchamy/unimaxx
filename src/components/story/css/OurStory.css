@@ -191,7 +191,7 @@ html::-webkit-scrollbar {
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15) !important;
   display: flex !important;
   flex-direction: column !important;
-  gap: 20px !important;           
+  gap: 5px !important;           
   height: 400px !important;        
   z-index: 5 !important;
   margin-top: 0 !important;
@@ -209,7 +209,7 @@ html::-webkit-scrollbar {
 
 .vertical-card-img-box {
   width: 100% !important;
-  height: 280px !important; 
+  height: 310px !important; 
   border-radius: 10px !important;
   overflow: hidden !important;
   display: block !important; /* டெஸ்க்டாப்பில் தம்ப்நெயில் தெரியும் */
@@ -278,7 +278,7 @@ html::-webkit-scrollbar {
 .v-tag {
   font-family: 'Manrope', sans-serif; 
   font-weight: 600; 
-  font-size: 9px;
+  font-size: 10px !important;
   color: #555555;
   letter-spacing: 0.04em;
   text-transform: uppercase;
@@ -290,16 +290,18 @@ html::-webkit-scrollbar {
 
 @media (min-width: 2000px) {
   .portfolio-large-card { height: 500px; }
-  .portfolio-vertical-floating-card { width: 400px; bottom: 35px !important; }
+  .portfolio-vertical-floating-card { width: 400px;  bottom: 35px !important; }
   .float-right { right: 50px !important; }
   .float-left { left: 50px !important; }
 }
 
 @media (max-width: 1200px) {
   .portfolio-large-card { height: 400px; }
-  .portfolio-vertical-floating-card { width: 310px; gap: 15px !important;  height :300px !important; bottom: 35px !important; }
-  .vertical-card-img-box { height: 200px !important; }
-  .vertical-card-title { font-size: 15px; }
+  .portfolio-vertical-floating-card { width: 310px;  height :300px !important; bottom: 35px !important; }
+  .vertical-card-img-box { height: 220px !important; }
+  .vertical-card-title { font-size: 15px; };
+  .float-right {right: 40px !important; left: auto !important;};
+  .float-left {left: 40px !important; right: auto !important;};
 }
 
 /* ==========================================
@@ -363,7 +365,7 @@ html::-webkit-scrollbar {
     height: 270px !important;         
     
     /* 👇 Ithu thaan mukkiyam: 4 sides-layum uniform space tharum */
-    padding: 20px !important; 
+    padding: 15px !important; 
     
     border-radius: 20px !important;
     box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.15) !important;
@@ -379,20 +381,20 @@ html::-webkit-scrollbar {
 .vertical-card-img-box { 
     display: block !important; 
     width: 100% !important;
-    height: 200px !important; 
-    
-    /* 👇 Image-ku rounded corners add panniduchu */
+    height: 250px !important; 
     border-radius: 12px !important; 
     overflow: hidden !important; 
-    
-    margin-bottom: 20px !important;
+  }
+
+  .vertical-card-img-box img { 
+   
+    height: 100% !important;
   }
 
   /* 2. Title */
   .vertical-card-title { 
     font-family: 'Playfair Display', serif !important;
     font-size: 28px !important; 
-    margin: 10px 0 15px 0 !important; 
     text-align: center !important; 
     color: #111 !important;
     font-weight: 500 !important;
@@ -401,10 +403,10 @@ html::-webkit-scrollbar {
   /* 3. Bottom Row - Flex Layout */
   .vertical-card-bottom-row { 
     display: flex !important;
-    flex-direction: column !important; 
+    flex-direction:column !important;
     align-items: center !important; 
     justify-content: center !important;
-    gap: 15px !important;
+    gap: 8px !important;
     width: 100% !important;
     margin-top: 0 !important; 
     border-top: none !important; /* Remove old border */
@@ -415,14 +417,15 @@ html::-webkit-scrollbar {
   .vertical-card-tags {
     display: flex !important;
     gap: 8px !important;
-    justify-content: center !important;
+    justify-content: end !important;
     width: 100% !important;
     margin-top: 10px !important;
   }
 
   .v-tag { 
     font-family: 'Geist', sans-serif !important;
-    font-size: 11px !important; 
+    font-size: 12px !important; 
+    
     padding: 0 !important; /* Remove background box styling */
     background-color: transparent !important; 
     color: #888 !important; /* Light text color */
@@ -432,5 +435,12 @@ html::-webkit-scrollbar {
 }
 
 @media (max-width: 480px) {
+    .vertical-card-tags {
+    display: flex !important;
+    gap: 8px !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-top: 0px !important;
+  }
   
 }

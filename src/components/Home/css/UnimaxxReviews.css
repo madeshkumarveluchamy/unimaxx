@@ -22,7 +22,7 @@
   color: #1a1a1a;
   max-width: 650px;
   line-height: 1.25;
-  margin: 0;
+  margin-left: 7%;
   text-align: left;
 }
 
@@ -233,6 +233,7 @@
 
   .um-reviews-header h2 {
     font-size: 2.2rem;
+    margin:0px ;
     text-align: center;
     max-width: 100%;
   }

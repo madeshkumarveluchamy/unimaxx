@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/Hero.css';
-import backgroundImg from '../../assets/contactpagebackground.webp'; // உங்கள் இமேஜ் பாத்
+import backgroundImg from '../../assets/backgroundimage.webp'; // உங்கள் இமேஜ் பாத்
 
 const ContactHero = () => {
   return (

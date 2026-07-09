@@ -53,23 +53,27 @@ const ContactFormSection = () => {
 
   return (
     <section className="unimaxx-form-section-container" id="contact">
-      <div className="unimaxx-form-layout-grid">
-        
-        {/* ================= இடது பக்க கன்டென்ட் & விவரங்கள் ================= */}
-        <div className="unimaxx-info-column">
-         <div className="unimaxx-section-header">
+
+      <div className="unimaxx-section-header ">
           <h2> <img 
             src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
             alt="Star Icon" 
             className="unimaxx-asterisk-icon" 
           />Connect with <br /> <span className="hello">Our Design Team</span></h2>
         </div>
+      <div className="unimaxx-form-layout-grid">
+
+        
+        
+        {/* ================= இடது பக்க கன்டென்ட் & விவரங்கள் ================= */}
+        <div className="unimaxx-info-column">
+         
           
           <div className="unimaxx-form-image-wrapper">
             <img src={formImg} alt="Contact Team" className="unimaxx-form-src-img" />
           </div>
 
-          <div className="unimaxx-address-grid">
+          <div className="unimaxx-address-grid row">
             <div className="unimaxx-info-item">
               <div className="unimaxx-icon-box">
                 {/* Location Icon SVG */}

@@ -183,7 +183,7 @@
   .ux-philo-section { padding: 15px 0; }
   .ux-philo-flex-row { flex-direction: column; gap: 50px; }
   .ux-philo-left-col, .ux-philo-center-col, .ux-philo-right-col {
-    width: 100%; padding-top: 0; text-align: center;
+    width: 100%; padding-top: 0; text-align: center; 
   }
   .ux-philo-main-title { font-size: 2.5rem; margin-bottom: 30px; text-align: center; }
   .ux-philo-sub-img { aspect-ratio: 4 / 3; width: 100%; margin-bottom: 30px; }
@@ -191,5 +191,12 @@
   
   .slide-from-left, .slide-from-right {
     transform: translateY(40px); 
+  }
+  .vision-col {
+    display:flex;
+    flex-direction:column-reverse !important;
+  }
+  .desc-story{
+    padding-bottom:30px;
   }
 }

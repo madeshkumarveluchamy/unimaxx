@@ -13,7 +13,7 @@
 .um-about-hero-section {
   width: 100%;
   max-width: 2000px;
-  height: 80vh; /* டெஸ்க்டாப்பில் பார்க்க நேர்த்தியான 80vh ஹைட் */
+  height: 100vh; /* டெஸ்க்டாப்பில் பார்க்க நேர்த்தியான 80vh ஹைட் */
   position: relative;
   background-size: cover;
   background-position: center;
@@ -27,7 +27,7 @@
 .um-about-hero-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45); /* இமேஜுக்கு மேல் டெக்ஸ்ட் பளிச்சென்று தெரிய ஓவர்லே */
+  background: rgba(0, 0, 0, 0); /* இமேஜுக்கு மேல் டெக்ஸ்ட் பளிச்சென்று தெரிய ஓவர்லே */
   z-index: 1;
 }
 
