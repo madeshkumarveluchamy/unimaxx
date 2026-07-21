@@ -316,7 +316,7 @@
     pointer-events: auto;
     position: absolute;
     z-index: 999;
-    background-color: rgba(43, 39, 34, 1) !important; !important;
+    background-color: rgba(43, 39, 34, 1) !important;
     backdrop-filter: blur(20px) !important;
     -webkit-backdrop-filter: blur(25px) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
