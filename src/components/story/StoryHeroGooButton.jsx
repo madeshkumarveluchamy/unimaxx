@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useCallback } from "react";
 import "./css/StoryHeroGooButton.css";
-
+import { Link } from "react-router-dom";
 let idCounter = 0;
 function useStableIds() {
   const ref = useRef(null);
@@ -137,6 +137,7 @@ export default function StoryHeroGooButton({ text = "Let's Build Your Legacy", o
   };
 
   return (
+    <Link to="start-a-project">
     <button 
       className="storyherogoobtn-btn" 
       ref={btnRef} 
@@ -175,5 +176,6 @@ export default function StoryHeroGooButton({ text = "Let's Build Your Legacy", o
   </span>
 
     </button>
+    </Link>
   );
 }

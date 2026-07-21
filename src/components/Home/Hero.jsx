@@ -24,10 +24,10 @@ const Hero = () => {
         {/* 🎯 INFINITE RUNNING LETTERS ENGINE */}
         <div className="unimaxx-marquee-container font-serief">
           <div className="unimaxx-marquee-track">
-            <span>UNIMAXX ARCHIT</span>
-            <span>UNIMAXX ARCHIT</span>
-            <span>UNIMAXX ARCHIT</span>
-            <span>UNIMAXX ARCHIT</span>
+            <span>UNIMAXX ARCHITECTS</span>
+            <span>UNIMAXX ARCHITECTS</span>
+            <span>UNIMAXX ARCHITECTS</span>
+            <span>UNIMAXX ARCHITECTS</span>
           </div>
         </div>
       </section>

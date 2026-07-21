@@ -1,5 +1,6 @@
 import React, { useRef, useEffect, useCallback } from "react";
 import "./css/CtaGooButton.css";
+import { Link } from "react-router-dom";
 
 let idCounter = 0;
 function useStableIds() {
@@ -125,6 +126,7 @@ export default function CtaGooButton({ text = "Contact Our Team", onClick }) {
   };
 
   return (
+    <Link to="/start-a-project">
     <button 
       className="ctagoobutton" 
       ref={btnRef} 
@@ -164,5 +166,6 @@ export default function CtaGooButton({ text = "Contact Our Team", onClick }) {
       {/* 4. Gold Icon Box */}
       <span className="ctagoobutton-icon">→</span>
     </button>
+    </Link>
   );
 }

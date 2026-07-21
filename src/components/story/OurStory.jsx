@@ -146,7 +146,9 @@ const OurStory = () => {
           <h1 className="story-hero-title font-geist">
             Explore Our Architectural <br /> Planning Projects
           </h1>
+        
           <StoryHeroGooButton />
+        
         </div>
       </section>
 

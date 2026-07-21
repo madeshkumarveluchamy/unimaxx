@@ -5,6 +5,7 @@ import peopleimg2 from '../../assets/peopleimg2.webp';
 import peopleimg3 from '../../assets/peopleimg3.webp';
 import peopleimg4 from '../../assets/peopleimg4.webp';
 import peopleimg5 from '../../assets/peopleimg5.webp';
+import { Link } from 'react-router-dom';
 
 const UnimaxxTeam = () => {
   const teamMembers = [
@@ -57,7 +58,9 @@ const UnimaxxTeam = () => {
               Ready to build something meaningful together? Let's connect <br/>and turn ideas into impactful design.
             </p>
           </div>
+          <Link to="start-a-project">
           <button className="um-team-join-btn">Join us now</button>
+          </Link>
         </div>
 
       </section>

@@ -16,7 +16,7 @@ function useStableIds() {
   return ref.current;
 }
 
-export default function PortfolioGooButton({ text = "View Our Portfolio", to = "/portfolio" }) {
+export default function PortfolioGooButton({ text = "View Our Portfolio", to = "/projects" }) {
   const wrapRef = useRef(null);
   const btnRef = useRef(null);
   const bgRef = useRef(null);

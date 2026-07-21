@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useCallback } from "react";
 // CSS கோப்பின் பெயரை இதற்கு ஏற்றாற்போல் கொடுத்துக்கொள்ளுங்கள்
 import "./css/ArchFeatGoodButton.css";
+import { Link } from "react-router-dom";
 
 let idCounter = 0;
 function useStableIds() {
@@ -138,6 +139,7 @@ export default function ArchFeatGooButton({ text = "The Architecture of Legacy",
   };
 
   return (
+    <Link to="our-story">
     <button 
       className="arch-feat-goo-btn font-hanken" 
       ref={btnRef} 
@@ -175,5 +177,6 @@ export default function ArchFeatGooButton({ text = "The Architecture of Legacy",
     </svg>
   </span>
     </button>
+    </Link>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useCallback } from "react";
 // CSS கோப்பின் பெயரை இதற்கு ஏற்றாற்போல் கொடுத்துக்கொள்ளுங்கள்
 import "./css/FaqContactGooButton.css";
+import { Link  } from "react-router-dom";
 
 let idCounter = 0;
 function useStableIds() {
@@ -13,6 +14,22 @@ function useStableIds() {
   }
   return ref.current;
 }
+
+const handleLinkClick = () => {
+    setIsMenuOpen(false);
+    setIsScrolled(false);
+    setIsTransitioning(true);
+
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'instant'
+    });
+
+    setTimeout(() => {
+      setIsTransitioning(false);
+    }, 50);
+  };
 
 export default function FaqContactGooButton({ text, onClick }) {
   const btnRef = useRef(null);
@@ -138,6 +155,7 @@ export default function FaqContactGooButton({ text, onClick }) {
   };
 
   return (
+    <Link to="/start-a-project" onClick={handleLinkClick}>
     <button 
       className="um-faq-fluid-btn font-geist fsub" 
       ref={btnRef} 
@@ -171,5 +189,6 @@ export default function FaqContactGooButton({ text, onClick }) {
 
       <span className="um-faq-fluid-text">{text}</span>
     </button>
+    </Link>
   );
 }

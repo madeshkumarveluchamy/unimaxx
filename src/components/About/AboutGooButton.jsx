@@ -16,7 +16,7 @@ function useStableIds() {
   return ref.current;
 }
 
-export default function AboutGooButton({ text = "Contact Our Team", to = "/contact-us" }) {
+export default function AboutGooButton({ text = "Contact Our Team", to = "/start-a-project" }) {
   const wrapRef = useRef(null);
   const btnRef = useRef(null);
   const bgRef = useRef(null);
