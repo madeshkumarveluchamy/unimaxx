@@ -5,7 +5,7 @@
 .unimaxx-exact-glass-pill a, 
 .portfolio-title,
 .story-hero-title {
-  font-family: 'Playfair Display', Georgia, serif !important;
+  font-family: 'Geist', sans-serif !important;
   font-weight: 400; /* ஃபிக்மாவில் உள்ளபடி Regular ஸ்டைல் */
 }
 
@@ -19,37 +19,23 @@
 }
 
 .font-serieef {
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-size: 3.5rem;
-  font-weight: 500; 
-  color: #1a1a1a;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
+font-family: 'Geist', sans-serif !important;
+  font-weight: 400;
 }
 
 
 .font-serif {
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-size: 3.5rem;
-  font-weight: 700; 
-  color: #1a1a1a;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
+ font-family: 'Geist', sans-serif !important;
+  font-weight: 400;
 }
 .font-seriefs {
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-weight: 500; 
-  color: #ffffff;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
+  font-family: 'Geist', sans-serif !important;
+  font-weight: 400;
 }
 
 .font-serief {
-  font-family: 'Playfair Display', Georgia, serif !important;
-  font-weight: 400; 
-  color: #000000;
-  line-height: 1.2;
-  letter-spacing: -0.5px;
+font-family: 'Geist', sans-serif !important;
+  font-weight: 400;
 }
 
 

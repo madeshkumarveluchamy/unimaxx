@@ -8,7 +8,7 @@ import frame2 from '../../assets/hero2frame2.webp';
 import frame3 from '../../assets/hero2frame3.webp';
 import ArchFeatGooButton from './ArchFeatGooButton';
 
-// --- 🎯 ரோலிங் எண்களுக்கான அனிமேஷன் கூறு (Slot Counter) ---
+// --- 🎯 Slot Counter ---
 const SlotCounter = ({ value, baseDirection = "up" }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
@@ -55,7 +55,6 @@ const SlotCounter = ({ value, baseDirection = "up" }) => {
   );
 };
 
-// --- முதன்மை ஃபீச்சர்ஸ் செக்ஷன் ---
 const UnimaxxFeatures = () => {
   const statsData = [
     { count: 50, suffix: "+", label: "Projects Realized" },
@@ -68,17 +67,15 @@ const UnimaxxFeatures = () => {
     <div className="arch-feat-master">
       <section className="arch-feat-section">
 
-        
-        
-        {/* Header Block */}
-        <div className="arch-feat-header">
+        {/* 🎯 Sticky Header */}
+        <div className="arch-feat-header sticky-header">
           <div className="arch-feat-left-title">
             <h2 className='font-serif stit'>
               Quiet corners, bold <br /> statements <img 
-                                        src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
-                                        alt="Star Icon" 
-                                        className="unimaxx-asterisk-icon" 
-                                      /> we design<br/> spaces that connect with you.
+                src={staricon} 
+                alt="Star Icon" 
+                className="unimaxx-asterisk-icon" 
+              /> we design<br/> spaces that connect with you.
             </h2>
           </div>
           
@@ -90,55 +87,57 @@ const UnimaxxFeatures = () => {
           </div>
         </div>
 
-        {/* 2Row Asymmetrical Grid Mesh */}
-        <div className="arch-feat-grid-mesh">
+        {/* 🎯 The Native Math Staggering Grid */}
+        <div className="arch-feat-grid-native">
           
-          {/* Testimonial Card */}
-          <div className="arch-feat-card arch-feat-testimonial">
-            <div className="arch-feat-stars">★★★★★</div>
-            <p className='smin font-geist'>We required a complete architectural vision, and this team delivered beyond our expectations. From the initial spatial concept to the final site execution, every element feels cohesive, intentional, and masterfully crafted.</p>
+          {/* Column 1 */}
+          <div className="native-col native-col-1">
+            <div className="arch-feat-card arch-feat-testimonial sticky-item tall-item">
+              <div className="arch-feat-stars">★★★★★</div>
+              <p className='smin font-geist'>We required a complete architectural vision, and this team delivered beyond our expectations. From the initial spatial concept to the final site execution, every element feels cohesive, intentional, and masterfully crafted.</p>
+            </div>
           </div>
 
-          {/* Orange Chair Image */}
-          <div className="arch-feat-image-card">
-            <img src={frame1} alt="Feature 1" />
+          {/* Column 2 */}
+          <div className="native-col native-col-2">
+            <div className="arch-feat-image-card sticky-item row-1-item">
+              <img src={frame1} alt="Feature 1" />
+            </div>
+            <div className="arch-feat-card arch-feat-text-type sticky-item row-2-item">
+              <span className="arch-feat-card-num">02</span>
+              <h3 className='font-serif stit'>Sustainable by Design</h3>
+              <p className='font-geist smin'>We have delivered 50+ projects that prioritize integrity, technical excellence, and long-term durability in every build.</p>
+            </div>
           </div>
 
-          {/* 01 Structural Precision */}
-          <div className="arch-feat-card arch-feat-text-type">
-            <span className="arch-feat-card-num">01</span>
-            <h3 className='font-serif stit'>Structural Precision</h3>
-            <p className='smin font-geist'>We have delivered 50+ projects that integrate eco-conscious materials and energy-efficient systems to harmonize with the environment.</p>
+          {/* Column 3 */}
+          <div className="native-col native-col-3">
+            <div className="arch-feat-card arch-feat-text-type sticky-item row-1-item">
+              <span className="arch-feat-card-num">01</span>
+              <h3 className='font-serif stit'>Structural Precision</h3>
+              <p className='smin font-geist'>We have delivered 50+ projects that integrate eco-conscious materials and energy-efficient systems to harmonize with the environment.</p>
+            </div>
+            <div className="arch-feat-image-card sticky-item row-2-item">
+              <img src={frame2} alt="Feature 2" />
+            </div>
           </div>
 
-          {/* Lake Table Image */}
-          <div className="arch-feat-image-card">
-            <img src={frame3} alt="Feature 3" />
-          </div>
-
-          {/* 02 Sustainable by Design */}
-          <div className="arch-feat-card arch-feat-text-type">
-            <span className="arch-feat-card-num">02</span>
-            <h3 className='font-serif stit'>Sustainable by Design</h3>
-            <p className='font-geist smin'>We have delivered 50+ projects that prioritize integrity, technical excellence, and long-term durability in every build.</p>
-          </div>
-
-          {/* Tree with Orange Chair Image */}
-          <div className="arch-feat-image-card">
-            <img src={frame2} alt="Feature 2" />
-          </div>
-
-          {/* 03 Beauty with purpose */}
-          <div className="arch-feat-card arch-feat-text-type">
-            <span className="arch-feat-card-num">03</span>
-            <h3 className='font-serif stit'>Beauty with purpose</h3>
-            <p className='font-geist smin'>We have delivered 50+ projects that transform raw volumes into inspiring, functional spaces tailored to the human experience.</p>
+          {/* Column 4 */}
+          <div className="native-col native-col-4">
+            <div className="arch-feat-image-card sticky-item row-1-item">
+              <img src={frame3} alt="Feature 3" />
+            </div>
+            <div className="arch-feat-card arch-feat-text-type sticky-item row-2-item">
+              <span className="arch-feat-card-num">03</span>
+              <h3 className='font-serif stit'>Beauty with purpose</h3>
+              <p className='font-geist smin'>We have delivered 50+ projects that transform raw volumes into inspiring, functional spaces tailored to the human experience.</p>
+            </div>
           </div>
 
         </div>
 
-        {/* 4-Column Stats Bar with Animated Slot Counter */}
-        <div className="arch-feat-stats-bar ">
+        {/* 4-Column Stats Bar */}
+        <div className="arch-feat-stats-bar">
           {statsData.map((stat, idx) => (
             <div key={idx} className="arch-feat-stat-item font-geist ">
               <h4>

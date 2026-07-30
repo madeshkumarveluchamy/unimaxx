@@ -1,7 +1,7 @@
 /* --- Master Container --- */
 .unq-wwd-container {
   width: 100vw;
-  background-color: #ffffff; 
+  background-color: rgb(218, 227, 228); 
   padding: 100px 20px;
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
 
 /* --- Header --- */
 .unq-wwd-main-title {
-  font-family: 'Georgia', serif;
+  font-family: 'Geist', sans-serif;
   font-size: 3.5rem;
   font-weight: 400;
   color: #2D2D2D;

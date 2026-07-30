@@ -54,112 +54,96 @@
   width: 100%;
 }
 
-/* Background Image Wrapper */
+/* 🎯 Background Image Wrapper (Hover Trigger) */
 .um-bg-image-wrapper {
   position: relative; 
   width: 100%;
   border-radius: 20px;
-  overflow: visible; 
+  overflow: hidden; 
+  cursor: pointer;
+  /* Adds a subtle lift to the whole box on hover */
+  transition: box-shadow 0.6s ease;
 }
 
-/* Background Image */
+/* Make the whole image box feel like it pops out slightly */
+.um-bg-image-wrapper:hover {
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* 🎯 Background Image with STRONGER zoom for "Munnadi vara feel" */
 .um-bg-main-img {
   width: 100%;
   height: 100%;
-  min-height: 390px; 
-  max-height: 390px; 
+  min-height: 450px; 
+  max-height: 450px; 
   object-fit: cover;
-  border-radius: 20px;
   display: block;
+  /* Very smooth, slightly longer transition */
+  transition: transform 0.8s cubic-bezier(0.25, 1, 0.25, 1);
 }
 
-/* ========================================================
-   🎯 NEW: SLIDER ANIMATION
-======================================================== */
-.slider-fade-anim {
-  animation: imageFade 0.8s ease-in-out;
+.um-bg-image-wrapper:hover .um-bg-main-img {
+  transform: scale(1.08); /* Increased scale to make it come forward more */
 }
 
-@keyframes imageFade {
-  0% {
-    opacity: 0.6;
-    filter: brightness(0.8);
-  }
-  100% {
-    opacity: 1;
-    filter: brightness(1);
-  }
-}
-
-/* Floating Overlay Card Standard Styling */
+/* 🎯 Floating Overlay Card (Attractive Pop-up Effect) */
 .um-overlay-card {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%); 
+  bottom: 30px; 
   background-color: #ffffff;
   border-radius: 20px;
-  padding: 24px;
-  
-  min-width: 320px;
-  max-width: 480px;
-  min-height: 75% !important; 
-  overflow-y: auto; 
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  padding: 20px 30px;
+  min-width: 420px;
+  max-width: 580px;
+  height: auto;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  justify-content: center;
   z-index: 10;
+
+  /* Hidden State: Lower down AND slightly smaller */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(40px) scale(0.95); 
+  
+  /* Attractive Spring/Bounce cubic-bezier */
+  transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
-.um-overlay-card::-webkit-scrollbar {
-  width: 5px;
-}
-.um-overlay-card::-webkit-scrollbar-thumb {
-  background: #d8b056; 
-  border-radius: 10px;
-}
-
-.um-overlay-right { right: 1.5%; }
-.um-overlay-left { left: 1.5%; }
-
-/* 🎯 FIX 1: Slim Banner Image inside Card */
-.um-overlay-img-box {
-  width: 100%;
-  border-radius: 12px;
-  overflow: hidden;
-  /* This makes the image short and wide, exactly like the 2nd screenshot */
-  aspect-ratio: 2.7 / 1.2; 
+/* 🎯 HOVER EFFECT - Card pops up with a slight bounce! */
+.um-bg-image-wrapper:hover .um-overlay-card {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1); /* Returns to normal size and position */
 }
 
-.um-overlay-img-box img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+.um-overlay-right { right: 30px; }
+.um-overlay-left { left: 30px; }
 
-/* 🎯 FIX 2: Center All Text Content */
+/* Center All Text Content */
 .um-overlay-text-content {
   display: flex;
   flex-direction: column;
-  align-items: start;/* Cceenters items horizontally */
+  align-items: flex-start;
   justify-content: center;
-  gap: 8px;
-  text-align: center;
+  gap: 25px; 
 }
 
 .um-card-title {
   font-family: 'Georgia', serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 500;
   color: #1a1a1a;
   margin: 0;
-  text-align: center;
+  text-align: left;
 }
 
 .um-btn-align-wrapper {
   display: flex;
   width: 100%;
   justify-content: space-between; 
+  align-items: center;
 }
 
 .um-card-footer {
@@ -167,10 +151,11 @@
   font-size: 0.65rem;
   font-weight: 600;
   color: #888888;
-  display:flex;
+  display: flex;
   letter-spacing: 0.5px;
-  text-align: center !important;
-  align-items:center;
+  text-align: right !important;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 /* ========================================================
@@ -187,35 +172,40 @@
   .um-ongoing-section {
     padding: 60px 40px;
   }
-
-  .um-ongoing-header {
+  .um-ongoing-header, .um-ongoing-subtitle {
     align-items: center;
     text-align: center;
   }
-
-  .um-ongoing-subtitle {
-    text-align: center;
-  }
-
   .um-bg-image-wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 0; 
+    overflow: visible; 
   }
 
-  /* Pull card up over the image using negative margin */
+  /* 🎯 Hover disable for touch devices (Always Visible) */
   .um-overlay-card {
+    opacity: 1;
+    visibility: visible;
+    transform: none !important; /* Force reset transforms for mobile */
     position: relative;
-    top: -25px;
-    transform: none;
+    bottom: auto;
+    right: auto !important;
+    left: auto !important;
     width: 92%;
     max-width: 500px;
     z-index: 10;
-    margin-top: -350px;
-    left: auto !important;
-    right: auto !important;
+    margin-top: -200px; 
     box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  }
+  .um-bg-image-wrapper:hover .um-overlay-card,
+  .um-bg-image-wrapper:hover .um-bg-main-img {
+    transform: none !important; /* Disable hover scale on mobile */
+  }
+
+  .um-bg-main-img{
+    border-radius:20px;
   }
 }
 
@@ -224,44 +214,43 @@
   .um-ongoing-section {
     padding: 50px 20px;
   }
-
   .um-ongoing-title {
     font-size: 2.5rem;
     text-align: center;
   }
-
   .um-bg-main-img {
-    min-height: 450px !important; 
+    min-height: 350px !important; 
+    max-height: 350px !important;
   }
-
-  .um-overlay-text-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;/* Cceenters items horizontally */
-  justify-content: center;
-  gap: 8px;
-  text-align: center;
-}
-
+  .um-overlay-text-content, .um-card-title {
+    align-items: center;
+    text-align: center;
+  }
   .um-overlay-card {
     width: 85%;
-    min-width: 220px ;
-    height:250px!important;
-    margin-top: -260px; 
-    padding: 10px;
+    min-width: 220px;
+    height: auto !important;
+    margin-top: -160px; 
+    padding: 10px 10px;
   }
-  
-  .um-overlay-img-box {
-    aspect-ratio: 1 / 3 !important; /* Slightly taller banner for very small screens */
-  }
-
-
   .um-btn-align-wrapper {
-  gap:10px;
-  display: flex;
-  flex-direction:column;
-  width: 100%;
-  align-items:center;
-  justify-content: center; 
+    gap: 15px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; 
+  }
+  .um-card-footer {
+    text-align: center !important;
+    justify-content: center;
+  }
 }
+
+@media(max-width:330px){
+   .um-overlay-card {
+    width: 85%;
+    min-width: 220px;
+    height: auto !important;
+    margin-top: -195px; 
+    padding: 10px 10px;
+  }
 }

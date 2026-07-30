@@ -44,8 +44,7 @@
 
 /* முதல் காலம் மட்டும் இடதுபுற பேடிங் தேவையில்லை */
 .um-footer-brand-col {
-  ;
-  text
+  /* no extra padding on the first column */
 }
 
 /* COLUMN 1: Brand Content Styling */

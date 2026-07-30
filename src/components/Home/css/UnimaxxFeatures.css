@@ -3,21 +3,25 @@
   background-color: #E2DCD0; 
   display: flex;
   justify-content: center;
-  overflow-x: hidden;
+  overflow: clip; 
   box-sizing: border-box;
 }
 
 .arch-feat-section {
   width: 100%;
   max-width: 2000px;
-  padding: 100px 80px;
+  padding: 50px 80px 100px;
   display: flex;
   flex-direction: column;
-  gap: 80px;
 }
 
-/* Header Config */
-.arch-feat-header {
+/* 🎯 Header Config - Sticky */
+.sticky-header { /* Make sure this is set to sticky */
+  top: 15px; /* Added some top space for the pill look */    /* Keeps it above the cards as they scroll up */
+  background-color: #E2DCD0; 
+  padding-top: 15px; 
+  padding-bottom: 15px; 
+  margin-bottom: 0px; 
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -25,320 +29,112 @@
   gap: 60px;
 }
 
-.arch-feat-left-title {
-  flex: 1.2;
-}
+.arch-feat-left-title { flex: 1.2; }
+.arch-feat-left-title h2 { font-family: 'Georgia', serif; font-size: 3.2rem; font-weight: 400; color: #1a1a1a; line-height: 1.25; margin: 0; }
+.unimaxx-asterisk-icon { width: 40px; vertical-align: middle; display: inline-block; margin: 0 5px; }
+.arch-feat-right-cta { flex: 0.8; display: flex; flex-direction: column; align-items: flex-end; gap: 25px; text-align: right; }
+.arch-feat-right-cta p { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 16px; color: #4a4a4a; line-height: 1.5; max-width: 420px; margin: 0; }
+.arch-feat-btn-container { display: flex; width: 100%; justify-content: flex-end; }
 
-.arch-feat-left-title h2 {
-  font-family: 'Georgia', serif;
-  font-size: 3.2rem;
-  font-weight: 400;
-  color: #1a1a1a;
-  line-height: 1.25;
-  margin: 0;
-}
-
-.arch-feat-star-icon {
-  color: #1a1a1a;
-  font-size: 2.5rem;
-  vertical-align: middle;
-  display: inline-block;
-  margin: 0 5px;
-}
-
-.arch-feat-right-cta {
-  flex: 0.8;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 25px;
-  text-align: right;
-}
-
-.arch-feat-right-cta p {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
-  color: #4a4a4a;
-  line-height: 1.5;
-  max-width: 420px;
-  margin: 0;
-}
-
-.arch-feat-btn-container {
-  display: flex;
-  width: 100%;
-  justify-content: flex-end;
-}
-
-.arch-feat-btn {
-  background-color: #1a1a1a;
-  color: #ffffff;
-  border: none;
-  padding: 14px 28px;
-  border-radius: 50px;
-  font-size: 14px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.arch-feat-btn:hover {
-  background-color: #333333;
-}
-
-.arch-feat-btn-arrow {
-  background-color: #d8b056;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-}
-
-/* 2x3 Grid Layout Grid Mesh */
-.arch-feat-grid-mesh {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-auto-rows: 1fr;
-  gap: 24px;
-  width: 100%;
-}
-
-.arch-feat-card {
-  background-color: #ffffff;
-  border-radius: 24px;
-  padding: 35px 25px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02);
-  box-sizing: border-box;
-}
-
-.arch-feat-testimonial {
-  grid-row: span 2; 
-}
-
-.arch-feat-testimonial p {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 15px;
-  color: #2d2d2d;
-  line-height: 1.6;
-  margin-top: 25px;
-}
-
-.arch-feat-stars {
-  color: #e0533c;
-  font-size: 18px;
-  letter-spacing: 2px;
-}
-
-.arch-feat-image-card {
-  border-radius: 24px;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
-}
-
-.arch-feat-image-card img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.arch-feat-card-num {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 13px;
-  color: #666666;
-  display: block;
-  margin-bottom: 15px;
-}
-
-.arch-feat-text-type h3 {
-  font-family: 'Georgia', serif;
-  font-size: 22px;
-  font-weight: 400;
-  color: #1a1a1a;
-  margin: 0 0 15px 0;
-}
-
-.arch-feat-text-type p {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
-  color: #555555;
-  line-height: 1.5;
-  margin: 0;
-}
-
-/* --- BOTTOM STATS BAR CONFIG --- */
-.arch-feat-stats-bar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  border-top: 1px solid rgba(0, 0, 0, 0.08);
-  padding-top: 50px;
-  margin-top: 20px;
-}
-
-.arch-feat-stat-item {
-  text-align: center;
-  flex: 1;
-}
-
-.arch-feat-stat-item h4 {
-  font-family: 'Georgia', serif;
-  font-size: 4.5rem;
-  font-weight: 400;
-  color: #1a1a1a;
-  margin: 0 0 10px 0;
-  display: flex !important;
-  justify-content: center;
-  align-items: baseline !important; 
-  line-height: 1 !important;
-}
-
-.arch-feat-slot-inline {
-  display: inline-flex !important;
-  align-items: baseline !important;
-  height: 1.1em !important;
-  overflow: hidden;
-  vertical-align: baseline !important;
-}
-
-.arch-feat-digit-column {
-  display: inline-flex !important;
-  flex-direction: column !important;
-  height: 1.1em !important;
-  width: auto !important;
-}
-
-.arch-feat-digit-strip {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-}
-
-.arch-feat-digit-strip span {
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  height: 1.1em !important;
-  line-height: 1.1em !important;
-  font-weight: 400 !important;
-}
-
-.arch-feat-stat-suffix, 
-.arch-feat-slot-static-char {
-  display: inline-block !important;
-  vertical-align: baseline !important;
-  line-height: 1 !important;
-  margin-left: 2px;
-}
-
-.arch-feat-stat-item p {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  font-size: 14px;
-  
-  text-transform: uppercase;
-  letter-spacing: 0.8px;
-  margin: 0;
-}
 
 /* ========================================================
-    🎯 RESPONSIVE MEDIA QUERIES (டேப்லெட் & மொபைல் பிக்ஸ்)
+   🎯 NATIVE SCROLL STACKING LOGIC (NO OVERLAP MATH FIX)
 ======================================================== */
-@media (max-width: 1200px) {
-  .arch-feat-grid-mesh {
-    grid-template-columns: repeat(2, 1fr);
-    grid-auto-rows: auto;
-  }
-  .arch-feat-testimonial {
-    grid-row: span 1;
-  }
+.arch-feat-grid-native {
+  display: flex;
+  gap: 24px;
+  width: 100%;
+  position: relative;
+  /* Removed 380vh. The height is now perfectly calculated by the elements. */
+  padding-bottom: 5vh; /* This gives you a slight "pause" to look at the arranged cards before they scroll away */
 }
 
-/* 👇 NEW BLOCK: Centers the odd card in the 2-column layout 👇 */
-@media (max-width: 1200px) and (min-width: 769px) {
-  .arch-feat-grid-mesh > :last-child:nth-child(odd) {
-    grid-column: 1 / -1;     
-    justify-self: center;    
-    width: calc(50% - 12px); 
-  }
+.native-col {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  /* Removed gap: 25vh. The gap is now handled mathematically below! */
+}
+
+/* Stagger times remain the same */
+.native-col-1 .sticky-item:first-child { margin-top: 0vh; }
+.native-col-2 .sticky-item:first-child { margin-top: 40vh; }
+.native-col-3 .sticky-item:first-child { margin-top: 130vh; }
+.native-col-4 .sticky-item:first-child { margin-top: 220vh; }
+
+
+/* Cards */
+.sticky-item {
+  position: sticky;
+  z-index: 10;
+  width: 100%;
+}
+
+/* 🎯 THE MATH TRICK TO PREVENT CRASHING: 
+   Difference between top values (424 - 150 = 274px).
+   By setting this as margin-bottom, both items reach the exact same "bottom" pixel 
+   and will scroll up together beautifully without touching. */
+.row-1-item {
+  top: 150px; 
+  height: 250px;
+  margin-bottom: 274px; 
+}
+
+.row-2-item {
+  top: 424px; 
+  height: 250px;
+}
+
+.tall-item {
+  top: 150px;
+  height: 524px;
+}
+
+/* கார்டு டிசைன் */
+.arch-feat-card { background-color: #ffffff; border-radius: 24px; padding: 35px 25px; display: flex; flex-direction: column; justify-content: flex-start; box-shadow: 0 4px 30px rgba(0, 0, 0, 0.02); box-sizing: border-box; }
+.arch-feat-testimonial p { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 15px; color: #2d2d2d; line-height: 1.6; margin-top: 25px; }
+.arch-feat-stars { color: #e0533c; font-size: 18px; letter-spacing: 2px; }
+.arch-feat-image-card { border-radius: 24px; overflow: hidden; }
+.arch-feat-image-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.arch-feat-card-num { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 13px; color: #666666; display: block; margin-bottom: 15px; }
+.arch-feat-text-type h3 { font-family: 'Georgia', serif; font-size: 22px; font-weight: 400; color: #1a1a1a; margin: 0 0 15px 0; }
+.arch-feat-text-type p { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; color: #555555; line-height: 1.5; margin: 0; }
+
+/* --- BOTTOM STATS BAR CONFIG --- */
+.arch-feat-stats-bar { display: flex; justify-content: space-between; align-items: center; width: 100%; border-top: 1px solid rgba(0, 0, 0, 0.08); padding-top: 50px; margin-top: 50px; }
+.arch-feat-stat-item { text-align: center; flex: 1; }
+.arch-feat-stat-item h4 { font-family: 'Georgia', serif; font-size: 4.5rem; font-weight: 400; color: #1a1a1a; margin: 0 0 10px 0; display: flex !important; justify-content: center; align-items: baseline !important; line-height: 1 !important; }
+.arch-feat-slot-inline { display: inline-flex !important; align-items: baseline !important; height: 1.1em !important; overflow: hidden; vertical-align: baseline !important; }
+.arch-feat-digit-column { display: inline-flex !important; flex-direction: column !important; height: 1.1em !important; width: auto !important; }
+.arch-feat-digit-strip { display: flex !important; flex-direction: column !important; align-items: center !important; }
+.arch-feat-digit-strip span { display: flex !important; align-items: center !important; justify-content: center !important; height: 1.1em !important; line-height: 1.1em !important; font-weight: 400 !important; }
+.arch-feat-stat-suffix, .arch-feat-slot-static-char { display: inline-block !important; vertical-align: baseline !important; line-height: 1 !important; margin-left: 2px; }
+.arch-feat-stat-item p { font-family: 'Helvetica Neue', Arial, sans-serif; font-size: 14px; text-transform: uppercase; letter-spacing: 0.8px; margin: 0; }
+
+/* ========================================================
+   🎯 RESPONSIVE MEDIA QUERIES
+======================================================== */
+@media (max-width: 1200px) {
+  .arch-feat-grid-native { height: auto; flex-wrap: wrap; padding-bottom: 50px; }
+  .native-col { flex: 0 0 calc(50% - 12px); gap: 24px; }
+  
+  /* Reset the magic math for smaller screens where it just flows naturally */
+  .native-col .sticky-item:first-child { margin-top: 0 !important; height:100% !important;} 
+  .row-1-item { margin-bottom: 0px !important; } 
+  .sticky-item { position: relative; top: 0 !important; height: auto !important; }
 }
 
 @media (max-width: 768px) {
-  .arch-feat-section {
-    padding: 60px 24px;
-    gap: 50px;
-  }
-
-  /* 768px-க்கு கீழ் ஹெடர் சென்டர் அலைன்மென்ட் */
-  .arch-feat-header {
-    flex-direction: column;
-    text-align: center;
-    gap: 25px;
-    align-items: center;
-  }
-
-  .arch-feat-left-title h2 {
-    font-size: 2.2rem;
-    text-align: center;
-  }
-
-  .arch-feat-right-cta {
-    align-items: center;
-    text-align: center;
-  }
-
-  .arch-feat-right-cta p {
-    text-align: center;
-  }
-
-  .arch-feat-btn-container {
-    justify-content: center;
-  }
-
-  /* கிரிட் கார்டுகளுக்குள் இருக்கும் கன்டென்ட் சென்டர் அலைன்மென்ட் */
-  .arch-feat-grid-mesh {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-
-  .arch-feat-card {
-    align-items: center;
-    text-align: center;
-  }
-
-  .arch-feat-stars {
-    text-align: center;
-  }
-
-  /* ஸ்டாட்ஸ் பார் மொபைல் சென்டர் அலைன்மென்ட் */
-  .arch-feat-stats-bar {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    row-gap: 40px;
-    column-gap: 15px;
-    padding-top: 40px;
-  }
-
-  .arch-feat-stat-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    width: 100%;
-  }
-
-  /* Slightly reduced font size so 2 columns fit comfortably on smaller screens */
-  .arch-feat-stat-item h4 {
-    font-size: 2.8rem; 
-    justify-content: center;
-  }
+  .arch-feat-section { padding: 60px 24px; }
+  .sticky-header { flex-direction: column; text-align: center; gap: 25px; align-items: center; }
+  .arch-feat-left-title h2 { font-size: 2.2rem; text-align: center; }
+  .arch-feat-right-cta, .arch-feat-right-cta p { align-items: center; text-align: center; }
+  .arch-feat-btn-container { justify-content: center; }
+  .native-col { flex: 0 0 100%; }
+  .native-col-3 { order: -1; }
+  .arch-feat-card, .arch-feat-image-card { align-items: center; text-align: center; }
+  .arch-feat-stars { text-align: center; }
+  .arch-feat-stats-bar { display: grid; grid-template-columns: repeat(2, 1fr); row-gap: 40px; column-gap: 15px; padding-top: 40px; margin-top: 20px; }
+  .arch-feat-stat-item { display: flex; flex-direction: column; align-items: center; text-align: center; width: 100%; }
+  .arch-feat-stat-item h4 { font-size: 2.8rem; justify-content: center; }
 }

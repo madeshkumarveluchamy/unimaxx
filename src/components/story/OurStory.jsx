@@ -41,7 +41,7 @@ const portfolioData = [
     category: "RESIDENTIAL",
     location: "COIMBATORE, TN",
     alignRight: true,
-    path: "/detail1" 
+    path: "/detail1"
   },
   {
     id: 2,
@@ -51,7 +51,7 @@ const portfolioData = [
     category: "RESIDENTIAL",
     location: "COIMBATORE, TN",
     alignRight: false,
-    path: "/detail2" 
+    path: "/detail2"
   },
   {
     id: 3,
@@ -61,7 +61,7 @@ const portfolioData = [
     category: "RESIDENTIAL",
     location: "COIMBATORE, TN",
     alignRight: true,
-    path: "/detail3" 
+    path: "/detail3"
   }
 ];
 
@@ -96,34 +96,11 @@ const AnimatedProjectCard = ({ project }) => {
       
       <div className={`portfolio-vertical-floating-card ${project.alignRight ? 'float-right' : 'float-left'}`}>
         
-        {/* 🎯 Slide Container */}
-        <div className="vertical-card-img-box" style={{ position: "relative", overflow: "hidden" }}>
-          <AnimatePresence mode="popLayout">
-            <motion.img 
-              key={currentImgIndex}
-              src={project.popupImages[currentImgIndex]}
-              alt="Project View"
-              // 🎯 Slide effect logic
-              initial={{ x: "100%" }}    // Right-la irunthu start aagum
-              animate={{ x: 0 }}         // Center-ku vandhu settle aagum
-              exit={{ x: "-100%" }}      // Left side-ku poi veliya agum
-              transition={{ duration: 0.7, ease: "easeInOut" }}
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                width: "100%",
-                height: "100%",
-                objectFit: "cover"
-              }}
-            />
-          </AnimatePresence>
-        </div>
       
         <h3 className="vertical-card-title maintit font-geist">{project.cardTitle}</h3>
       
         <div className="vertical-card-bottom-row">
-          <ProjectGooButton to={project.path}  />
+          <ProjectGooButton to={project.path} />
           <div className="vertical-card-tags" >
             <span className="v-tag ">{project.category}</span>
             <span className="v-tag ">{project.location}</span>

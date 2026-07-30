@@ -1,21 +1,25 @@
-/* Wrapper */
+/* Wrapper - Padding மற்றும் Margin நீக்கப்பட்டுள்ளது */
 .um-vd-goo-wrapper {
   position: relative;
   display: inline-flex;
   align-items: center;
-  justify-content: flex-start;
-  padding: 16px; 
-  margin: -16px; 
+  justify-content: center;
+  /* இங்கு padding மற்றும் margin 0 ஆக இருக்க வேண்டும் */
+  padding: 0; 
+  margin: 0; 
+  border:none !important;
 }
 
 /* SVG Filter Background */
 .um-vd-goo-svg {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  overflow: visible;
+  overflow: visible; /* Goo எபெக்ட் வெளியே தெரிய இது அவசியம் */
   pointer-events: none;
+
 }
 
 /* Main Button Class */
@@ -23,7 +27,7 @@
   position: relative;
   background: transparent;
   border: 1px solid #1a1a1a;
-  padding: 5px 10px;
+  padding: 6px 10px;
   border-radius: 50px;
   display: inline-flex;
   align-items: center;
@@ -32,17 +36,21 @@
   width: fit-content;
   gap: 15px;
   text-decoration: none;
-  overflow: hidden; 
+  overflow: visible; 
+  
+  /* z-index: 1; என்பதை இங்கிருந்து நீக்கிவிடவும் */
 }
 
 /* Text inside Button */
 .um-vd-goo-text {
   font-family: 'Hanken Grotesk', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 300;
-  color: #ffffff;
+  font-size: 13px; /* எழுத்துக்கள் சற்று தெளிவாக தெரிய அளவை சற்றே கூட்டியுள்ளோம் */
+  font-weight: 500;
+  color: #ffffff; /* வெள்ளை நிறம் அவசியம் */
   pointer-events: none;
-  mix-blend-mode: difference;
+  mix-blend-mode: difference; /* இது வெள்ளை நிற பின்னணியில் கறுப்பாகவும், கறுப்பு அனிமேஷனில் வெள்ளையாகவும் மாற்றும் */
+
+  
 }
 
 /* The Gold Icon Box */
@@ -71,4 +79,5 @@
 .um-vd-goo-btn:focus-visible {
   outline: 2px solid #d8b056;
   outline-offset: 3px;
+  border:none !important;
 }

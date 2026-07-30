@@ -7,10 +7,11 @@ import expertiseimg3 from '../../assets/expertiseimg3.webp';
 import expertiseimg4 from '../../assets/expertiseimg4.webp';
 import expertiseimg5 from '../../assets/expertiseimg5.webp';
 import GetQuoteGooButton from './GetQuoteGooButton';
-// import { Link } from 'react-router-dom'; // தேவைப்பட்டால் மட்டும் பயன்படுத்தவும்
 
 const UnimaxxExpertise = () => {
-  const [activeId, setActiveId] = useState(1);
+  // Default-ஆக எந்த கார்டும் open-ல் இருக்க வேண்டாம் எனில் null என வைக்கலாம்
+  // அல்லது முதல் கார்டு திறந்திருக்க வேண்டும் எனில் 1 என வைக்கலாம்.
+  const [activeId, setActiveId] = useState(null); 
   
   // Mobile-ஐ கண்டுபிடிக்க <= 968 பயன்படுத்துகிறோம்
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 968);
@@ -65,7 +66,6 @@ const UnimaxxExpertise = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      // மொபைலைக் கண்டுபிடிக்க <= பயன்படுத்துவதே சரி
       setIsMobile(window.innerWidth <= 968);
     };
 
@@ -73,10 +73,17 @@ const UnimaxxExpertise = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const toggleAccordion = (id) => {
-    // மொபைலில் click வேலை செய்ய வேண்டாம், Desktop-ல் மட்டும் வேலை செய்யட்டும்
+  // Hover செய்யும் போது வேலை செய்ய (Desktop மட்டும்)
+  const handleMouseEnter = (id) => {
     if (!isMobile) {
-      setActiveId(activeId === id ? null : id); // ஒரே கார்டை மறுபடியும் கிளிக் செய்தால் மூடவும்
+      setActiveId(id);
+    }
+  };
+
+  // Mouse வெளியேறும் போது மூட (Desktop மட்டும்)
+  const handleMouseLeave = () => {
+    if (!isMobile) {
+      setActiveId(null);
     }
   };
 
@@ -95,17 +102,17 @@ const UnimaxxExpertise = () => {
         {/* Accordion List Container */}
         <div className="um-accordion-list">
           {expertiseData.map((item) => {
-            // Desktop-ல் click செய்தால் மட்டுமே isOpen true ஆகும்.
             const isOpen = activeId === item.id;
             
-            // Mobile-ல் எல்லாமே திறந்திருக்க வேண்டும், Desktop-ல் click செய்தவை மட்டும் திறக்க வேண்டும்
+            // Mobile-ல் எல்லாமே திறந்திருக்க வேண்டும், Desktop-ல் Hover செய்தவை மட்டும் திறக்க வேண்டும்
             const showDetails = isMobile || isOpen;
 
             return (
               <div
                 key={item.id} 
                 className={`um-accordion-row ${showDetails ? 'um-row-open' : ''}`}
-                onClick={() => toggleAccordion(item.id)}
+                onMouseEnter={() => handleMouseEnter(item.id)}
+                onMouseLeave={handleMouseLeave}
               >
                 
                 {/* Number column */}

@@ -1,6 +1,6 @@
 .unimaxx-master-wrapper {
   width: 100vw;
-  background-color: #0d0d0d;
+  background-color: #000000;
   display: flex;
   justify-content: center;
   overflow-x: hidden;
@@ -10,7 +10,7 @@
 html, body {
   width: 100%;
   height: 100%;
-  background-color: #0d0d0d;
+  background-color: #000000;
   overflow-x: hidden;
   margin: 0;
   padding: 0;
@@ -23,24 +23,35 @@ html, body {
   min-height: 100vh;
   min-height: 100dvh;
   position: relative;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  background-color: #000000;
 }
 
+/* 🎯 BACKGROUND VIDEO */
+.unimaxx-hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 0;
+}
+
+/* 🎯 OVERLAY */
 .unimaxx-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+  background-color: rgba(0, 0, 0, 0.3); 
   z-index: 1;
 }
 
+/* 🎯 CENTER CONTENT */
 .unimaxx-hero-content {
   position: absolute;
-  top: 45%; 
+  top: 60%; 
   left: 50%;
   transform: translate(-50%, -50%); 
   display: flex;
@@ -52,6 +63,23 @@ html, body {
   max-width: 800px;
   z-index: 10; 
 }
+
+/* ========================================================
+   🎯 NEW: SMOOTH FADE TRANSITION CLASSES
+   ======================================================== */
+.content-visible {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
+}
+
+.content-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none; /* மறைந்த பிறகு Button Click ஆவதைத் தடுக்கும் */
+  transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
+}
+/* ======================================================== */
 
 .unimaxx-main-title {
   color: #ffffff;
@@ -104,108 +132,24 @@ html, body {
   font-size: 10px;
 }
 
-.unimaxx-marquee-container {
-  position: absolute;
-  bottom: 0%; 
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  z-index: 2;
-  pointer-events: none;
-  user-select: none;
-  padding: 20px 0;
-}
-
-/* 🎯 Left Side Black Blur / Fade Effect */
-.unimaxx-marquee-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 25%; /* இடது பக்கம் கருப்பு நிறம் எவ்வளவு தூரம் வர வேண்டும் என்பதை இங்கே மாற்றலாம் */
-  height: 100%;
-  background: linear-gradient(to right, #000000 1%, transparent 35%);
-  z-index: 3;
-  pointer-events: none;
-}
-
-/* 🎯 Right Side Black Blur / Fade Effect */
-.unimaxx-marquee-container::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 25%; /* வலது பக்கம் கருப்பு நிறம் எவ்வளவு தூரம் வர வேண்டும் என்பதை இங்கே மாற்றலாம் */
-  height: 100%;
-  background: linear-gradient(to left, #000000 1%, transparent 35%);
-  z-index: 3;
-  pointer-events: none;
-}
-
-.unimaxx-marquee-track {
-  display: flex;
-  width: max-content;
-  gap: 80px; 
-  
-  /* 🎯 அனிமேஷன் வலது பக்கத்தில் இருந்து இடது பக்கமாக நகரும் */
-  animation: runLettersRightToLeft 22s linear infinite;
-}
-
-.unimaxx-marquee-track span {
-  color: #ffffff; 
-  font-family: 'Georgia', serif;
-  font-size: clamp(120px, 14vw, 220px); 
-  font-weight: 100;
-  white-space: nowrap;
-  line-height: 1;
-  letter-spacing: 2px;
-}
-
-/* 🎯 0% லிருந்து -50% நோக்கி நகர்வதால் எழுத்துக்கள் வலமிருந்து இடமாக ஸ்மூத்தா ஓடும் */
-@keyframes runLettersRightToLeft {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
 /* ========================================================
    🎯 RESPONSIVE OVERRIDES
    ======================================================== */
 @media (max-width: 768px) {
   .unimaxx-hero-content {
-    top: 42%; 
     width: 90%;
+    top:53%;
   }
 
   .unimaxx-main-title {
-    font-size: 2.3rem;
+    font-size: 3.2rem;
     margin-bottom: 1.8rem;
-  }
-
-  .unimaxx-marquee-container {
-    bottom: 0%;
-  }
-  
-  .unimaxx-marquee-track {
-    gap: 40px;
-    animation-duration: 24s; 
   }
 }
 
 @media (max-width: 426px) {
-  .unimaxx-hero-content {
-    top: 45%;
-  }
-
   .unimaxx-main-title {
-    font-size: 2.5rem;
+    font-size: 3rem;
     line-height: 1.2;
-  }
-
-  .unimaxx-marquee-container {
-    bottom: 0%;
   }
 }

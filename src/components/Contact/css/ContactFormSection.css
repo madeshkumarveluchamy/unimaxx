@@ -26,9 +26,12 @@
 }
 
 .unimaxx-section-header {
+  font-family: 'Geist', sans-serif !important;
+    font-size: 32px;
   display: flex;
   align-items: flex-start;
   gap: 15px;
+  
 }
 
 .unimaxx-asterisk {
@@ -102,6 +105,8 @@
 }
 
 .unimaxx-section-header {
+  font-family: 'Geist', sans-serif !important;
+    font-size: 32px;
   display: flex;
   padding-bottom:25px;
   align-items: flex-start; /* அல்லது center, உங்கள் தேவைக்கேற்ப */
@@ -254,6 +259,7 @@
   }
 
   .unimaxx-section-header h2 {
+    font-family: 'Geist', sans-serif !important;
     font-size: 32px;
   }
 

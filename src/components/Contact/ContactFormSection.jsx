@@ -54,7 +54,7 @@ const ContactFormSection = () => {
   return (
     <section className="unimaxx-form-section-container" id="contact">
 
-      <div className="unimaxx-section-header ">
+      <div className="unimaxx-section-header">
           <h2> <img 
             src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
             alt="Star Icon" 

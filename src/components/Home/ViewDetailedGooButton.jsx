@@ -37,26 +37,26 @@ export default function ViewDetailedGooButton({ text = "View Detailed Project" ,
   const targetRyRef = useRef(0);
 
   const ids = useStableIds();
-
-  const sizeRect = useCallback(() => {
-    if (!btnRef.current || !wrapRef.current || !bgRef.current || !baseBgRef.current) return;
-    const r = btnRef.current.getBoundingClientRect();
-    const w = wrapRef.current.getBoundingClientRect();
-    const x = r.left - w.left;
-    const y = r.top - w.top;
-    const radius = r.height / 2; 
+const sizeRect = useCallback(() => {
+    if (!btnRef.current || !bgRef.current || !baseBgRef.current) return;
     
-    bgRef.current.setAttribute("x", x);
-    bgRef.current.setAttribute("y", y);
-    bgRef.current.setAttribute("width", r.width);
-    bgRef.current.setAttribute("height", r.height);
+    // பட்டனின் உண்மையான அகலம் மற்றும் உயரத்தை எடுக்கிறோம்
+    const width = btnRef.current.offsetWidth;
+    const height = btnRef.current.offsetHeight;
+    const radius = height / 2; 
+    
+    // x, y நிலைகளை 0 ஆக அமைக்கிறோம் (ஏனெனில் SVG இப்போது சரியாக wrapper-க்குள் பொருந்தும்)
+    bgRef.current.setAttribute("x", 0);
+    bgRef.current.setAttribute("y", 0);
+    bgRef.current.setAttribute("width", width);
+    bgRef.current.setAttribute("height", height);
     bgRef.current.setAttribute("rx", radius); 
     bgRef.current.setAttribute("ry", radius); 
 
-    baseBgRef.current.setAttribute("x", x);
-    baseBgRef.current.setAttribute("y", y);
-    baseBgRef.current.setAttribute("width", r.width);
-    baseBgRef.current.setAttribute("height", r.height);
+    baseBgRef.current.setAttribute("x", 0);
+    baseBgRef.current.setAttribute("y", 0);
+    baseBgRef.current.setAttribute("width", width);
+    baseBgRef.current.setAttribute("height", height);
     baseBgRef.current.setAttribute("rx", radius); 
     baseBgRef.current.setAttribute("ry", radius); 
   }, []);

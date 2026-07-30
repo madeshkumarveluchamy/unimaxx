@@ -167,7 +167,8 @@ html::-webkit-scrollbar {
   width: 100%;
   height: 480px; 
   border-radius: 16px;
-  overflow: visible; 
+  overflow: hidden; /* கார்டு அனிமேஷன் வெளியே தெரியாமல் இருக்க */
+  cursor: pointer;
 }
 
 .portfolio-main-img {
@@ -176,26 +177,42 @@ html::-webkit-scrollbar {
   object-fit: cover;
   display: block;
   border-radius: 16px;
+  transition: filter 0.4s ease; 
 }
+
+
 
 /* ==========================================
    🎯 DESKTOP CORE: மிதக்கும் வெள்ளை கார்டு (Absolute Lock)
    ========================================== */
-.portfolio-vertical-floating-card {
-  position: absolute !important; /* 🎯 பெரிய ஸ்கிரீனில் கண்டிப்பாக அப்சல்யூட் ஆக தான் இருக்க வேண்டும் */
-  bottom: 25px !important;      /* 🎯 இமேஜின் பாட்டம் பார்டரில் கச்சிதமாக மிதக்க வைக்க */
+.portfolio-vertical-floating-card{
+  position: absolute !important; 
+  bottom: 25px !important;      
   background-color: #ffffff !important;
   width: 450px !important; 
   border-radius: 12px !important; 
   padding: 14px !important;
   box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.15) !important;
-  display: flex !important;
+  display: flex  !important;
   flex-direction: column !important;
-  gap: 5px !important;           
-  height: 400px !important;        
+  gap: 5px !important;          
+  height: 70px !important;        
   z-index: 5 !important;
   margin-top: 0 !important;
+
+  /* 🎯 Hover-க்காக ஆரம்பத்தில் மறைத்து வைக்கிறோம் */
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transform: translateY(20px) !important; /* லேசாக கீழே இறங்கியிருக்கும் */
+  transition: all 0.4s ease-in-out !important; /* ஸ்மூத் அனிமேஷன் */
 }
+
+.portfolio-large-card:hover .portfolio-vertical-floating-card {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateY(0) !important; /* சரியான இடத்திற்கு வரும் */
+}
+
 
 /* இடது மற்றும் வலது அலைன்மென்ட் பூட்டு */
 .float-right { 
@@ -233,7 +250,7 @@ html::-webkit-scrollbar {
 
 .vertical-card-bottom-row {
   display: flex !important;
-  flex-direction: row !important; /* டெஸ்க்டாப்பில் நேர்கோடு அலைன்மென்ட் */
+  flex-direction: row-reverse !important; /* டெஸ்க்டாப்பில் நேர்கோடு அலைன்மென்ட் */
   justify-content: space-between !important;
   align-items: center !important;
   padding-left: 2px;
@@ -297,7 +314,7 @@ html::-webkit-scrollbar {
 
 @media (max-width: 1200px) {
   .portfolio-large-card { height: 400px; }
-  .portfolio-vertical-floating-card { width: 310px;  height :300px !important; bottom: 35px !important; }
+  .portfolio-vertical-floating-card { width: 310px;  height :70px !important; bottom: 35px !important; }
   .vertical-card-img-box { height: 220px !important; }
   .vertical-card-title { font-size: 15px; };
   .float-right {right: 40px !important; left: auto !important;};
@@ -362,7 +379,10 @@ html::-webkit-scrollbar {
     left: auto !important;
     right: auto !important;
     margin: -350px auto 20px auto !important; 
-    height: 270px !important;         
+    height: 100px !important;  
+    opacity: 1 !important; 
+    visibility: visible !important;
+    transform: translateY(0) !important;       
     
     /* 👇 Ithu thaan mukkiyam: 4 sides-layum uniform space tharum */
     padding: 15px !important; 
@@ -417,7 +437,7 @@ html::-webkit-scrollbar {
   .vertical-card-tags {
     display: flex !important;
     gap: 8px !important;
-    justify-content: end !important;
+    justify-content: center !important;
     width: 100% !important;
     margin-top: 10px !important;
   }
@@ -441,6 +461,11 @@ html::-webkit-scrollbar {
     justify-content: center !important;
     width: 100% !important;
     margin-top: 0px !important;
+  }
+
+   .portfolio-vertical-floating-card {
+
+    height: 110px !important; 
   }
   
 }

@@ -6,6 +6,7 @@ import WhyChooseUs from './WhyChooseUs'
 import WhatWeDo from './WhatWeDo'
 import TeamSection from './TeamSection'
 import CallToAction from './CallToAction'
+import UnimaxxOngoing from './UnimaxxOngoing'
 
 
 const AboutHome = () => {
@@ -16,6 +17,7 @@ const AboutHome = () => {
       <StoryPhilosophy />
       <WhyChooseUs />
       <WhatWeDo />
+      <UnimaxxOngoing />
       <TeamSection />
       <CallToAction />
     </div>
