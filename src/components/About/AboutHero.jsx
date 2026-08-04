@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/AboutHero.css';
 // 🎯 உங்க அசெட்ஸ் ஃபோல்டரில் இருக்கும் பேக்ரவுண்ட் இமேஜ் பாத் (தேவைப்பட்டால் மாற்றிக் கொள்ளவும்)
-import aboutBgImg from '../../assets/ourstorybackground.png'; 
+import aboutBgImg from '../../assets/ourstorybackground.webp'; 
 
 const AboutHero = () => {
   return (

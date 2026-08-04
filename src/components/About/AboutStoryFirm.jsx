@@ -1,9 +1,9 @@
 import React from 'react';
 import './css/AboutStoryFirm.css';
 import { Link } from 'react-router-dom';
-import firmImg from '../../assets/aboutstory.png';
+import firmImg from '../../assets/aboutstory.webp';
 import AboutGooButton from './AboutGooButton';
-import staricon from '../../assets/logo1.png';
+import staricon from '../../assets/logo1.webp';
 
 const AboutStoryFirm = () => {
   return (

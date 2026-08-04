@@ -3,7 +3,7 @@
   import './css/WhatWeDo.css';
 
   // குறிப்பு: உங்கள் மையப் படத்தின் பாதையை கீழே உள்ள src-ல் மாற்றிக்கொள்ளவும்
-  import centerImage from '../../assets/whatwedo.png'; 
+  import centerImage from '../../assets/whatwedo.webp'; 
 
   const WhatWeDo = () => {
     const servicesData = [

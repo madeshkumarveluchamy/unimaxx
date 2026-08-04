@@ -10,7 +10,7 @@ const UnimaxxFaq = () => {
   const faqData = [
     {
       id: 1,
-      question: "1.What is your design philosophy?",
+      question: "1. What is your design philosophy?",
       answer: "We believe in \"Architecting the Soul of Space.\" Our philosophy centers on the intersection of structural integrity and human experience, ensuring that every project is not just a building, but a functional, inspiring environment tailored to your unique narrative."
     },
     {
@@ -30,7 +30,7 @@ const UnimaxxFaq = () => {
     },
     {
       id: 5,
-      question: "5.What are your pricing options?",
+      question: "5. What are your pricing options?",
       answer: "Our pricing options are transparent and tailored based on the project scale, material selections, and specific customization requirements."
     },
     {
@@ -40,8 +40,11 @@ const UnimaxxFaq = () => {
     }
   ];
 
+  // 🎯 எப்போதாவது ஒரு FAQ திறந்தபடியே இருக்க:
   const toggleFaq = (id) => {
-    setOpenId(openId === id ? null : id);
+    if (openId !== id) {
+      setOpenId(id);
+    }
   };
 
   return (
@@ -50,9 +53,7 @@ const UnimaxxFaq = () => {
         
         {/* FAQ Header Content */}
         <div className="um-faq-header">
-          <h2 className="um-faq-main-title font-serief 
-          
-          ">Answers that bring clarity</h2>
+          <h2 className="um-faq-main-title font-serief">Answers that bring clarity</h2>
           <p className="um-faq-subtitle-top font-geist fsub">
             We've answered the most common questions to help you move forward.
           </p>
@@ -74,23 +75,19 @@ const UnimaxxFaq = () => {
                   <div className="um-faq-question-row">
                     <h3 className='font-geist fsub'>{faq.question}</h3>
                     <span className="um-faq-arrow-icon">
-  {isOpen ? (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="18 15 12 9 6 15"></polyline>
-    </svg>
-  ) : (
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-      <polyline points="6 9 12 15 18 9"></polyline>
-    </svg>
-  )}
-</span>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="6 9 12 15 18 9"></polyline>
+                      </svg>
+                    </span>
                   </div>
                   
-                  {isOpen && (
+                  {/* 🎯 Smooth Grid Transition Wrapper */}
+                  <div className={`um-faq-answer-wrapper ${isOpen ? 'is-open' : ''}`}>
                     <div className="um-faq-answer-row">
                       <p className='font-geist fmin'>{faq.answer}</p>
                     </div>
-                  )}
+                  </div>
+                  
                 </div>
               );
             })}

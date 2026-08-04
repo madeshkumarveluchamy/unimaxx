@@ -2,7 +2,7 @@ import React from 'react';
 import './css/CallToAction.css';
 
 // குறிப்பு: உங்கள் பின்னணிப் படத்தின் (Background Image) பாதையை இங்கே மாற்றிக்கொள்ளவும்
-import bgImage from '../../assets/storybuilding.png'; 
+import bgImage from '../../assets/storybuilding.webp'; 
 import CtaGooButton from './CtaGooButton';
 
 const CallToAction = () => {

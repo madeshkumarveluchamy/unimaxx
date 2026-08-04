@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import './css/OurStory.css';
-import staricon from '../../assets/logo1.png';
+import staricon from '../../assets/logo1.webp';
 import heroBg1Png from '../../assets/hero-bg1.webp';
 
 // ==========================================
@@ -11,20 +11,20 @@ import heroBg1Png from '../../assets/hero-bg1.webp';
 
 // Project 1 க்கான Main Image & Popup Images
 import p1_main from '../../assets/story1.webp';
-import p1_img1 from '../../assets/aboutstory.png'; // உங்களோட நிஜ image names-அ இங்க மாத்திக்கோங்க
-import p1_img2 from '../../assets/aboutstory2.png';
-import p1_img3 from '../../assets/aboutstory3.png';
+import p1_img1 from '../../assets/aboutstory.webp'; // உங்களோட நிஜ image names-அ இங்க மாத்திக்கோங்க
+import p1_img2 from '../../assets/aboutstory2.webp';
+import p1_img3 from '../../assets/aboutstory3.webp';
 
 // Project 2 க்கான Main Image & Popup Images
 import p2_main from '../../assets/story1.webp';
-import p2_img1 from '../../assets/aboutstory.png';
-import p2_img2 from '../../assets/aboutstory2.png';
-import p2_img3 from '../../assets/aboutstory3.png';
+import p2_img1 from '../../assets/aboutstory.webp';
+import p2_img2 from '../../assets/aboutstory2.webp';
+import p2_img3 from '../../assets/aboutstory3.webp';
 
 // Project 3 க்கான Main Image & Popup Images
 import p3_main from '../../assets/story1.webp';
-import p3_img1 from '../../assets/aboutstory.png';
-import p3_img2 from '../../assets/aboutstory2.png';
+import p3_img1 from '../../assets/aboutstory.webp';
+import p3_img2 from '../../assets/aboutstory2.webp';
 
 import StoryHeroGooButton from './StoryHeroGooButton';
 import ProjectGooButton from './ProjectGooButton';

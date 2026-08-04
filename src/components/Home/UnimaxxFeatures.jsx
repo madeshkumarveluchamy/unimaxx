@@ -1,8 +1,7 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import './css/UnimaxxFeatures.css';
-import staricon from '../../assets/logo1.png'; 
-
+import staricon from '../../assets/logo1.webp';
 import frame1 from '../../assets/hero2frame1.webp';
 import frame2 from '../../assets/hero2frame2.webp';
 import frame3 from '../../assets/hero2frame3.webp';

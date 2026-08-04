@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './css/ContactFormSection.css';
 import formImg from '../../assets/contactformbackground.webp'; // உங்கள் இமேஜ் பாத்
-import staricon from "../../assets/logo1.png"
+import staricon from "../../assets/logo1.webp"
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
     firstName: '',

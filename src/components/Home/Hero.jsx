@@ -1,41 +1,42 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './css/Hero.css';
 import bgVideo from '../../assets/unimaxx1(1).mp4';
+import bgImage from '../../assets/storybuilding.webp'; 
 import { FaArrowRight } from 'react-icons/fa';
 import StoryHeroGooButton from '../story/StoryHeroGooButton';
 
 const Hero = () => {
-  // 🎯 5 வினாடிகளுக்குப் பிறகு Content-ஐ மறைக்க State
-  const [showContent, setShowContent] = useState(true);
-
-  useEffect(() => {
-    // 5000ms (5 வினாடிகள்) கழித்து showContent-ஐ false ஆக மாற்றுதல்
-    const timer = setTimeout(() => {
-      setShowContent(false);
-    }, 5000); 
-
-    return () => clearTimeout(timer); // Cleanup function
-  }, []);
+  // 🎯 Text மறைவதற்கான (setTimeout) கோடுகள் அனைத்தும் நீக்கப்பட்டுவிட்டன
 
   return (
     <div className="unimaxx-master-wrapper">
-      <section className="unimaxx-hero-section">
+      
+      <section 
+        className="unimaxx-hero-section"
+        style={{
+          backgroundImage: `url(${bgImage})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center'
+        }}
+      >
         
-        {/* 🎯 BACKGROUND VIDEO */}
+        {/* BACKGROUND VIDEO */}
         <video 
           className="unimaxx-hero-video" 
           src={bgVideo} 
+          poster={bgImage} 
           autoPlay 
           loop 
           muted 
           playsInline
+          preload="auto"       
         ></video>
 
-        {/* 🎯 OVERLAY (கருப்பு நிற லேயர்) */}
+        {/* OVERLAY */}
         <div className="unimaxx-overlay"></div>
 
-        {/* 🎯 CENTER CONTENT (Text & Button) - Condition மூலம் CSS Class மாறும் */}
-        <main className={`unimaxx-hero-content ${showContent ? 'content-visible' : 'content-hidden'}`}>
+        {/* 🎯 CENTER CONTENT: 'content-visible / hidden' லாஜிக் நீக்கப்பட்டு நேரடியாக கொடுக்கப்பட்டுள்ளது */}
+        <main className="unimaxx-hero-content">
           <h1 className="unimaxx-main-title font-geist">
             Architecting the<br />Soul of Space
           </h1>
@@ -48,4 +49,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero;  

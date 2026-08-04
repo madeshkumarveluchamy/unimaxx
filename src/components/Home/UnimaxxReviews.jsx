@@ -58,28 +58,41 @@ const UnimaxxReviews = () => {
     }
   ];
 
-  // Auto-Scroll வேலை செய்ய 8 கார்டுகளாக மாற்றுகிறோம்
+  // 🎯 மாற்றம் 1: Infinite Drag-க்காக 4 Sets (16 Cards) உருவாக்குகிறோம்
   const displayReviews = [
     ...reviewsData,
-    ...reviewsData.map(review => ({ ...review, id: review.id + 4 })) 
+    ...reviewsData.map(review => ({ ...review, id: review.id + 4 })),
+    ...reviewsData.map(review => ({ ...review, id: review.id + 8 })),
+    ...reviewsData.map(review => ({ ...review, id: review.id + 12 }))
   ];
 
-  // Auto-Scroll Animation 
+  // 🎯 Auto-Scroll & Infinite Seamless Loop Animation 
   useEffect(() => {
     const slider = sliderRef.current;
     
     const autoScroll = () => {
       if (!slider) return;
 
-      if (isDown.current || isHovering.current || activeVideoId !== null) {
-        animationRef.current = requestAnimationFrame(autoScroll);
-        return;
+      // Responsive ஆக அகலத்தை (Width) கணக்கிடுதல் (Mobile & Desktop)
+      const cardWidth = slider.children[0]?.offsetWidth || 350;
+      const gap = 24; // CSS-ல் உள்ள gap அளவு
+      const SET_WIDTH = (cardWidth + gap) * 4; // 1 Set-ன் மொத்த நீளம்
+
+      // ==========================================
+      // 🎯 மாற்றம் 2: PERFECT SEAMLESS LOOP (எப்போதும் இயங்கும்)
+      // முடிவை எட்டும் முன் யாருக்கும் தெரியாமல் மையத்திற்குத் தாவிவிடும்
+      // ==========================================
+      if (slider.scrollLeft >= SET_WIDTH * 2) {
+        slider.scrollLeft -= SET_WIDTH;
+        if (isDown.current) scrollLeft.current -= SET_WIDTH; // Drag-ஐ டிஸ்டர்ப் செய்யாமல் இருக்க
+      } else if (slider.scrollLeft < SET_WIDTH) {
+        slider.scrollLeft += SET_WIDTH;
+        if (isDown.current) scrollLeft.current += SET_WIDTH; // Drag-ஐ டிஸ்டர்ப் செய்யாமல் இருக்க
       }
 
-      slider.scrollLeft += 1;
-
-      if (Math.ceil(slider.scrollLeft) >= slider.scrollWidth - slider.clientWidth) {
-        slider.scrollLeft = 0;
+      // 3. Auto Scroll (Mouse hover செய்யாதபோதும், Video play ஆகாதபோதும் மட்டும்)
+      if (!isDown.current && !isHovering.current && activeVideoId === null) {
+        slider.scrollLeft += 1; // Animation Speed
       }
 
       animationRef.current = requestAnimationFrame(autoScroll);
@@ -93,7 +106,6 @@ const UnimaxxReviews = () => {
 
   // ==========================================
   // Mouse Drag Events (Desktop Only)
-  // மொபைலுக்கு Native Swipe வேலை செய்யும்
   // ==========================================
   const handleMouseDown = (e) => {
     isDown.current = true;
@@ -124,8 +136,7 @@ const UnimaxxReviews = () => {
     if (!isDown.current || !sliderRef.current) return;
     e.preventDefault();
     const x = e.pageX - sliderRef.current.offsetLeft;
-    // 1.5 என Speed-ஐ குறைத்துள்ளேன், Drag மிகவும் Smooth ஆக இருக்கும்
-    const walk = (x - startX.current) * 1.5; 
+    const walk = (x - startX.current) * 1.5; // Drag Speed
     
     if (Math.abs(walk) > 5) {
       dragged.current = true;
@@ -171,7 +182,6 @@ const UnimaxxReviews = () => {
           onMouseLeave={handleMouseLeave}
           onMouseUp={handleMouseUp}
           onMouseMove={handleMouseMove}
-          // Touch Events நீக்கப்பட்டுவிட்டன! Mobile-ல் Browser-ன் இயல்பான Swipe வேலை செய்யும்.
         >
           {displayReviews.map((review) => {
             const isPlaying = activeVideoId === review.id;

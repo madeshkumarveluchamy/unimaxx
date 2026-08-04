@@ -114,6 +114,26 @@
 /* ========================================================
    🎯 RESPONSIVE MEDIA QUERIES
 ======================================================== */
+@media (min-width: 1200px) and (max-width: 1400px) {
+.row-1-item {
+  top: 120px; 
+  height: 230px;
+  margin-bottom: 254px; 
+}
+
+.row-2-item {
+  top: 370px; 
+  height: 230px;
+}
+
+.tall-item {
+  top: 120px;
+  height: 484px;
+}
+}
+
+
+
 @media (max-width: 1200px) {
   .arch-feat-grid-native { height: auto; flex-wrap: wrap; padding-bottom: 50px; }
   .native-col { flex: 0 0 calc(50% - 12px); gap: 24px; }

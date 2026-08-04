@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './css/ServicePage.css';
-import staricon from '../../assets/logo1.png'; 
+import staricon from '../../assets/logo1.webp'; 
 // Assets
 import heroBgPng from '../../assets/hero-bg.webp';
 import service1Png from '../../assets/service1.webp';

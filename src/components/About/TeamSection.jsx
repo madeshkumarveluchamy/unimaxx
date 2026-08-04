@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import './css/TeamSection.css';
 
-import img1 from '../../assets/employee1.png';
-import img2 from '../../assets/employee1.png';
-import img3 from '../../assets/employee1.png';
-import img4 from '../../assets/employee1.png';
-import img5 from '../../assets/employee1.png';
+import img1 from '../../assets/employee1.webp';
+import img2 from '../../assets/employee1.webp';
+import img3 from '../../assets/employee1.webp';
+import img4 from '../../assets/employee1.webp';
+import img5 from '../../assets/employee1.webp';
 
 const TeamSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);

@@ -46,12 +46,12 @@
   margin: 10px 0 0 0;
 }
 
-/* 🎯 FAQ கிரிட் பகுதியை அலைன்மென்ட் சீராக்கியாச்சு */
+/* FAQ Grid Layout - No Stretch */
 .um-faq-content-grid {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly; 
-  align-items: stretch; /* 🎯 பிக்ஸ்: இடது பக்க உயரத்திற்கு ஏற்ப வலது பக்கமும் சமமாக நீள (Stretch) வேண்டும் */
+  align-items: flex-start; /* 🎯 இது இமேஜ் ஷேக் ஆவதைத் தடுக்கும் */
   width: 100%;
   gap: 40px;
 }
@@ -78,6 +78,10 @@
   align-items: flex-start;
 }
 
+.um-faq-open {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
+}
+
 .um-faq-question-row {
   display: flex;
   justify-content: space-between;
@@ -94,18 +98,51 @@
   text-align: left;
 }
 
+/* 🎯 Smooth Accordion Transitions (Arrow & Height) */
 .um-faq-arrow-icon {
   font-size: 10px;
   color: #999999;
-  transition: transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.um-faq-arrow-icon svg {
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.um-faq-box.um-faq-open .um-faq-arrow-icon svg {
+  transform: rotate(-180deg);
+}
+
+.um-faq-answer-wrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  width: 100%;
+  transition: grid-template-rows 0.4s cubic-bezier(0.25, 1, 0.5, 1), 
+              opacity 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.um-faq-answer-wrapper.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
 }
 
 .um-faq-answer-row {
-  margin-top: 18px;
-  border-top: 1px solid #eeeeee;
-  padding-top: 18px;
+  overflow: hidden; 
+  min-height: 0;
+  padding-top: 0;
+  margin-top: 0;
+  border-top: 1px solid transparent;
   width: 100%;
-  animation: faqFadeIn 0.4s ease;
+  transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.um-faq-answer-wrapper.is-open .um-faq-answer-row {
+  padding-top: 18px;
+  margin-top: 18px;
+  border-top-color: #eeeeee;
 }
 
 .um-faq-answer-row p {
@@ -117,20 +154,19 @@
   text-align: left;
 }
 
-.um-faq-open {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.04);
-}
-
-/* Right Side Image Block */
+/* 🎯 Right Side Image Block (Fixed Height + Sticky) */
 .um-faq-image-column {
-  width: 42%; 
-  display: flex; /* 🎯 பிக்ஸ்: உள்ளே இருக்கும் ரேப்பரை முழு உயரத்திற்கு இழுக்க */
+  width: 42%;
+  height: min(650px, calc(100vh - 150px)); 
+  position: sticky;
+  top: 100px;
+  display: flex;
 }
 
 .um-faq-img-wrapper {
   position: relative; 
   width: 100%;
-  height: 100%; /* 🎯 பிக்ஸ்: பெற்றோர் பெட்டியின் முழு உயரத்தையும் எடுக்கும் */
+  height: 100%; 
   border-radius: 20px;
   overflow: hidden;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
@@ -138,12 +174,12 @@
 
 .um-faq-img-wrapper img {
   width: 100%;
-  height: 100%; /* 🎯 பிக்ஸ்: அக்கார்டியன் விரிந்தாலும் சுருங்கினாலும் 100% உயரத்தை கவர்பண்ணும் */
+  height: 100%; 
   display: block;
-  object-fit: cover; /* 🎯 பிக்ஸ்: படம் தட்டையாகாமல் கச்சிதமாக க்ராப் ஆகி அமரும் */
+  object-fit: cover; 
 }
 
-/* படத்தில் உள்ளவாறு இமேஜின் கீழ் இருக்கும் பிளாக் ஓவர்லே பட்டி */
+/* Image Overlay Bar */
 .um-faq-image-overlay-bar {
   position: absolute;
   bottom: 13px;
@@ -198,39 +234,27 @@
   background-color: #e0e0e0;
 }
 
-/* 🎯 பழைய 1440 பிக்ஸட் ஹைட் குறியீடுகள் நீக்கப்பட்டு நீக்கமறத் தொடரும் வகையில் மாற்றப்பட்டுள்ளது */
-@media(max-width: 1440px) {
-  .um-faq-img-wrapper img {
-    height: 100% !important; /* பிக்ஸட் 400px நீக்கப்பட்டு 100% ஆக்கப்பட்டது */
-  }
-  .um-faq-image-column {
-    height: auto !important;
-  }
-}
 
-/* Animation */
-@keyframes faqFadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
-}
+/* ========================================================
+   🎯 RESPONSIVE MASTER: எல்லா ஸ்கிரீன்களுக்கும் (All Devices)
+   ======================================================== */
 
-/* Responsive UI Styles */
+/* --- Tablets & Small Laptops (Max Width: 1024px) --- */
 @media (max-width: 1024px) {
   .um-faq-content-grid {
-    flex-direction: column; 
-    gap: 40px;
-    align-items: stretch;
+    flex-direction: column-reverse;
+    align-items: center; 
+    gap: 50px;
   }
-  .um-faq-accordion-group,
+  .um-faq-accordion-group {
+    width: 100%;
+  }
   .um-faq-image-column {
-    width: 100%; 
+    width: 100%;
+    height: 500px;
+    position: relative; /* Sticky நீக்கப்படுகிறது */
+    top: 0;
   }
-  
-  /* 🎯 1024 பிக்சலில் படம் தனியாக வரும்போது ஒரு கச்சிதமான பிக்ஸட் ஹைட் */
-  .um-faq-img-wrapper img {
-    height: 500px !important; 
-  }
-  
   .um-faq-header {
     flex-direction: column;
     gap: 15px;
@@ -238,69 +262,65 @@
   }
   .um-faq-subtitle-top {
     text-align: left;
-    margin: 0;
+    max-width: 100%;
   }
 }
 
-/* PHONE VIEW PRECISE FIXES */
+/* --- Mobile Phones (Max Width: 768px) --- */
 @media (max-width: 768px) {
   .um-faq-section {
-    padding: 60px 24px;
-    align-items: center;
+    padding: 50px 24px;
   }
-
   .um-faq-header {
     align-items: center;
     text-align: center;
   }
-
   .um-faq-main-title {
     font-size: 2.6rem;
     text-align: center;
   }
-
   .um-faq-subtitle-top {
     text-align: center;
   }
-
-  .um-faq-box {
-    align-items: center;
-    text-align: center;
-    padding: 22px 20px;
+  .um-faq-image-column {
+    height: 400px;
   }
-
-  .um-faq-question-row {
-    flex-direction: row;
-    gap: 10px;
-    text-align: left !important;
-  }
-
-  .um-faq-answer-row p {
-    text-align: justify;
-  }
-
   .um-faq-image-overlay-bar {
+    width: 90%;
     flex-direction: column;
     gap: 15px;
-    border-radius: 20px;
     padding: 20px;
+    border-radius: 20px;
     text-align: center;
   }
-  
-  .um-faq-img-wrapper img {
-    width: 100%;
-    height: 450px !important;
-    display: block;
-    object-fit: cover;
-  }
-
   .um-overlay-text-left {
-    gap: 5px;
     justify-content: center;
     align-items: start;
   }
-
   .um-faq-contact-btn {
     width: 100%;
+  }
+  .um-faq-question-row {
+    flex-direction: row;
+    gap: 15px;
+  }
+}
+
+/* --- Small Mobile Phones (Max Width: 480px) --- */
+@media (max-width: 480px) {
+  .um-faq-section {
+    padding: 40px 16px; 
+  }
+  .um-faq-main-title {
+    font-size: 2.2rem;
+  }
+  .um-faq-box {
+    padding: 18px 20px;
+  }
+  .um-faq-question-row h3 {
+    font-size: 14px;
+  }
+  .um-faq-image-column {
+    height: 320px; 
   }
 }

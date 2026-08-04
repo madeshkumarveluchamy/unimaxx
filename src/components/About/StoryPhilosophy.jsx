@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './css/StoryPhilosophy.css';
 
-import blueprintImg from '../../assets/aboutstory2.png'; 
-import staircaseImg from '../../assets/aboutstory3.png'; 
+import blueprintImg from '../../assets/aboutstory2.webp'; 
+import staircaseImg from '../../assets/aboutstory3.webp'; 
 
 const StoryPhilosophy = () => {
   const sectionRef = useRef(null);
