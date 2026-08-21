@@ -17,12 +17,12 @@ function useStableIds() {
 
 export default function ProjectGooButtons({ text = "View Detailed Project", to = {to} }) {
   const btnRef = useRef(null);
-  
+
   const blobRef1 = useRef(null);
   const blobRef2 = useRef(null);
   const blobRef3 = useRef(null);
   const rafRef = useRef(null);
-  
+
   const targetRef = useRef({ x: 0, y: 0 });
   const posRef1 = useRef({ x: 0, y: 0 });
   const posRef2 = useRef({ x: 0, y: 0 });
