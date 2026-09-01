@@ -53,7 +53,7 @@ const UnimaxxFaq = () => {
         
         {/* FAQ Header Content */}
         <div className="um-faq-header">
-          <h2 className="um-faq-main-title font-serief">Answers that bring clarity</h2>
+          <h2 className="um-faq-main-title font-alice">Answers that bring clarity</h2>
           <p className="um-faq-subtitle-top font-geist fsub">
             We've answered the most common questions to help you move forward.
           </p>

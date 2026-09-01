@@ -54,7 +54,7 @@ useEffect(() => {
           <div className="ux-philo-col ux-philo-left-col ">
             <div className="ux-philo-tag slide-from-left mainsub font-geist">● OUR PHILOSOPHY</div>
             
-            <h2 className="ux-philo-main-title slide-from-left">
+            <h2 className="ux-philo-main-title slide-from-left font-alice">
               Design with <br />
               Purpose, Build <br />
               with Integrity

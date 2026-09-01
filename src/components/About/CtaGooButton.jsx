@@ -149,7 +149,7 @@ export default function CtaGooButton({ text = "Contact Our Team", onClick }) {
               values="1 0 0 0 0
                       0 1 0 0 0
                       0 0 1 0 0
-                      0 0 0 25 -10"
+                      0 0 0 20 -10"
             />
           </filter>
         </defs>

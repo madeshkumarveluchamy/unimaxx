@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import { NavLink } from "react-router-dom";
-import logoImg from '../../../assets/unimaxxlogo.webp'; 
+import logoImg from '../../../assets/Artboard.webp'; 
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

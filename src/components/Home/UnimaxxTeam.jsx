@@ -22,7 +22,7 @@ const UnimaxxTeam = () => {
         
         {/* Header Area */}
         <div className="um-team-header">
-          <h2 className="um-team-main-title font-serief">
+          <h2 className="um-team-main-title font-alice">
             Meet the people behind<br />the process
           </h2>
           <p className="um-team-subtitle-top font-geist fsub">

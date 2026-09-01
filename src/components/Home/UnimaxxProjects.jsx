@@ -83,7 +83,7 @@ const UnimaxxProjects = () => {
         <div className="um-projects-header">
           <div className="um-proj-title-area">
             <span className="um-proj-subtitle font-hanken fsub">What We Proud Of</span>
-            <h2 className="um-proj-title stit font-serief">Our Projects:</h2>
+            <h2 className="um-proj-title stit font-alice">Our Projects:</h2>
           </div>
         </div>
 

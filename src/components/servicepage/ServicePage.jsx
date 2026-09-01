@@ -235,7 +235,7 @@ export default function ServicePage() {
             <img 
               src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
               alt="Star Icon" 
-              className="unimaxx-asterisk-icon" 
+              className="unimaxx-asterisk-icon font-alice" 
             />  Our Services
           </h2>
         </div>

@@ -69,7 +69,7 @@ const UnimaxxFeatures = () => {
         {/* 🎯 Sticky Header */}
         <div className="arch-feat-header sticky-header">
           <div className="arch-feat-left-title">
-            <h2 className='font-serif stit'>
+            <h2 className='font-alice stit'>
               Quiet corners, bold <br /> statements <img 
                 src={staricon} 
                 alt="Star Icon" 

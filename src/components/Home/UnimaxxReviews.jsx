@@ -171,7 +171,7 @@ const UnimaxxReviews = () => {
       <section className="um-reviews-section">
         
         <div className="um-reviews-header">
-          <h2 className='font-serief'>Don't just listen to us—see what our partners have to say.</h2>
+          <h2 className='font-alice'>Don't just listen to us—see what our partners have to say.</h2>
         </div>
 
         <div 

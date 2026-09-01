@@ -157,7 +157,7 @@ export default function StoryHeroGooButton({ text = "Let's Build Your Legacy", o
               values="1 0 0 0 0
                       0 1 0 0 0
                       0 0 1 0 0
-                      0 0 0 25 -10"
+                      0 0 0 20 -10"
             />
           </filter>
         </defs>

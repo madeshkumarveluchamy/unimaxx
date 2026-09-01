@@ -116,6 +116,26 @@
   padding-left: 25px;
 }
 
+/* IMAGE/MAP BOUNDS */
+.unimaxx-form-image-wrapper {
+  width: 100%;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  
+  /* Map-க்கு குறிப்பிட்ட height தேவை, அதனால் இமேஜ் அளவுக்கான height-ஐ கொடுக்கிறோம் */
+  height: 420px; 
+  display: flex;
+}
+
+/* Map Iframe-க்கான Class */
+.unimaxx-form-src-map {
+  width: 100%;
+  height: 100%;
+  border: none; /* Iframe-ன் default border-ஐ நீக்க */
+  object-fit: cover;
+}
+
 .unimaxx-asterisk-icon {
   width: 25px; /* இமேஜின் அளவை உங்கள் டிசைனுக்கு ஏற்ப மாற்றவும் */
   height: auto;

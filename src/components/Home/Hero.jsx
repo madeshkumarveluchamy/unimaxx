@@ -38,7 +38,7 @@ const Hero = () => {
         {/* 🎯 CENTER CONTENT: 'content-visible / hidden' லாஜிக் நீக்கப்பட்டு நேரடியாக கொடுக்கப்பட்டுள்ளது */}
         <main className="unimaxx-hero-content">
           <h1 className="unimaxx-main-title font-geist">
-            Architecting the<br />Soul of Space
+            ARCHITECTING THE<br />SOUL OF SPACE
           </h1>
           
           <StoryHeroGooButton />

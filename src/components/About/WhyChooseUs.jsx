@@ -63,7 +63,7 @@ const WhyChooseUs = () => {
       <section className="wcu-section">
         
         {/* Header Title */}
-        <h2 className="wcu-heading">Why choose us</h2>
+        <h2 className="wcu-heading font-alice">Why choose us</h2>
 
         {/* 4-Column Grid */}
         <div className="wcu-grid">

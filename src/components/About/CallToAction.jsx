@@ -19,7 +19,7 @@ const CallToAction = () => {
       <div className="unq-cta-content">
         
         {/* Left Side: Title */}
-        <h2 className="unq-cta-title text-center">
+        <h2 className="unq-cta-title text-center font-alice">
           Let’s Build Something <br /> Extraordinary
         </h2>
         

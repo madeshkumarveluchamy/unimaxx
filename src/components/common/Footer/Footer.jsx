@@ -36,7 +36,7 @@ const Footer = () => {
             <div className="um-footer-logo-box">
               <img src={unimaxxlogo} alt="Unimaxx Logo" />
             </div>
-            <h2 className="um-footer-cta-title ftit font-serief text-center text-md-start">START YOUR <br />DREAM SPACE</h2>
+            <h2 className="um-footer-cta-title ftit font-alice text-center text-md-start">START YOUR <br />DREAM SPACE</h2>
             <p className="um-footer-brand-desc font-inter fmin s text-center text-md-start">
               Minimal, Premium, Eternal — we care for your emotion and our commitment to timeless design.
             </p>
@@ -53,12 +53,12 @@ const Footer = () => {
             <h3 className='font-serief text-center text-md-start'>Quick Links</h3>
             <ul className="um-footer-links-list">
               {/* 🎯 பழைய href தூக்கிட்டு App.js-ல இருக்குற exact paths-ஐ Link-ஆ மாத்தியாச்சு */}
-              <li><Link to="/" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Home</Link></li>
-              <li><Link to="/projects" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Projects</Link></li>
-              <li><Link to="/what-we-deliver" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>What We Deliver</Link></li>
-              <li><Link to="/projects" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Our Story</Link></li>
-              <li><Link to="/start-a-project" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Contact</Link></li>
-              <li><Link to="/" className='font-geist fmin text-decoration-none' onClick={handleLinkClick}>Blog</Link></li>
+              <li><Link to="/" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Home</Link></li>
+              <li><Link to="/projects" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Projects</Link></li>
+              <li><Link to="/what-we-deliver" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>What We Deliver</Link></li>
+              <li><Link to="/projects" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Our Story</Link></li>
+              <li><Link to="/start-a-project" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Contact</Link></li>
+              <li><Link to="/" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Blog</Link></li>
             </ul>
           </div>
 

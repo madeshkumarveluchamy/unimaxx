@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import './css/ContactFormSection.css';
-import formImg from '../../assets/contactformbackground.webp'; // உங்கள் இமேஜ் பாத்
-import staricon from "../../assets/logo1.webp"
+// Image import தேவையில்லை என்பதால் comment செய்யப்பட்டுள்ளது
+// import formImg from '../../assets/contactformbackground.webp'; 
+import staricon from "../../assets/logo1.webp";
+
 const ContactFormSection = () => {
   const [formData, setFormData] = useState({
     firstName: '',
@@ -53,26 +55,34 @@ const ContactFormSection = () => {
 
   return (
     <section className="unimaxx-form-section-container" id="contact">
-
       <div className="unimaxx-section-header">
-          <h2> <img 
-            src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
+        <h2> 
+          <img 
+            src={staricon} 
             alt="Star Icon" 
             className="unimaxx-asterisk-icon" 
-          />Connect with <br /> <span className="hello">Our Design Team</span></h2>
-        </div>
+          />
+          Get a Free<br /> <span className="hello">Consultation</span>
+        </h2>
+      </div>
+      
       <div className="unimaxx-form-layout-grid">
-
-        
         
         {/* ================= இடது பக்க கன்டென்ட் & விவரங்கள் ================= */}
         <div className="unimaxx-info-column">
-         
           
+          {/* IMAGE-க்கு பதிலாக MAP செருகப்பட்டுள்ளது */}
           <div className="unimaxx-form-image-wrapper">
-            <img src={formImg} alt="Contact Team" className="unimaxx-form-src-img" />
+           <iframe 
+    title="Office Location Map"
+    className="unimaxx-form-src-map"
+    /* கீழே உள்ள src-ல் உங்கள் உண்மையான Google Maps Embed Link-ஐப் பயன்படுத்தவும் */
+    src="https://maps.google.com/maps?q=Coimbatore&t=&z=14&ie=UTF8&iwloc=&output=embed" 
+    allowFullScreen="" 
+    loading="lazy" 
+    referrerPolicy="no-referrer-when-downgrade"
+  ></iframe>
           </div>
-
           <div className="unimaxx-address-grid row">
             <div className="unimaxx-info-item">
               <div className="unimaxx-icon-box">
@@ -84,7 +94,6 @@ const ContactFormSection = () => {
               </div>
               <p>Poompuhar Nagar Annex, Avinashi Rd, behind Haribhavanam, Goldwins, Civil Aerodrome Post</p>
             </div>
-            
             <div className="unimaxx-info-item">
               <div className="unimaxx-icon-box">
                 {/* Location Icon SVG */}

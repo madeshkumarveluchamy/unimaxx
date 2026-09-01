@@ -15,7 +15,7 @@ const UnimaxxOngoing = () => {
         {/* Header Section */}
         <div className="um-ongoing-header">
           <span className="um-ongoing-subtitle font-hanken fsub">What We Proud Of</span>
-          <h2 className="um-ongoing-title font-serief">On Going Projects:</h2>
+          <h2 className="um-ongoing-title font-alice">On Going Projects:</h2>
         </div>
 
         <div className="um-ongoing-list">

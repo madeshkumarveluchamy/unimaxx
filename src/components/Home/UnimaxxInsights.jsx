@@ -14,7 +14,7 @@ const UnimaxxInsights = () => {
         
         {/* Top Header Row */}
         <div className="um-insights-header">
-          <h2 className="font-serif">
+          <h2 className="font-alice">
           Ideas, Interiors, Insight, <br />
           <span className="font-sand">&</span> Innovation.
           </h2>

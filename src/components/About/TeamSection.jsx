@@ -23,7 +23,7 @@ const TeamSection = () => {
       <div className="unq-team-wrapper">
         
         <div className="unq-team-header ">
-          <h2 className="unq-team-title ">The team crafting <br/> inspired designs</h2>
+          <h2 className="unq-team-title  font-alice">The team crafting <br/> inspired designs</h2>
         </div>
 
         <div className="unq-team-desktop-layout">

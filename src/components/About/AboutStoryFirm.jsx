@@ -20,7 +20,7 @@ const AboutStoryFirm = () => {
                                                       alt="Star Icon" 
                                                       className="unimaxx-asterisk-icon" 
                                                     /> </span>
-              <h2 className="ux-firm-title">About <br /> Our Firm</h2>
+              <h2 className="ux-firm-title font-alice">About <br /> Our Firm</h2>
             </div>
             
             <p className="ux-firm-description font-geist mainsub" >

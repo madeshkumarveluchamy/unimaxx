@@ -93,7 +93,7 @@ const UnimaxxExpertise = () => {
         
         {/* Header Title Area */}
         <div className="um-expertise-header">
-          <h2 className="um-exp-title font-serief text-white">Our expertise</h2>
+          <h2 className="um-exp-title font-alice text-white">Our expertise</h2>
           <p className="um-exp-desc-top fmin font-geist">
             We offer a full spectrum of interior design — each tailored to elevate spaces with clarity and timeless aesthetic value.
           </p>
