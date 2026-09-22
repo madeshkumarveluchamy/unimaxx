@@ -23,8 +23,8 @@
       },
       {
         id: '03',
-        title: 'Branding Services',
-        desc: 'Your brand is more than a logo—it’s the story you tell and the feeling you create. Our branding services help businesses define their voice, establish strong identities.',
+        title: 'Bespoke Furniture',
+        desc: 'Elevate your interiors with custom-designed furniture crafted to fit your space perfectly. We create unique pieces that blend striking aesthetics with everyday practicality.',
         posClass: 'unq-wwd-pos-3',
         slideFrom: -50, // இடதுபுறத்தில் இருந்து வரும்
       }

@@ -52,10 +52,10 @@ const SlotCounter = ({ value, baseDirection = "up" }) => {
 // --- புதிய "Why Choose Us" டிசைன் ---
 const WhyChooseUs = () => {
   const statsData = [
-    { count: 110, suffix: "+", title: "Spaces Redefined", desc: "Crafting functional, timeless spaces that inspire and connect." },
-    { count: 40, suffix: "+", title: "Workplace Design", desc: "Designing workplaces that boost productivity and inspire growth." },
-    { count: 99, suffix: "%", title: "Client Happiness", desc: "Delivering meaningful designs that exceed expectations." },
-    { count: 16, suffix: "+", title: "Proven Expertise", desc: "Crafting exceptional spaces with decades of proven expertise." }
+    { count: 110, suffix: "+", title: "Spaces Redefined", desc: "Transforming raw concepts into highly functional and aesthetically stunning environments." },
+    { count: 2, suffix: "+", title: "Years of Excellence", desc: "A rapidly growing legacy driven by innovative architecture and uncompromising quality." },
+    { count: 50, suffix: "k+", title: "SQ.FT. Of Excellence", desc: "Maximizing utility and beauty across massive spaces, ensuring every inch serves a purpose." },
+    { count: 100, suffix: "%", title: "Client Satisfaction", desc: "Delivering a flawless experience from the very first consultation to the final handover." }
   ];
 
   return (
