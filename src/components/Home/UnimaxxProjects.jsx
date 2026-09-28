@@ -1,10 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import './css/UnimaxxProjects.css';
-
-import hero3frame1 from '../../assets/hero3frame1.webp';
-import projectimg1 from '../../assets/projectimg1.webp';
-import projectimg2 from '../../assets/projectimg2.webp';
 
 import p2_main from '../../assets/Corporate_office (10).webp';
 import p3_main from '../../assets/Dr.Vijayalakshmi (6).webp';
@@ -17,19 +14,20 @@ import p9_main from '../../assets/Pritham (23).webp';
 import p10_main from '../../assets/Pritham (5).webp';
 import p11_main from '../../assets/vivke (5).webp';
 
-
 const UnimaxxProjects = () => {
+  const navigate = useNavigate();
+
   const [projects, setProjects] = useState([
-    { id: 1, img: p2_main, title: "serenia", type: "COMMERCIAL", location: "TIRUPPUR, TN" },
-    { id: 2, img: p3_main, title: "Dr. VIJAYALAKSHMI", type: "RESIDENTIAL", location: "CHENNAI, TN" },
-    { id: 3, img: p4_main, title: "Mr. BALACHANDAR", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
-    { id: 4, img: p5_main, title: "Mr .BALAJI", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
-    { id: 5, img: p6_main, title: "Mr. SHANMUGAM", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
-    { id: 6, img: p7_main, title: "GOWTHAMI RESIDENCE", type: "RESIDENTIAL", location: "TIRUPPUR, TN" },
-    { id: 7, img: p8_main, title: "MEENA RESIDENCE", type: "RESIDENTIAL", location: "MADURAI, TN" },
-    { id: 8, img: p9_main, title: "PRITHAM RESIDENCE", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
-    { id: 9, img: p10_main, title: "Mr. SUBRAMANI", type: "RESIDENTIAL", location: "ERODE, TN" },
-    { id: 10,img: p11_main, title: "Mr .VIVEK", type: "RESIDENTIAL", location: "CHENNAI, TN" },
+    { id: 1, img: p2_main, title: "SERENIA", type: "COMMERCIAL", location: "TIRUPPUR, TN", link: "/projects/serenia" },
+    { id: 2, img: p3_main, title: "Dr.VIJAYALAKSHMI", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/dr-vijayalakshmi" },
+    { id: 3, img: p4_main, title: "Mr.BALACHANDAR", type: "RESIDENTIAL", location: "COIMBATORE, TN", link: "/projects/mr-balachandar" },
+    { id: 4, img: p5_main, title: "Mr.BALAJI", type: "RESIDENTIAL", location: "COIMBATORE, TN", link: "/projects/mr-balaji" },
+    { id: 5, img: p6_main, title: "Mr.SHANMUGAM", type: "RESIDENTIAL", location: "COIMBATORE, TN", link: "/projects/mr-shanmugam" },
+    { id: 6, img: p7_main, title: "GOWTHAMI RESIDENCE", type: "RESIDENTIAL", location: "TIRUPPUR, TN", link: "/projects/gowthami-residence" },
+    { id: 7, img: p8_main, title: "MEENA RESIDENCE", type: "RESIDENTIAL", location: "MADURAI, TN", link: "/projects/meena-residence" },
+    { id: 8, img: p9_main, title: "PRITHAM RESIDENCE", type: "RESIDENTIAL", location: "COIMBATORE, TN", link: "/projects/pritham-residence" },
+    { id: 9, img: p10_main, title: "Mr.SUBRAMANI", type: "RESIDENTIAL", location: "ERODE, TN", link: "/projects/mr-subramani" },
+    { id: 10,img: p11_main, title: "Mr.VIVEK", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/mr-vivek" },
   ]);
 
   const [direction, setDirection] = useState(1);
@@ -54,15 +52,45 @@ const UnimaxxProjects = () => {
     });
   };
 
-  // Autoplay Logic Added Here
   useEffect(() => {
+    // 1. Scroll Position Restoration Logic (Lag-free)
+    const savedScrollPosition = sessionStorage.getItem('unimaxxProjectsScrollPos');
+    
+    if (savedScrollPosition) {
+      setTimeout(() => {
+        window.scrollTo({ 
+          top: parseInt(savedScrollPosition, 10), 
+          behavior: 'instant' // Smooth இல்லாமல் Instant ஆக சென்றால் Lag இருக்காது
+        });
+      }, 0);
+    }
+
+    // Scroll செய்யும் போது Position-ஐ தொடர்ச்சியாக Save செய்ய
+    const handleScroll = () => {
+      sessionStorage.setItem('unimaxxProjectsScrollPos', window.scrollY);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    // 2. Autoplay Logic
     const autoPlayInterval = setInterval(() => {
       handleNext();
-    }, 3000); // 3000ms = 3 seconds (Unangalku ethapla timing mathikonga)
+    }, 3000); 
 
-    // Cleanup function to clear interval on component unmount
-    return () => clearInterval(autoPlayInterval);
+    return () => {
+      clearInterval(autoPlayInterval);
+      window.removeEventListener('scroll', handleScroll); // Event Listener-ஐ Remove செய்வது முக்கியம்
+    };
   }, []); 
+
+  // Redirect செய்யும் function
+  const handleTitleClick = (link) => {
+    if(link) {
+      // Navigate செய்வதற்கு சற்று முன் கடைசியாக ஒருமுறை Scroll Position-ஐ Save செய்துகொள்கிறோம்
+      sessionStorage.setItem('unimaxxProjectsScrollPos', window.scrollY);
+      navigate(link);
+    }
+  };
 
   const waterflowVariants = {
     initial: (dir) => ({
@@ -126,7 +154,13 @@ const UnimaxxProjects = () => {
               <div className="um-proj-icon">∞</div>
             </div>
             <div className="um-proj-info">
-              <h3 className='font-inter stit'>{projects[0].title}</h3>
+              <h3 
+                className='font-inter stit' 
+                onClick={() => handleTitleClick(projects[0].link)}
+                style={{ cursor: 'pointer' }}
+              >
+                {projects[0].title}
+              </h3>
               <div className="um-proj-tags">
                 <span className='font-manrope'>{projects[0].type}</span>
                 <span className='font-manrope'>{projects[0].location}</span>
@@ -152,7 +186,13 @@ const UnimaxxProjects = () => {
               <div className="um-proj-icon">∞</div>
             </div>
             <div className="um-proj-info">
-              <h3 className='stit font-inter'>{projects[1].title}</h3>
+              <h3 
+                className='stit font-inter' 
+                onClick={() => handleTitleClick(projects[1].link)}
+                style={{ cursor: 'pointer' }}
+              >
+                {projects[1].title}
+              </h3>
               <div className="um-proj-tags">
                 <span className='font-manrope'>{projects[1].type}</span>
                 <span className='font-manrope'>{projects[1].location}</span>
@@ -178,7 +218,13 @@ const UnimaxxProjects = () => {
               <div className="um-proj-icon">∞</div>
             </div>
             <div className="um-proj-info">
-              <h3 className='font-inter stit'>{projects[2].title}</h3>
+              <h3 
+                className='font-inter stit' 
+                onClick={() => handleTitleClick(projects[2].link)}
+                style={{ cursor: 'pointer' }}
+              >
+                {projects[2].title}
+              </h3>
               <div className="um-proj-tags">
                 <span className='font-manrope'>{projects[2].type}</span>
                 <span className='font-manrope'>{projects[2].location}</span>
@@ -191,7 +237,6 @@ const UnimaxxProjects = () => {
         {/* Buttons Layout Control */}
         <div className="um-proj-navigation-wrapper">
             <div className="um-proj-navigation-inline">
-              {/* Left Modern Arrow */}
               <button className="um-proj-arrow-btn" onClick={handlePrev} aria-label="Previous">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="19" y1="12" x2="5" y2="12"></line>
@@ -199,7 +244,6 @@ const UnimaxxProjects = () => {
                 </svg>
               </button>
               
-              {/* Right Modern Arrow */}
               <button className="um-proj-arrow-btn um-arrow-active" onClick={handleNext} aria-label="Next">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                   <line x1="5" y1="12" x2="19" y2="12"></line>

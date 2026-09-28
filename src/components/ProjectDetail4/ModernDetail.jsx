@@ -21,7 +21,7 @@ const ModernDetail = () => {
                 src={staricon}
                 alt="Star Icon"
                 className="unimaxx-asterisk-icon"
-              />Mr. BALACHANDAR</h2>
+              />Mr.BALACHANDAR</h2>
             
             <div className="nest-top-specs-grid">
               <div className="nest-top-spec-box">

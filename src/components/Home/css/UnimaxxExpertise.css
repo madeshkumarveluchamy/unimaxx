@@ -215,7 +215,7 @@
 .um-row-open {
   align-items: flex-start;
   padding: 40px 0;
-  background-color: rgba(255, 255, 255, 0.02);
+  background-color : #000000;
 }
 
 .um-row-open .um-row-img-container {

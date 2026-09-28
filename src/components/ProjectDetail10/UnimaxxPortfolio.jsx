@@ -166,7 +166,7 @@ const portfolioData = [
       <div className="sync-portfolio-container">
         
         {/* செக்ஷன் மெயின் தலைப்பு */}
-        <h2 className="sync-portfolio-main-heading font-serief"><span>✻</span> Our Portfolio</h2>
+        <h2 className="sync-portfolio-main-heading font-serief"><span>✻</span> Project Gallery</h2>
 
         {/* பிரதான பெரிய இமேஜ் பாக்ஸ் */}
         <div className="sync-portfolio-hero-banner">
@@ -185,7 +185,7 @@ const portfolioData = [
         {/* கட்டுப்படுத்தும் நேவிகேஷன் பட்டன்கள் (View Next Projects) */}
         <div className="sync-portfolio-controls-row">
           <SyncPortfolioNavButton
-            text="View Next Projects" 
+            text="Previous | Next Project" 
             onPrev={handlePrev} 
             onNext={handleNext} 
             onMainClick={() => console.log("Main text clicked!")} 

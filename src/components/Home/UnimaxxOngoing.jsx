@@ -34,10 +34,10 @@ const UnimaxxOngoing = () => {
                 
                 {/* Centered Text Content */}
                 <div className="um-overlay-text-content">
-                  <h3 className="um-card-title font-serief">Mr. BALACHANDAR</h3>
+                  <h3 className="um-card-title font-serief">Mr.BALACHANDAR</h3>
                   
                   <div className="um-btn-align-wrapper row">
-                    <Link className="text-decoration-none col-12 col-md-6 hellos gap-3" to="/projects">
+                    <Link className="text-decoration-none col-12 col-md-6 hellos gap-3" to="/projects/mr-balachandar">
                       <ViewDetailedGooButton textColor="black" />
                     </Link>
 
@@ -60,10 +60,10 @@ const UnimaxxOngoing = () => {
                 
                 {/* Centered Text Content */}
                 <div className="um-overlay-text-content">
-                  <h3 className="um-card-title font-serief">Mr .BALAJI</h3>
+                  <h3 className="um-card-title font-serief">Mr.BALAJI</h3>
                   
                   <div className="um-btn-align-wrapper row">
-                    <Link className="text-decoration-none col-12 col-md-6 hellos" to="/projects">
+                    <Link className="text-decoration-none col-12 col-md-6 hellos" to="/projects/mr-balaji">
                       <ViewDetailedGooButton textColor="black" />
                     </Link>
 

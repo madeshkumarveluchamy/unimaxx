@@ -20,7 +20,7 @@ const ModernDetail = () => {
             src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
             alt="Star Icon" 
             className="unimaxx-asterisk-icon" 
-          />Mr. SHANMUGAM</h2>
+          />Mr.SHANMUGAM</h2>
             
             <div className="nest-top-specs-grid">
               <div className="nest-top-spec-box">

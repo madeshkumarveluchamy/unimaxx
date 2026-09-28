@@ -55,7 +55,7 @@ const UnimaxxPortfolio = () => {
     <div className="sync-portfolio-viewport">
       <div className="sync-portfolio-container">
         
-        <h2 className="sync-portfolio-main-heading font-serief"><span>✻</span> Our Portfolio</h2>
+        <h2 className="sync-portfolio-main-heading font-serief"><span>✻</span> Project Gallery</h2>
 
         {/* 🎯 பிரதான பெரிய இமேஜ் பாக்ஸ் */}
         <div className="sync-portfolio-hero-banner">
@@ -88,7 +88,7 @@ const UnimaxxPortfolio = () => {
 
         <div className="sync-portfolio-controls-row">
           <SyncPortfolioNavButton 
-            text="View Next Projects" 
+            text="Previous | Next Project" 
             onPrev={handlePrev} 
             onNext={handleNext} 
             onMainClick={() => console.log("Main text clicked!")} 
