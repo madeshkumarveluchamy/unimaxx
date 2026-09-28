@@ -10,21 +10,47 @@ import heroBg1Png from '../../assets/hero-bg1.webp';
 // ==========================================
 
 // Project 1 க்கான Main Image & Popup Images
-import p1_main from '../../assets/story1.webp';
+import p1_main from '../../assets/cafe (1).webp';
 import p1_img1 from '../../assets/aboutstory.webp'; // உங்களோட நிஜ image names-அ இங்க மாத்திக்கோங்க
 import p1_img2 from '../../assets/aboutstory2.webp';
 import p1_img3 from '../../assets/aboutstory3.webp';
 
 // Project 2 க்கான Main Image & Popup Images
-import p2_main from '../../assets/story1.webp';
+import p2_main from '../../assets/Corporate_office (10).webp';
 import p2_img1 from '../../assets/aboutstory.webp';
 import p2_img2 from '../../assets/aboutstory2.webp';
 import p2_img3 from '../../assets/aboutstory3.webp';
 
 // Project 3 க்கான Main Image & Popup Images
-import p3_main from '../../assets/story1.webp';
+import p3_main from '../../assets/Dr.Vijayalakshmi (6).webp';
 import p3_img1 from '../../assets/aboutstory.webp';
 import p3_img2 from '../../assets/aboutstory2.webp';
+
+import p4_main from '../../assets/EivvaVilla21 (33).webp';
+
+
+import p5_main from '../../assets/EivvaVilla 28 (33).webp';
+
+
+import p6_main from '../../assets/EivvaVilla 32  (33).webp';
+
+
+import p7_main from '../../assets/Gowthami1.webp';
+
+
+import p8_main from '../../assets/meenamadurai (85).webp';
+
+
+import p9_main from '../../assets/Pritham (23).webp';
+
+
+import p10_main from '../../assets/Pritham (5).webp';
+import p11_main from '../../assets/vivke (5).webp';
+import p12_main from '../../assets/thara (7).webp';
+
+
+
+
 
 import StoryHeroGooButton from './StoryHeroGooButton';
 import ProjectGooButton from './ProjectGooButton';
@@ -33,36 +59,125 @@ import ProjectGooButton from './ProjectGooButton';
 // 🎯 2. இங்க தான் நீங்க Import பண்ண Images-அ கார்டுக்கு Assign பண்றீங்க
 // ==========================================
 const portfolioData = [
-  {
-    id: 1,
-    mainImage: p1_main, // இந்த கார்டோட பெரிய background image
-    popupImages: [p1_img1, p1_img2, p1_img3], // 🎯 Project 1-ஓட images மட்டும் இங்க ஆட்டோமேட்டிக்கா மாறும்
-    cardTitle : "Modern Residence",
-    category: "RESIDENTIAL",
-    location: "COIMBATORE, TN",
-    alignRight: true,
-    path: "/detail1"
-  },
+
   {
     id: 2,
     mainImage: p2_main,
     popupImages: [p2_img1, p2_img2, p2_img3], // 🎯 Project 2-ஓட images
-    cardTitle: "Modern & luxury Residence",
-    category: "RESIDENTIAL",
-    location: "COIMBATORE, TN",
+    cardTitle: "SERENIA",
+    category: "COMMERCIAL",
+    location: "TIRUPPUR, TN",
     alignRight: false,
-    path: "/detail2"
+    path: "/projects/serenia"
   },
   {
     id: 3,
     mainImage: p3_main,
     popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
-    cardTitle: "Modern Architecture & Interior",
+    cardTitle: "Dr. VIJAYALAKSHMI",
+    category: "RESIDENTIAL",
+    location: "CHENNAI, TN",
+    alignRight: true,
+    path: "/projects/dr-vijayalakshmi"
+  },
+    {
+    id: 4,
+    mainImage: p4_main,
+    popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
+    cardTitle: "Mr. BALACHANDAR",
+    category: "RESIDENTIAL",
+    location: "COIMBATORE, TN",
+    alignRight: false,
+    path: "/projects/mr-balachandar"
+  },
+   {
+    id: 5,
+    mainImage: p5_main,
+    popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
+    cardTitle: "Mr .BALAJI",
     category: "RESIDENTIAL",
     location: "COIMBATORE, TN",
     alignRight: true,
-    path: "/detail3"
-  }
+    path: "/projects/mr-balaji"
+  },
+   {
+    id: 6,
+    mainImage: p6_main,
+    popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
+    cardTitle: "Mr. SHANMUGAM",
+    category: "RESIDENTIAL",
+    location: "COIMBATORE, TN",
+    alignRight: false,
+    path: "/projects/mr-shanmugam"
+  },
+  {
+    id:7,
+    mainImage: p7_main,
+    popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
+    cardTitle: "GOWTHAMI RESIDENCE",
+    category: "RESIDENTIAL",
+    location: "TIRUPPUR, TN",
+    alignRight: true,
+    path: "/projects/gowthami-residence"
+  },
+   {
+    id: 8,
+    mainImage: p8_main,
+    popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
+    cardTitle: "MEENA RESIDENCE",
+    category: "RESIDENTIAL",
+    location: "MADURAI, TN",
+    alignRight: false,
+    path: "/projects/meena-residence"
+  },
+   {
+    id: 9,
+    mainImage: p9_main,
+    popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
+    cardTitle: "PRITHAM RESIDENCE",
+    category: "RESIDENTIAL",
+    location: "COIMBATORE, TN",
+    alignRight: true,
+    path: "/projects/pritham-residence"
+  },
+   {
+    id: 10,
+    mainImage: p10_main,
+    popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
+    cardTitle: "Mr. SUBRAMANI",
+    category: "RESIDENTIAL",
+    location: "ERODE, TN",
+    alignRight: false,
+    path: "/projects/mr-subramani"
+  }, {
+    id: 11,
+    mainImage: p11_main,
+    popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
+    cardTitle: "Mr .VIVEK",
+    category: "RESIDENTIAL",
+    location: "CHENNAI, TN",
+    alignRight: true,
+    path: "/projects/mr-vivek"
+  }, {
+    id: 12,
+    mainImage: p12_main,
+    popupImages: [p3_img1, p3_img2], // 🎯 Project 3-ஓட images (எத்தன images வேணாலும் குடுக்கலாம்)
+    cardTitle: "THARA RESIDENCE",
+    category: "RESIDENTIAL",
+    location: "CHENNAI, TN",
+    alignRight: false,
+    path: "/projects/thara-residence"
+  },
+    {
+    id: 1,
+    mainImage: p1_main, // இந்த கார்டோட பெரிய background image
+    popupImages: [p1_img1, p1_img2, p1_img3], // 🎯 Project 1-ஓட images மட்டும் இங்க ஆட்டோமேட்டிக்கா மாறும்
+    cardTitle : "Cafe",
+    category: "COMMERCIAL",
+    location: "COIMBATORE, TN",
+    alignRight: true,
+    path: "/projects/cafe"
+  },
 ];
 
 const AnimatedProjectCard = ({ project }) => {
@@ -135,10 +250,10 @@ const OurStory = () => {
           <span className="portfolio-sub maindes font-geist">RECENT PROJECTS</span>
           <h2 className="portfolio-title">
             <img 
-                                                    src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
-                                                    alt="Star Icon" 
-                                                    className="unimaxx-asterisk-icon" 
-                                                  />  Our Portfolio
+                src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
+                alt="Star Icon" 
+                className="unimaxx-asterisk-icon" 
+            />  Our Portfolio
           </h2>
         </div>
 

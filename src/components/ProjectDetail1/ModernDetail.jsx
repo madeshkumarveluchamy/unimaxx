@@ -2,9 +2,9 @@ import React from 'react';
 import './css/ModernDetail.css';
 
 // தேவையான இமேஜ் ஃபைல்கள்
-import modern1 from '../../assets/modern1.webp';
-import modern2 from '../../assets/modern2.webp';
-import modern3 from '../../assets/modern3.webp';
+import modern1 from '../../assets/cafe (1).webp';
+import modern2 from '../../assets/cafe (2).webp';
+import modern3 from '../../assets/cafe (3).webp';
 import staricon from '../../assets/logo1.webp'; // உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும்
 
 const ModernDetail = () => {

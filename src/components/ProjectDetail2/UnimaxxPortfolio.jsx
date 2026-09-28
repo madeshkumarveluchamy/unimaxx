@@ -3,11 +3,17 @@ import '../ProjectDetail1/css/UnimaxxPortfolio.css';
 import SyncPortfolioNavButton from '../ProjectDetail1/SyncPortfolioNavButton';
 
 // நாம் ஏற்கனவே பயன்படுத்திய அதே இமேஜ் ஃபைல்கள்
-import modern1 from '../../assets/modern1.webp'; 
-import modern2 from '../../assets/modern2.webp';
-import modern3 from '../../assets/modern3.webp'; 
-import modern4 from '../../assets/modern4.webp';
-import modern5 from '../../assets/modern5.webp'; 
+import modern1 from '../../assets/Corporate_office (1).webp'; 
+import modern2 from '../../assets/Corporate_office (2).webp';
+import modern3 from '../../assets/Corporate_office (3).webp'; 
+import modern4 from '../../assets/Corporate_office (4).webp';
+import modern5 from '../../assets/Corporate_office (5).webp'; 
+import modern6 from '../../assets/Corporate_office (6).webp'; 
+import modern7 from '../../assets/Corporate_office (7).webp'; 
+import modern8 from '../../assets/Corporate_office (8).webp'; 
+import modern9 from '../../assets/Corporate_office (9).webp'; 
+import modern10 from '../../assets/Corporate_office (10).webp'; 
+
 import SyncPortfolioFluidButton from '../ProjectDetail1/SyncPortfolioFluidButton';
 import ProjectGooButtons from '../ProjectDetail1/ProjectGooButtons';
 
@@ -19,25 +25,46 @@ const UnimaxxPortfolio = () => {
   const portfolioData = [
     {
       id: 1,
-      bgImage: modern2,      /* பிரதான சோபா பின்னணி */
-      title: "Modern Residence",
-      type: "RESIDENTIAL",
-      location: "COIMBATORE, TN"
+      bgImage: modern1,      /* பிரதான சோபா பின்னணி */
     },
     {
       id: 2,
-      bgImage: modern4,      /* பிரதான லிவிங் ரூம் பின்னணி */
-      title: "Luxury Villa Loft",
-      type: "RESIDENTIAL",
-      location: "BANGALORE, KA"
+      bgImage: modern2,      /* பிரதான லிவிங் ரூம் பின்னணி */
+     
     },
     {
       id: 3,
-      bgImage: modern1,      /* பிரதான கிச்சன் பின்னணி */
-      title: "Premium Penthouse",
-      type: "COMMERCIAL",
-      location: "CHENNAI, TN"
-    }
+      bgImage: modern3,      /* பிரதான கிச்சன் பின்னணி */
+    },
+    {
+      id: 4,
+      bgImage: modern4,      /* பிரதான கிச்சன் பின்னணி */
+    },
+    {
+      id: 5,
+      bgImage: modern5,      /* பிரதான கிச்சன் பின்னணி */
+    },
+    {
+      id: 6,
+      bgImage: modern6,      /* பிரதான கிச்சன் பின்னணி */
+    },
+    {
+      id: 7,
+      bgImage: modern7,      /* பிரதான கிச்சன் பின்னணி */
+    },
+    {
+      id: 8,
+      bgImage: modern8,      /* பிரதான கிச்சன் பின்னணி */
+    },
+    {
+      id: 9,
+      bgImage: modern9,      /* பிரதான கிச்சன் பின்னணி */
+    },
+    {
+      id: 10,
+      bgImage: modern10,      /* பிரதான கிச்சன் பின்னணி */
+    },
+   
   ];
 
   // அடுத்த புராஜெக்ட்டுக்கு மாற (Next Button)
@@ -72,28 +99,11 @@ const UnimaxxPortfolio = () => {
             <div 
               key={project.id}
               className={`sync-portfolio-bg-layer ${index === currentIndex ? 'bg-active' : ''}`}
-              style={{ backgroundImage: `url(${project.bgImage})` }}
+              style={{ backgroundImage: `url("${project.bgImage}" )` }}
             ></div>
           ))}
           
-          {/* வலதுபுறம் மிதக்கும் கார்டு லேயர் */}
-          <div className="sync-portfolio-floating-card">
-            
-            {/* 🎯 Text-ம் ஸ்மூத் ஆக Fade ஆக key={currentProject.id} கொடுக்கப்பட்டுள்ளது */}
-            <div className="sync-portfolio-card-info" key={currentProject.id}>
-              <h3 className='font-geist'>{currentProject.title}</h3>
-              
-              <div className="sync-portfolio-card-footer">
-                <ProjectGooButtons to="/" />
-                
-                <div className="sync-portfolio-meta-tags">
-                  <span className='font-manrope'>{currentProject.type}</span>
-                  <span className='font-manrope'>{currentProject.location}</span>
-                </div>
-              </div>
-            </div>
-            
-          </div>
+          
 
         </div>
 

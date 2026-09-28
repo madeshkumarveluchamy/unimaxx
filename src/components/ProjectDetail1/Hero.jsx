@@ -1,10 +1,10 @@
 import React from 'react';
 import './css/Hero.css';
-import backgroundimage from '../../assets/backgroundimage.webp';
+import backgroundimage from '../../assets/cafe (1).webp';
 
 const Hero = () => {
   return (
-    <div className="unimaxx-hero-viewport" style={{ backgroundImage: `url(${backgroundimage})` }}>
+    <div className="unimaxx-hero-viewport" style={{ backgroundImage: `url("${backgroundimage}")` }}>
       <div className="unimaxx-hero-darkener"></div>
       
       <div className="unimaxx-hero-bound-box">

@@ -10,9 +10,9 @@ const Home1 = () => {
       <Hero />
       <ModernDetail />
       <ProjectBottomSection />
-      <UnimaxxPortfolio />
+      {/* <UnimaxxPortfolio /> */}
     </div>
   )
-}
+} 
 
 export default Home1

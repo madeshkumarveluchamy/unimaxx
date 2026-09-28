@@ -2,9 +2,9 @@ import React from 'react';
 import '../ProjectDetail1/css/ModernDetail.css';
 
 // தேவையான இமேஜ் ஃபைல்கள்
-import modern1 from '../../assets/modern1.webp';
-import modern2 from '../../assets/modern2.webp';
-import modern3 from '../../assets/modern3.webp';
+import modern1 from '../../assets/Corporate_office (1).webp';
+import modern2 from '../../assets/Corporate_office (2).webp';
+import modern3 from '../../assets/Corporate_office (3).webp';
 import staricon from '../../assets/logo1.webp'; // உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும்
 
 const ModernDetail = () => {
@@ -21,24 +21,24 @@ const ModernDetail = () => {
                                                                   src={staricon} /* உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும் */
                                                                   alt="Star Icon" 
                                                                   className="unimaxx-asterisk-icon" 
-                                                                />  Modern Nest</h2>
+                                                                />SERENIA</h2>
             
             <div className="nest-top-specs-grid">
               <div className="nest-top-spec-box">
                 <h4 className='font-geist fusb'>LOCATION</h4>
-                <p className='font-geist fmin'>Vadavalli, Coimbatore.</p>
+                <p className='font-geist fmin'>TIRUPPUR</p>
               </div>
               <div className="nest-top-spec-box">
-                <h4 className='font-geist fsub'>CATEGORY</h4>
-                <p className='font-geist fmin' >Residential</p>
+                <h4 className='font-geist fsub'>Sq.Ft</h4>
+                <p className='font-geist fmin' >959</p>
               </div>
               <div className="nest-top-spec-box">
-                <h4 className='font-geist fsub'>YEAR</h4>
-                <p className='font-geist fmin'>2026</p>
+                <h4 className='font-geist fsub'>FACING</h4>
+                <p className='font-geist fmin'>EAST</p>
               </div>
               <div className="nest-top-spec-box">
-                <h4 className='font-geist fsub'>TIMELINE</h4>
-                <p className='font-geist fmin'>30 Weeks</p>
+                <h4 className='font-geist fsub'>DURATION</h4>
+                <p className='font-geist fmin'>ONGOING</p>
               </div>
             </div>
 

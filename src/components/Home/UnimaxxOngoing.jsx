@@ -3,6 +3,9 @@ import './css/UnimaxxOngoing.css';
 
 import bgImg from '../../assets/ongoing1.webp'; // Background image (Static)
 
+import p4_main from '../../assets/EivvaVilla21 (33).webp';
+import p5_main from '../../assets/EivvaVilla 28 (38).webp';
+
 import ViewDetailedGooButton from './ViewDetailedGooButton';
 import { Link } from "react-router-dom";
 
@@ -25,13 +28,13 @@ const UnimaxxOngoing = () => {
             <div className="um-bg-image-wrapper">
               
               {/* Static Background Image */}
-              <img src={bgImg} alt="Project Background 1" className="um-bg-main-img" />
+              <img src={p4_main} alt="Project Background 1" className="um-bg-main-img" />
               
               <div className="um-overlay-card um-overlay-right">
                 
                 {/* Centered Text Content */}
                 <div className="um-overlay-text-content">
-                  <h3 className="um-card-title font-serief">Modern Residence</h3>
+                  <h3 className="um-card-title font-serief">Mr. BALACHANDAR</h3>
                   
                   <div className="um-btn-align-wrapper row">
                     <Link className="text-decoration-none col-12 col-md-6 hellos gap-3" to="/projects">
@@ -51,13 +54,13 @@ const UnimaxxOngoing = () => {
             <div className="um-bg-image-wrapper">
               
               {/* Static Background Image */}
-              <img src={bgImg} alt="Project Background 2" className="um-bg-main-img" />
+              <img src={p5_main} alt="Project Background 2" className="um-bg-main-img" />
               
               <div className="um-overlay-card um-overlay-left">
                 
                 {/* Centered Text Content */}
                 <div className="um-overlay-text-content">
-                  <h3 className="um-card-title font-serief">Modern Residence</h3>
+                  <h3 className="um-card-title font-serief">Mr .BALAJI</h3>
                   
                   <div className="um-btn-align-wrapper row">
                     <Link className="text-decoration-none col-12 col-md-6 hellos" to="/projects">

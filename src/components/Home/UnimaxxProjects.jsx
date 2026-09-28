@@ -6,12 +6,30 @@ import hero3frame1 from '../../assets/hero3frame1.webp';
 import projectimg1 from '../../assets/projectimg1.webp';
 import projectimg2 from '../../assets/projectimg2.webp';
 
+import p2_main from '../../assets/Corporate_office (10).webp';
+import p3_main from '../../assets/Dr.Vijayalakshmi (6).webp';
+import p4_main from '../../assets/EivvaVilla21 (33).webp';
+import p5_main from '../../assets/EivvaVilla 28 (33).webp';
+import p6_main from '../../assets/EivvaVilla 32  (33).webp';
+import p7_main from '../../assets/view_2.webp';
+import p8_main from '../../assets/meenamadurai (85).webp';
+import p9_main from '../../assets/Pritham (23).webp';
+import p10_main from '../../assets/Pritham (5).webp';
+import p11_main from '../../assets/vivke (5).webp';
+
+
 const UnimaxxProjects = () => {
   const [projects, setProjects] = useState([
-    { id: 1, img: hero3frame1, title: "Modern Residence 1", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
-    { id: 2, img: projectimg1, title: "Modern Residence 2", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
-    { id: 3, img: projectimg2, title: "Modern Residence 3", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
-    { id: 4, img: hero3frame1, title: "Modern Residence 4", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
+    { id: 1, img: p2_main, title: "serenia", type: "COMMERCIAL", location: "TIRUPPUR, TN" },
+    { id: 2, img: p3_main, title: "Dr. VIJAYALAKSHMI", type: "RESIDENTIAL", location: "CHENNAI, TN" },
+    { id: 3, img: p4_main, title: "Mr. BALACHANDAR", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
+    { id: 4, img: p5_main, title: "Mr .BALAJI", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
+    { id: 5, img: p6_main, title: "Mr. SHANMUGAM", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
+    { id: 6, img: p7_main, title: "GOWTHAMI RESIDENCE", type: "RESIDENTIAL", location: "TIRUPPUR, TN" },
+    { id: 7, img: p8_main, title: "MEENA RESIDENCE", type: "RESIDENTIAL", location: "MADURAI, TN" },
+    { id: 8, img: p9_main, title: "PRITHAM RESIDENCE", type: "RESIDENTIAL", location: "COIMBATORE, TN" },
+    { id: 9, img: p10_main, title: "Mr. SUBRAMANI", type: "RESIDENTIAL", location: "ERODE, TN" },
+    { id: 10,img: p11_main, title: "Mr .VIVEK", type: "RESIDENTIAL", location: "CHENNAI, TN" },
   ]);
 
   const [direction, setDirection] = useState(1);

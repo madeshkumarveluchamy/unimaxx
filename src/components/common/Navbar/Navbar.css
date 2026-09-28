@@ -22,9 +22,9 @@
 
   /* ஸ்மூத் அண்ட் ஃபாஸ்ட் டிரான்சிஷன் டைமிங் */
   transition: 
-    background-color 0.2s ease-in-out, 
-    backdrop-filter 0.2s ease-in-out,
-    -webkit-backdrop-filter 0.2s ease-in-out,
+   
+   6
+    
     border-bottom 0.2s ease-in-out,
     box-shadow 0.2s ease-in-out,
     padding 0.3s cubic-bezier(0.25, 1, 0.5, 1),
@@ -142,7 +142,7 @@
     backdrop-filter: blur(20px) saturate(140%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
     border: 1px solid rgba(255, 255, 255, 0.1) !important;
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.25) !important;
+    box-shadow: none !important;
 
   }
 
@@ -253,7 +253,7 @@
     backdrop-filter: blur(20px) saturate(140%) !important;
     -webkit-backdrop-filter: blur(20px) saturate(140%) !important;
     border: 1px solid rgba(255, 255, 255, 0.08) !important;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2) !important;
+    box-shadow: none !important;
   }
 
   .unimaxx-nav-flex-core {

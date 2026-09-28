@@ -2,9 +2,9 @@ import React from 'react';
 import './css/ProjectBottomSection.css';
 
 // தேவையான இமேஜ் ஃபைல்கள்
-import modern4 from '../../assets/modern4.webp';
-import modern5 from '../../assets/modern5.webp';
-import modern6 from '../../assets/modern6.webp'; // இறுதிப் படம்
+import modern4 from '../../assets/cafe (1).webp';
+import modern5 from '../../assets/cafe (2).webp';
+import modern6 from '../../assets/cafe (3).webp'; // இறுதிப் படம்
 
 const ProjectBottomSection = () => {
   return (
