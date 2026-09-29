@@ -49,7 +49,7 @@ const ProjectBottomSection = () => {
               </div>
 
               <div className="nest-timeline-step-card">
-                <h4 className='fsub font-geist'>3. Final Touches</h4>
+                <h4 className='fsub font-geist'>3. Final Details</h4>
                 <p className='fmin font-geist'>
                   Textural elements like linen, rattan, and aged wood 
                   brought a grounded elegance. Subtle brass accents 

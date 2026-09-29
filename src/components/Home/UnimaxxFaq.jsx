@@ -10,33 +10,33 @@ const UnimaxxFaq = () => {
   const faqData = [
     {
       id: 1,
-      question: "1. What is your design philosophy?",
-      answer: "We believe in \"Architecting the Soul of Space.\" Our philosophy centers on the intersection of structural integrity and human experience, ensuring that every project is not just a building, but a functional, inspiring environment tailored to your unique narrative."
+      question: "1. How do you approach each design project?",
+      answer: "We begin by understanding your requirements, lifestyle, preferences, and the character of the space. This allows us to develop designs that balance aesthetics, functionality, and the way the space will be experienced."
     },
     {
       id: 2,
-      question: "2. Do you handle both residential and commercial projects?",
-      answer: "Yes, we handle a wide spectrum of both residential and commercial interior architecture, customized completely to match the scale and brand expectations."
+      question: "2. What types of projects do you undertake?",
+      answer: "We work across residential and commercial projects, developing design solutions that respond to the scale, purpose, character, and specific requirements of each space."
     },
     {
       id: 3,
-      question: "3. How do you integrate sustainability into your designs?",
-      answer: "We carefully source eco-conscious materials, use energy-efficient fixtures, and optimize spatial structures to encourage natural lighting and ventilation."
+      question: "3.  How do you incorporate sustainable design?",
+      answer: "We consider sustainability throughout the design process through thoughtful material selection, efficient lighting, natural ventilation, and planning strategies that make better use of available resources."
     },
     {
       id: 4,
-      question: "4. What is your process from concept to completion?",
-      answer: "Our seamless process involves initial spatial layout concept rendering, detailed structural drawings, material curation, and strict site supervision till execution."
+      question: "4. What does your design process involve?",
+      answer: "Our process moves from understanding your requirements and developing the initial concept to detailed planning, material selection, design development, and coordination through the execution stage."
     },
     {
       id: 5,
-      question: "5. What are your pricing options?",
-      answer: "Our pricing options are transparent and tailored based on the project scale, material selections, and specific customization requirements."
+      question: "5. How is the project cost determined?",
+      answer: "Project costs are developed according to the scope of work, scale, material choices, design requirements, and level of customization. We discuss these factors clearly during the planning stage."
     },
     {
       id: 6,
-      question: "6. Why should we choose your firm?",
-      answer: "We focus on a perfect blend of timeless aesthetics, technical precision, and an uncompromised commitment to bringing your unique spatial vision to life."
+      question: "6. What can we expect when working with your team?",
+      answer: "You can expect a considered design approach, clear communication, attention to detail, and solutions developed around your specific requirements from the initial concept through execution."
     }
   ];
 
@@ -102,7 +102,7 @@ const UnimaxxFaq = () => {
               <div className="um-faq-image-overlay-bar">
                 <div className="um-overlay-text-left">
                   <span className="um-overlay-star">✻</span>
-                  <p className='font-geist fsub'>Still have a question in mind?</p>
+                  <p className='font-geist fsub'>Have a project in mind?</p>
                 </div>
                 <FaqContactGooButton text="Contact Us" />
               </div>

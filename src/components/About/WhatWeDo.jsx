@@ -10,21 +10,21 @@
       {
         id: '01',
         title: 'Interior Design',
-        desc: 'Our interior design service focuses on creating tailored spaces that combine comfort, elegance, and functionality. From modern residences to commercial spaces.',
+        desc: 'We create interiors that reflect the personality and requirements of each space. From spatial planning and material selection to lighting, furniture, and finishing details, every element is considered to create a cohesive and comfortable environment.',
         posClass: 'unq-wwd-pos-1',
         slideFrom: -50, // இடதுபுறத்தில் இருந்து வரும்
       },
       {
         id: '02',
         title: 'Architecture',
-        desc: 'We approach architecture as an art form that merges vision with functionality. Each structure is thoughtfully planned to maximize space, enhance usability.',
+        desc: 'We develop architectural solutions that balance visual character with practical requirements. Every project is approached with careful consideration of its context, proportions, functionality, and long-term usability.',
         posClass: 'unq-wwd-pos-2',
         slideFrom: 50,  // வலதுபுறத்தில் இருந்து வரும்
       },
       {
         id: '03',
         title: 'Bespoke Furniture',
-        desc: 'Elevate your interiors with custom-designed furniture crafted to fit your space perfectly. We create unique pieces that blend striking aesthetics with everyday practicality.',
+        desc: 'We design furniture specifically around the character and requirements of a space. From custom forms to carefully selected materials and finishes, our furniture solutions bring functionality and individuality together.',
         posClass: 'unq-wwd-pos-3',
         slideFrom: -50, // இடதுபுறத்தில் இருந்து வரும்
       }

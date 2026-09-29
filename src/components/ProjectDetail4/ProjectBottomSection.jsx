@@ -33,27 +33,21 @@ const ProjectBottomSection = () => {
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>1. Concept Development</h4>
                 <p className='fmin font-geist'>
-                  We started by capturing the essence of coastal life: 
-                  light, air, and movement. The palette leaned into ocean 
-                  blues, sandy neutrals, and breezy white finishes.
+                  The design process begins by understanding the client's lifestyle, requirements, and expectations for the residence. These insights guide the development of an architectural concept that gives the home a clear identity while responding to its practical needs.
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>2. Spatial Planning</h4>
                 <p className='fmin font-geist'>
-                  An open floor plan with visual flow from room to room 
-                  allows natural light to fill the entire home. We 
-                  emphasized seamless indoor-outdoor transitions.
+                  The 2,344 sq.ft. residence is planned to create a natural flow between its different areas. Careful attention is given to circulation, proportions, functionality, and the relationship between individual spaces. 
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
-                <h4 className='fsub font-geist'>3. Final Touches</h4>
+                <h4 className='fsub font-geist'>3. Design Development</h4>
                 <p className='fmin font-geist'>
-                  Textural elements like linen, rattan, and aged wood 
-                  brought a grounded elegance. Subtle brass accents 
-                  added polish without overwhelming the calm aesthetic.
+                  Architectural elements, materials, finishes, and interior details are brought together to establish a cohesive design language. The result is intended to balance contemporary aesthetics with the comfort and functionality of everyday living. 
                 </p>
               </div>
 

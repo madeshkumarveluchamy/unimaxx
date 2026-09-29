@@ -1,7 +1,7 @@
 import React from 'react'
 import Hero from './Hero'
 import ContactFormSection from './ContactFormSection'
-import UnimaxxFaq from '../Home/UnimaxxFaq'
+import UnimaxxFaq from './UnimaxxFaq'
 
 const ContactHome = () => {
   return (

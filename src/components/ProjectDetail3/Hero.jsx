@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-            Modern Nest: Welcome <br /> Home to Modern Luxury.
+          A Contemporary Home <br/> Designed Around Everyday Living
           </h1>
           
       
@@ -20,9 +20,7 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            Experience a seamless blend of contemporary aesthetics and functional comfort. 
-            Modern Nest is thoughtfully curated to provide a sanctuary that balances 
-            cutting-edge design with the warmth of a true home.
+            A thoughtfully planned residence that brings together contemporary aesthetics, practical spatial planning, and a comfortable living experience. The design is developed around the requirements of the home while giving each space a clear sense of purpose and character.  
           </p>
           
         </div>

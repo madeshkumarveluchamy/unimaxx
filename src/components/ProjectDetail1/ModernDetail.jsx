@@ -43,13 +43,7 @@ const ModernDetail = () => {
             </div>
 
             <p className="nest-top-paragraph font-geist fmin">
-              Designed to exist in harmony with nature, The Glass Pavilion is defined by its 
-              expansive floor to ceiling windows that dissolve the distinction between 
-              architecture and environment. The structure is carefully positioned to follow the 
-              contours of the land, maximizing natural light while offering uninterrupted views 
-              of the surrounding vineyards and distant hills. A neutral material palette, including 
-              polished concrete, raw limestone, and smoked oak, ensures the home feels both 
-              modern and timeless, responding to the shifting light and changing seasons.
+              Modern Nest is a contemporary residential project in Vadavalli, Coimbatore, designed with a focus on comfortable living, efficient planning, and a strong architectural identity. The design approach considers the relationship between spaces, movement, functionality, and everyday use to create a well-balanced home. Contemporary forms and carefully considered details come together to create a residence that feels refined, practical, and connected to modern lifestyles.
             </p>
           </div>
 

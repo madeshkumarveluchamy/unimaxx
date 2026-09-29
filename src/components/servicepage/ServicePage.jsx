@@ -16,79 +16,79 @@ const servicesData = [
   {
     id: "01",
     title: "Architectural Design",
-    desc: "We develop innovative architectural concepts, ensuring each design is practical, aesthetically appealing, and built for longevity. From initial sketches to technical documentation, we create custom solutions tailored to your vision.",
+    desc: "We shape architectural concepts around the purpose, context, and character of each project. Our approach combines creative thinking with practical planning to develop spaces that are distinctive, functional, and built to last. ",
     image: service1Png,
     points: [
-      "Concept development & feasibility studies",
-      "Schematic design & 3D visualization",
-      "Detailed architectural planning & documentation",
-      "Compliance with local regulations & building codes",
-      "Coordination with engineers & contractors"
+      "Concept development & design planning",
+      "Spatial studies & 3D visualisation",
+      "Detailed drawings & documentation",
+      "Site-responsive architectural solutions",
+      "Coordination with technical consultants"
     ]
   },
   {
     id: "02",
     title: "Commercial & Workplace Design",
-    desc: "We design offices, coworking spaces, and commercial hubs that prioritize functionality, aesthetics, and employee well-being. Our spaces foster creativity, efficiency, and a strong brand presence.",
+    desc: "We create commercial and workplace environments that support productivity, reflect brand identity, and provide a thoughtful experience for the people who use them. Every space is planned around its operational and aesthetic requirements.",
     image: service2Png,
     points: [
-      "Office layout & workflow optimization",
-      "Branding & identity integration in design",
-      "Sustainable & flexible workspaces",
-      "Employee well-being & biophilic design",
-      "Technology-driven smart office solutions"
+      " Workplace planning & space optimisation",
+      "Functional zoning & circulation planning",
+      "Brand identity through spatial design",
+      "Flexible workplace environments",
+      " Employee-focused design solutions"
     ]
   },
   {
     id: "03",
     title: "Interior Design & Space Planning",
-    desc: "Our interior design services enhance the functionality and visual appeal of spaces through strategic layouts, custom finishes, and smart material choices. Whether residential, commercial, or hospitality-focused, we create spaces that inspire.",
+    desc: "We transform interiors through purposeful layouts, carefully selected materials, and a considered approach to colour, light, and form. Each design is developed to balance visual character with everyday functionality.",
     image: service3Png,
     points: [
-      "Space planning & layout optimization",
-      "Custom furniture & material selection",
-      "Lighting, color, and texture harmonization",
-      "Smart technology integration",
-      "Workplace ergonomics & residential comfort solutions"
+      "Space planning & functional layouts",
+      "Material & finish selection",
+      "Lighting & colour coordination",
+      "Custom interior elements",
+      " Residential & commercial interiors"
     ]
   },
   {
     id: "04",
     title: "Furniture & Styling Design",
-    desc: "We curate interiors that transcend mere decor, transforming commercial hubs into high performance landscapes. By balancing ergonomic functionality with visual elegance, we design spaces that boost employee well-being. Every element is meticulously selected to serve a purpose while reinforcing your brand's unique identity.",
+    desc: "We complete interiors through carefully considered furniture, textures, accessories, and finishing elements. Each selection contributes to the overall character of the space while maintaining comfort, proportion, and visual balance.",
     image: service4Png,
     points: [
-      "Curated Furniture & Spatial Flow",
-      "Brand-Centric Design Integration",
-      "Adaptive & Sustainable Furnishing",
-      "Ergonomic Comfort & Biophilic Styling",
-      "Integrated Tech-Smart Furnishings"
+      "Furniture selection & placement",
+      "Custom furniture solutions",
+      "Material & fabric coordination",
+      "Decorative styling & accessories",
+      "Complete interior detailing"
     ]
   },
   {
     id: "05",
     title: "Restoration & Adaptive Reuse",
-    desc: "We specialize in restoring heritage buildings and repurposing outdated spaces into contemporary, efficient environments. Our adaptive reuse projects retain historical architectural charm while integrating modern innovations.",
+    desc: "We approach existing structures with an understanding of their character and potential. Through thoughtful restoration and redesign, we help transform older or underused spaces into environments that meet contemporary requirements while retaining their distinctive identity.",
     image: service5Png,
     points: [
-      "Historic preservation & heritage conservation",
-      "Structural assessment & rehabilitation",
-      "Adaptive reuse & space repurposing",
-      "Facade restoration & material matching",
-      "Code compliance & safety upgrades"
+      "Existing space assessment",
+      "Restoration & renovation planning",
+      "Adaptive space transformation",
+      "Material & architectural detailing",
+      "Modern functionality integration"
     ]
   },
   {
     id: "06",
     title: "Project Management & Consulting",
-    desc: "We oversee architectural projects at every stage, managing costs, timelines, and quality control to ensure flawless execution. Our consulting services provide expert insights to optimize planning, construction, and compliance.",
+    desc: "We provide structured guidance throughout the project journey, helping coordinate design decisions, timelines, resources, and execution. Our focus is to keep the process organised while ensuring the design intent is carried through to completion.",
     image: service6Png,
     points: [
-      "Budgeting & cost estimation",
-      "Scheduling & timeline management",
-      "Contractor selection & coordination",
-      "Construction oversight & quality control",
-      "Risk assessment & problem-solving strategies"
+      "Project planning & coordination",
+      "Cost planning & estimation ",
+      "Timeline & execution monitoring",
+      "Contractor & consultant coordination",
+      "Quality review & project guidance"
     ]
   }
 ];

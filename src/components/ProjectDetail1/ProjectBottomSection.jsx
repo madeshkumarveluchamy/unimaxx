@@ -33,27 +33,21 @@ const ProjectBottomSection = () => {
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>1. Concept Development</h4>
                 <p className='fmin font-geist'>
-                  We started by capturing the essence of coastal life: 
-                  light, air, and movement. The palette leaned into ocean 
-                  blues, sandy neutrals, and breezy white finishes.
+                  The project began with an understanding of the requirements, lifestyle, and possibilities of the site. The design direction was developed around a contemporary architectural language, with emphasis on creating a home that feels distinctive while remaining practical for everyday living. 
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>2. Spatial Planning</h4>
                 <p className='fmin font-geist'>
-                  An open floor plan with visual flow from room to room 
-                  allows natural light to fill the entire home. We 
-                  emphasized seamless indoor-outdoor transitions.
+                  The residence is carefully planned to establish functional zones, comfortable circulation, and a natural relationship between different areas. Each space is considered as part of the larger composition, creating a cohesive flow throughout the home.
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
-                <h4 className='fsub font-geist'>3. Final Touches</h4>
+                <h4 className='fsub font-geist'>3. Final Details</h4>
                 <p className='fmin font-geist'>
-                  Textural elements like linen, rattan, and aged wood 
-                  brought a grounded elegance. Subtle brass accents 
-                  added polish without overwhelming the calm aesthetic.
+                  Architectural elements, materials, finishes, and interior details are brought together to establish a consistent visual identity. Every element is considered to support the overall character of the residence while maintaining comfort, functionality, and contemporary appeal.
                 </p>
               </div>
 

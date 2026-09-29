@@ -33,27 +33,21 @@ const ProjectBottomSection = () => {
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>1. Concept Development</h4>
                 <p className='fmin font-geist'>
-                  We started by capturing the essence of coastal life: 
-                  light, air, and movement. The palette leaned into ocean 
-                  blues, sandy neutrals, and breezy white finishes.
+                  The project began with an understanding of the client's requirements, the site's possibilities, and the intended experience of the home. The design direction was developed to establish a contemporary residence with a distinct architectural character and a practical approach to everyday living.
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>2. Spatial Planning</h4>
                 <p className='fmin font-geist'>
-                  An open floor plan with visual flow from room to room 
-                  allows natural light to fill the entire home. We 
-                  emphasized seamless indoor-outdoor transitions.
+                  The 1,170 sq.ft. layout is carefully organised to create purposeful spaces while maintaining comfortable movement throughout the residence. Each area is planned in relation to the overall layout, creating a cohesive and functional flow. 
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
-                <h4 className='fsub font-geist'>3. Final Touches</h4>
+                <h4 className='fsub font-geist'>3. Final Details</h4>
                 <p className='fmin font-geist'>
-                  Textural elements like linen, rattan, and aged wood 
-                  brought a grounded elegance. Subtle brass accents 
-                  added polish without overwhelming the calm aesthetic.
+                  Architectural elements, finishes, and interior details are brought together to create a consistent visual language. The final design balances contemporary aesthetics with comfort, functionality, and the practical needs of modern residential living. 
                 </p>
               </div>
 

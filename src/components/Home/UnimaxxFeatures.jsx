@@ -70,16 +70,16 @@ const UnimaxxFeatures = () => {
         <div className="arch-feat-header sticky-header">
           <div className="arch-feat-left-title">
             <h2 className='font-alice stit'>
-              Quiet corners, bold <br /> statements <img 
+              Thoughtful spaces <br /> refined <img 
                 src={staricon} 
                 alt="Star Icon" 
                 className="unimaxx-asterisk-icon" 
-              /> we design<br/> spaces that connect with you.
+              /> details we create<br/> places that feel distinctly yours.  
             </h2>
           </div>
           
           <div className="arch-feat-right-cta">
-            <p className='font-geist smin'>With a seamless process and attention to detail, we turn ideas into beautiful, livable realities.</p>
+            <p className='font-geist smin'>With thoughtful design and meticulous execution, we transform ideas into refined, functional, and enduring spaces. </p>
             <div className="arch-feat-btn-container">
               <ArchFeatGooButton />
             </div>
@@ -93,7 +93,7 @@ const UnimaxxFeatures = () => {
           <div className="native-col native-col-1">
             <div className="arch-feat-card arch-feat-testimonial sticky-item tall-item">
               <div className="arch-feat-stars">★★★★★</div>
-              <p className='smin font-geist'>We required a complete architectural vision, and this team delivered beyond our expectations. From the initial spatial concept to the final site execution, every element feels cohesive, intentional, and masterfully crafted.</p>
+              <p className='smin font-geist'>From the first consultation to the final details, the experience was seamless and thoughtfully managed. The team understood our vision and translated it into a space that feels refined, practical, and truly personal.</p>
             </div>
           </div>
 
@@ -104,8 +104,8 @@ const UnimaxxFeatures = () => {
             </div>
             <div className="arch-feat-card arch-feat-text-type sticky-item row-2-item">
               <span className="arch-feat-card-num">02</span>
-              <h3 className='font-serif stit'>Sustainable by Design</h3>
-              <p className='font-geist smin'>We have delivered 50+ projects that prioritize integrity, technical excellence, and long-term durability in every build.</p>
+              <h3 className='font-serif stit'>Built Around You</h3>
+              <p className='font-geist smin'>With 50+ projects delivered, our designs are shaped around individual needs, lifestyles, and the unique possibilities of every space.</p>
             </div>
           </div>
 
@@ -113,8 +113,8 @@ const UnimaxxFeatures = () => {
           <div className="native-col native-col-3">
             <div className="arch-feat-card arch-feat-text-type sticky-item row-1-item">
               <span className="arch-feat-card-num">01</span>
-              <h3 className='font-serif stit'>Structural Precision</h3>
-              <p className='smin font-geist'>We have delivered 50+ projects that integrate eco-conscious materials and energy-efficient systems to harmonize with the environment.</p>
+              <h3 className='font-serif stit'>Design with Intention</h3>
+              <p className='smin font-geist'>With 50+ projects delivered, we develop spaces where thoughtful planning, functionality, and visual character come together naturally. </p>
             </div>
             <div className="arch-feat-image-card sticky-item row-2-item">
               <img src={frame2} alt="Feature 2" />
@@ -128,8 +128,8 @@ const UnimaxxFeatures = () => {
             </div>
             <div className="arch-feat-card arch-feat-text-type sticky-item row-2-item">
               <span className="arch-feat-card-num">03</span>
-              <h3 className='font-serif stit'>Beauty with purpose</h3>
-              <p className='font-geist smin'>We have delivered 50+ projects that transform raw volumes into inspiring, functional spaces tailored to the human experience.</p>
+              <h3 className='font-serif stit'>Form Meets Function</h3>
+              <p className='font-geist smin'>With 50+ projects delivered, we create balanced environments that combine distinctive design with comfort, usability, and everyday living.</p>
             </div>
           </div>
 

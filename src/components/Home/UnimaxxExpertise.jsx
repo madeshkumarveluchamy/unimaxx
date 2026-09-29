@@ -22,45 +22,45 @@ const UnimaxxExpertise = () => {
       num: "01",
       img: expertiseimg1,
       title: "Residential Interiors",
-      subtitle: "Elegant, livable spaces",
+      subtitle: "Spaces made personal",
       count: "50+",
-      desc: "This process ensures that each home is customized, from the overall layout and flow of rooms to the choice of materials. Every business has distinct requirements based on its industry, target audience, and organisational culture"
+      desc: "We design homes around individual lifestyles, creating balanced layouts, thoughtful material palettes, and interiors that feel comfortable, distinctive, and naturally connected."
     },
     {
       id: 2,
       num: "02",
       img: expertiseimg2,
       title: "Commercial Spaces",
-      subtitle: "Branded environments that work",
+      subtitle: "Designed for your business",
       count: "30+",
-      desc: "Creating functional, inspiring environments for corporate offices, retail stores, and commercial venues tailored to match your brand identity."
+      desc: "We create purposeful commercial environments that reflect each brand while considering functionality, customer experience, workflow, and the character of the business."
     },
     {
       id: 3,
       num: "03",
       img: expertiseimg3,
       title: "Interior Architecture",
-      subtitle: "Structural design with depth",
+      subtitle: "Where space meets structure",
       count: "25+",
-      desc: "Merging structural engineering with interior aesthetics to reshape interior volumes, optimizing light, spatial flow, and structural integrity."
+      desc: "We thoughtfully shape interior volumes by combining spatial planning, architectural elements, natural light, and material expression to create cohesive and functional environments."
     },
     {
       id: 4,
       num: "04",
       img: expertiseimg4,
       title: "Furniture & Styling",
-      subtitle: "Curated design layers",
+      subtitle: "Details that complete the space",
       count: "100+",
-      desc: "Handpicked furniture selections, custom upholstery, and bespoke styling layers that give your spaces a premium, complete, and personal touch."
+      desc: "From carefully selected furniture to custom pieces and finishing details, we bring together textures, forms, and accents that give every interior its own distinctive character."
     },
     {
       id: 5,
       num: "05",
       img: expertiseimg5,
       title: "Renovation Consulting",
-      subtitle: "Guidance through change",
+      subtitle: "Transforming existing spaces",
       count: "40+",
-      desc: "Expert restoration and modern remodeling consultations to breathe new life into existing structures safely and efficiently."
+      desc: "We help reimagine existing spaces through considered renovation strategies, practical planning, and design guidance that brings new function and character to established environments."
     }
   ];
 
@@ -95,7 +95,7 @@ const UnimaxxExpertise = () => {
         <div className="um-expertise-header">
           <h2 className="um-exp-title font-alice text-white">Our expertise</h2>
           <p className="um-exp-desc-top fmin font-geist">
-            We offer a full spectrum of interior design — each tailored to elevate spaces with clarity and timeless aesthetic value.
+            Architecture and interiors shaped around how you live, work, and experience a space. From initial concepts to refined details, we create environments with clarity, character, and purpose. 
           </p>
         </div>
 

@@ -33,27 +33,21 @@ const ProjectBottomSection = () => {
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>1. Concept Development</h4>
                 <p className='fmin font-geist'>
-                  We started by capturing the essence of coastal life: 
-                  light, air, and movement. The palette leaned into ocean 
-                  blues, sandy neutrals, and breezy white finishes.
+                  The project begins with an understanding of the client's requirements, the site's characteristics, and the way the home is intended to be experienced. These considerations form the foundation for a residential concept that is both practical and visually distinctive.
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>2. Spatial Planning</h4>
                 <p className='fmin font-geist'>
-                  An open floor plan with visual flow from room to room 
-                  allows natural light to fill the entire home. We 
-                  emphasized seamless indoor-outdoor transitions.
+                  The available 1,166 sq.ft. area is carefully planned to establish functional spaces and comfortable circulation. Each area is considered in relation to the overall layout, creating a cohesive flow throughout the residence.
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
-                <h4 className='fsub font-geist'>3. Final Touches</h4>
+                <h4 className='fsub font-geist'>3. Design Development</h4>
                 <p className='fmin font-geist'>
-                  Textural elements like linen, rattan, and aged wood 
-                  brought a grounded elegance. Subtle brass accents 
-                  added polish without overwhelming the calm aesthetic.
+                  Architectural elements, materials, finishes, and interior details are brought together to establish a consistent visual identity. The design balances contemporary expression with the comfort and functionality expected from a modern home. 
                 </p>
               </div>
 

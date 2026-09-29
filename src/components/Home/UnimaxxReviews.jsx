@@ -23,39 +23,111 @@ const UnimaxxReviews = () => {
     {
       id: 1,
       stars: "★★★★★",
-      text: "Their work brought our entire brand to life—subtle, thoughtful, and timeless. Every element felt carefully crafted, both visually and emotionally.",
+      text: "The team understood our requirements from the beginning and translated our ideas into a space that feels both elegant and comfortable. Their attention to detail throughout the project was truly appreciated.",
       userImg: user1,
-      userName: "Amelia Hart",
-      company: "Vale Studio",
+      userName: "Dr. Vijayalakshmi ",
+      company: "Residential",
       videoUrl: reviewVideo1
     },
     {
       id: 2,
       stars: "★★★★★",
-      text: "The team captured our vision better than we imagined. From mood boards to final space, everything felt clear, smooth, and perfectly on-brand.",
+      text: "Working with the team was a smooth and well-organized experience. They brought together thoughtful design, practical planning, and beautiful details to create a space that feels complete and refined.",
       userImg: user2,
-      userName: "Daniel Rees",
-      company: "Rees & Co",
+      userName: "Serenia ",
+      company: "Commercial",
       videoUrl: reviewVideo1
     },
     {
       id: 3,
       stars: "★★★★★",
-      text: "We required a complete architectural vision, and this team delivered beyond our expectations. Every element feels cohesive and intentional.",
+      text: "We appreciated how carefully the team listened to our requirements and developed the design around them. The final result is functional, distinctive, and beautifully executed.",
       userImg: user3,
-      userName: "Julian Meyer",
-      company: "Partner",
+      userName: "Mr. Balachandar",
+      company: "Residential",
       videoUrl: reviewVideo1
     },
     {
       id: 4,
       stars: "★★★★★",
-      text: "We felt heard and understood at every step. Their design choices not only impressed—but told our story in ways we never could with words.",
+      text: "The entire design process was handled with clarity and attention to detail. The team understood our vision and created a space that feels practical, modern, and personal.",
       userImg: user4,
-      userName: "Sophie Lang",
-      company: "Atelier Nine",
+      userName: "Mr. Balaji",
+      company: "Residential",
       videoUrl: reviewVideo1
-    }
+    },
+    {
+      id: 5,
+      stars: "★★★★★",
+      text: "From the initial discussions to the final execution, the team maintained a thoughtful approach throughout. The design reflects our needs while adding a strong sense of character to the space.",
+      userImg: user4,
+      userName: "Mr. Shanmugam",
+      company: "Residential",
+      videoUrl: reviewVideo1
+    },
+    {
+      id: 6,
+      stars: "★★★★★",
+      text: "Our home was designed with a wonderful balance of comfort, functionality, and aesthetics. The team paid attention to the smallest details and made the entire experience feel effortless.",
+      userImg: user4,
+      userName: "Gowthami Residence",
+      company: "Residential",
+      videoUrl: reviewVideo1
+    },
+    {
+      id: 7,
+      stars: "★★★★★",
+      text: "The team took the time to understand how we wanted our home to feel and brought that vision into the design beautifully. Every space feels considered, comfortable, and uniquely ours.",
+      userImg: user4,
+      userName: "Meena Residence",
+      company: "Residential",
+      videoUrl: reviewVideo1
+    },
+    {
+      id: 8,
+      stars: "★★★★★",
+      text: "We were impressed by the way the team transformed our ideas into a cohesive design. Their planning, creativity, and attention to detail made a real difference to the final outcome.",
+      userImg: user4,
+      userName: "Pritham Residence",
+      company: "Residential",
+      videoUrl: reviewVideo1
+    },
+      {
+      id: 9,
+      stars: "★★★★★",
+      text: "The team approached the project with professionalism and genuine attention to our requirements. The finished space is well planned, functional, and reflects the vision we had from the beginning.",
+      userImg: user4,
+      userName: "Mr. Subramani",
+      company: "Residential",
+      videoUrl: reviewVideo1
+    },
+      {
+      id: 10,
+      stars: "★★★★★",
+      text: "What stood out to us was the team's ability to combine creativity with practical design. Communication was clear throughout, and the final space exceeded what we had imagined.",
+      userImg: user4,
+      userName: "Mr. Vivek",
+      company: "Residential",
+      videoUrl: reviewVideo1
+    },
+      {
+      id: 11,
+      stars: "★★★★★",
+      text: "Our home feels completely transformed. The design brings together beautiful details and everyday functionality in a way that feels natural, comfortable, and truly suited to our family.",
+      userImg: user4,
+      userName: "Thara Residence",
+      company: "Residential",
+      videoUrl: reviewVideo1
+    },
+    {
+      id: 12,
+      stars: "★★★★★",
+      text: "The team understood the character we wanted for the café and translated it into a welcoming and distinctive environment. The attention to space, details, and overall experience made the design stand out.",
+      userImg: user4,
+      userName: "Cafe",
+      company: "Commercial",
+      videoUrl: reviewVideo1
+    },
   ];
 
   // 🎯 மாற்றம் 1: Infinite Drag-க்காக 4 Sets (16 Cards) உருவாக்குகிறோம்

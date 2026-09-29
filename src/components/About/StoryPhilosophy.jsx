@@ -56,8 +56,8 @@ useEffect(() => {
             
             <h2 className="ux-philo-main-title slide-from-left font-alice">
               Design with <br />
-              Purpose, Build <br />
-              with Integrity
+              Clarity. Create <br />
+              with Purpose.
             </h2>
 
             <div className="ux-philo-animated-line main-line line-draw"></div>
@@ -68,9 +68,7 @@ useEffect(() => {
               <div className="ux-philo-animated-line sub-line line-draw"></div>
               
               <p className="ux-philo-desc slide-from-left mainsub font-geist">
-                At Unimaxx, we believe architecture should improve lives, respect the environment, and tell a story. 
-                Every line we draw reflects purpose, creativity, and care. Our mission is to deliver spaces that endure 
-                aesthetically, functionally, and emotionally.
+                Our mission is to create spaces that respond thoughtfully to the way people live, work, and interact. We combine creativity with practical thinking to deliver designs that are visually refined, functionally strong, and carefully considered from concept through completion.
               </p>
             </div>
           </div>
@@ -98,9 +96,7 @@ useEffect(() => {
               <div className="ux-philo-animated-line sub-line line-draw"></div>
 
               <p className="ux-philo-desc slide-from-right mainsub font-geist desc-story">
-                Our vision is to create purposeful, innovative, and enduring spaces through a process that values 
-                collaboration, creativity, and sustainability. Every line we draw and every space we craft reflects our 
-                commitment to human-centered design, technical precision, and timeless aesthetic values.
+                We aspire to create architecture and interiors that remain meaningful beyond changing trends. Through collaboration, thoughtful planning, and attention to detail, we aim to develop spaces where design, functionality, and individual character come together naturally.
               </p>
             </div>
           </div>

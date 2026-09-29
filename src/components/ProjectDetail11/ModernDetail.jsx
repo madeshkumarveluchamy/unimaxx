@@ -42,13 +42,7 @@ const ModernDetail = () => {
             </div>
 
             <p className="nest-top-paragraph font-geist fmin">
-              Designed to exist in harmony with nature, The Glass Pavilion is defined by its 
-              expansive floor to ceiling windows that dissolve the distinction between 
-              architecture and environment. The structure is carefully positioned to follow the 
-              contours of the land, maximizing natural light while offering uninterrupted views 
-              of the surrounding vineyards and distant hills. A neutral material palette, including 
-              polished concrete, raw limestone, and smoked oak, ensures the home feels both 
-              modern and timeless, responding to the shifting light and changing seasons.
+              This 1,170 sq.ft. east-facing residence in Chennai is designed to create a comfortable and well-organised setting for everyday living. The planning focuses on efficient space utilisation, clear circulation, and a practical relationship between different areas of the home. Contemporary architectural elements and carefully considered design details come together to create a residence that feels refined, functional, and welcoming. 
             </p>
           </div>
 

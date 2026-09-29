@@ -42,13 +42,7 @@ const ModernDetail = () => {
             </div>
 
             <p className="nest-top-paragraph font-geist fmin">
-              Designed to exist in harmony with nature, The Glass Pavilion is defined by its 
-              expansive floor to ceiling windows that dissolve the distinction between 
-              architecture and environment. The structure is carefully positioned to follow the 
-              contours of the land, maximizing natural light while offering uninterrupted views 
-              of the surrounding vineyards and distant hills. A neutral material palette, including 
-              polished concrete, raw limestone, and smoked oak, ensures the home feels both 
-              modern and timeless, responding to the shifting light and changing seasons.
+              This 2,733 sq.ft. east-facing residence in Coimbatore is designed around the requirements of modern family living. The planning focuses on creating well-connected spaces, comfortable circulation, and a balanced relationship between private and shared areas. Contemporary architectural elements are combined with carefully considered materials and finishes to create a home that feels welcoming, functional, and visually cohesive.
             </p>
           </div>
 

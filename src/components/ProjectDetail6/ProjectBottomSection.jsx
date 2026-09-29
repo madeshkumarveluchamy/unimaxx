@@ -33,27 +33,21 @@ const ProjectBottomSection = () => {
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>1. Concept Development</h4>
                 <p className='fmin font-geist'>
-                  We started by capturing the essence of coastal life: 
-                  light, air, and movement. The palette leaned into ocean 
-                  blues, sandy neutrals, and breezy white finishes.
+                  The design began with an understanding of the client's requirements, lifestyle, and the potential of the site. The concept focuses on creating a contemporary residence with a clear identity and a comfortable living experience. 
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
                 <h4 className='fsub font-geist'>2. Spatial Planning</h4>
                 <p className='fmin font-geist'>
-                  An open floor plan with visual flow from room to room 
-                  allows natural light to fill the entire home. We 
-                  emphasized seamless indoor-outdoor transitions.
+                  The 2,693 sq.ft. residence is thoughtfully planned to establish functional spaces, comfortable circulation, and a natural connection between different areas. Each zone is designed to support everyday living.
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
-                <h4 className='fsub font-geist'>3. Final Touches</h4>
+                <h4 className='fsub font-geist'>3. Final Details </h4>
                 <p className='fmin font-geist'>
-                  Textural elements like linen, rattan, and aged wood 
-                  brought a grounded elegance. Subtle brass accents 
-                  added polish without overwhelming the calm aesthetic.
+                  Architectural forms, materials, finishes, and interior elements are carefully brought together to create a cohesive visual language. The final design balances contemporary aesthetics with warmth, comfort, and functionality.
                 </p>
               </div>
 

@@ -43,13 +43,7 @@ const ModernDetail = () => {
             </div>
 
             <p className="nest-top-paragraph font-geist fmin">
-              Designed to exist in harmony with nature, The Glass Pavilion is defined by its 
-              expansive floor to ceiling windows that dissolve the distinction between 
-              architecture and environment. The structure is carefully positioned to follow the 
-              contours of the land, maximizing natural light while offering uninterrupted views 
-              of the surrounding vineyards and distant hills. A neutral material palette, including 
-              polished concrete, raw limestone, and smoked oak, ensures the home feels both 
-              modern and timeless, responding to the shifting light and changing seasons.
+              Designed as a contemporary workspace in Tiruppur, Serenia combines clean architectural lines with a refined and functional interior environment. The 959 sq.ft. space is thoughtfully planned to accommodate focused work, collaboration, and everyday movement while maintaining a sense of openness. Glass partitions create visual connectivity between work areas, while a restrained palette of white surfaces, wood textures, and subtle marble detailing adds warmth and sophistication. Carefully considered furniture, lighting, and spatial proportions complete a professional workplace designed for comfort, efficiency, and a distinctive visual identity. 
             </p>
           </div>
 

@@ -24,9 +24,7 @@ const AboutStoryFirm = () => {
             </div>
             
             <p className="ux-firm-description font-geist mainsub" >
-              We bridge the gap between imagination and reality, transforming complex concepts 
-              into landmark structures that redefine the skyline. Guided by innovation and a 
-              passion for excellence, we create spaces that stand as a testament to your legacy.
+              We believe great spaces begin with a clear understanding of the people, purpose, and possibilities behind them. At Unimaxx Architects & Interiors, we bring together architectural thinking, interior design, and craftsmanship to create spaces that are distinctive, functional, and made to last.
             </p>
             
             <AboutGooButton />
