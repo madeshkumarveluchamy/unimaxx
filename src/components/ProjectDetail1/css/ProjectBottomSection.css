@@ -104,7 +104,7 @@
   aspect-ratio: 16 / 6; /* படத்தில் உள்ளவாறு கச்சிதமான லேண்ட்ஸ்கேப் ரேஷியோ */
   border-radius: 16px;
   overflow: hidden;
-  margin-top: 20px; /* டைம்லைன் முடிந்த பிறகு வரும் கூடுதல் கேப் */
+  margin-top: 120px; /* டைம்லைன் முடிந்த பிறகு வரும் கூடுதல் கேப் */
 }
 
 .nest-final-closet-frame img {
@@ -130,6 +130,9 @@
     grid-template-columns: 1fr;
     gap: 40px;
   }
+  .nest-final-closet-frame{
+    margin-top: 20px; /* டேப்லெட்டுக்கு சிறிய கேப் */
+  }
   
   .nest-timeline-text-holder {
     position: static;
@@ -146,6 +149,10 @@
   .nest-full-banner-frame,
   .nest-final-closet-frame {
     aspect-ratio: 4 / 3; /* மொபைலுக்கு உகந்த அளவு */
+  }
+
+  .nest-final-closet-frame {
+    margin-top: 20px; /* மொபைலுக்கு சிறிய கேப் */
   }
 
   .nest-timeline-main-title {

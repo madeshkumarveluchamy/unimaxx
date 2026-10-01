@@ -31,29 +31,23 @@ const ProjectBottomSection = () => {
             <div className="nest-timeline-steps-stack">
               
               <div className="nest-timeline-step-card">
-                <h4 className='fsub font-geist'>1. Concept Development</h4>
+                <h4 className='fsub font-geist'>1. Understanding the Workplace</h4>
                 <p className='fmin font-geist'>
-                  We started by capturing the essence of coastal life: 
-                  light, air, and movement. The palette leaned into ocean 
-                  blues, sandy neutrals, and breezy white finishes.
+                  The design began with an understanding of the workplace requirements, spatial possibilities, and the experience expected from a contemporary professional environment. The focus was on creating a setting that feels organised, open, and purposeful.
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
-                <h4 className='fsub font-geist'>2. Spatial Planning</h4>
+                <h4 className='fsub font-geist'>2. Planning the Space</h4>
                 <p className='fmin font-geist'>
-                  An open floor plan with visual flow from room to room 
-                  allows natural light to fill the entire home. We 
-                  emphasized seamless indoor-outdoor transitions.
+                  The interior was planned around efficient work areas, clear circulation, and a comfortable relationship between different zones. Furniture placement and spatial proportions were carefully considered to support the everyday functions of the workplace.
                 </p>
               </div>
 
               <div className="nest-timeline-step-card">
-                <h4 className='fsub font-geist'>3. Final Details</h4>
+                <h4 className='fsub font-geist'>3. Creating the Final Experience</h4>
                 <p className='fmin font-geist'>
-                  Textural elements like linen, rattan, and aged wood 
-                  brought a grounded elegance. Subtle brass accents 
-                  added polish without overwhelming the calm aesthetic.
+                  A restrained material palette, clean forms, and carefully selected furnishings bring consistency to the interior. Large openings introduce a strong connection with the surrounding environment, while the overall design maintains a professional and contemporary character.
                 </p>
               </div>
 
