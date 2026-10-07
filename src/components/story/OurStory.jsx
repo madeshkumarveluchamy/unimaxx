@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import './css/OurStory.css';
 import staricon from '../../assets/logo1.webp';
-import heroBg1Png from '../../assets/hero-bg1.webp';
+import heroBg1Png from '../../assets/Thara Residence (12).webp';
 
 // ==========================================
 // 🎯 1. உங்க Project சம்பந்தமான Images-அ இங்க Import பண்ணுங்க
@@ -30,7 +30,7 @@ import p8_main from '../../assets/meenamadurai (85).webp';
 import p9_main from '../../assets/Pritham (23).webp';
 import p10_main from '../../assets/Pritham (5).webp';
 import p11_main from '../../assets/vivke (5).webp';
-import p12_main from '../../assets/thara (7).webp';
+import p12_main from '../../assets/Thara Residence (3).webp';
 
 import StoryHeroGooButton from './StoryHeroGooButton';
 import ProjectGooButton from './ProjectGooButton';
@@ -39,6 +39,18 @@ import ProjectGooButton from './ProjectGooButton';
 // 🎯 2. இங்க தான் நீங்க Import பண்ண Images-அ கார்டுக்கு Assign பண்றீங்க
 // ==========================================
 const portfolioData = [
+
+  {
+    id: 12,
+    mainImage: p12_main,
+    popupImages: [p3_img1, p3_img2],
+    cardTitle: "THARA RESIDENCE",
+    category: "RESIDENTIAL",
+    location: "CHENNAI, TN",
+    alignRight: false,
+    path: "/projects/thara-residence"
+  },
+
   {
     id: 2,
     mainImage: p2_main,
@@ -139,16 +151,7 @@ const portfolioData = [
     alignRight: true,
     path: "/projects/mr-vivek"
   },
-  {
-    id: 12,
-    mainImage: p12_main,
-    popupImages: [p3_img1, p3_img2],
-    cardTitle: "THARA RESIDENCE",
-    category: "RESIDENTIAL",
-    location: "CHENNAI, TN",
-    alignRight: false,
-    path: "/projects/thara-residence"
-  },
+  
   {
     id: 1,
     mainImage: p1_main,

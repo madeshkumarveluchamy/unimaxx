@@ -41,6 +41,21 @@ html::-webkit-scrollbar {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  /* Fallback color */
+}
+
+.story-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Your content should stay above overlay */
+.story-hero-section > * {
+  position: relative;
+  z-index: 2;
 }
 
 .story-hero-bg-image {

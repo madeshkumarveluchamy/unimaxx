@@ -1,7 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './css/UnimaxxReviews.css';
 
-import reviewVideo1 from '../../assets/bg-videos.mp4'; 
+import reviewVideo1 from "../../assets/unimaxx1(1).mp4"; 
+import reviewVideo2 from "../../assets/tharavideo.mp4"; 
 import user1 from '../../assets/user1.webp';
 import user2 from '../../assets/user2.webp';
 import user3 from '../../assets/user3.webp';
@@ -117,7 +118,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Thara Residence",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
     {
       id: 12,
@@ -130,12 +131,12 @@ const UnimaxxReviews = () => {
     },
   ];
 
-  // 🎯 மாற்றம் 1: Infinite Drag-க்காக 4 Sets (16 Cards) உருவாக்குகிறோம்
+  // 🎯 மாற்றம் 1: Infinite Drag-க்காக 4 Sets உருவாக்குகிறோம் (String IDs to prevent overlap)
   const displayReviews = [
-    ...reviewsData,
-    ...reviewsData.map(review => ({ ...review, id: review.id + 4 })),
-    ...reviewsData.map(review => ({ ...review, id: review.id + 8 })),
-    ...reviewsData.map(review => ({ ...review, id: review.id + 12 }))
+    ...reviewsData.map(review => ({ ...review, uniqueId: `set1-${review.id}` })),
+    ...reviewsData.map(review => ({ ...review, uniqueId: `set2-${review.id}` })),
+    ...reviewsData.map(review => ({ ...review, uniqueId: `set3-${review.id}` })),
+    ...reviewsData.map(review => ({ ...review, uniqueId: `set4-${review.id}` }))
   ];
 
   // 🎯 Auto-Scroll & Infinite Seamless Loop Animation 
@@ -148,7 +149,7 @@ const UnimaxxReviews = () => {
       // Responsive ஆக அகலத்தை (Width) கணக்கிடுதல் (Mobile & Desktop)
       const cardWidth = slider.children[0]?.offsetWidth || 350;
       const gap = 24; // CSS-ல் உள்ள gap அளவு
-      const SET_WIDTH = (cardWidth + gap) * 4; // 1 Set-ன் மொத்த நீளம்
+      const SET_WIDTH = (cardWidth + gap) * reviewsData.length; // 1 Set-ன் மொத்த நீளம் (இப்போது 12 items)
 
       // ==========================================
       // 🎯 மாற்றம் 2: PERFECT SEAMLESS LOOP (எப்போதும் இயங்கும்)
@@ -174,7 +175,7 @@ const UnimaxxReviews = () => {
     animationRef.current = requestAnimationFrame(autoScroll);
 
     return () => cancelAnimationFrame(animationRef.current);
-  }, [activeVideoId]); 
+  }, [activeVideoId, reviewsData.length]); 
 
   // ==========================================
   // Mouse Drag Events (Desktop Only)
@@ -256,16 +257,17 @@ const UnimaxxReviews = () => {
           onMouseMove={handleMouseMove}
         >
           {displayReviews.map((review) => {
-            const isPlaying = activeVideoId === review.id;
+            // Use uniqueId for tracking the active video
+            const isPlaying = activeVideoId === review.uniqueId;
             
             return (
               <div 
-                key={review.id}
+                key={review.uniqueId} 
                 className={`um-review-card ${isPlaying ? 'video-active' : ''}`}
-                onClick={() => handleCardClick(review.id)}
+                onClick={() => handleCardClick(review.uniqueId)} 
               >
                 <video 
-                  ref={(el) => (videoRefs.current[review.id] = el)}
+                  ref={(el) => (videoRefs.current[review.uniqueId] = el)} 
                   src={review.videoUrl}
                   className="um-card-video-bg"
                   loop

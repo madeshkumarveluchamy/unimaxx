@@ -23,7 +23,7 @@ const UnimaxxExpertise = () => {
       img: expertiseimg1,
       title: "Residential Interiors",
       subtitle: "Spaces made personal",
-      count: "50+",
+      count: "30+",
       desc: "We design homes around individual lifestyles, creating balanced layouts, thoughtful material palettes, and interiors that feel comfortable, distinctive, and naturally connected."
     },
     {
@@ -32,7 +32,7 @@ const UnimaxxExpertise = () => {
       img: expertiseimg2,
       title: "Commercial Spaces",
       subtitle: "Designed for your business",
-      count: "30+",
+      count: "10+",
       desc: "We create purposeful commercial environments that reflect each brand while considering functionality, customer experience, workflow, and the character of the business."
     },
     {
@@ -41,7 +41,7 @@ const UnimaxxExpertise = () => {
       img: expertiseimg3,
       title: "Interior Architecture",
       subtitle: "Where space meets structure",
-      count: "25+",
+      count: "20+",
       desc: "We thoughtfully shape interior volumes by combining spatial planning, architectural elements, natural light, and material expression to create cohesive and functional environments."
     },
     {
@@ -50,7 +50,7 @@ const UnimaxxExpertise = () => {
       img: expertiseimg4,
       title: "Furniture & Styling",
       subtitle: "Details that complete the space",
-      count: "100+",
+      count: "20+",
       desc: "From carefully selected furniture to custom pieces and finishing details, we bring together textures, forms, and accents that give every interior its own distinctive character."
     },
     {
@@ -59,7 +59,7 @@ const UnimaxxExpertise = () => {
       img: expertiseimg5,
       title: "Renovation Consulting",
       subtitle: "Transforming existing spaces",
-      count: "40+",
+      count: "100+",
       desc: "We help reimagine existing spaces through considered renovation strategies, practical planning, and design guidance that brings new function and character to established environments."
     }
   ];

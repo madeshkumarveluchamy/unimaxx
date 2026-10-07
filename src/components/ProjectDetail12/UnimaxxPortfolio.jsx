@@ -2,7 +2,20 @@ import React, { useState } from 'react';
 import '../ProjectDetail1/css/UnimaxxPortfolio.css';
 
 // நாம் ஏற்கனவே பயன்படுத்திய அதே இமேஜ் ஃபைல்கள்
-import modern1 from '../../assets/tharacut1.webp';
+import modern1 from '../../assets/Thara Residence (1).webp';
+import modern_1 from '../../assets/Thara Residence (2).webp';
+import modern_2 from '../../assets/Thara Residence (3).webp';
+import modern_3 from '../../assets/Thara Residence (4).webp';
+import modern_4 from '../../assets/Thara Residence (5).webp';
+import modern_5 from '../../assets/Thara Residence (6).webp';
+import modern_6 from '../../assets/Thara Residence (7).webp';
+import modern_7 from '../../assets/Thara Residence (8).webp';
+import modern_8 from '../../assets/Thara Residence (9).webp';
+import modern_9 from '../../assets/Thara Residence (10).webp';
+import modern_10 from '../../assets/Thara Residence (11).webp';
+import modern_11 from '../../assets/Thara Residence (12).webp';
+import modern_12 from '../../assets/Thara Residence (13).webp';
+import modern_13 from '../../assets/tharacut1.webp';
 import modern2 from '../../assets/tharacut2.webp';
 import modern3 from '../../assets/tharacut3.webp';
 import modern4 from '../../assets/tharacut4.webp';
@@ -49,18 +62,30 @@ const UnimaxxPortfolio = () => {
 
   // உங்களிடம் உள்ள ஐந்து இமேஜ்களை பின்னணி மற்றும் கார்டுக்குள் மாறி மாறி வருமாறு செட் செய்துள்ளேன்
 const portfolioData = [
-  { id: 1, bgImage: modern1 },
-  { id: 2, bgImage: modern2 },
-  { id: 3, bgImage: modern3 },
-  { id: 4, bgImage: modern4 },
-  { id: 6, bgImage: modern6 },
-  { id: 7, bgImage: modern7 },
-  { id: 8, bgImage: modern8 },
-  { id: 9, bgImage: modern9 },
-  { id: 10, bgImage: modern10 },
-  { id: 11, bgImage: modern11 },
-  { id: 12, bgImage: modern12 },
-  { id: 13, bgImage: modern13 },
+  { id: 1, bgImage: modern_1 },
+  { id: 2, bgImage: modern_2 },
+  { id: 3, bgImage: modern_3 },
+  { id: 4, bgImage: modern_4 },
+  { id: 6, bgImage: modern_6 },
+  { id: 7, bgImage: modern_7 },
+  { id: 8, bgImage: modern_8 },
+  { id: 9, bgImage: modern_9 },
+  { id: 10, bgImage: modern_10 },
+  { id: 11, bgImage: modern_11 },
+  { id: 12, bgImage: modern_12 },
+  { id: 13, bgImage: modern_13 },
+   { id: 91, bgImage: modern1 },
+  { id: 92, bgImage: modern2 },
+  { id: 93, bgImage: modern3 },
+  { id: 94, bgImage: modern4 },
+  { id: 96, bgImage: modern6 },
+  { id: 97, bgImage: modern7 },
+  { id: 98, bgImage: modern8 },
+  { id: 99, bgImage: modern9 },
+  { id: 100, bgImage: modern10 },
+  { id: 111, bgImage: modern11 },
+  { id: 122, bgImage: modern12 },
+  { id: 133, bgImage: modern13 },
   { id: 14, bgImage: modern14 },
   { id: 15, bgImage: modern15 },
   { id: 16, bgImage: modern16 },

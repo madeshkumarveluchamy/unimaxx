@@ -24,6 +24,20 @@
   overflow: hidden;
 }
 
+.um-about-hero-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Your content should stay above overlay */
+.um-about-hero-section > * {
+  position: relative;
+  z-index: 2;
+}
+
 .um-about-hero-overlay {
   position: absolute;
   inset: 0;

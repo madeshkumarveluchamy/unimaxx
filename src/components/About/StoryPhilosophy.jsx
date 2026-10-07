@@ -68,7 +68,7 @@ useEffect(() => {
               <div className="ux-philo-animated-line sub-line line-draw"></div>
               
               <p className="ux-philo-desc slide-from-left mainsub font-geist">
-                Our mission is to create spaces that respond thoughtfully to the way people live, work, and interact. We combine creativity with practical thinking to deliver designs that are visually refined, functionally strong, and carefully considered from concept through completion.
+                To design for everybody, delivering adaptable spaces that reflect unique needs, lifestyles, aspirations, and everyday experiences.
               </p>
             </div>
           </div>
@@ -96,7 +96,7 @@ useEffect(() => {
               <div className="ux-philo-animated-line sub-line line-draw"></div>
 
               <p className="ux-philo-desc slide-from-right mainsub font-geist desc-story">
-                We aspire to create architecture and interiors that remain meaningful beyond changing trends. Through collaboration, thoughtful planning, and attention to detail, we aim to develop spaces where design, functionality, and individual character come together naturally.
+                To become a trusted name in customizable interiors for residential, commercial, and villas, where design meets individuality and purpose.
               </p>
             </div>
           </div>

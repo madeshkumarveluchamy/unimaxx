@@ -56,9 +56,9 @@ const SlotCounter = ({ value, baseDirection = "up" }) => {
 
 const UnimaxxFeatures = () => {
   const statsData = [
-    { count: 110, suffix: "+", label: "Spaces Transformed" },
-    { count: 2, suffix: "+", label: "Years of Excellence" },
-    { count: 50, suffix: "K+", label: "SQ.FT. Of Excellence" },
+    { count: 8, suffix: "+", label: "Years of Excellence" },
+    { count: 75, suffix: "+", label: "Spaces Transformed" },
+    { count: 25, suffix: "K+", label: "SQ.FT. Of Excellence" },
     { count: 100, suffix: "%", label: "Client Satisfaction" }
   ];
 

@@ -2,9 +2,9 @@ import React from 'react';
 import '../ProjectDetail1/css/ModernDetail.css';
 import staricon from '../../assets/logo1.webp'; // உங்களது இமேஜ் இருக்கும் சரியான file path-ஐ இங்கே கொடுக்கவும்
 // தேவையான இமேஜ் ஃபைல்கள்
-import modern1 from '../../assets/thara (1).webp';
-import modern2 from '../../assets/thara (3).webp';
-import modern3 from '../../assets/thara (16).webp';
+import modern1 from '../../assets/Thara Residence (1).webp';
+import modern2 from '../../assets/Thara Residence (4).webp';
+import modern3 from '../../assets/Thara Residence (5).webp';
 
 const ModernDetail = () => {
   return (
@@ -29,7 +29,7 @@ const ModernDetail = () => {
               </div>
               <div className="nest-top-spec-box">
                 <h4 className='font-geist fsub'>Sq.Ft</h4>
-                <p className='font-geist fmin' >1840.3</p>
+                <p className='font-geist fmin' >1840</p>
               </div>
               <div className="nest-top-spec-box">
                 <h4 className='font-geist fsub'>Facing</h4>

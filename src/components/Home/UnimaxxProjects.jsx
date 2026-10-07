@@ -13,12 +13,14 @@ import p8_main from '../../assets/meenamadurai (85).webp';
 import p9_main from '../../assets/Pritham (23).webp';
 import p10_main from '../../assets/Pritham (5).webp';
 import p11_main from '../../assets/vivke (5).webp';
+import p12_main from '../../assets/Thara Residence (3).webp';
 
 const UnimaxxProjects = () => {
   const navigate = useNavigate();
 
   const [projects, setProjects] = useState([
     { id: 1, img: p2_main, title: "SERENIA", type: "COMMERCIAL", location: "TIRUPPUR, TN", link: "/projects/serenia" },
+    { id: 11,img: p12_main, title: "THARA RESIDENCE", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/thara-residence" },
     { id: 2, img: p3_main, title: "Dr.VIJAYALAKSHMI", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/dr-vijayalakshmi" },
     { id: 3, img: p4_main, title: "Mr.BALACHANDAR", type: "RESIDENTIAL", location: "COIMBATORE, TN", link: "/projects/mr-balachandar" },
     { id: 4, img: p5_main, title: "Mr.BALAJI", type: "RESIDENTIAL", location: "COIMBATORE, TN", link: "/projects/mr-balaji" },
@@ -27,6 +29,7 @@ const UnimaxxProjects = () => {
     { id: 7, img: p8_main, title: "MEENA RESIDENCE", type: "RESIDENTIAL", location: "MADURAI, TN", link: "/projects/meena-residence" },
     { id: 8, img: p9_main, title: "PRITHAM RESIDENCE", type: "RESIDENTIAL", location: "COIMBATORE, TN", link: "/projects/pritham-residence" },
     { id: 9, img: p10_main, title: "Mr.SUBRAMANI", type: "RESIDENTIAL", location: "ERODE, TN", link: "/projects/mr-subramani" },
+    { id: 10,img: p11_main, title: "Mr.VIVEK", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/mr-vivek" },
     { id: 10,img: p11_main, title: "Mr.VIVEK", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/mr-vivek" },
   ]);
 

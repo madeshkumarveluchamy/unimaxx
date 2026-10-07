@@ -52,9 +52,9 @@ const SlotCounter = ({ value, baseDirection = "up" }) => {
 // --- புதிய "Why Choose Us" டிசைன் ---
 const WhyChooseUs = () => {
   const statsData = [
-    { count: 110, suffix: "+", title: "Spaces Redefined", desc: "Transforming raw concepts into highly functional and aesthetically stunning environments." },
-    { count: 2, suffix: "+", title: "Years of Excellence", desc: "A rapidly growing legacy driven by innovative architecture and uncompromising quality." },
-    { count: 50, suffix: "k+", title: "SQ.FT. Of Excellence", desc: "Maximizing utility and beauty across massive spaces, ensuring every inch serves a purpose." },
+    { count: 8, suffix: "+", title: "Years of Excellence", desc: "A rapidly growing legacy driven by innovative architecture and uncompromising quality." },
+    { count: 75, suffix: "+", title: "Spaces Redefined", desc: "Transforming raw concepts into highly functional and aesthetically stunning environments." },
+    { count: 25, suffix: "k+", title: "SQ.FT. Of Excellence", desc: "Maximizing utility and beauty across massive spaces, ensuring every inch serves a purpose." },
     { count: 100, suffix: "%", title: "Client Satisfaction", desc: "Delivering a flawless experience from the very first consultation to the final handover." }
   ];
 

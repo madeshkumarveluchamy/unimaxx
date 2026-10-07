@@ -1,6 +1,6 @@
 import React from 'react';
 import '../ProjectDetail1/css/Hero.css';
-import backgroundimage from '../../assets/thara (7).webp';
+import backgroundimage from '../../assets/Thara Residence (3).webp';
 
 const Hero = () => {
   return (

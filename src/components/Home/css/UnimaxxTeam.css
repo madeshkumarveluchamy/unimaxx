@@ -61,6 +61,7 @@
 /* 5 Column Grid */
 .um-team-grid {
   display: flex;
+  height:325px !important;
   flex-wrap: wrap;
   justify-content: center; /* This perfectly centers 1, 2, 3, or 4 items */
   gap: 16px;
@@ -230,6 +231,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center; 
+    height:410px !important;
     gap: 16px;
   }
 
@@ -257,6 +259,7 @@
 
 @media (max-width: 426px) {
   .um-team-grid {
+    height:410px !important;
     flex-direction: column;
     align-items: center;
   }

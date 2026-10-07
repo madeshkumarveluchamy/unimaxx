@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/Hero.css';
 import bgVideo from '../../assets/unimaxx1(1).mp4';
-import bgImage from '../../assets/storybuilding.webp'; 
+import bgImage from '../../assets/thara residence (11).webp'; 
 import { FaArrowRight } from 'react-icons/fa';
 import StoryHeroGooButton from '../story/StoryHeroGooButton';
 
