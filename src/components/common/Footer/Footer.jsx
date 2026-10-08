@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom'; // 🎯 React Router Link இம்போர்ட் பண்ணியாச்சு
 import './Footer.css';
 
-import unimaxxlogo from '../../../assets/unimaxxlogo.webp';
+import unimaxxlogo from '../../../assets/Artboard.webp';
 import { FaInstagram, FaFacebookF, FaXTwitter, FaPinterestP } from 'react-icons/fa6';
 import DreamConnection from './DreamConnection';
 
@@ -70,7 +70,7 @@ const Footer = () => {
             </address>
             <div className="um-footer-contact-details text-center text-md-start">
               <p className='font-geist fsub'>Call us: <a href="tel:04222696100" className='fmin'>0422 269 6100</a></p>
-              <p className='font-geist fsub'>Email: <a href="mailto:Admin@unimaxx.com" className='fmin'>Admin@unimaxx.com</a></p>
+              <p className='font-geist fsub'>Email: <a href="mailto:Admin@unimaxx.com" className='fmin'>unimaxxarchitects@gmail.com</a></p>
             </div>
             
             {/* Social Icons row */}

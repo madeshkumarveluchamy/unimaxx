@@ -28,7 +28,7 @@ const UnimaxxReviews = () => {
       userImg: user1,
       userName: "Dr. Vijayalakshmi ",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
     {
       id: 2,
@@ -37,7 +37,7 @@ const UnimaxxReviews = () => {
       userImg: user2,
       userName: "Serenia ",
       company: "Commercial",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
     {
       id: 3,
@@ -46,7 +46,7 @@ const UnimaxxReviews = () => {
       userImg: user3,
       userName: "Mr. Balachandar",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
     {
       id: 4,
@@ -55,7 +55,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Mr. Balaji",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
     {
       id: 5,
@@ -64,7 +64,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Mr. Shanmugam",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
     {
       id: 6,
@@ -73,7 +73,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Gowthami Residence",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
     {
       id: 7,
@@ -82,7 +82,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Meena Residence",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
     {
       id: 8,
@@ -91,7 +91,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Pritham Residence",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
       {
       id: 9,
@@ -100,7 +100,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Mr. Subramani",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
       {
       id: 10,
@@ -109,7 +109,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Mr. Vivek",
       company: "Residential",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
       {
       id: 11,
@@ -127,7 +127,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Cafe",
       company: "Commercial",
-      videoUrl: reviewVideo1
+      videoUrl: reviewVideo2
     },
   ];
 
@@ -239,6 +239,12 @@ const UnimaxxReviews = () => {
     }
   };
 
+  const getInitial = (name) => {
+    if (!name) return '';
+    const cleanName = name.replace(/^(Mr\.|Mrs\.|Ms\.|Dr\.)\s*/i, '').trim();
+    return cleanName.charAt(0).toUpperCase();
+  };
+
   return (
     <div className="um-reviews-master">
       <section className="um-reviews-section">
@@ -284,7 +290,9 @@ const UnimaxxReviews = () => {
                     </div>
 
                     <div className="um-rev-user-info">
-                      <img src={review.userImg} alt={review.userName} draggable="false" />
+                      <div className="um-profile-initial" style={{ width: '45px', height: '45px', borderRadius: '50%', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', fontWeight: 'bold', color: '#333', flexShrink: 0 }}>
+                        {getInitial(review.userName)}
+                      </div>
                       <div>
                         <h4 className='font-inter fsub'>{review.userName}</h4>
                         <span className='font-geist fmin'>{review.company}</span>
@@ -295,7 +303,9 @@ const UnimaxxReviews = () => {
                   </>
                 ) : (
                   <div className="um-rev-user-info um-video-user-overlay">
-                    <img src={review.userImg} alt={review.userName} draggable="false" />
+                    <div className="um-profile-initial" style={{ width: '45px', height: '45px', borderRadius: '50%', backgroundColor: '#f0f0f0', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '20px', fontWeight: 'bold', color: '#333', flexShrink: 0 }}>
+                      {getInitial(review.userName)}
+                    </div>
                     <div>
                       <h4 className="text-white font-inter fsub">{review.userName}</h4>
                       <span className="text-white-dim font-geist fmin">{review.company}</span>

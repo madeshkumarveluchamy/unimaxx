@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './css/ServicePage.css';
 import staricon from '../../assets/logo1.webp'; 
 // Assets
-import heroBgPng from '../../assets/hero-bg.webp';
+import heroBgPng from '../../assets/Thara Residence (4).webp';
 import service1Png from '../../assets/service1.webp';
 import service2Png from '../../assets/service2.webp';
 import service3Png from '../../assets/service3.webp';

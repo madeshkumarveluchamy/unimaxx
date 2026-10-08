@@ -51,7 +51,6 @@
   scroll-behavior: auto; /* Drag-ஐ smooth-ஆக மாற்ற */
 }
 
-/* Individual Card Style */
 .um-review-card {
   flex: 0 0 auto; /* Grid-ல் இருந்து Flex-க்கு மாறுவதால் சுருங்காமல் இருக்க */
   width: 350px; /* கார்டின் அகலத்தை செட் செய்துள்ளேன் (தேவைக்கேற்ப மாற்றிக்கொள்ளலாம்) */
@@ -71,24 +70,23 @@
   user-select: none; /* Drag செய்யும்போது Text Select ஆவதைத் தடுக்க */
 }
 
-
 .um-review-card {
-  flex: 0 0 auto;         /* கார்டுகள் சுருங்காமல் இருக்க இது அவசியம் */
-  width: 350px;           /* அகலம் கட்டாயம் இருக்க வேண்டும் */
+  flex: 0 0 auto;
+  width: 350px;  
 }
+
 .um-review-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-2px);
   background-color: #fcfcfc;
 }
 
-/* Static Content Group */
 .um-card-static-content {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
   width: 100%;
   align-items: flex-start;
-  pointer-events: none; /* உள்ளே இருக்கும் Content Drag-ஐ டிஸ்டர்ப் செய்யாமல் இருக்க */
+  pointer-events: none;
 }
 
 .um-rev-stars {

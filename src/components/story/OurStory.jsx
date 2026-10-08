@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion, useScroll, useTransform, useSpring, AnimatePresence } from 'framer-motion';
 import './css/OurStory.css';
 import staricon from '../../assets/logo1.webp';
-import heroBg1Png from '../../assets/Thara Residence (12).webp';
+import heroBg1Png from '../../assets/Thara Residence (8).webp';
 
 // ==========================================
 // 🎯 1. உங்க Project சம்பந்தமான Images-அ இங்க Import பண்ணுங்க

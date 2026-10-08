@@ -6,15 +6,11 @@ const ProjectVideo = () => {
   return (
     <section className="project-video-section">
       <div className="project-video-wrapper">
-        <h2 className="sync-portfolio-main-heading font-serief mainheading"><span>✻</span> Project Gallery</h2>
+        <h2 className="sync-portfolio-main-heading font-serief mainheading"><span>✻</span>Project Video</h2>
         <div className="project-video-container">
           <video 
             className="project-video-element" 
             src={tharavideo} 
-            autoPlay 
-            loop 
-            muted 
-            playsInline
             controls
           />
         </div>

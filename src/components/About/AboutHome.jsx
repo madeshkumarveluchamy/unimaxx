@@ -17,7 +17,7 @@ const AboutHome = () => {
       <StoryPhilosophy />
       <WhyChooseUs />
       <WhatWeDo />
-      <UnimaxxOngoing />
+      {/* <UnimaxxOngoing /> */}
       <TeamSection />
       <CallToAction />
     </div>

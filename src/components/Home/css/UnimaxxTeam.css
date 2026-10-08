@@ -58,12 +58,10 @@
   text-align: left;
 }
 
-/* 5 Column Grid */
+/* Responsive Grid */
 .um-team-grid {
-  display: flex;
-  height:325px !important;
-  flex-wrap: wrap;
-  justify-content: center; /* This perfectly centers 1, 2, 3, or 4 items */
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 16px;
   width: 100%;
   margin-bottom: 50px;
@@ -72,10 +70,8 @@
 /* Individual Team Card */
 .um-team-card {
   position: relative;
-  /* Math: 100% width minus the 64px gap (4 gaps of 16px), divided by 5 items */
-  width: calc((100% - 64px) / 5);
-  flex: 0 0 calc((100% - 64px) / 5); /* Prevents cards from stretching too wide if there's only 1 */
-  aspect-ratio: 3 / 3; 
+  width: 100%;
+  aspect-ratio:.8 / 1; 
   border-radius: 12px;
   overflow: hidden;
 }
@@ -172,12 +168,7 @@
    ======================================================== */
 @media (max-width: 1200px) {
   .um-team-grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .um-team-card {
-    /* 3 items per row -> Total gap is 32px (2 gaps of 16px) */
-    width: calc((100% - 32px) / 3);
-    flex: 0 0 calc((100% - 32px) / 3);
+    grid-template-columns: repeat(2, 1fr);
   }
   .um-team-main-title{
     right:0px;
@@ -228,17 +219,8 @@
   }
   
 .um-team-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; 
-    height:410px !important;
+    grid-template-columns: repeat(2, 1fr);
     gap: 16px;
-  }
-
-  .um-team-card {
-    width: calc((100% - 32px) / 3);
-    flex: 0 0 calc((100% - 32px) / 3);
-    min-width: 160px;
   }
   
   .um-team-footer-cta {
@@ -259,9 +241,7 @@
 
 @media (max-width: 426px) {
   .um-team-grid {
-    height:410px !important;
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr;
   }
 
   .um-team-main-title{
@@ -269,9 +249,8 @@
   }
 
   .um-team-card {
-    flex: 0 1 auto;
     width: 100%;
-    max-width: 280px;
-    aspect-ratio: 3 / 3;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }

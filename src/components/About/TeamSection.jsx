@@ -1,21 +1,20 @@
 import React, { useState } from 'react';
 import './css/TeamSection.css';
 
-import img1 from '../../assets/employee1.webp';
-import img2 from '../../assets/employee1.webp';
-import img3 from '../../assets/employee1.webp';
-import img4 from '../../assets/employee1.webp';
-import img5 from '../../assets/employee1.webp';
+import img1 from '../../assets/Mr.Dinesh.webp';
+import img2 from '../../assets/Adhi Kesavan.webp';
+import img3 from '../../assets/Raghul.webp';
+import img4 from '../../assets/Vignesh.webp';
 
 const TeamSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const teamMembers = [
-    { id: '01', role: 'Lead Architect', name: 'Ananya Suresh', image: img1 },
-    { id: '02', role: 'Interior Designer', name: 'Karthik Mehra', image: img2 },
-    { id: '03', role: 'Landscape Architect', name: 'Priya Varman', image: img3 },
-    { id: '04', role: 'Project Manager', name: 'Arjun Menon', image: img4 },
-    { id: '05', role: 'Brand & Spatial Designer', name: 'Vikram Rajan', image: img5 }
+    { id: '01', role: 'Founder', name: 'Mr.Dinesh', image: img1 },
+    { id: '04', role: 'Lead Architect', name: 'Mr.Vignesh', image: img4 },    
+    { id: '02', role: 'Interior Designer', name: 'Mr.Adhi Kesavan', image: img2 },
+    { id: '03', role: 'Interior Designer', name: 'Mr.Raghul', image: img3 },
+    
   ];
 
   return (

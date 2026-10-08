@@ -10,6 +10,21 @@
   /* படம் லோடு ஆகும் முன் தெரிய வேண்டிய டீஃபால்ட் டார்க் நிறம் */
 }
 
+
+.unimaxx-contact-hero-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+/* Your content should stay above overlay */
+.unimaxx-contact-hero-wrapper > * {
+  position: relative;
+  z-index: 2;
+}
+
 /* --- BACKGROUND IMAGE LAYER --- */
 .unimaxx-contact-hero-bg {
   position: absolute;

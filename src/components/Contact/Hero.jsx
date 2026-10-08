@@ -1,6 +1,6 @@
 import React from 'react';
 import './css/Hero.css';
-import backgroundImg from '../../assets/backgroundimage.webp'; // உங்கள் இமேஜ் பாத்
+import backgroundImg from '../../assets/Thara Residence (6).webp'; // உங்கள் இமேஜ் பாத்
 
 const ContactHero = () => {
   return (
@@ -8,7 +8,7 @@ const ContactHero = () => {
       {/* பின்னணி படம் மற்றும் டார்க் லேயர் டின்ட் */}
       <div 
         className="unimaxx-contact-hero-bg"
-        style={{ backgroundImage: `url(${backgroundImg})` }}
+        style={{ backgroundImage: `url("${backgroundImg}")` }}
       />
       <div className="unimaxx-contact-hero-overlay"></div>
 
