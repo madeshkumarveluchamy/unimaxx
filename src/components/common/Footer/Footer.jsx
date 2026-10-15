@@ -69,7 +69,7 @@ const Footer = () => {
               Poompuhar Nagar Annex, Avinashi Rd, behind Haribhavanam, Goldwins, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014
             </address>
             <div className="um-footer-contact-details text-center text-md-start">
-              <p className='font-geist fsub'>Call us: <a href="tel:04222696100" className='fmin'>0422 269 6100</a></p>
+              <p className='font-geist fsub'>Call us: <a href="tel:04222696100" className='fmin'>9751437020</a></p>
               <p className='font-geist fsub'>Email: <a href="mailto:Admin@unimaxx.com" className='fmin'>unimaxxarchitects@gmail.com</a></p>
             </div>
             

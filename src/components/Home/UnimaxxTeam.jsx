@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const UnimaxxTeam = () => {
   const teamMembers = [
-    { id: 1, name: "Mr.Dinesh - Founder", img: peopleimg4 },
+    { id: 1, name: "Mr.Dineshkaran - Founder", img: peopleimg4 },
     { id: 4, name: "Mr.Vignesh - Lead Architect", img: peopleimg3 },  
     { id: 2, name: "Mr.Adhi Kesavan - Interior Designer", img: peopleimg1 },
     { id: 3, name: "Mr.Raghul - Interior Designer", img: peopleimg2 },
