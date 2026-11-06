@@ -1,18 +1,19 @@
 import React from 'react';
 import './css/UnimaxxTeam.css';
-import peopleimg1 from '../../assets/Adhi Kesavan.webp';
+import gnanavel from '../../assets/Gnanavel.S.webp';
 import peopleimg2 from '../../assets/Raghul.webp';
 import peopleimg3 from '../../assets/Vignesh.webp';
 import peopleimg4 from '../../assets/Mr.Dinesh.webp';
-import peopleimg5 from '../../assets/peopleimg5.webp';
+import rathish from '../../assets/Ratish.S.webp';
 import { Link } from 'react-router-dom';
 
 const UnimaxxTeam = () => {
   const teamMembers = [
     { id: 1, name: "Mr.Dineshkaran - Founder", img: peopleimg4 },
-    { id: 4, name: "Mr.Vignesh - Lead Architect", img: peopleimg3 },  
-    { id: 2, name: "Mr.Adhi Kesavan - Interior Designer", img: peopleimg1 },
+    { id: 2, name: "Mr.Vignesh - Lead Architect", img: peopleimg3 },  
     { id: 3, name: "Mr.Raghul - Interior Designer", img: peopleimg2 },
+    { id: 4, name: "Mr.Gnanavel - Junior Architect", img: gnanavel},
+    { id: 5, name: "Mr.Rathish - Junior Architect", img: rathish },
 
   ];
 

@@ -56,7 +56,7 @@ const Footer = () => {
               <li><Link to="/" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Home</Link></li>
               <li><Link to="/projects" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Projects</Link></li>
               <li><Link to="/what-we-deliver" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>What We Deliver</Link></li>
-              <li><Link to="/projects" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Our Story</Link></li>
+              <li><Link to="/our-story" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Our Story</Link></li>
               <li><Link to="/start-a-project" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Contact</Link></li>
               <li><Link to="/" className='font-alice fmin text-decoration-none' onClick={handleLinkClick}>Blog</Link></li>
             </ul>
@@ -69,8 +69,8 @@ const Footer = () => {
               Poompuhar Nagar Annex, Avinashi Rd, behind Haribhavanam, Goldwins, Civil Aerodrome Post, Coimbatore, Tamil Nadu 641014
             </address>
             <div className="um-footer-contact-details text-center text-md-start">
-              <p className='font-geist fsub'>Call us: <a href="tel:04222696100" className='fmin'>9751437020</a></p>
-              <p className='font-geist fsub'>Email: <a href="mailto:Admin@unimaxx.com" className='fmin'>unimaxxarchitects@gmail.com</a></p>
+              <p className='font-geist fsub'>Call us: <a href="tel:+919751437020" className='fmin'>9751437020</a></p>
+              <p className='font-geist fsub'>Email: <a href="mailto:unimaxxarchitects@gmail.com" className='fmin'>unimaxxarchitects@gmail.com</a></p>
             </div>
             
             {/* Social Icons row */}

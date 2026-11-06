@@ -61,7 +61,7 @@
 /* Responsive Grid */
 .um-team-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
   width: 100%;
   margin-bottom: 50px;
@@ -166,9 +166,49 @@
 /* ========================================================
     Responsive Code
    ======================================================== */
-@media (max-width: 1200px) {
+@media (max-width: 1200px) {@media (max-width: 1200px) {
   .um-team-grid {
     grid-template-columns: repeat(2, 1fr);
+  }
+  
+  /* Center card-oda width-ah matha cards alavuku maatra */
+  .um-team-grid > *:last-child:nth-child(odd) {
+    grid-column: 1 / -1;
+    justify-self: center; 
+    
+    /* Unga grid gap 20px iruntha, athula paathi 10px-ah inga minus pannanum.
+       Appo thaan exact 1 column width kedaikum. */
+    width: calc(50% - 10px); 
+  }
+
+  /* Center card-kulla irukka image stretch aagama, sariyaana alavula vara */
+  .um-team-grid > *:last-child:nth-child(odd) img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .um-team-main-title {
+    right: 0px;
+    max-width: 100%;
+    margin-bottom: 16px;
+    text-align: center;
+  }
+  
+  .um-team-header {
+    flex-direction: column;
+    margin-bottom: 40px;
+    align-items: center;
+  }
+  
+  .um-team-subtitle-top {
+    max-width: 550px;
+    text-align: center;
+  }
+}
+  .um-team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    
   }
   .um-team-main-title{
     right:0px;
@@ -252,5 +292,10 @@
     width: 100%;
     max-width: 320px;
     margin: 0 auto;
+  }
+
+  /* Intha code thaan puthusa add aagirukku - Last card-ah full width-ku maathum */
+  .um-team-grid > *:last-child:nth-child(odd) {
+    width: 100%;
   }
 }
