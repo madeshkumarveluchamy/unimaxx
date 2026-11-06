@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import './css/UnimaxxReviews.css';
 
-import reviewVideo1 from "../../assets/unimaxx1(1).mp4"; 
+import reviewVideo1 from "../../assets/sandeep_residency.mp4"; 
 import reviewVideo2 from "../../assets/tharavideo.mp4"; 
 import user1 from '../../assets/user1.webp';
 import user2 from '../../assets/user2.webp';
@@ -28,7 +28,7 @@ const UnimaxxReviews = () => {
       userImg: user1,
       userName: "Dr. Vijayalakshmi ",
       company: "Residential",
-      videoUrl: reviewVideo2
+      videoUrl: reviewVideo1
     },
     {
       id: 2,
@@ -46,7 +46,7 @@ const UnimaxxReviews = () => {
       userImg: user3,
       userName: "Mr. Balachandar",
       company: "Residential",
-      videoUrl: reviewVideo2
+      videoUrl: reviewVideo1
     },
     {
       id: 4,
@@ -64,7 +64,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Mr. Shanmugam",
       company: "Residential",
-      videoUrl: reviewVideo2
+      videoUrl: reviewVideo1
     },
     {
       id: 6,
@@ -82,7 +82,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Meena Residence",
       company: "Residential",
-      videoUrl: reviewVideo2
+      videoUrl: reviewVideo1
     },
     {
       id: 8,
@@ -100,7 +100,7 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Mr. Subramani",
       company: "Residential",
-      videoUrl: reviewVideo2
+      videoUrl: reviewVideo1
     },
       {
       id: 10,
@@ -110,6 +110,15 @@ const UnimaxxReviews = () => {
       userName: "Mr. Vivek",
       company: "Residential",
       videoUrl: reviewVideo2
+    },
+    {
+      id: 13,
+      stars: "★★★★★",
+      text: "The Unimaxx team understood our vision for the residence and transformed it into a thoughtfully designed living space. Their attention to architectural details, space planning, and the luxury guest house within our farmland made the entire project truly special.",
+      userImg: user4,
+      userName: "Sandeep Residence",
+      company: "Residential",
+      videoUrl: reviewVideo1
     },
       {
       id: 11,
@@ -127,8 +136,8 @@ const UnimaxxReviews = () => {
       userImg: user4,
       userName: "Cafe",
       company: "Commercial",
-      videoUrl: reviewVideo2
-    },
+      videoUrl: reviewVideo1
+    }
   ];
 
   // 🎯 மாற்றம் 1: Infinite Drag-க்காக 4 Sets உருவாக்குகிறோம் (String IDs to prevent overlap)
@@ -277,7 +286,7 @@ const UnimaxxReviews = () => {
                   src={review.videoUrl}
                   className="um-card-video-bg"
                   loop
-                  muted
+                
                   playsInline
                   onEnded={() => setActiveVideoId(null)}
                 />

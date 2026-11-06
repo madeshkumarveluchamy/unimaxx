@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-           A Contemporary Residence <br/> Shaped for Modern Living 
+          Thoughtful Architecture <br/> for Contemporary Living
           </h1>
       
       
@@ -20,7 +20,11 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            A thoughtfully planned residence that brings together contemporary design, practical spatial planning, and a comfortable everyday living experience. The design is developed to make the most of the available space while creating a home with a distinct architectural character. 
+            Mr. Balachandar Residence explores a practical approach to contemporary architecture,
+combining efficient layouts with a distinctive visual identity. The design considers spatial
+relationships and everyday requirements, shaping a comfortable home where functionality
+and architectural expression complement one another.
+
           </p>
           
         </div>

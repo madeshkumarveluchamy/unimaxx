@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-            A Refined Home <br/>Designed for Everyday Living
+            An Elegant Home with<br/>a Balanced Design Approach
           </h1>
           
       
@@ -20,7 +20,11 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            A thoughtfully designed residence that brings together contemporary architectural expression, practical planning, and comfortable living. The design makes effective use of the space while creating a home with a strong sense of character and visual balance.
+            Mr. Balaji Residence reflects a balanced combination of architectural refinement and
+functional planning. The design carefully considers spatial arrangements, visual proportions,
+and everyday needs, resulting in a comfortable residential environment with a cohesive
+appearance and lasting character.
+
           </p>
         </div>
       </div>

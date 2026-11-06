@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-            A Contemporary Home<br/> Designed with Purpose 
+            Where Practical Planning<br/> Meets Modern Architecture
           </h1>
           
       
@@ -20,7 +20,11 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-          A thoughtfully designed residence that brings together contemporary architectural character, practical planning, and comfortable living. The design makes efficient use of the available space while creating a home with a balanced and cohesive identity. 
+          Mr. Vivek Residence brings together thoughtful space utilisation and contemporary
+architectural detailing. The design focuses on establishing functional living areas with a
+natural sense of connection, creating a comfortable residential environment defined by
+simplicity, proportion, and visual harmony.
+
           </p>
           
         </div>

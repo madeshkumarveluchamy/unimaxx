@@ -19,6 +19,7 @@ import Home9 from './components/ProjectDetail9/Home9';
 import Home10 from './components/ProjectDetail10/Home10';
 import Home11 from './components/ProjectDetail11/Home11';
 import Home12 from './components/ProjectDetail12/Home12';
+import Home13 from './components/ProjectDetail13/Home13';
 import ScrollToTop from './components/ScrollToTop';
 import AboutHome from './components/About/AboutHome';
 
@@ -31,8 +32,8 @@ const App = () => {
       <Routes>
         <Route path='/' element={<Homepage />} />
         <Route path='/what-we-deliver' element={<ServicePage />} />
-         <Route path ='projects/start-a-project' element = {<ContactHome />} />
-          <Route path ='what-we-deliver/start-a-project' element = {<ContactHome />} />
+        <Route path ='projects/start-a-project' element = {<ContactHome />} />
+        <Route path ='what-we-deliver/start-a-project' element = {<ContactHome />} />
         <Route path ='/start-a-project' element = {<ContactHome />} />
         <Route path='/projects' element = {<OurStory />}/>
         <Route path='/projects/cafe' element = {<Home1 />}/>
@@ -47,6 +48,7 @@ const App = () => {
         <Route path='/projects/mr-subramani' element = {<Home10 />}/>
         <Route path='/projects/mr-vivek' element = {<Home11 />}/>
         <Route path='/projects/thara-residence' element = {<Home12 />}/>
+        <Route path='/projects/mr-sandeep-residence' element = {<Home13 />}/>
         <Route path='/our-story' element = {<AboutHome />}/>
       </Routes>
       <Footer />

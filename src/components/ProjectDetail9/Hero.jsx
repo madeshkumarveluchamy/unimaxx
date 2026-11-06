@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-            A Thoughtfully Planned <br/> Home for Modern Living 
+            Designed with Clarity, <br/>  Planned for Living
           </h1>
           
       
@@ -20,7 +20,10 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            A well-planned residence that combines contemporary design with practical spatial planning. The home is shaped around everyday requirements, creating comfortable spaces with a clear sense of flow, proportion, and architectural character. 
+            Pritham Residence demonstrates an approach to home design that prioritises thoughtful
+organisation and architectural simplicity. Its spatial planning establishes practical living areas
+and smooth circulation, bringing together contemporary aesthetics and everyday
+functionality in a well-defined residential setting
           </p>
           
         </div>

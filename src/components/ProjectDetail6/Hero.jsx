@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-           A Contemporary Residence<br/>with Purposeful Design 
+           Modern Architecture<br/>with Meaningful Spaces
           </h1>
           
       
@@ -20,7 +20,10 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            A thoughtfully planned home that brings together contemporary architectural character, functional spaces, and a comfortable living experience. The design is shaped around the requirements of modern living while giving the residence a distinct and cohesive identity.
+            Mr. Shanmugam Residence is developed around the principles of practical planning and
+contemporary architectural design. Each space contributes to the overall living experience,
+creating a well-organised home that connects functionality, comfort, and a distinctive
+architectural identity
           </p>
           
         </div>

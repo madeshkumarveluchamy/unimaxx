@@ -505,7 +505,7 @@ const UnimaxxPortfolio = () => {
         {/* கட்டுப்படுத்தும் நேவிகேஷன் பட்டன்கள் (View Next Projects) */}
         <div className="sync-portfolio-controls-row">
           <SyncPortfolioNavButton
-            text="Previous | Next Project" 
+            text="Previous | Next Image" 
             onPrev={handlePrev} 
             onNext={handleNext} 
             onMainClick={() => console.log("Main text clicked!")} 

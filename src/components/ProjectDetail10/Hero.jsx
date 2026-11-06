@@ -12,7 +12,8 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-            A Contemporary Residence <br/> Planned Around Everyday Living
+            A Well-Considered <br/> Approach to Residential Design
+
           </h1>
           
       
@@ -20,7 +21,11 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-           A thoughtfully planned residence that combines contemporary architectural expression with practical spatial planning. The design focuses on creating comfortable, functional spaces while giving the home a clear and cohesive visual character. 
+           Mr. Subramani Residence is shaped by a design approach that values spatial efficiency and
+architectural consistency. The planning creates purposeful living areas while maintaining a
+balanced visual language, resulting in a home that responds to practical needs and
+contemporary expectations.
+
           </p>
           
         </div>

@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-            A Contemporary Home <br/>Designed for Comfortable Living
+           Spaces That Bring<br/>Comfort and Character Together
           </h1>
           
       
@@ -20,7 +20,11 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            A thoughtfully planned residence that combines contemporary architectural character with practical spatial planning. The design focuses on creating comfortable, well-connected spaces while giving the home a distinct and cohesive identity.
+            Gowthami Residence reflects a carefully considered residential design, where spatial
+organisation meets contemporary aesthetics. The layout establishes a natural connection
+between living areas, creating an inviting atmosphere with functional spaces and a
+consistent architectural character throughout the home.
+
           </p>
           
         </div>

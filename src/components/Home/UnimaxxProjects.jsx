@@ -14,11 +14,13 @@ import p9_main from '../../assets/Pritham (23).webp';
 import p10_main from '../../assets/Pritham (5).webp';
 import p11_main from '../../assets/vivke (5).webp';
 import p12_main from '../../assets/Thara Residence (3).webp';
+import p13_main from '../../assets/trippur_residency (1).webp';
 
 const UnimaxxProjects = () => {
   const navigate = useNavigate();
 
   const [projects, setProjects] = useState([
+    { id: 12,img: p13_main, title: "Mr.SANDEEP RESIDENCE", type: "RESIDENTIAL", location: "TIRUPPUR, TN", link: "/projects/mr-sandeep-residence" },
     { id: 1, img: p2_main, title: "SERENIA", type: "COMMERCIAL", location: "TIRUPPUR, TN", link: "/projects/serenia" },
     { id: 11,img: p12_main, title: "THARA RESIDENCE", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/thara-residence" },
     { id: 2, img: p3_main, title: "Dr.VIJAYALAKSHMI", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/dr-vijayalakshmi" },
@@ -30,10 +32,10 @@ const UnimaxxProjects = () => {
     { id: 8, img: p9_main, title: "PRITHAM RESIDENCE", type: "RESIDENTIAL", location: "COIMBATORE, TN", link: "/projects/pritham-residence" },
     { id: 9, img: p10_main, title: "Mr.SUBRAMANI", type: "RESIDENTIAL", location: "ERODE, TN", link: "/projects/mr-subramani" },
     { id: 10,img: p11_main, title: "Mr.VIVEK", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/mr-vivek" },
-    { id: 10,img: p11_main, title: "Mr.VIVEK", type: "RESIDENTIAL", location: "CHENNAI, TN", link: "/projects/mr-vivek" },
   ]);
 
   const [direction, setDirection] = useState(1);
+  const [isHovered, setIsHovered] = useState(false); // Hover State
 
   const handleNext = () => {
     setDirection(1);
@@ -56,40 +58,49 @@ const UnimaxxProjects = () => {
   };
 
   useEffect(() => {
-    // 1. Scroll Position Restoration Logic (Lag-free)
+    // 1. Scroll Position Restoration Logic
     const savedScrollPosition = sessionStorage.getItem('unimaxxProjectsScrollPos');
     
     if (savedScrollPosition) {
       setTimeout(() => {
         window.scrollTo({ 
           top: parseInt(savedScrollPosition, 10), 
-          behavior: 'instant' // Smooth இல்லாமல் Instant ஆக சென்றால் Lag இருக்காது
+          behavior: 'instant' 
         });
       }, 0);
     }
 
-    // Scroll செய்யும் போது Position-ஐ தொடர்ச்சியாக Save செய்ய
     const handleScroll = () => {
       sessionStorage.setItem('unimaxxProjectsScrollPos', window.scrollY);
     };
 
     window.addEventListener('scroll', handleScroll);
 
-    // 2. Autoplay Logic
-    const autoPlayInterval = setInterval(() => {
-      handleNext();
-    }, 3000); 
-
     return () => {
-      clearInterval(autoPlayInterval);
-      window.removeEventListener('scroll', handleScroll); // Event Listener-ஐ Remove செய்வது முக்கியம்
+      window.removeEventListener('scroll', handleScroll); 
     };
   }, []); 
 
-  // Redirect செய்யும் function
+  // 2. Autoplay Logic 
+  useEffect(() => {
+    let autoPlayInterval;
+    
+    // Hover செய்யாத போது (Cursor வெளியே வந்ததும்) மீண்டும் Autoplay ஓடத் தொடங்கும்
+    if (!isHovered) {
+      autoPlayInterval = setInterval(() => {
+        handleNext();
+      }, 3000); 
+    }
+
+    return () => {
+      if (autoPlayInterval) {
+        clearInterval(autoPlayInterval);
+      }
+    };
+  }, [isHovered]); // isHovered மாறும்போதெல்லாம் (Cursor உள்ளே/வெளியே போகும்போது) இது இயங்கும்
+
   const handleTitleClick = (link) => {
     if(link) {
-      // Navigate செய்வதற்கு சற்று முன் கடைசியாக ஒருமுறை Scroll Position-ஐ Save செய்துகொள்கிறோம்
       sessionStorage.setItem('unimaxxProjectsScrollPos', window.scrollY);
       navigate(link);
     }
@@ -136,8 +147,12 @@ const UnimaxxProjects = () => {
           </div>
         </div>
 
-        {/* Projects Container */}
-        <div className="um-projects-grid">
+        {/* Projects Container - இங்கு மட்டுமே Hover Event கொடுக்கப்பட்டுள்ளது */}
+        <div 
+          className="um-projects-grid"
+          onMouseEnter={() => setIsHovered(true)}  // Cursor உள்ளே வரும்போது நிற்கும்
+          onMouseLeave={() => setIsHovered(false)} // Cursor வெளியே போனதும் மீண்டும் ஓட ஆரம்பிக்கும்
+        >
           
           {/* Card 1 */}
           <div className="um-project-card um-card-first">

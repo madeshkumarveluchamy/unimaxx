@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-            A Workplace Designed<br/> for Modern Work. 
+            A Professional Space<br/> Built for Productivity
           </h1>
           
       
@@ -20,7 +20,11 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            Serenia brings together clean architectural language, functional planning, and contemporary interiors to create a professional workplace. Thoughtfully designed spaces encourage focus, collaboration, comfort, and seamless movement throughout.
+            Serenia is designed to create an engaging workplace through purposeful architecture and
+contemporary interiors. Its carefully arranged spaces support productivity, encourage
+interaction, and provide a comfortable professional environment with a seamless balance of
+functionality and visual appeal.
+
           </p>
           
         </div>

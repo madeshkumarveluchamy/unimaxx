@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-          A Contemporary Home <br/> Designed Around Everyday Living
+         A Personalised Home <br/> with Contemporary Character
           </h1>
           
       
@@ -20,7 +20,10 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            A thoughtfully planned residence that brings together contemporary aesthetics, practical spatial planning, and a comfortable living experience. The design is developed around the requirements of the home while giving each space a clear sense of purpose and character.  
+            Dr. Vijaylakshmi Residence reflects a considered approach to modern home design, where
+aesthetics and functionality work together. The planning gives importance to everyday
+comfort, organised spaces, and architectural details that create a welcoming atmosphere
+with individual character.
           </p>
           
         </div>

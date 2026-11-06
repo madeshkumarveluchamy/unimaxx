@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-            A Contemporary Residence <br/> Designed for Refined Living
+            A Home Where <br/> Modern Design Meets Comfort
           </h1>
           
       
@@ -20,7 +20,10 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            A thoughtfully planned residence that combines contemporary architectural expression with practical spatial planning and comfortable living. The design is developed around the requirements of the home, creating a balanced environment with a clear and cohesive character. 
+            Thara Residence showcases a thoughtful blend of modern architecture and functional
+design. Every space is planned to support comfortable living, with balanced proportions,
+purposeful layouts, and a distinctive character that reflects the essence of the home.
+
           </p>
           
         </div>

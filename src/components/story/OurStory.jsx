@@ -31,6 +31,7 @@ import p9_main from '../../assets/Pritham (23).webp';
 import p10_main from '../../assets/Pritham (5).webp';
 import p11_main from '../../assets/vivke (5).webp';
 import p12_main from '../../assets/Thara Residence (3).webp';
+import p13_main from '../../assets/trippur_residency (5).webp';
 
 import StoryHeroGooButton from './StoryHeroGooButton';
 import ProjectGooButton from './ProjectGooButton';
@@ -50,12 +51,21 @@ const portfolioData = [
     alignRight: false,
     path: "/projects/thara-residence"
   },
-
+  {
+    id: 13,
+    mainImage: p13_main,
+    popupImages: [p3_img1, p3_img2],
+    cardTitle: "MR.SANDEEP RESIDENCE",
+    category: "RESIDENTIAL",
+    location: "TIRUPPUR, TN",
+    alignRight: true,
+    path: "/projects/mr-sandeep-residence"
+  },
   {
     id: 2,
     mainImage: p2_main,
     popupImages: [p2_img1, p2_img2, p2_img3],
-    cardTitle: "SERENIA",
+    cardTitle: "SERENIA OFFICE",
     category: "COMMERCIAL",
     location: "TIRUPPUR, TN",
     alignRight: false,
@@ -65,7 +75,7 @@ const portfolioData = [
     id: 3,
     mainImage: p3_main,
     popupImages: [p3_img1, p3_img2],
-    cardTitle: "Dr.VIJAYALAKSHMI",
+    cardTitle: "DR.VIJAYALAKSHMI RESIDENCE",
     category: "RESIDENTIAL",
     location: "CHENNAI, TN",
     alignRight: true,
@@ -75,7 +85,7 @@ const portfolioData = [
     id: 4,
     mainImage: p4_main,
     popupImages: [p3_img1, p3_img2],
-    cardTitle: "Mr.BALACHANDAR",
+    cardTitle: "MR.BALACHANDAR RESIDENCE",
     category: "RESIDENTIAL",
     location: "COIMBATORE, TN",
     alignRight: false,
@@ -85,7 +95,7 @@ const portfolioData = [
     id: 5,
     mainImage: p5_main,
     popupImages: [p3_img1, p3_img2],
-    cardTitle: "Mr.BALAJI",
+    cardTitle: "MR.BALAJI RESIDENCE",
     category: "RESIDENTIAL",
     location: "COIMBATORE, TN",
     alignRight: true,
@@ -95,7 +105,7 @@ const portfolioData = [
     id: 6,
     mainImage: p6_main,
     popupImages: [p3_img1, p3_img2],
-    cardTitle: "Mr.SHANMUGAM",
+    cardTitle: "MR.SHANMUGAM RESIDENCE",
     category: "RESIDENTIAL",
     location: "COIMBATORE, TN",
     alignRight: false,
@@ -135,7 +145,7 @@ const portfolioData = [
     id: 10,
     mainImage: p10_main,
     popupImages: [p3_img1, p3_img2],
-    cardTitle: "Mr.SUBRAMANI",
+    cardTitle: "MR.SUBRAMANI RESIDENCE",
     category: "RESIDENTIAL",
     location: "ERODE, TN",
     alignRight: false,
@@ -145,13 +155,12 @@ const portfolioData = [
     id: 11,
     mainImage: p11_main,
     popupImages: [p3_img1, p3_img2],
-    cardTitle: "Mr.VIVEK",
+    cardTitle: "MR.VIVEK RESIDENCE",
     category: "RESIDENTIAL",
     location: "CHENNAI, TN",
     alignRight: true,
     path: "/projects/mr-vivek"
   },
-  
   {
     id: 1,
     mainImage: p1_main,
@@ -159,7 +168,7 @@ const portfolioData = [
     cardTitle: "CAFE",
     category: "COMMERCIAL",
     location: "COIMBATORE, TN",
-    alignRight: true,
+    alignRight: false,
     path: "/projects/cafe"
   }
 ];

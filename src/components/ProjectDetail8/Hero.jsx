@@ -12,7 +12,7 @@ const Hero = () => {
           
         
           <h1 className="unimaxx-hero-headline font-geist">
-            A Contemporary Residence<br/> Designed for Modern Living 
+           A Modern Home<br/>with Understated Elegance
           </h1>
           
       
@@ -20,7 +20,10 @@ const Hero = () => {
           
      
           <p className="unimaxx-hero-paragraph font-geist fmin">
-            A thoughtfully designed residence that brings together contemporary architectural expression, functional planning, and comfortable everyday living. The design makes effective use of the available space while creating a home with a refined and cohesive character. 
+            Meena Residence explores contemporary residential design through considered layouts and
+refined architectural elements. The planning brings together everyday functionality and
+visual harmony, shaping a comfortable home where space, proportions, and design details
+contribute to an elegant living environment.
           </p>
           
         </div>
