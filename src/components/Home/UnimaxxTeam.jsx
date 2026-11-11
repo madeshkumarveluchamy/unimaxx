@@ -11,9 +11,9 @@ const UnimaxxTeam = () => {
   const teamMembers = [
     { id: 1, name: "Mr.Dineshkaran - Founder", img: peopleimg4 },
     { id: 2, name: "Mr.Vignesh - Lead Architect", img: peopleimg3 },  
-    { id: 3, name: "Mr.Raghul - Interior Designer", img: peopleimg2 },
+    { id: 3, name: "Mr.Ragul - Interior Designer", img: peopleimg2 },
     { id: 4, name: "Mr.Gnanavel - Junior Architect", img: gnanavel},
-    { id: 5, name: "Mr.Rathish - Junior Architect", img: rathish },
+    { id: 5, name: "Mr.Ratish - Junior Architect", img: rathish },
 
   ];
 
