@@ -5,15 +5,19 @@ import img1 from '../../assets/Mr.Dinesh.webp';
 import img2 from '../../assets/Adhi Kesavan.webp';
 import img3 from '../../assets/Raghul.webp';
 import img4 from '../../assets/Vignesh.webp';
+import gnanavel from '../../assets/Gnanavel.S.webp';
+import rathish from '../../assets/Ratish.S.webp';
 
 const TeamSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const teamMembers = [
     { id: '01', role: 'Founder', name: 'Mr.Dineshkaran', image: img1 },
-    { id: '04', role: 'Lead Architect', name: 'Mr.Vignesh', image: img4 },    
-    { id: '02', role: 'Interior Designer', name: 'Mr.Adhi Kesavan', image: img2 },
-    { id: '03', role: 'Interior Designer', name: 'Mr.Raghul', image: img3 },
+    { id: '02', role: 'Lead Architect', name: 'Mr.Vignesh', image: img4 },    
+     { id: '03', role: 'Interior Designer', name: 'Mr.Ragul', image: img3 },
+    { id: '04', role: 'Junior Architect', name: 'Mr.Gnanavel', image: gnanavel },
+    { id: '05', role: 'Junior Architect', name: 'Mr.Ratish', image: rathish },
+    
     
   ];
 
