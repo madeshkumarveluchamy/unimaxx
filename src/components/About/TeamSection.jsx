@@ -12,7 +12,7 @@ const TeamSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const teamMembers = [
-    { id: '01', role: 'Founder', name: 'Mr.Dineshkaran', image: img1 },
+    { id: '01', role: 'Founder', name: 'Mr.Dhineshkaran', image: img1 },
     { id: '02', role: 'Lead Architect', name: 'Mr.Vignesh', image: img4 },    
      { id: '03', role: 'Interior Designer', name: 'Mr.Ragul', image: img3 },
     { id: '04', role: 'Junior Architect', name: 'Mr.Gnanavel', image: gnanavel },
